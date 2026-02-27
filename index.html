@@ -69,7 +69,7 @@ nav {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+.nav-links { display: none; gap: 1.5rem; list-style: none; align-items: center; }
 .nav-links a {
   color: var(--star);
   text-decoration: none;
@@ -125,6 +125,8 @@ nav {
 @keyframes fade-up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
 /* ── DIVIDERS ── */
+#tim-meyer-mobile { display: none; }
+
 .gold-divider {
   height: 6px;
   background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
@@ -144,7 +146,7 @@ nav {
 .alert-bar a { color: var(--gold-pale); text-decoration: underline; }
 
 /* ── SECTIONS ── */
-section { padding: 5rem 0; }
+section { padding: 5rem 0; scroll-margin-top: 70px; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 .container-narrow { max-width: 850px; margin: 0 auto; padding: 0 2rem; }
 
@@ -177,24 +179,25 @@ a { color: var(--lake-blue); }
 .sec-petition {
   background: var(--forest-dark);
   color: #fff;
+  padding-top: 1.5rem;
 }
 .sec-petition .section-title { color: #fff; }
 .sec-petition .lead-text { color: rgba(255,255,255,0.82); }
 .petition-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;
+  display: grid; grid-template-columns: 2fr 3fr; gap: 2rem; align-items: start;
 }
 .petition-form {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(200,146,42,0.35);
   border-radius: 4px;
-  padding: 2rem;
+  padding: 1.25rem;
 }
 .petition-form h3 {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.75rem; font-weight: 800;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--gold-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
 .form-field { display: flex; flex-direction: column; gap: 0.3rem; }
@@ -213,6 +216,19 @@ a { color: var(--lake-blue); }
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.9rem;
   outline: none; transition: border-color 0.2s;
+}
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  padding-right: 2.2rem;
+  cursor: pointer;
+}
+.form-field select option {
+  background: #0d1f35;
+  color: #fff;
 }
 .form-field input:focus, .form-field textarea:focus { border-color: var(--gold); }
 .sig-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: 0.5rem 0; }
@@ -734,8 +750,9 @@ footer a { color: var(--gold-light); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 800px) {
-  .petition-grid, .about-grid { grid-template-columns: 1fr !important; }
-  .petition-grid > div { min-width: 0; max-width: 100%; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .petition-grid { display: flex !important; flex-direction: column; }
+  .petition-grid > * { min-width: 0; max-width: 100%; }
   .petition-form { max-width: 100%; box-sizing: border-box; }
   .sig-tracker { padding: 1.5rem 1.25rem; }
   .sig-number { font-size: 2.5rem; }
@@ -758,8 +775,13 @@ footer a { color: var(--gold-light); }
   }
   .hamburger { display: block; }
   #section-nav { display: none !important; }
+  #our-supporters { padding-top: 0 !important; margin-top: 0; }
+  #left-col { width: 100%; text-align: center; }
+  #tim-meyer-desktop { display: none !important; }
+  #tim-meyer-mobile { display: block !important; }
   section { padding: 3rem 0; }
   #petition { padding-top: 4.5rem; }
+
   .container, .container-narrow { padding: 0 1.25rem; }
   .subsection { padding: 1.5rem; }
 }
@@ -776,7 +798,8 @@ footer a { color: var(--gold-light); }
   <ul class="nav-links">
     <li><a href="#homegrown" onclick="document.querySelector('.nav-links').classList.remove('open')">About Us</a></li>
     <li><a href="#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">It Ain't Pretty</a></li>
-    <li><a href="#timeline" onclick="document.querySelector('.nav-links').classList.remove('open')">The Record</a></li>
+    <li><a href="#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">Inside City Hall</a></li>
+    <li><a href="#timeline" onclick="document.querySelector('.nav-links').classList.remove('open')">A Timeline</a></li>
     <li><a href="#golf" onclick="document.querySelector('.nav-links').classList.remove('open')">Why Not Golf?</a></li>
     <li><a href="#vision" onclick="document.querySelector('.nav-links').classList.remove('open')">Homegrown Lester</a></li>
     <li><a href="#housing" onclick="document.querySelector('.nav-links').classList.remove('open')">We Support Housing</a></li>
@@ -790,7 +813,8 @@ footer a { color: var(--gold-light); }
 <div id="section-nav" style="margin-top:60px;background:var(--night-sky-deep);padding:0.75rem 1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 0.6rem;position:sticky;top:60px;z-index:90;border-bottom:1px solid rgba(255,255,255,0.08);">
   <a href="#homegrown" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">About Us</a>
   <a href="#vision" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Homegrown Lester</a>
-  <a href="#timeline" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">The Record</a>
+  <a href="#investigate" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Inside City Hall</a>
+  <a href="#timeline" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">A Timeline</a>
   <a href="#golf" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Why Not Golf?</a>
   <a href="#housing" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">We Support Housing</a>
   <a href="#schools" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">The School Problem</a>
@@ -801,18 +825,63 @@ footer a { color: var(--gold-light); }
 <!-- ══════════════════════════════════════
      PETITION
 ══════════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     PETITION
+══════════════════════════════════════ -->
 <section id="petition" class="sec-petition">
   <div class="container">
-    <div class="petition-grid">
-      <div>
-        <h2 class="section-title" style="color:#fff">Tell the Mayor and City Council:<br><span>Put Lester's Future to a Public Vote</span></h2>
-        <p style="color:rgba(255,255,255,0.85);font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;line-height:1.8;margin-top:1.2rem;font-weight:400;">Tim Meyer, the architect who chaired the Mayor's own Lester Park Working Group, said that the Lester decision is <strong style="font-size:1.05rem;text-decoration:underline;text-underline-offset:3px;">"significant enough that it may warrant resolution by referendum."</strong> (December 3, Duluth News Tribune)</p>
-        <p style="color:#fff;font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;font-weight:400;line-height:1.8;margin-top:0.5rem;">When the person the Mayor appointed to lead this process is saying we should put it to a <strong style="text-decoration:underline;text-underline-offset:3px;">public vote</strong>, we should take him up on it.</p>
+    <h2 class="section-title" style="color:#fff;margin-bottom:1.5rem;text-align:center;">Tell the Mayor and City Council:<br><span>Put Lester's Future to a Public Vote</span></h2>
 
+
+
+    <!-- Petition: 3-item grid for flexible mobile ordering -->
+    <div class="petition-grid">
+
+      <!-- LEFT COL: supporters + tim meyer together -->
+      <div id="left-col" style="display:flex;flex-direction:column;">
+        <div id="our-supporters" style="padding-top:1.25rem;">
+          <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);text-align:center;margin-bottom:1.75rem;">Our Supporters</h3>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+            <div style="text-align:center;max-width:160px;">
+              <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+                <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+              </div>
+              <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Brett Cease</p>
+            </div>
+            <div style="text-align:center;max-width:160px;">
+              <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+                <img src="dan-proctor.png" alt="Dan Proctor" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+              </div>
+              <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Dan Proctor</p>
+            </div>
+            <div style="text-align:center;max-width:160px;">
+              <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><circle cx="20" cy="15" r="7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:rgba(255,255,255,0.35);margin-bottom:0.3rem;">Your Name Here</p>
+            </div>
+            <div style="text-align:center;max-width:160px;">
+              <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><circle cx="20" cy="15" r="7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:rgba(255,255,255,0.35);margin-bottom:0.3rem;">Your Name Here</p>
+            </div>
+          </div>
+
+        <!-- Tim Meyer - desktop only -->
+        <div id="tim-meyer-desktop" style="margin-top:2rem;">
+          <div style="border-top:2px solid rgba(255,255,255,0.4);margin-bottom:1.5rem;"></div>
+          <p style="color:rgba(255,255,255,0.85);font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;line-height:1.8;margin:0;font-weight:400;">"<strong>This is a significant enough decision that it may warrant resolution by referendum.</strong>"<br><span style="font-size:0.88rem;opacity:0.8;">Tim Meyer<br>Architect<br>Co-Chair of Mayor Reinert's Lester Park Working Group<br><em>Duluth News Tribune</em>, December 3, 2025<br><br><strong style="color:#fff;font-size:1.5rem;display:block;text-align:center;margin-top:0.5rem;">"We <em>must</em> have a referendum!" — Us</strong></span></p>
+        </div>
+        </div>
       </div>
+
+      <!-- CELL 2: Petition form -->
       <div class="petition-form">
+
+
         <h3>Sign the Petition</h3>
-        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:1.25rem;">We need your signature so that the Mayor and the City Council understand what Duluthians want: a public vote to decide the future of our public park.</p>
+        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.5;margin-bottom:1rem;">Duluthians — <span style="color:var(--gold-light);">not developers and politicians</span> — should decide what happens to 270 acres of Lester parkland.</p>
         <form name="petition" method="POST" data-netlify="true" action="/thank-you">
           <input type="hidden" name="form-name" value="petition">
           <div class="form-row">
@@ -835,6 +904,7 @@ footer a { color: var(--gold-light); }
                 <option value="">Select…</option>
                 <option>Yes — registered voter</option>
                 <option>Yes — not yet registered</option>
+                <option>Yes — but too young to vote</option>
                 <option>No — but I support the cause</option>
               </select>
             </div>
@@ -847,9 +917,15 @@ footer a { color: var(--gold-light); }
         </form>
         <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:0.75rem;line-height:1.5;margin-bottom:0;">Your name and information will not be publicly shared and will be used solely for the purposes of this initiative.</p>
         <p style="font-size:0.72rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:0;"></p>
-      </div>
-    </div>
 
+  </div>
+</section>
+
+<!-- Tim Meyer quote standalone - mobile only -->
+<section id="tim-meyer-mobile" style="background:var(--forest-dark);padding:2.5rem 0;">
+  <div class="container-narrow" style="text-align:center;">
+    <div style="border-top:2px solid rgba(255,255,255,0.4);margin-bottom:1.5rem;"></div>
+    <p style="color:rgba(255,255,255,0.85);font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;line-height:1.8;margin:0;font-weight:400;">"<strong>This is a significant enough decision that it may warrant resolution by referendum.</strong>"<br><span style="font-size:0.88rem;opacity:0.8;">Tim Meyer<br>Architect<br>Co-Chair of Mayor Reinert's Lester Park Working Group<br><em>Duluth News Tribune</em>, December 3, 2025<br><br><strong style="color:#fff;font-size:1.5rem;display:block;text-align:center;margin-top:0.5rem;">"We <em>must</em> have a referendum!" — Us</strong></span></p>
   </div>
 </section>
 
@@ -868,7 +944,7 @@ footer a { color: var(--gold-light); }
         <span style="display:block;margin:0.75rem 0 0;">Grandma's. The Duluth Curling Club (established in 1891). Life House, CHUM, Second Harvest. Outdoor hockey rinks iced by generations of great parents dedicated to raising healthy, happy, hearty kids. <span class="more-trigger" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.85rem;font-weight:700;">More&nbsp;.&nbsp;.&nbsp;.</span></span>
       </summary>
       <div class="detail-body">
-        <p style="margin-top:1rem;">Fiberguilds and knitting circles and beautiful religious communities. The ski, hiking, and biking trails and the shops that outfit us for them. Unions. <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a>. A surf shop. Stores that equip us for the Boundary Waters. Duluth's golf community, which has 13 courses to play within a 25-mile radius of town. The Folk School. Hawk Ridge. Bentleyville. Duluth Art Institute. Theaters, symphony and independent bookstores. The North, <a href="https://www.lauraerickson.com/radio/" target="_blank">For The Birds</a>, The Gear Exchange, and the Duluth News Tribune. Breweries, cideries, restaurants and bakeries. Forest and immersion schools. AICHO. The trail-running, polar bear, and seed art clubs. Homegrown Music Festival. Cirrus and Loll. A blog that helps us all have a Perfect Duluth Day. UMD (founded 1895), St. Scholastica (founded 1912 by a Benedictine nun and six students), Lake Superior College (founded 1995). The Duluth Maker Space. The Rowing Club. St. Mary's Hospital (founded 1892). St. Luke's Hospital (founded 1881). None of these things came from developers. All of them are made by people who live here, love it, and spent their time building something.</p>
+        <p style="margin-top:1rem;">Fiberguilds and knitting circles and beautiful religious communities, the ski, hiking, and biking trails and the shops that outfit us for them. Strong Unions. <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a>. A surf shop. Stores that equip us for the Boundary Waters. Duluth's golf community, which has 13 courses to play within a 25-mile radius of town. The Folk School. Hawk Ridge. Bentleyville. Duluth Art Institute. Theaters, symphony and independent bookstores. The North, The Gear Exchange, and the Duluth News Tribune. Breweries, cideries, restaurants and bakeries. Forest and immersion schools. <a href="https://www.aicho.org/" target="_blank">AICHO</a>. The trail-running, polar bear, and seed art clubs. Homegrown Music Festival. Cirrus and Loll. A blog that helps us all have a Perfect Duluth Day. UMD (founded 1895), St. Scholastica (founded 1912 by a Benedictine nun and six students), Lake Superior College (founded 1995). The Duluth Maker Space. The Rowing Club. St. Mary's Hospital (founded 1892). St. Luke's Hospital (founded 1881). The list is practically endless and is constantly growing. None of these things came from developers. All of them are made by people who live here, love it, and spent their time building something.</p>
         <p>What's in the water? One theory: we are grateful for the opportunity to live in this beautiful and wild place, and are inspired to create things worthy of it.</p>
         <p>Visitors are nice — Elvis came here once to perform and came back six months later. His driver remembered him saying he'd been all over the world and Duluth was "as pretty as anywhere." We'll take it. But when it comes to building great things in our community we're perfectly capable of doing it ourselves. We don't need consultants from out of town or a Disney developer to decide what we want and enrich themselves building it. All we need is us.</p>
         <p style="margin-top:1rem;"><span onclick="this.closest('details').removeAttribute('open')" style="cursor:pointer;color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Collapse ↑</span></p>
@@ -888,11 +964,11 @@ footer a { color: var(--gold-light); }
 ══════════════════════════════════════ -->
 <section id="investigate" class="sec-dark-content">
   <div class="container-narrow">
-    <p class="section-label" style="color:var(--gold-light)">What City Hall Doesn't Want You to Know</p>
-    <h2 class="section-title"><span>It Ain't Pretty</span></h2>
+    <p class="section-label" style="color:var(--gold-light)">What Is Going On at City Hall</p>
+    <h2 class="section-title"><span>It Isn't Pretty</span></h2>
     <p class="lead-text">Before entrusting 270 acres of irreplaceable parkland to this administration's judgment, consider the record — sourced from the Star Tribune, Duluth News Tribune, Northern News Now, and public filings. <em>Local journalism is so important. Support it!</em></p>
 
-    <!-- Sunnarborg -->
+        <!-- Sunnarborg -->
     <details class="subsection">
       <summary><h3>Who Is Tom Sunnarborg, the Developer Who Has Wanted Lester Since 2019</h3></summary>
       <div class="detail-body">
@@ -984,8 +1060,8 @@ footer a { color: var(--gold-light); }
 ══════════════════════════════════════ -->
 <section id="timeline" class="sec-timeline">
   <div class="container">
-    <p class="section-label" style="color:var(--gold-light)">The Record</p>
-    <h2 class="section-title">How We Got Here<br><span>A Timeline</span></h2>
+    <p class="section-label" style="color:var(--gold-light)">How We Got Here</p>
+    <h2 class="section-title">A Timeline</h2>
     <p class="lead-text">The push to privatize Lester Park didn't happen overnight. Here are the key dates — all sourced from public records and local reporting.</p>
 
     <div class="timeline">
@@ -1069,6 +1145,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('timeline', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-timeline">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1137,6 +1214,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('golf', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-golf">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1182,7 +1260,7 @@ footer a { color: var(--gold-light); }
       <div class="vision-card">
         <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="20" cy="34" rx="10" ry="3" fill="#5a6e3a" fill-opacity="0.12" stroke="#5a6e3a" stroke-width="1.2"/><ellipse cx="20" cy="28" rx="7" ry="4" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><ellipse cx="20" cy="20" rx="5.5" ry="4" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><ellipse cx="20" cy="13" rx="4" ry="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><circle cx="20" cy="6" r="3" fill="#5a6e3a" fill-opacity="0.2" stroke="#5a6e3a" stroke-width="1.3"/></svg></div>
         <h3>Honor the Giants Among Us</h3>
-        <p>A <a href="https://lauraerickson.substack.com/" target="_blank">Laura Erickson</a> Bird-Viewing Platform. A <a href="https://bookshop.org/search?keywords=larry+weber+north+woods" target="_blank">Larry Weber</a> Nature Pavilion. An <a href="https://astrobob.areavoices.com/" target="_blank">Astro Bob</a> Aurora Landing. A <a href="https://bookshop.org/search?keywords=sam+cook+outdoor+essays" target="_blank">Sam Cook</a> Campground. A Judy Gibbs Hiking Trail — honoring the woman who led 750 volunteers to build 40 miles of the Superior Hiking Trail through Duluth. An outdoor GFI outlet dedicated to <a href="https://www.saxzim.org/" target="_blank">Sparky Stensaas and the Sax-Zim Bog</a>. These places will allow Duluthians to learn from some of the best stewards of nature in the country and inspire future generations to love and protect our land and water. These names belong on the landscape more than any developer's rendering ever could.</p>
+        <p>A <a href="https://bookshop.org/search?keywords=larry+weber+north+woods" target="_blank">Larry Weber</a> Nature Pavilion. An <a href="https://astrobob.areavoices.com/" target="_blank">Astro Bob</a> Aurora Landing. A <a href="https://bookshop.org/search?keywords=sam+cook+outdoor+essays" target="_blank">Sam Cook</a> Campground. A Judy Gibbs Hiking Trail — honoring the woman who led 750 volunteers to build 40 miles of the Superior Hiking Trail through Duluth. An outdoor GFI outlet dedicated to <a href="https://www.saxzim.org/" target="_blank">Sparky Stensaas and the Sax-Zim Bog</a>. These places will allow Duluthians to learn from some of the best stewards of nature in the country and inspire future generations to love and protect our land and water. These names belong on the landscape more than any developer's rendering ever could.</p>
       </div>
     </div>
 
@@ -1190,6 +1268,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('vision', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-vision">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1200,14 +1279,69 @@ footer a { color: var(--gold-light); }
 ══════════════════════════════════════ -->
 <section id="housing" class="sec-housing">
   <div class="container">
-    <p class="section-label">The Real Story</p>
-    <h2 class="section-title">This Isn't NIMBYism<br><span>We Support Smart, Affordable Housing Solutions</span></h2>
+    <p class="section-label">This Isn't NIMBYism</p>
+    <h2 class="section-title"><span>We Support Smart, Affordable Housing Solutions</span></h2>
 
-    <p style="max-width:760px; margin: 0 auto 2rem; font-size:1.05rem; line-height:1.7; opacity:0.9;">Duluth does have a housing problem. We're not disputing that. But the mayor has chosen a solution — sell public land to private developers — before seriously examining the alternatives. The sections below look at what he's saying, what he's leaving out, and what a more honest conversation about housing in Duluth might look like.</p>
+    <p style="max-width:760px; margin: 0 auto 2rem; font-size:1.05rem; line-height:1.7; opacity:0.9;">Solve the Incline Village mess. Look downtown — a 2023 city study found space for over 2,400 units on already-disturbed land. And expand the community land trust programs already getting Duluth families into homes they can actually afford to buy — and keep. The city has better options than giving away 270 acres of century-old parkland.</p>
 
-    <!-- Subsection I -->
+    <!-- Incline Village -->
+    <details class="subsection">
+      <summary><h3>Solve — and Rethink — Incline Village Development</h3></summary>
+      <div class="detail-body">
+      <p>The city also desperately needs to rethink what Incline Village development looks like. For example, why not commit to build with the help of <a href="https://www.just-housing.org/" target="_blank">Just Housing</a>, a local social benefit corporation building zero net energy homes specifically designed for Duluth's brutal winters — triple-pane windows, airtight construction, extra insulation, all-electric with no fossil fuels on site — that use less than a third of the energy a code-built home would consume, with rooftop solar bringing the annual energy bill to zero. They cost only about 11% more to build than a standard home, and they're designed to still be standing and functional a century from now. Just Housing is also <a href="https://www.just-housing.org/impact-overview" target="_blank">training the next generation of builders in these techniques</a> — working with high school construction students on high-performance building skills — a green-collar workforce pipeline that Duluth badly needs. These are not luxury units aimed at out-of-town buyers. These are homes real Duluth families and seniors would actually want to live in, at prices designed to stay within reach. A site like Incline Village, in the hands of a partner like that, could demonstrate that the city doesn't have to choose between housing and values — that building for the community already here is both possible and worth doing.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Downtown Conversion -->
     <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
-      <summary><h3>What the Mayor Is Claiming — and What He's Not Saying</h3></summary>
+      <summary><h3>Downtown Conversion — Done Right, With the Right Partners</h3></summary>
+      <div class="detail-body">
+      <p><strong style="color: var(--gold);">Downtown conversion — done right, with the right partners.</strong> A 2023 study commissioned by the city identified capacity for over 2,400 new housing units on already-disturbed downtown land with existing infrastructure. At least eight downtown buildings are sitting vacant right now. The problem is not that Duluth has run out of places to build — the problem is that the city keeps turning to market-rate developers to solve an affordability problem. If the goal is affordable units, the city needs to work with organizations that actually know how to build them — <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a>, <a href="https://centercityhousing.org/" target="_blank">Center City Housing</a>, and the Duluth HRA, not developers with an affordable unit sprinkled in.</p>
+      <p>For large downtown office-to-apartment conversions, the relevant tool is affordable rental development using Low Income Housing Tax Credits, which cap rents at a percentage of area median income for decades. One Roof and Center City Housing both do this — One Roof's Brewery Creek Apartments and Decker Dwellings are local examples. It's not permanent the way a Community Land Trust is, but it keeps rents meaningfully below what a market-rate developer would charge and it's the standard tool for multi-unit buildings where individual ownership isn't practical. That's a fundamentally different outcome than a market-rate developer putting up a $1,800/month studio and calling one unit "workforce housing." For seniors especially — who need accessible living near services, medical care, and a view of the lake — downtown could be a natural fit, as part of a broader revival. Downtown Duluth is not currently the kind of place most seniors would choose to move, but that's an argument for investing in it, not for ignoring it. A downtown that adds affordable residential density, fills its vacant storefronts, and builds on anchors like the DECC, the library, aquarium and the medical district becomes somewhere people actually want to live. Every senior who makes that move frees up a family-sized home elsewhere in the city.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Subsection IV -->
+    <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
+      <summary><h3>Expand the Programs Closing the Affordability Gap</h3></summary>
+      <div class="detail-body">
+
+      <p><strong style="color: var(--gold);">One Roof Community Housing</strong> builds homes in Duluth that people earning working-class wages can actually afford to buy. In recent homes, that's meant selling at $75,000 below appraised value — the gap covered by a mix of city, state, and federal grants. And unlike most affordable housing programs, the model is designed so those grants don't get used up: when a homeowner sells, the next family gets the same deal. The subsidy stays in the home instead of disappearing into the market.</p>
+
+      <p>One Roof has been doing this in Duluth for over 30 years — and the numbers show it. On the homeownership side, they've built and stewarded 375+ permanently affordable CLT homes across the region, with 250 resales that have recycled over $20 million back into affordability for the next buyer. In 2023, they helped 22 households purchase a home; in November 2025, they unveiled five new homes appraised at $300,000 that sold for $160,000. On the rental side, they've developed 350+ affordable units through projects like Brewery Creek Apartments (52 units, including 22 for people experiencing homelessness), Decker Dwellings (42 units in Duluth Heights), Brae View Senior Apartments (72 units with on-site childcare and services), and Plover Place (24 units for unhoused individuals). They're not a theory or a pilot program. They're a proven local institution with a track record that dwarfs anything a market-rate developer has delivered for Duluth families.</p>
+
+      <p>The city already works with One Roof. But how much it prioritizes that partnership — in funding decisions, in development agreements, in how it disposes of public land — is a political choice. Some of these moves are available to the city right now; others require going to the state for new authority. All of them require political will:</p>
+
+      <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
+        <li><strong>Require that any development receiving a TIF subsidy deed a percentage of affordable units into the land trust permanently.</strong> TIF — tax increment financing — is the city's most powerful development subsidy tool: it lets a developer use new tax revenue generated by their own project to pay for infrastructure and construction costs, sometimes for up to 26 years. Cities routinely attach affordability strings to that kind of public money. Chicago requires 10% affordable units from any development over 10 units — doubling to 20% when TIF is involved, with some units placed into a community land trust under a 99-year resale covenant. Portland requires 30% of TIF revenues in its urban renewal areas be spent on affordable housing. Utah mandates 20% of TIF revenues go to affordable housing once a district clears $100,000 annually. The established range is 10–20% of units, scaled to subsidy size. <strong><em>Duluth gave Incline Village $75 million in TIF — up to $100 million across all phases — and required zero affordable units.</em></strong> Councilor Durrwachter was the lone dissenting vote; the developer's response was a verbal promise to "consider" affordability in future phases. The condos were projected to start at $650,000. Developer promises evaporate. Land trust deeds don't.</li>
+        <li><strong>Give One Roof right of first refusal when the city or county disposes of tax-forfeited properties.</strong> Before a vacant lot goes to open auction, One Roof gets first look.</li>
+        <li><strong>Use Duluth's political capital at the state legislature to fight for sustained One Roof funding.</strong> In 2023, under a DFL trifecta, One Roof received over $50 million from Minnesota's historic $1 billion housing omnibus — a generation's worth of work in a single cycle. That's likely a ceiling: it required an unusual alignment that won't repeat on demand. But the baseline is worth fighting for. In the most recent annual cycle, One Roof received $3.1 million for 10 homes. There's real room between those numbers, and how much Duluth gets depends partly on how hard the city advocates for it.</li>
+        <li><strong>Push the legislature for authorization to create a dedicated surcharge on high-value home sales, with proceeds going directly to the land trust.</strong> Duluth can't do this without state enabling legislation — but it could with it. Los Angeles taxes sales above $5 million at 4–5.5% and has raised over $830 million for affordable housing, though critics note the broad application to commercial properties has had unintended consequences. Vermont's approach is more targeted: a sharply higher transfer tax rate on non-primary residences that has outperformed revenue forecasts while protecting primary homeowners. Duluth's high-end market is closer to Vermont's than LA's — lake-view properties, North Shore second homes, Congdon Park estates. A modest surcharge on sales above $600,000 or $750,000, applied only to the amount above the threshold and exempt for affordable housing organizations, would generate real dedicated revenue for the land trust year over year. Not enough to replace state funding. Enough to matter.</li>
+      </ul>
+
+      <p>None of these require giving away parkland. They require the same political will the city has shown when subsidizing private development — directed instead toward a partner with a 30-year track record of delivering for Duluth families.</p>
+
+      <p><strong style="color: var(--gold);">Expand first-time buyer programs.</strong> The city and the Duluth HRA could aggressively promote and fund down payment assistance programs targeted at families and first-time buyers in the $50,000–$80,000 income range — the people most likely to buy an existing Duluth home if they can get over the barrier of a down payment. The federal CDBG and HOME programs are the primary funding source for exactly this kind of initiative — and despite the Trump administration's attempt to eliminate both entirely, the money was preserved through Democratic negotiations and made it into the FY2026 appropriations bill signed into law on February 3, 2026. Getting more buyers into the existing housing stock also creates natural upward mobility: a family that buys a starter home frees up a rental unit. These programs work without building anything new and without touching public land.</p>
+
+
+            <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+        <!-- Subsection I -->
+    <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
+      <summary><h3>The Mayor's Housing Argument, Examined</h3></summary>
       <div class="detail-body">
       <p>Mayor Roger Reinert has made housing a centerpiece of his administration, arguing that Duluth is <a href="https://www.wdio.com/front-page/top-stories/study-shows-scale-of-duluths-housing-shortage/" target="_blank">failing to attract people "simply due to a lack of housing"</a> and that major employers like <a href="https://www.startribune.com/is-population-stuck-duluth-finally-growing/601143248" target="_blank">Cirrus Aircraft and Essentia Health are struggling to hire</a> because workers can't find places to live. His goal is <a href="https://www.startribune.com/duluth-mayor-pledges-population-growth-in-the-long-stalled-city/600361869" target="_blank">90,000 residents by 2030</a>. Notably, this agenda is oriented largely toward people who don't live here yet — and the solution he has landed on involves selling public land, including parkland, to private developers.</p>
       <p>The mayor's framing doesn't pass inspection. The first problem is that the 90,000 population target is an assertion, not an argument. Duluth has hovered between 85,000 and 92,000 residents for most of the past 40 years. The city provides services, maintains infrastructure, and functions. Growth for its own sake primarily benefits developers and expands the tax base — but it also increases demands on schools, roads, and city services. The <a href="https://www.duluthnewstribune.com/news/local/capacity-crunch-prompts-districtwide-study-at-duluth-public-schools" target="_blank">east side schools are already over capacity</a>, and the mayor has offered no plan for how Duluth Public Schools absorbs more families. The question of whether Duluth needs to grow, or whether it needs to become more livable and affordable for the people already here, is one the mayor has decided without asking anyone.</p>
@@ -1219,66 +1353,11 @@ footer a { color: var(--gold-light); }
       </div>
     </details>
 
-    <!-- Subsection II -->
-    <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
-      <summary><h3>This Is an Affordability Crisis, Not a Supply Crisis</h3></summary>
-      <div class="detail-body">
-      <p>The mayor's framing — that Duluth needs more housing units — conflates two different problems. The city doesn't lack housing because too few units exist. It lacks housing that people who actually live and work here can afford. Those are different diagnoses with different remedies, and market-rate development on public parkland addresses neither.</p>
-      <p>For those who could buy, the math is brutal. The <a href="https://www.startribune.com/duluth-sees-record-high-home-prices-in-2024/601449966" target="_blank">median sale price hit a record $292,000 in 2024</a> — up 50 percent from 2019 — and remains around $290,000 as of late 2025, with homes selling in roughly 18 days and only about six weeks of inventory on the market at any given time (a healthy market carries six months). At current rates, that purchase requires roughly $90,500 a year to meet standard lending thresholds. The median Duluth homeowner household earns around $72,000 — leaving them about $18,500 short, and that's before saving the $29,000 down payment.</p>
-      <p>More than <a href="https://duluthmn.gov/media/10307/2020-2024-consolidated-plan-housing-market-analysis.pdf" target="_blank">40 percent of Duluth's homes were built before 1940</a> — compared to 18 percent statewide — and two-thirds are at least 60 years old, built for households that averaged nearly 3.5 people when Duluth's population was at its peak. Today the average household is just over 2. And $290,000 doesn't buy what people expect for that money. As one local realtor put it, that price point lately means a house with at least cosmetic needs, and buyers who can't afford to both finance a $300,000 home and fix it up are simply priced out.</p>
-      <p>The affordability crisis isn't local to Duluth — it's a national problem that the mayor is framing as a local one. The mayor himself put it plainly: <a href="https://www.northernnewsnow.com/2024/05/31/neighborhoods-without-neighbors-significant-impact-investors-buying-up-duluth-homes/" target="_blank">"Basically, we have a housing market in Duluth that lifetime Duluthians can't afford."</a> That is accurate. It's also true of most of America — this is a national crisis, not a Duluth-specific failure. Nationally, <a href="https://nhc.org/press-release/income-needed-to-buy-median-price-home-has-doubled-since-the-pandemic/" target="_blank">home buying costs have more than doubled since before the pandemic</a>, and households earning $75,000 a year — the range that includes teachers, nurses, and skilled tradespeople — <a href="https://www.nar.realtor/newsroom/americas-housing-affordability-gap-persists-households-earning-75000-annually-can-afford-less-than-a-quarter-of-for-sale-home-listings" target="_blank">could afford nearly half of all listings in 2019 but only about 21 percent as of early 2025</a>.</p>
-      <p>Whoever actually solves the housing affordability problem in a mid-sized American city will have the choice of either being mayor for life or president of the United States. But greenlighting high-priced new condo construction doesn't fit what Duluth actually is, and the evidence suggests it isn't helping: new market-rate units at the top of the price range do little for working families already priced out of a $290,000 house. The next question — the one the mayor hasn't answered — is why wages at Duluth's major employers haven't kept pace with what Duluth housing now costs.</p>
-      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
-        <button onclick="copySubLink(this)">Share This Section</button>
-      </div>
-      </div>
-    </details>
-
-    <!-- Subsection III -->
-    <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
-      <summary><h3>The Wage Problem</h3></summary>
-      <div class="detail-body">
-      <p>When Mayor Reinert says employers like Cirrus Aircraft and Essentia Health can't hire because Duluth lacks housing, he is describing a symptom. The underlying issue is that wages at both employers make Duluth housing difficult to afford — not just for workers the city hopes to attract, but for the ones already here. The wage argument isn't about population targets. It's about the nurse who already lives here, already has kids in Duluth schools, and is already paying more than she should have to for housing that's older than her parents. Higher wages don't create a new housing problem — they give existing residents a fighting chance at the one they're already living in.</p>
-      <p>Cirrus Aircraft posted <a href="https://longportapp.com/en/news/232986306" target="_blank">record results in 2024</a>: 731 aircraft delivered — its highest single-year total in company history, topping a record set in 2006 — and $1.2 billion in revenue for the first time. Net profit was $121 million, up 33 percent year over year. Its SR22 aircraft sells for around $1.1 million; the Vision Jet for $3.4 million. For a company posting record profits on products in that price range, average employee pay of $66,384 per year is worth scrutinizing.</p>
-      <p>Essentia Health presents a starker local comparison. Essentia nurses earn approximately $41–44 per hour. Across town, <a href="https://www.slhduluth.com/careers/featured-careers/registered-nurse/" target="_blank">Aspirus St. Luke's advertises paying the 7th-highest RN wages in the nation</a> — and <a href="https://www.indeed.com/cmp/St.-Luke's-7/salaries/Registered-Nurse/Duluth-MN" target="_blank">Indeed reports Aspirus/St. Luke's RN pay in Duluth at approximately $52 per hour</a>, roughly 20 percent higher for the same job in the same city. Essentia employs approximately 4,876 registered and licensed practical nurses across its entire system of 14 hospitals and 79 clinics; St. Luke's, before its merger with Aspirus, employed roughly 510 nurses at its Duluth-area facilities alone. These are not small numbers, and the wage gap between the two systems for the same work is not abstract — it directly affects whether nurses working in Duluth can afford to live in Duluth. That gap contributed to a <a href="https://mnnurses.org/essentia-health-clinic-workers-and-advanced-practice-providers-end-historic-ulp-strike/" target="_blank">July 2025 unfair labor practice strike</a> by Essentia nurses after <a href="https://mnnurses.org/after-successful-first-day-on-ulp-strike-nurses-and-healthcare-workers-renew-call-for-essentia-to-negotiate-in-good-faith-and-settle-ulps/" target="_blank">Essentia refused to meet at seven bargaining dates offered by the Minnesota Nurses Association</a>. Why can't the city use its leverage over TIF districts, permits, and development agreements to hold its largest employer accountable?</p>
-      <p>When employers tell the mayor they can't attract talent because Duluth lacks housing, they are asking the city to subsidize their own labor costs — to make housing cheap enough to compensate for wages that wouldn't otherwise be competitive. <strong>That is not a housing policy.</strong></p>
-      <p>There's a further consequence worth naming. Higher wages don't just help individual workers. They produce more homeowners, which produces better-funded schools — the same schools currently running out of classroom space.</p>
-      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
-        <button onclick="copySubLink(this)">Share This Section</button>
-      </div>
-      </div>
-    </details>
-
-    <!-- Subsection IV -->
-    <details class="subsection" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
-      <summary><h3>What the City Could Actually Do</h3></summary>
-      <div class="detail-body">
-
-      <p><strong style="color: var(--gold);">Wages and leverage.</strong> The city awards TIF districts, development agreements, permitting priority, and workforce partnerships. It could use that leverage to reward employers who pay competitively and decline to extend it to those who don't. In fact, Duluth already has a living wage ordinance on the books — passed in 1997, requiring recipients of city development assistance of $25,000 or more to pay a living wage. The problem is that the wage floor hasn't been meaningfully updated since roughly 2005, when it sat at $7.61 an hour — so far below a liveable wage it's barely worth calling an ordinance. And a <a href="https://www.duluthnewstribune.com/news/local/duluth-shapes-policy-to-guide-future-use-of-tax-subsidies-for-developers" target="_blank">June 2025 News Tribune report</a> found the city had been dispensing TIF without any coherent public benefits framework at all, prompting a city councilor to say the city had been "abusing TIF to try to get projects forward." Other cities have done far better with the same tools — Minneapolis requires businesses receiving $100,000 or more in city assistance to create at least one full-time living wage job for every $25,000 of subsidy, with the living wage set at 130% of the federal poverty level for a family of four — currently around $17–18 per hour — and updated annually. Cleveland goes further: under its 2023 Community Benefits Ordinance, any project receiving $250,000 or more in city assistance must enter into a legally binding agreement covering local hiring goals, minority and women-owned business participation, apprenticeships for Cleveland residents, and — for projects over $20 million — an expanded set of additional community benefits negotiated deal by deal. And CBAs with living wage and local hiring requirements have been successfully negotiated on major projects in Chicago, Denver, and Milwaukee.</p>
-      <p>Duluth has the authority. What it has lacked is the will to use it. When workers earn enough to afford a home in Duluth's actual market, they become buyers — and homeowners with rising incomes can absorb property tax increases that fund better schools and city services, rather than being perpetually squeezed by them. <strong>The virtuous cycle the mayor is looking for runs through wages, not parkland.</strong></p>
-
-      <p><strong style="color: var(--gold);">Expand first-time buyer programs.</strong> The city and the Duluth HRA could aggressively promote and fund down payment assistance programs targeted at families and first-time buyers in the $50,000–$80,000 income range — the people most likely to buy an existing Duluth home if they can get over the barrier of a down payment. The federal CDBG and HOME programs are the primary funding source for exactly this kind of initiative — and despite the Trump administration's attempt to eliminate both entirely, the money was preserved through Democratic negotiations and made it into the FY2026 appropriations bill signed into law on February 3, 2026. Getting more buyers into the existing housing stock also creates natural upward mobility: a family that buys a starter home frees up a rental unit. These programs work without building anything new and without touching public land.</p>
-
-      <p><strong style="color: var(--gold);">Downtown conversion — done right, with the right partners.</strong> A 2023 study commissioned by the city identified capacity for over 2,400 new housing units on already-disturbed downtown land with existing infrastructure. At least eight downtown buildings are sitting vacant right now. The problem is not that Duluth has run out of places to build — the problem is that the city keeps turning to market-rate developers to solve an affordability problem. If the goal is affordable units, the city needs to work with organizations that actually know how to build them — <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a>, <a href="https://centercityhousing.org/" target="_blank">Center City Housing</a>, and the Duluth HRA, not developers with an affordable unit sprinkled in.</p>
-      <p>For large downtown office-to-apartment conversions, the relevant tool is affordable rental development using Low Income Housing Tax Credits, which cap rents at a percentage of area median income for decades. One Roof and Center City Housing both do this — One Roof's Brewery Creek Apartments and Decker Dwellings are local examples. It's not permanent the way a Community Land Trust is, but it keeps rents meaningfully below what a market-rate developer would charge and it's the standard tool for multi-unit buildings where individual ownership isn't practical. That's a fundamentally different outcome than a market-rate developer putting up a $1,800/month studio and calling one unit "workforce housing." For seniors especially — who need accessible living near services, medical care, and a view of the lake — downtown could be a natural fit, as part of a broader revival. Downtown Duluth is not currently the kind of place most seniors would choose to move, but that's an argument for investing in it, not for ignoring it. A downtown that adds affordable residential density, fills its vacant storefronts, and builds on anchors like the DECC, the library, aquarium and the medical district becomes somewhere people actually want to live. Every senior who makes that move frees up a family-sized home elsewhere in the city.</p>
-      <p>For smaller conversions and homeownership throughout the city, <a href="https://1roofhousing.org/homebuyers/community-land-trust/" target="_blank">One Roof's Community Land Trust (CLT) model</a> produces homes that stay affordable permanently. The way it works: One Roof retains ownership of the land and sells the home itself to an income-qualified buyer at well below market rate — currently around $75,000 below market — and when that buyer eventually sells, they pass the same affordability along to the next income-qualified buyer rather than cashing out at market price. One Roof has already <a href="https://www.wdio.com/front-page/top-stories/one-roof-community-housing-celebrates-375th-land-trust-home/" target="_blank">done this 375 times in Duluth</a>. The city's initial investment recycles through every future sale instead of disappearing into one family's equity.</p>
-
-      <p><strong style="color: var(--gold);">Solve — and rethink — Incline Village.</strong> The former Duluth Central High School site — a spectacular hillside overlooking Lake Superior, already cleared, with infrastructure investment underway — had its development agreement terminated after the developer fell into material breach. It was supposed to deliver 1,300 units of housing. It is now stalled. Before the city commits to selling Lester Park to create yet another development project on a separate front, it should concentrate its energy on attracting a credible developer to a site that is already prepared, already approved, and already in desperate need of one.</p>
-      <p>The city also desperately needs to rethink what Incline Village development looks like. For example, why not commit to build with the help of <a href="https://www.just-housing.org/" target="_blank">Just Housing</a>, a local social benefit corporation building zero net energy homes specifically designed for Duluth's brutal winters — triple-pane windows, airtight construction, extra insulation, all-electric with no fossil fuels on site — that use less than a third of the energy a code-built home would consume, with rooftop solar bringing the annual energy bill to zero. They cost only about 11% more to build than a standard home, and they're designed to still be standing and functional a century from now. Just Housing is also <a href="https://www.just-housing.org/impact-overview" target="_blank">training the next generation of builders in these techniques</a> — working with high school construction students on high-performance building skills — a green-collar workforce pipeline that Duluth badly needs. These are not luxury units aimed at out-of-town buyers. These are homes real Duluth families and seniors would actually want to live in, at prices designed to stay within reach. A site like Incline Village, in the hands of a partner like that, could demonstrate that the city doesn't have to choose between housing and values — that building for the community already here is both possible and worth doing.</p>
-      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a>
-        <button onclick="copySubLink(this)">Share This Section</button>
-      </div>
-      </div>
-    </details>
-
-
     <div class="share-bar">
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('housing', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-housing">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1311,6 +1390,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('schools', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-schools">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1330,7 +1410,7 @@ footer a { color: var(--gold-light); }
       <div class="endorser-card">
         <div class="name">Your Name Here</div>
         <div class="role">Duluth Resident</div>
-        <div class="quote">We're building this list. Email <a href="/cdn-cgi/l/email-protection#bed7d0d8d1fed1cbcccedfccd5d1cbccc8d1cadb90d1ccd9"><span class="__cf_email__" data-cfemail="0d64636b624d62787f7d6c7f6662787f7b62796823627f6a">[email&#160;protected]</span></a> or sign the petition to add your endorsement.</div>
+        <div class="quote">We're building this list. Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> or sign the petition to add your endorsement.</div>
       </div>
     </div>
 
@@ -1339,13 +1419,13 @@ footer a { color: var(--gold-light); }
       <div class="endorser-card">
         <div class="name">Your Business Here</div>
         <div class="role">Duluth Business</div>
-        <div class="quote">Want to endorse the referendum effort? Request a hard-copy petition and a counter placard for your shop by emailing <a href="/cdn-cgi/l/email-protection#1f767179705f706a6d6f7e6d74706a6d69706b7a31706d78"><span class="__cf_email__" data-cfemail="6e070008012e011b1c1e0f1c05011b1c18011a0b40011c09">[email&#160;protected]</span></a>. Let your customers know where you stand.</div>
+        <div class="quote">Want to endorse the referendum effort? Request a hard-copy petition and a counter placard for your shop by emailing <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a>. Let your customers know where you stand.</div>
       </div>
     </div>
 
     <div style="margin-top:3rem;">
       <h3 style="font-family:'Playfair Display',serif;color:var(--forest-dark);font-size:1.2rem;margin-bottom:1rem;">For Businesses</h3>
-      <p style="color:var(--text);font-size:0.95rem;">Put a hard-copy petition on your sales counter. Display a placard in your window. Let your customers know Duluth's homegrown business community stands behind a public vote on Lester's future. Email <a href="/cdn-cgi/l/email-protection#85ecebe3eac5eaf0f7f5e4f7eeeaf0f7f3eaf1e0abeaf7e2"><span class="__cf_email__" data-cfemail="87eee9e1e8c7e8f2f5f7e6f5ece8f2f5f1e8f3e2a9e8f5e0">[email&#160;protected]</span></a> to request materials — we'll deliver them to your door.</p>
+      <p style="color:var(--text);font-size:0.95rem;">Put a hard-copy petition on your sales counter. Display a placard in your window. Let your customers know Duluth's homegrown business community stands behind a public vote on Lester's future. Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> to request materials — we'll deliver them to your door.</p>
     </div>
 
     <div style="margin-top:2rem;">
@@ -1357,6 +1437,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('endorsements', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-endorsements">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1403,30 +1484,30 @@ footer a { color: var(--gold-light); }
       <div class="action-card">
         <h4>📧 Contact the Mayor &amp; Council</h4>
         <p>Tell them you want a referendum on the sale, that you oppose development at Lester, and that rezoning parkland for private development is not something you will accept.</p>
-        <p style="font-size:0.85rem;"><strong>Mayor Reinert:</strong> <a href="/cdn-cgi/l/email-protection#d5b8b4acbaa795b1a0b9a0a1bdb8bbfbb2baa3"><span class="__cf_email__" data-cfemail="c4a9a5bdabb684a0b1a8b1b0aca9aaeaa3abb2">[email&#160;protected]</span></a> | 218-730-5230</p>
+        <p style="font-size:0.85rem;"><strong>Mayor Reinert:</strong> <a href="mailto:mayor@duluthmn.gov">mayor@duluthmn.gov</a> | 218-730-5230</p>
         <div class="email-block">
-          <a href="/cdn-cgi/l/email-protection#b1dddac3c4d6f1d5c4ddc4c5d9dcdf9fd6dec7"><span class="__cf_email__" data-cfemail="335f584146547357465f46475b5e5d1d545c45">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#eb918d8287829b849d828883ab8f9e879e9f838685c58c849d"><span class="__cf_email__" data-cfemail="176d717e7b7e6778617e747f5773627b62637f7a7939707861">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#93f2f5fce1e0fef2fdd3f7e6ffe6e7fbfefdbdf4fce5"><span class="__cf_email__" data-cfemail="4f2e29203d3c222e210f2b3a233a3b27222161282039">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#2d45454c435e42436d4958415859454043034a425b"><span class="__cf_email__" data-cfemail="b5ddddd4dbc6dadbf5d1c0d9c0c1ddd8db9bd2dac3">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#7b1108120b091e08083b1f0e170e0f131615551c140d"><span class="__cf_email__" data-cfemail="aec4ddc7dedccbddddeecadbc2dbdac6c3c080c9c1d8">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#771d1c12191912130e3713021b02031f1a1959101801"><span class="__cf_email__" data-cfemail="076d6c62696962637e4763726b72736f6a6929606871">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#691b1f0807070c1d1d290d1c051c1d010407470e061f"><span class="__cf_email__" data-cfemail="c5b7b3a4ababa0b1b185a1b0a9b0b1ada8abeba2aab3">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#0b7c6f7e79797c6a68637f6e794b6f7e677e7f636665256c647d"><span class="__cf_email__" data-cfemail="e1968594939396808289958493a185948d9495898c8fcf868e97">[email&#160;protected]</span></a>;
-          <a href="/cdn-cgi/l/email-protection#d7a3b4a5a2bea4b297b3a2bba2a3bfbab9f9b0b8a1"><span class="__cf_email__" data-cfemail="eb9f88999e82988eab8f9e879e9f838685c58c849d">[email&#160;protected]</span></a>
+          <a href="mailto:lkrug@duluthmn.gov">lkrug@duluthmn.gov</a>;
+          <a href="mailto:zfilipovich@duluthmn.gov">zfilipovich@duluthmn.gov</a>;
+          <a href="mailto:aforsman@duluthmn.gov">aforsman@duluthmn.gov</a>;
+          <a href="mailto:hhanson@duluthmn.gov">hhanson@duluthmn.gov</a>;
+          <a href="mailto:jsipress@duluthmn.gov">jsipress@duluthmn.gov</a>;
+          <a href="mailto:jkennedy@duluthmn.gov">jkennedy@duluthmn.gov</a>;
+          <a href="mailto:rvannett@duluthmn.gov">rvannett@duluthmn.gov</a>;
+          <a href="mailto:wdurrwachter@duluthmn.gov">wdurrwachter@duluthmn.gov</a>;
+          <a href="mailto:tcruise@duluthmn.gov">tcruise@duluthmn.gov</a>
         </div>
         <p style="font-size:0.82rem;">Copy the addresses above into the "To:" field to email all nine councilors at once.</p>
       </div>
 
       <div class="action-card">
         <h4>📞 Join the Bi-Weekly Conference Call</h4>
-        <p>Every other Tuesday at 7 PM, we hold a campaign coordination call open to all supporters. Get updates, plan actions, and connect with fellow Duluthians. Email <a href="/cdn-cgi/l/email-protection#630a0d050c230c1611130211080c1611150c17064d0c1104"><span class="__cf_email__" data-cfemail="1b72757d745b746e696b7a6970746e696d746f7e3574697c">[email&#160;protected]</span></a> for the call-in link.</p>
+        <p>Every other Tuesday at 7 PM, we hold a campaign coordination call open to all supporters. Get updates, plan actions, and connect with fellow Duluthians. Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> for the call-in link.</p>
       </div>
 
       <div class="action-card">
         <h4>🎓 Contact Superintendent Magas</h4>
         <p>East side schools are <a href="https://www.duluthnewstribune.com/news/local/capacity-crunch-prompts-districtwide-study-at-duluth-public-schools" target="_blank">already over capacity</a>. Lester Park Elementary has no classroom space left. Congdon Park is at 108%. Adding 455 units would make it worse.</p>
-        <p style="font-size:0.85rem;"><strong>Superintendent John Magas:</strong> <a href="/cdn-cgi/l/email-protection#c2a8adaaacecafa3a5a3b182abb1a6f5f2fbecadb0a5"><span class="__cf_email__" data-cfemail="b6dcd9ded898dbd7d1d7c5f6dfc5d281868f98d9c4d1">[email&#160;protected]</span></a> | 218-336-8752</p>
+        <p style="font-size:0.85rem;"><strong>Superintendent John Magas:</strong> <a href="mailto:john.magas@isd709.org">john.magas@isd709.org</a> | 218-336-8752</p>
       </div>
     </div>
 
@@ -1434,6 +1515,7 @@ footer a { color: var(--gold-light); }
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('action', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-action">Copied!</span>
     </div>
+
   </div>
 </section>
 
@@ -1444,7 +1526,7 @@ footer a { color: var(--gold-light); }
     <p class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</p>
     <p>A grassroots initiative to protect Lester Park Golf Course and demand a public referendum on Duluth's public lands.</p>
     <p style="margin-top:0.5rem;">
-      <a href="/cdn-cgi/l/email-protection#01686f676e416e74737160736a6e7473776e75642f6e7366"><span class="__cf_email__" data-cfemail="5f363139301f302a2d2f3e2d34302a2d29302b3a71302d38">[email&#160;protected]</span></a> ·
+      <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> ·
       <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})">Sign Petition</a> ·
       <a href="#action">Take Action</a> ·
       <a href="#shop">Shop</a>
