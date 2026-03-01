@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Park, Our Vote — Referendum on Lester's Future</title>
+<title>Thank You — Our Park, Our Vote</title>
+
+<!-- SEO -->
+<meta name="description" content="Thank you for signing the Our Park, Our Vote petition to protect Lester Park Golf Course in Duluth, Minnesota.">
+<link rel="canonical" href="https://ourparkourvote.org/thank-you.html">
+
+<!-- Indexing — confirmation pages should not appear in search results -->
+<meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
 
@@ -1442,7 +1449,7 @@ function copyShareLink(btn) {
   <div class="container">
     <p class="section-label">Support Growing</p>
     <h2 class="section-title">Who Stands<br><span>With Us</span></h2>
-    <p class="lead-text">Individuals, businesses, and organizations endorsing the call for a public referendum on Lester's future. <a href="/cdn-cgi/l/email-protection#0b62656d644b647e797b6a7960647e797d647f6e2564796c">Contact us</a> to add your name.</p>
+    <p class="lead-text">Individuals, businesses, and organizations endorsing the call for a public referendum on Lester's future. <a href="mailto:info@ourparkourvote.org">Contact us</a> to add your name.</p>
 
     <h3 style="margin-top:2rem; font-family:'Playfair Display',serif; color:var(--forest-dark); font-size:1.1rem;">Individuals</h3>
     <div class="endorser-grid">
@@ -1546,48 +1553,51 @@ function copyShareLink(btn) {
       <div class="action-card">
         <h4>🎓 Contact Superintendent Magas</h4>
         <p>East side schools are <a href="https://www.duluthnewstribune.com/news/local/capacity-crunch-prompts-districtwide-study-at-duluth-public-schools" target="_blank">already over capacity</a>. Lester Park Elementary has no classroom space left. Congdon Park is at 108%. Adding 455 units would make it worse.</p>
-        <p style="font-size:0.85rem;"><strong>Superintendent John Magas:</strong> <a href="mailto:john.magas@isd709.org">john.magas@isd709.org</a> | 218-336-8752</p>
+        <p style="font-size:0.85rem;"><strong>Superintendent John Magas:</strong> <a href=
+        </div>
       </div>
     </div>
-
-    <div class="share-bar">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="text-decoration:none;">Sign the Petition</a> <button onclick="copyLink('action', this)" title="Copy link">Share This Section</button>
-      <span class="copied-msg" id="copied-action">Copied!</span>
-    </div>
-
   </div>
 </section>
 
-<div class="gold-divider"></div>
-<footer>
-  <div class="container">
-    <div class="footer-gold"></div>
-    <p class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</p>
-    <p>A grassroots initiative to protect Lester Park Golf Course and demand a public referendum on Duluth's public lands.</p>
-    <p style="margin-top:0.5rem;">
-      <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> ·
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})">Sign Petition</a> ·
-      <a href="#action">Take Action</a> ·
-      <a href="#shop">Shop</a>
-    </p>
+</main>
 
-  </div>
-</footer>
 <script>
-function copySubLink(btn) {
-  const section = btn.closest('section');
-  const id = section ? section.id : '';
-  copyLink(id, btn);
+function copyLink(sectionId, btn) {
+  const url = window.location.origin + window.location.pathname + '#' + sectionId;
+  navigator.clipboard.writeText(url).then(function() {
+    const msg = document.getElementById('copied-' + sectionId);
+    if (msg) {
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    }
+  }).catch(function() {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const msg = document.getElementById('copied-' + sectionId);
+    if (msg) {
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    }
+  });
 }
 
-function copyLink(section, btn) {
-  const url = window.location.origin + window.location.pathname + '#' + section;
+function copySubLink(btn) {
+  let el = btn;
+  while (el && el.tagName !== 'SECTION') {
+    el = el.parentElement;
+  }
+  const sectionId = el ? el.id : '';
+  const url = window.location.origin + window.location.pathname + (sectionId ? '#' + sectionId : '');
   navigator.clipboard.writeText(url).then(function() {
     const orig = btn.textContent;
-    btn.textContent = '✅ Copied!';
+    btn.textContent = 'Copied!';
     setTimeout(function() { btn.textContent = orig; }, 2000);
   }).catch(function() {
-    // Fallback for older browsers
     const ta = document.createElement('textarea');
     ta.value = url;
     document.body.appendChild(ta);
@@ -1595,12 +1605,11 @@ function copyLink(section, btn) {
     document.execCommand('copy');
     document.body.removeChild(ta);
     const orig = btn.textContent;
-    btn.textContent = '✅ Copied!';
+    btn.textContent = 'Copied!';
     setTimeout(function() { btn.textContent = orig; }, 2000);
   });
 }
 </script>
-
 
 </body>
 </html>
