@@ -880,8 +880,30 @@ footer a { color: var(--gold-light); }
       <!-- Volunteer CTA -->
       <div style="margin-top:2rem;background:rgba(255,255,255,0.05);border:1px solid rgba(200,146,42,0.2);border-radius:4px;padding:2rem;">
         <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem;">We Need Volunteers</h3>
-        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:0.5rem;">Download extra copies and ask your <strong style="color:#fff;">family, friends, and neighbors</strong> to sign. Every signature counts. The more people who get involved, the closer we get to putting this decision where it belongs — in the hands of Duluth voters.</p>
-        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:1rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a></p>
+        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:1.25rem;">Download extra copies and ask your <strong style="color:#fff;">family, friends, and neighbors</strong> to sign. Every signature counts. The more people who get involved, the closer we get to putting this decision where it belongs — in the hands of Duluth voters.</p>
+        <form name="volunteer" method="POST" data-netlify="true" action="/thank-you" style="margin-top:1rem;">
+          <input type="hidden" name="form-name" value="volunteer">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">First Name *</label>
+              <input type="text" name="first-name" placeholder="Jane" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Last Name *</label>
+              <input type="text" name="last-name" placeholder="Smith" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Email *</label>
+            <input type="email" name="email" placeholder="jane@example.com" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Phone</label>
+            <input type="tel" name="phone" placeholder="(218) 555-1234" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Sign Up to Volunteer</button>
+        </form>
+        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a></p>
       </div>
     </div>
 
