@@ -847,7 +847,8 @@ footer a { color: var(--gold-light); }
         </svg>
       </div>
 
-      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:#fff;">Our Park Our Vote</strong> is a not-for-profit, community-driven initiative. Our goal: to collect enough Duluth voter signatures to force City Hall to put Lester's future to a public vote.</p>
+      <p style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:1rem;">Thank you.</p>
+      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.85;margin-bottom:1.25rem;">Your support means more than you know. <strong style="color:#fff;">Our Park Our Vote</strong> is a not-for-profit, community-driven initiative. Our goal: to collect enough Duluth voter signatures to force City Hall to put Lester's future to a public vote.</p>
 
       <div style="height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem 0;"></div>
 
@@ -856,6 +857,44 @@ footer a { color: var(--gold-light); }
         <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:1.25rem;">Download extra copies, print them, and get all your <strong style="color:#fff;">family and friends who are registered Duluth voters</strong> to sign. Mail completed petitions to the address on the form. Every signature counts.</p>
         <a href="petition.pdf" target="_blank" class="btn-primary" style="display:inline-block;padding:1rem 2.5rem;font-size:0.95rem;margin-bottom:1rem;">Download Petition (PDF)</a>
         <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Print &bull; Sign &bull; Mail</p>
+      </div>
+
+      <!-- Yard Sign Request -->
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(200,146,42,0.35);border-radius:4px;padding:2rem;margin-bottom:1.5rem;">
+        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:0.5rem;">Request a Yard Sign</h3>
+        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.92rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:1.25rem;">Show your neighbors where you stand. We'll deliver a free <strong style="color:#fff;">Our Park Our Vote</strong> yard sign to your door.</p>
+        <form name="yard-sign" method="POST" data-netlify="true" action="/thank-you" style="margin-top:1rem;">
+          <input type="hidden" name="form-name" value="yard-sign">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">First Name *</label>
+              <input type="text" name="first-name" placeholder="Jane" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Last Name *</label>
+              <input type="text" name="last-name" placeholder="Smith" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Street Address *</label>
+            <input type="text" name="address" placeholder="1234 Lester River Rd" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">City *</label>
+              <input type="text" name="city" value="Duluth" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Zip *</label>
+              <input type="text" name="zip" placeholder="55804" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Email *</label>
+            <input type="email" name="email" placeholder="jane@example.com" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Request My Yard Sign</button>
+        </form>
       </div>
 
       <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
