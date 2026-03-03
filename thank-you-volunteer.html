@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You for Volunteering — Our Park, Our Vote</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night-sky-deep: #060f1e;
+  --gold: #c8922a;
+  --gold-light: #e8b84a;
+  --forest-dark: #0f2a0f;
+  --star: #e8e4d8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background: var(--forest-dark);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  line-height: 1.75;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(6,15,30,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--gold);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: center;
+  height: 60px;
+}
+.nav-brand {
+  font-family: 'Righteous', 'Arial Black', sans-serif;
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.card {
+  max-width: 580px;
+  text-align: center;
+  margin-top: 60px;
+}
+.checkmark {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.message {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+.back-link {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+.back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-brand">Our Park Our Vote</a>
+</nav>
+<div class="card">
+  <div class="checkmark">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="var(--gold-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="4,13 9,18 20,7"/>
+    </svg>
+  </div>
+  <h1>Thank you for volunteering to volunteer.</h1>
+  <p class="message">We'll be in touch with the call-in number. Check your email for talking points and a copy of the petition.</p>
+  <a href="/" class="back-link">&larr; Back to ourparkourvote.org</a>
+</div>
+</body>
+</html>
