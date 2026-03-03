@@ -4,7 +4,7 @@ Hi Ikes,
 
 It was great to get face time with some of you last night. I wanted to follow up with an update on where things stand with the Lester Park effort.
 
-I've tacked. This is our land, and the city is planning to sell it without asking us. The petition would require voter approval for any Lester rezoning from P1 to anything else. I've updated the initiative website to reflect the shift.
+I've tacked and decided to turn this into a **citizen initiative petition** — centering on a simple idea: this is our land, and the city is planning to sell it without asking us. The petition would require voter approval for any Lester rezoning from P1 to anything else. I've updated the initiative website to reflect the shift.
 
 I did it for a few strategic reasons:
 
