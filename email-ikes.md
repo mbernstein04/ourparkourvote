@@ -24,7 +24,7 @@ Here's the whole thing: **get 5 people to sign a hard copy of the petition every
 
 Every Sunday at **5:55 PM**, we hop on a **5-minute** conference call. We go around: did you get your 5? If not, you give your excuse — "I was too busy" or "I wasn't in the mood" or "I was sick" are all legitimate excuses. We might even ask if we could bring you some soup. And not to get sappy, but we're envisioning whole families on the call. It's an easy way to teach your kids about democratic participation and volunteering. Then we hang up. Five minutes. Done.
 
-Oh, and for every Sunday call you show up to, you'll receive a **Baker's 5-Pack** of native plants — that I'm growing right here in my basement. Baker's 5-Packs will be distributed at a house party on April 5th. The first fifty people to get in on this thing will get priority for the Baker's 5-Packs. The others will get as many as there are left.
+Oh, and for every Sunday call you show up to, you'll receive a **"baker's" 5-Pack** — $50 worth of native plants — that I'm growing right here in my basement. "baker's" 5-Packs will be distributed at a house party on April 5th. The first fifty people to get in on this thing will get priority for the "baker's" 5-Packs. The others will get as many as there are left.
 
 The goal: **50 people** on the Get 5 call by April 5th. That's 50 people each getting 5 signatures a week.
 
