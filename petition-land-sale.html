@@ -249,6 +249,14 @@ a { color: var(--lake-blue); }
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem;
 }
+.card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.card-header h3 { margin-bottom: 0; }
+.supporter-avatars { display: flex; }
+.supporter-avatars img {
+  width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
+  border: 2px solid #fff; margin-left: -8px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.supporter-avatars img:first-child { margin-left: 0; }
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── CTA SECTION ── */
@@ -304,7 +312,6 @@ footer a { color: var(--gold-light); }
     <li><a href="petition.pdf" target="_blank" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petition</a></li>
     <li><a href="index.html#homegrown" onclick="document.querySelector('.nav-links').classList.remove('open')">This We Believe</a></li>
     <li><a href="index.html#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">Inside City Hall</a></li>
-    <li><a href="index.html#timeline" onclick="document.querySelector('.nav-links').classList.remove('open')">A Timeline</a></li>
     <li><a href="index.html#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Take Action</a></li>
     <li><a href="#volunteer" class="cta-nav" onclick="document.querySelector('\.nav-links').classList.remove('open')">Volunteer</a></li>
   </ul>
@@ -333,8 +340,17 @@ footer a { color: var(--gold-light); }
 
     <div class="info-grid">
       <div class="info-card">
-        <h3>Who We Are</h3>
-        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="index.html#our-supporters">Learn more about us&nbsp;&rarr;</a></p>
+        <div class="card-header">
+          <h3>Who We Are</h3>
+          <div class="supporter-avatars">
+            <img src="michael-bernstein.jpg" alt="Michael Bernstein">
+            <img src="laura-erickson.jpg" alt="Laura Erickson">
+            <img src="meghan-morrow.jpg" alt="Meghan Morrow">
+            <img src="thom-storm.jpg" alt="Thom Storm">
+            <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease">
+          </div>
+        </div>
+        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="index.html#our-supporters">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="info-card">
         <h3>What We're Doing</h3>
@@ -360,34 +376,6 @@ footer a { color: var(--gold-light); }
     <h2 class="section-title" style="text-align:center;">Volunteer</h2>
     <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">The easiest volunteer gig you'll ever have &mdash; with homegrown native plants as your reward.</p>
 
-    <div style="max-width:600px;margin:2.5rem auto 0;">
-      <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
-        <input type="hidden" name="form-name" value="volunteer-landing">
-        <div class="get5-form">
-          <div class="form-field">
-            <label>First Name *</label>
-            <input type="text" name="first-name" placeholder="Jane" required>
-          </div>
-          <div class="form-field">
-            <label>Last Name *</label>
-            <input type="text" name="last-name" placeholder="Smith" required>
-          </div>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Email *</label>
-          <input type="email" name="email" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(218) 555-1234">
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Sign Up</button>
-      </form>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">By signing up to volunteer you are also agreeing to receive occasional emails updating you about our campaign.</p>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a></p>
-    </div>
-
-    <p class="section-label" style="text-align:center;margin-top:2rem;">How Volunteering Works</p>
     <div class="sixpack-wrap">
           <svg viewBox="80 100 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:4px;">
             <defs>
@@ -716,6 +704,35 @@ footer a { color: var(--gold-light); }
             </g>
           </svg>
       </div>
+
+    <div style="max-width:600px;margin:2.5rem auto 0;">
+      <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
+        <input type="hidden" name="form-name" value="volunteer-landing">
+        <div class="get5-form">
+          <div class="form-field">
+            <label>First Name *</label>
+            <input type="text" name="first-name" placeholder="Jane" required>
+          </div>
+          <div class="form-field">
+            <label>Last Name *</label>
+            <input type="text" name="last-name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-field" style="margin-bottom:0.75rem;">
+          <label>Email *</label>
+          <input type="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-field" style="margin-bottom:0.75rem;">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="(218) 555-1234">
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Sign Up</button>
+      </form>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">By signing up to volunteer you are also agreeing to receive occasional emails updating you about our campaign.</p>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? <a href="contact.html">Contact us</a>.</p>
+    </div>
+
+    <p class="section-label" style="text-align:center;margin-top:2rem;">How Volunteering Works</p>
 
     <div class="steps-grid">
       <div class="step">
