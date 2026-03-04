@@ -281,6 +281,33 @@ a { color: var(--lake-blue); }
 .housing-card a { color: var(--gold-light); }
 .housing-card a:hover { color: var(--gold); }
 
+.track-record {
+  margin-top: 3.5rem; padding: 2.5rem;
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid var(--gold); border-radius: 2px;
+}
+.track-record h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;
+}
+.track-record p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 1rem; }
+.track-record p:last-child { margin-bottom: 0; }
+.track-record strong { color: #fff; }
+.track-record ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.track-record li {
+  font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8;
+  padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-left: 1.5rem; position: relative;
+}
+.track-record li::before {
+  content: '\2717'; color: var(--gold); position: absolute; left: 0; font-weight: 700;
+}
+.track-record .highlight-stat {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; font-weight: 700; color: var(--gold-light);
+  display: block; margin-bottom: 0.25rem;
+}
+
 /* ── CTA SECTION ── */
 .sec-cta { background: var(--night-sky-deep); color: #fff; text-align: center; }
 .sec-cta .section-title { color: #fff; }
@@ -366,14 +393,14 @@ footer a { color: var(--gold-light); }
         <div class="card-header">
           <h3>Who We Are</h3>
         </div>
-        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="full-site.html#our-supporters">Learn more&nbsp;&rarr;</a></p>
+        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public.</p>
         <div class="supporter-avatars">
           <img src="michael-bernstein.jpg" alt="Michael Bernstein">
           <img src="laura-erickson.jpg" alt="Laura Erickson">
           <img src="meghan-morrow.jpg" alt="Meghan Morrow">
           <img src="thom-storm.jpg" alt="Thom Storm">
           <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease">
-          <span style="font-size:1.4rem;color:var(--text-mid);font-weight:700;align-self:flex-end;">. . .</span>
+
         </div>
       </div>
       <div class="info-card">
@@ -386,7 +413,7 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="info-card">
         <h3>How to Help</h3>
-        <p>Sign up to collect petition signatures in your neighborhood and earn a free six-pack of homegrown native plants for every weekly check-in. And get homegrown native plants as your reward (while supplies last). <a href="#volunteer">Learn more &amp; sign up&nbsp;&rarr;</a></p>
+        <p>Sign up to collect petition signatures in your neighborhood and earn a free six-pack of homegrown native plants for every weekly check-in. And get homegrown native plants as your reward (while supplies last). <a href="#volunteer">Join us&nbsp;&rarr;</a></p>
       </div>
     </div>
   </div>
@@ -783,21 +810,35 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="step">
         <div class="step-icon">
-          <!-- Modern smartphone call icon -->
+          <!-- Old-timey rotary telephone icon -->
           <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <!-- Phone body -->
-            <rect x="28" y="12" width="34" height="66" rx="6" fill="none" stroke="#c8922a" stroke-width="2.5"/>
-            <!-- Screen -->
-            <rect x="32" y="22" width="26" height="42" rx="2" fill="#2d6e2d" opacity="0.18"/>
-            <!-- Speaker slit -->
-            <line x1="40" y1="17" x2="50" y2="17" stroke="#c8922a" stroke-width="1.5" stroke-linecap="round"/>
-            <!-- Home button -->
-            <circle cx="45" cy="72" r="3" fill="none" stroke="#c8922a" stroke-width="1.5"/>
-            <!-- Call icon on screen -->
-            <path d="M37,38 Q37,34 40,33 L42,33 Q43,33 43,35 L43,38 Q43,39 42,39 L41,39 Q40,39 40,41 L40,45 Q40,47 41,47 L42,47 Q43,47 43,49 L43,52 Q43,53 42,53 L40,53 Q37,52 37,49Z" fill="#c8922a" transform="scale(0.9) translate(5,2)"/>
-            <!-- Signal waves -->
-            <path d="M52,36 Q56,40 52,44" fill="none" stroke="#e8b84a" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M56,33 Q62,40 56,47" fill="none" stroke="#e8b84a" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <!-- Base -->
+            <rect x="15" y="58" width="60" height="20" rx="4" fill="none" stroke="#c8922a" stroke-width="2.5"/>
+            <!-- Rotary dial -->
+            <circle cx="45" cy="68" r="10" fill="none" stroke="#c8922a" stroke-width="2"/>
+            <circle cx="45" cy="68" r="4" fill="none" stroke="#c8922a" stroke-width="1.5"/>
+            <!-- Dial holes -->
+            <circle cx="45" cy="60" r="1.3" fill="#c8922a"/>
+            <circle cx="50.5" cy="61.2" r="1.3" fill="#c8922a"/>
+            <circle cx="53.8" cy="65" r="1.3" fill="#c8922a"/>
+            <circle cx="53.8" cy="71" r="1.3" fill="#c8922a"/>
+            <circle cx="50.5" cy="74.8" r="1.3" fill="#c8922a"/>
+            <circle cx="45" cy="76" r="1.3" fill="#c8922a"/>
+            <circle cx="39.5" cy="74.8" r="1.3" fill="#c8922a"/>
+            <circle cx="36.2" cy="71" r="1.3" fill="#c8922a"/>
+            <circle cx="36.2" cy="65" r="1.3" fill="#c8922a"/>
+            <circle cx="39.5" cy="61.2" r="1.3" fill="#c8922a"/>
+            <!-- Handset cradle arms -->
+            <path d="M18,58 L18,50 Q18,46 22,44" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M72,58 L72,50 Q72,46 68,44" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Handset -->
+            <path d="M22,44 Q22,30 30,22 L33,22 Q35,22 35,25 L35,32 Q35,34 33,34 L30,34 Q28,34 28,37 L28,40 Q28,43 30,43" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M68,44 Q68,30 60,22 L57,22 Q55,22 55,25 L55,32 Q55,34 57,34 L60,34 Q62,34 62,37 L62,40 Q62,43 60,43" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Handset top bar -->
+            <path d="M33,22 Q45,16 57,22" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Sound waves from earpiece -->
+            <path d="M30,18 Q26,15 30,12" fill="none" stroke="#e8b84a" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M27,19 Q21,14 27,9" fill="none" stroke="#e8b84a" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
           </svg>
         </div>
         <div class="step-number">2</div>
@@ -806,7 +847,7 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="step">
         <div class="step-icon">
-          <!-- Native plants in dark six-pack tray -->
+          <!-- Six native plants in dark six-pack tray -->
           <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
             <!-- Dark tray -->
             <rect x="10" y="52" width="70" height="24" rx="2" fill="#1a1a1a"/>
@@ -815,45 +856,56 @@ footer a { color: var(--gold-light); }
             <line x1="33" y1="54" x2="33" y2="74" stroke="#2a2a2a" stroke-width="1.5"/>
             <line x1="57" y1="54" x2="57" y2="74" stroke="#2a2a2a" stroke-width="1.5"/>
             <line x1="12" y1="63" x2="78" y2="63" stroke="#2a2a2a" stroke-width="1.5"/>
-            <!-- Soil circles in cells -->
+            <!-- Soil circles in all 6 cells -->
             <ellipse cx="22" cy="57" rx="9" ry="3" fill="#3a2818"/>
             <ellipse cx="45" cy="57" rx="9" ry="3" fill="#3a2818"/>
             <ellipse cx="68" cy="57" rx="9" ry="3" fill="#3a2818"/>
             <ellipse cx="22" cy="68" rx="9" ry="3" fill="#3a2818"/>
             <ellipse cx="45" cy="68" rx="9" ry="3" fill="#3a2818"/>
             <ellipse cx="68" cy="68" rx="9" ry="3" fill="#3a2818"/>
-            <!-- Small plants sprouting -->
+            <!-- Top row: 3 plants -->
             <g fill="#2d6e2d">
-              <ellipse cx="20" cy="48" rx="3" ry="6" transform="rotate(-10,20,48)"/>
-              <ellipse cx="25" cy="49" rx="3" ry="5" transform="rotate(12,25,49)"/>
-              <line x1="22" y1="57" x2="22" y2="46" stroke="#2a7a24" stroke-width="1.5"/>
+              <ellipse cx="20" cy="47" rx="3" ry="6" transform="rotate(-10,20,47)"/>
+              <ellipse cx="25" cy="48" rx="3" ry="5" transform="rotate(12,25,48)"/>
+              <line x1="22" y1="57" x2="22" y2="45" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="20" cy="41" r="1.5" fill="#e8b84a" opacity="0.7"/>
             </g>
             <g fill="#2d6e2d">
-              <ellipse cx="43" cy="46" rx="3" ry="7" transform="rotate(-8,43,46)"/>
-              <ellipse cx="48" cy="47" rx="3" ry="6" transform="rotate(10,48,47)"/>
-              <line x1="45" y1="57" x2="45" y2="44" stroke="#2a7a24" stroke-width="1.5"/>
+              <ellipse cx="43" cy="45" rx="3" ry="7" transform="rotate(-8,43,45)"/>
+              <ellipse cx="48" cy="46" rx="3" ry="6" transform="rotate(10,48,46)"/>
+              <line x1="45" y1="57" x2="45" y2="43" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="48" cy="40" r="1.5" fill="#f5d878" opacity="0.7"/>
             </g>
             <g fill="#2d6e2d">
-              <ellipse cx="66" cy="47" rx="3" ry="6" transform="rotate(-12,66,47)"/>
-              <ellipse cx="71" cy="48" rx="3" ry="5" transform="rotate(8,71,48)"/>
-              <line x1="68" y1="57" x2="68" y2="45" stroke="#2a7a24" stroke-width="1.5"/>
+              <ellipse cx="66" cy="46" rx="3" ry="6" transform="rotate(-12,66,46)"/>
+              <ellipse cx="71" cy="47" rx="3" ry="5" transform="rotate(8,71,47)"/>
+              <line x1="68" y1="57" x2="68" y2="44" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="66" cy="41" r="1.5" fill="#e8b84a" opacity="0.6"/>
             </g>
-            <!-- Bottom row tiny sprouts -->
-            <line x1="22" y1="68" x2="22" y2="63" stroke="#2a7a24" stroke-width="1.2"/>
-            <ellipse cx="21" cy="62" rx="2" ry="3" fill="#36a030" transform="rotate(-10,21,62)"/>
-            <line x1="45" y1="68" x2="45" y2="62" stroke="#2a7a24" stroke-width="1.2"/>
-            <ellipse cx="46" cy="61" rx="2" ry="3.5" fill="#36a030" transform="rotate(8,46,61)"/>
-            <line x1="68" y1="68" x2="68" y2="63" stroke="#2a7a24" stroke-width="1.2"/>
-            <ellipse cx="67" cy="62" rx="2" ry="3" fill="#36a030" transform="rotate(-6,67,62)"/>
-            <!-- Small flowers on top row -->
-            <circle cx="20" cy="42" r="1.5" fill="#e8b84a" opacity="0.7"/>
-            <circle cx="48" cy="41" r="1.5" fill="#f5d878" opacity="0.7"/>
-            <circle cx="66" cy="42" r="1.5" fill="#e8b84a" opacity="0.6"/>
+            <!-- Bottom row: 3 plants (same size as top row) -->
+            <g fill="#2d6e2d">
+              <ellipse cx="20" cy="58" rx="3" ry="5.5" transform="rotate(-8,20,58)"/>
+              <ellipse cx="25" cy="59" rx="3" ry="5" transform="rotate(10,25,59)"/>
+              <line x1="22" y1="68" x2="22" y2="56" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="20" cy="53" r="1.5" fill="#f5d878" opacity="0.7"/>
+            </g>
+            <g fill="#2d6e2d">
+              <ellipse cx="43" cy="57" rx="3" ry="6" transform="rotate(-10,43,57)"/>
+              <ellipse cx="48" cy="58" rx="3" ry="5.5" transform="rotate(8,48,58)"/>
+              <line x1="45" y1="68" x2="45" y2="55" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="48" cy="52" r="1.5" fill="#e8b84a" opacity="0.7"/>
+            </g>
+            <g fill="#2d6e2d">
+              <ellipse cx="66" cy="58" rx="3" ry="5.5" transform="rotate(-12,66,58)"/>
+              <ellipse cx="70" cy="59" rx="3" ry="5" transform="rotate(6,70,59)"/>
+              <line x1="68" y1="68" x2="68" y2="56" stroke="#2a7a24" stroke-width="1.5"/>
+              <circle cx="66" cy="53" r="1.5" fill="#f5d878" opacity="0.6"/>
+            </g>
           </svg>
         </div>
         <div class="step-number">3</div>
         <h3>Earn Native Plants</h3>
-        <p>For every Sunday call you join, receive a complimentary six-pack of native plants &mdash; even if you didn't get any signatures that week.</p>
+        <p>For every Sunday call you join, receive a complimentary six-pack of homegrown native plants &mdash; even if you didn't get any signatures that week.</p>
       </div>
     </div>
 
@@ -868,7 +920,7 @@ footer a { color: var(--gold-light); }
   <div class="container">
     <p class="section-label" style="text-align:center;color:var(--gold-light);">The Backstory</p>
     <h2 class="section-title" style="text-align:center;">How Did We<br><span>Get Here?</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Mayor wants to bring golf back to Lester Park. The problem? The city can't afford it. But a private developer from Florida can &mdash; and the deal isn't what it sounds like.</p>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Mayor wants to bring golf back to Lester Park. The problem? The city can't afford it. But a private developer from Florida can.</p>
 
     <div class="backstory-grid">
       <div class="backstory-card">
@@ -891,13 +943,13 @@ footer a { color: var(--gold-light); }
 <!-- ══════════ HOUSING? ══════════ -->
 <section class="sec-housing-q">
   <div class="container">
-    <p class="section-label" style="text-align:center;color:var(--gold-light);">We Support Affordable or Workforce Housing</p>
+    <p class="section-label" style="text-align:center;color:var(--gold-light);">We Support Affordable Housing</p>
     <h2 class="section-title" style="text-align:center;"><span>37.5 Acres of Lester Is Already</span><br>Zoned for Housing</h2>
     <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The mayor says we need to sell parkland for housing. But 37.5 acres of Lester is <strong style="color:var(--gold-light);">already zoned mixed use</strong>. We don't need to give away more park.</p>
 
     <div class="housing-grid">
       <div class="housing-card">
-        <h3>&ldquo;We Need Housing&rdquo;</h3>
+        <h3>There Are Better Places to Build Housing</h3>
         <p>The mayor claims selling Lester is necessary to address Duluth's housing shortage. But the city's own studies show thousands of units can be built on already-disturbed land downtown &mdash; without touching a single acre of parkland. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="housing-card">
@@ -906,13 +958,29 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="housing-card">
         <h3>&ldquo;It Will Be Affordable&rdquo;</h3>
-        <p>Past developer proposals have included as few as 68 &ldquo;affordable&rdquo; units out of 455 total &mdash; just 15%. History shows luxury development on public land rarely delivers on affordability promises. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
+        <p>He&rsquo;s also promising 68 units of &ldquo;affordable or workforce&rdquo; housing. We believe skepticism is warranted. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="housing-card">
         <h3>We Aren&rsquo;t NIMBYs</h3>
         <p>We support smart, affordable housing &mdash; on private land, vacant lots, and underused downtown buildings. What we oppose is handing irreplaceable public green space to private developers. That&rsquo;s not NIMBYism. That&rsquo;s common sense. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
       </div>
     </div>
+
+    <!-- Track Record -->
+    <div class="track-record">
+      <h3>The Track Record Speaks for Itself</h3>
+      <p>When developers promise affordable housing in Duluth, how often do they deliver? Over the past 25 years, the record is sobering:</p>
+      <p><span class="highlight-stat">~18 units</span>That&rsquo;s roughly how many affordable housing units private developers have actually built in Duluth in a quarter century. The Firehouse Apartments on Superior Street stand as essentially the only completed project.</p>
+      <p><strong>Meanwhile, the promises keep coming &mdash; and falling short:</strong></p>
+      <ul>
+        <li><strong>&ldquo;Workforce&rdquo; housing that isn&rsquo;t housing.</strong> Developers label units as &ldquo;workforce housing&rdquo; to sound affordable, but these often turn out to be short-term rentals &mdash; 3-to-12-month stays that function more like corporate lodging than homes for Duluth families.</li>
+        <li><strong>Affordability that expires.</strong> When developers do include affordable units, the affordability requirements often have sunset clauses. After a few years, rents climb to market rate and the &ldquo;affordable&rdquo; housing quietly disappears.</li>
+        <li><strong>Promised units that never materialize.</strong> Developers routinely pledge affordable units to win public support and approvals, then scale back or eliminate them during construction, citing rising costs or changing market conditions.</li>
+        <li><strong>Public land given away, public benefit withheld.</strong> Duluth has seen developers receive public land, tax breaks, and other incentives in exchange for affordable housing commitments &mdash; only to underdeliver or walk away entirely.</li>
+      </ul>
+      <p>Now we&rsquo;re being asked to trust that a private developer from Florida will deliver 68 units of &ldquo;affordable or workforce&rdquo; housing on public parkland. <strong>History says otherwise.</strong></p>
+    </div>
+
   </div>
 </section>
 
