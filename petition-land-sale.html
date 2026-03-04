@@ -214,11 +214,11 @@ a { color: var(--lake-blue); }
 .form-field { display: flex; flex-direction: column; gap: 0.3rem; }
 .form-field label {
   font-family: 'Source Sans 3', sans-serif; font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6);
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid);
 }
 .form-field input {
-  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 2px; color: #fff; padding: 0.6rem 0.8rem;
+  background: #fff; border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 2px; color: var(--text-dark); padding: 0.6rem 0.8rem;
   font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; outline: none;
 }
 .form-field input:focus { border-color: var(--gold); }
@@ -290,7 +290,7 @@ footer a { color: var(--gold-light); }
     <li><a href="index.html#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">Inside City Hall</a></li>
     <li><a href="index.html#timeline" onclick="document.querySelector('.nav-links').classList.remove('open')">A Timeline</a></li>
     <li><a href="index.html#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Take Action</a></li>
-    <li><a href="#get5" class="cta-nav" onclick="document.querySelector('.nav-links').classList.remove('open')">Get 5</a></li>
+    <li><a href="#volunteer" class="cta-nav" onclick="document.querySelector('\.nav-links').classList.remove('open')">Volunteer</a></li>
   </ul>
 </nav>
 
@@ -301,7 +301,7 @@ footer a { color: var(--gold-light); }
     <p class="subheading">Sign the Petition to Require Voter Approval</p>
     <div class="hero-cta">
       <a href="petition.pdf" target="_blank" class="btn-primary">Download the Petition</a>
-      <a href="#get5" class="btn-outline">Volunteer &amp; Earn Native Plants</a>
+      <a href="#volunteer" class="btn-outline">Volunteer &amp; Earn Native Plants</a>
     </div>
   </div>
 </div>
@@ -339,42 +339,13 @@ footer a { color: var(--gold-light); }
 <div class="gold-divider"></div>
 
 <!-- ══════════ HOW IT WORKS ══════════ -->
-<section class="sec-how">
+<section id="volunteer" class="sec-how">
   <div class="container">
     <p class="section-label" style="text-align:center;">How Volunteering Works</p>
     <h2 class="section-title" style="text-align:center;">Earn Native Plants<br><span>by Volunteering</span></h2>
     <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">The easiest volunteer gig you'll ever have &mdash; with native plants as your reward.</p>
 
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Get 5 Signatures</h3>
-        <p>Download the petition, print it, and get <strong>5 people</strong> to sign a hard copy every week. Friends. Neighbors. People you already talk to.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Call in on Sunday</h3>
-        <p>Every Sunday at <strong>5:55</strong> PM, hop on a <strong>5-minute</strong> conference call. Report your haul. That's it &mdash; five minutes, done.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Earn Native Plants</h3>
-        <p>For every Sunday call you join, receive a complimentary six-pack of native plants &mdash; even if you didn't get any signatures that week.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="gold-divider"></div>
-
-<!-- ══════════ GET 5 SIGNUP ══════════ -->
-<section id="get5" class="sec-get5">
-  <div class="container">
-    <div class="get5-card">
-      <p class="get5-title">Get 5.</p>
-      <p class="get5-desc">Get 5 people to sign a hard copy of the petition every week. Friends. Neighbors. Every Sunday at 5:55 hop on a 5 minute conference call to report your haul. Receive a complimentary six pack of native plants for every conference call you come on, even if you didn't get any signatures.</p>
-
-      <div class="sixpack-wrap">
+    <div class="sixpack-wrap">
           <svg viewBox="80 100 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:4px;">
             <defs>
               <linearGradient id="sixpackTrayFrontG" x1="0" y1="0" x2="0" y2="1">
@@ -703,6 +674,26 @@ footer a { color: var(--gold-light); }
           </svg>
       </div>
 
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Get 5 Signatures</h3>
+        <p>Download the petition, print it, and get <strong>5 people</strong> to sign a hard copy every week. Friends. Neighbors. People you already talk to.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Call in on Sunday</h3>
+        <p>Every Sunday at <strong>5:55</strong> PM, hop on a <strong>5-minute</strong> conference call. Report your haul. That's it &mdash; five minutes, done.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Earn Native Plants</h3>
+        <p>For every Sunday call you join, receive a complimentary six-pack of native plants &mdash; even if you didn't get any signatures that week.</p>
+      </div>
+    </div>
+
+
+    <div style="max-width:600px;margin:2.5rem auto 0;">
       <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
         <input type="hidden" name="form-name" value="volunteer-landing">
         <div class="get5-form">
@@ -725,7 +716,7 @@ footer a { color: var(--gold-light); }
         </div>
         <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">I Will Get 5</button>
       </form>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a></p>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a></p>
     </div>
   </div>
 </section>
