@@ -123,7 +123,47 @@ nav {
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
 .hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
 
-/* ── HERO (removed) ── */
+/* ── HERO ── */
+.hero {
+  background: var(--forest-dark);
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 120%, rgba(200,146,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fade-up 0.8s ease-out;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.12;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero .subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
 .btn-primary {
   background: var(--gold);
   color: #fff;
@@ -810,6 +850,7 @@ footer a { color: var(--gold-light); }
   #tim-meyer-desktop { display: none !important; }
   #tim-meyer-mobile { display: block !important; }
   section { padding: 3rem 0; }
+  .hero { padding: 4rem 1.5rem 3.5rem; }
   #petition { padding-top: 4.5rem; }
 
   .container, .container-narrow { padding: 0 1.25rem; }
@@ -853,9 +894,14 @@ footer a { color: var(--gold-light); }
   <a href="#action" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Take Action</a>
 </div>
 
-<!-- ══════════════════════════════════════
-     PETITION
-══════════════════════════════════════ -->
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Lester Is <em>Our</em> Land.<br>City Hall Wants to Sell It<br>Without Asking Us.</h1>
+    <p class="subheading">Sign the Petition to Require Voter Approval</p>
+  </div>
+</div>
+
 <!-- ══════════════════════════════════════
      PETITION
 ══════════════════════════════════════ -->
