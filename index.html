@@ -281,6 +281,33 @@ a { color: var(--lake-blue); }
 .housing-card a { color: var(--gold-light); }
 .housing-card a:hover { color: var(--gold); }
 
+.track-record {
+  margin-top: 3.5rem; padding: 2.5rem;
+  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid var(--gold); border-radius: 2px;
+}
+.track-record h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;
+}
+.track-record p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 1rem; }
+.track-record p:last-child { margin-bottom: 0; }
+.track-record strong { color: #fff; }
+.track-record ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.track-record li {
+  font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8;
+  padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-left: 1.5rem; position: relative;
+}
+.track-record li::before {
+  content: '\2717'; color: var(--gold); position: absolute; left: 0; font-weight: 700;
+}
+.track-record .highlight-stat {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; font-weight: 700; color: var(--gold-light);
+  display: block; margin-bottom: 0.25rem;
+}
+
 /* ── CTA SECTION ── */
 .sec-cta { background: var(--night-sky-deep); color: #fff; text-align: center; }
 .sec-cta .section-title { color: #fff; }
@@ -938,6 +965,22 @@ footer a { color: var(--gold-light); }
         <p>We support smart, affordable housing &mdash; on private land, vacant lots, and underused downtown buildings. What we oppose is handing irreplaceable public green space to private developers. That&rsquo;s not NIMBYism. That&rsquo;s common sense. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
       </div>
     </div>
+
+    <!-- Track Record -->
+    <div class="track-record">
+      <h3>The Track Record Speaks for Itself</h3>
+      <p>When developers promise affordable housing in Duluth, how often do they deliver? Over the past 25 years, the record is sobering:</p>
+      <p><span class="highlight-stat">~18 units</span>That&rsquo;s roughly how many affordable housing units private developers have actually built in Duluth in a quarter century. The Firehouse Apartments on Superior Street stand as essentially the only completed project.</p>
+      <p><strong>Meanwhile, the promises keep coming &mdash; and falling short:</strong></p>
+      <ul>
+        <li><strong>&ldquo;Workforce&rdquo; housing that isn&rsquo;t housing.</strong> Developers label units as &ldquo;workforce housing&rdquo; to sound affordable, but these often turn out to be short-term rentals &mdash; 3-to-12-month stays that function more like corporate lodging than homes for Duluth families.</li>
+        <li><strong>Affordability that expires.</strong> When developers do include affordable units, the affordability requirements often have sunset clauses. After a few years, rents climb to market rate and the &ldquo;affordable&rdquo; housing quietly disappears.</li>
+        <li><strong>Promised units that never materialize.</strong> Developers routinely pledge affordable units to win public support and approvals, then scale back or eliminate them during construction, citing rising costs or changing market conditions.</li>
+        <li><strong>Public land given away, public benefit withheld.</strong> Duluth has seen developers receive public land, tax breaks, and other incentives in exchange for affordable housing commitments &mdash; only to underdeliver or walk away entirely.</li>
+      </ul>
+      <p>Now we&rsquo;re being asked to trust that a private developer from Florida will deliver 68 units of &ldquo;affordable or workforce&rdquo; housing on public parkland. <strong>History says otherwise.</strong></p>
+    </div>
+
   </div>
 </section>
 
