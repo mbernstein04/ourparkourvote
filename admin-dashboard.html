@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Our Park, Our Vote</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night-sky-deep: #060f1e;
+  --gold: #c8922a;
+  --gold-light: #e8b84a;
+  --cream: #faf4e8;
+  --cream-alt: #f0ebe0;
+  --text-dark: #1a1a2e;
+  --forest-dark: #0f2a0f;
+  --alert-red: #c44b3f;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--text-dark);
+  background: var(--cream);
+  min-height: 100vh;
+}
+header {
+  background: var(--night-sky-deep);
+  border-bottom: 2px solid var(--gold);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+header h1 {
+  font-family: 'Righteous', sans-serif;
+  color: var(--gold-light);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+header .actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header a, header button {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--gold-light);
+  text-decoration: none;
+  background: none;
+  border: 1px solid var(--gold);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+header a:hover, header button:hover {
+  background: rgba(200,146,42,0.15);
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  background: var(--forest-dark);
+  color: var(--gold-light);
+  padding: 1.25rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-card .number {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2rem;
+  display: block;
+}
+.stat-card .label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+h2 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold);
+}
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+}
+th {
+  background: var(--forest-dark);
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e0dbd0;
+}
+tr:nth-child(even) { background: var(--cream-alt); }
+tr:hover { background: #e8e0cc; }
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-family: 'Source Sans 3', sans-serif;
+  color: #888;
+}
+.error-msg {
+  text-align: center;
+  padding: 2rem;
+  color: var(--alert-red);
+  font-family: 'Source Sans 3', sans-serif;
+}
+.export-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.export-btn:hover { background: #b07e20; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <div class="actions">
+      <a href="/">View Site</a>
+      <button id="logoutBtn">Log Out</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat-card">
+        <span class="number" id="totalCount">—</span>
+        <span class="label">Total Volunteers</span>
+      </div>
+      <div class="stat-card">
+        <span class="number" id="weekCount">—</span>
+        <span class="label">This Week</span>
+      </div>
+      <div class="stat-card">
+        <span class="number" id="todayCount">—</span>
+        <span class="label">Today</span>
+      </div>
+    </div>
+
+    <h2>Volunteer Signups</h2>
+    <button class="export-btn" id="exportBtn" style="display:none;">Export CSV</button>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Signed Up</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="5" class="loading">Loading submissions...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let allSubmissions = [];
+
+    async function loadSubmissions() {
+      try {
+        const res = await fetch('/.netlify/functions/get-submissions');
+        if (res.status === 401) {
+          window.location.href = '/admin.html';
+          return;
+        }
+        if (!res.ok) throw new Error('Failed to load');
+
+        const data = await res.json();
+        allSubmissions = data.submissions;
+        renderTable(allSubmissions);
+        renderStats(allSubmissions);
+        document.getElementById('exportBtn').style.display = 'inline-block';
+      } catch {
+        document.getElementById('tableBody').innerHTML =
+          '<tr><td colspan="5" class="error-msg">Failed to load submissions. Please try again.</td></tr>';
+      }
+    }
+
+    function renderStats(subs) {
+      const now = new Date();
+      const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const startOfWeek = new Date(startOfDay);
+      startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay());
+
+      const today = subs.filter(s => new Date(s.created_at) >= startOfDay).length;
+      const week = subs.filter(s => new Date(s.created_at) >= startOfWeek).length;
+
+      document.getElementById('totalCount').textContent = subs.length;
+      document.getElementById('weekCount').textContent = week;
+      document.getElementById('todayCount').textContent = today;
+    }
+
+    function renderTable(subs) {
+      const tbody = document.getElementById('tableBody');
+      if (subs.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="loading">No submissions yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = subs.map((s, i) => {
+        const date = new Date(s.created_at).toLocaleDateString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric'
+        });
+        return `<tr>
+          <td>${i + 1}</td>
+          <td>${escapeHtml(s.first_name)} ${escapeHtml(s.last_name)}</td>
+          <td><a href="mailto:${escapeHtml(s.email)}">${escapeHtml(s.email)}</a></td>
+          <td>${escapeHtml(s.phone) || '—'}</td>
+          <td>${date}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str || '';
+      return div.innerHTML;
+    }
+
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      const header = 'First Name,Last Name,Email,Phone,Signed Up\n';
+      const rows = allSubmissions.map(s => {
+        const date = new Date(s.created_at).toISOString().split('T')[0];
+        return [s.first_name, s.last_name, s.email, s.phone, date]
+          .map(v => `"${(v || '').replace(/"/g, '""')}"`)
+          .join(',');
+      }).join('\n');
+
+      const blob = new Blob([header + rows], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'volunteers.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      document.cookie = 'admin_token=; Path=/; Max-Age=0';
+      window.location.href = '/admin.html';
+    });
+
+    loadSubmissions();
+  </script>
+</body>
+</html>
