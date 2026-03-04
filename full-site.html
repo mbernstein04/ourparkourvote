@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Park, Our Vote — Citizen Petition for Lester's Future</title>
+
+<!-- SEO -->
+<meta name="description" content="Our Park Our Vote is a not-for-profit, community-driven initiative to require voter approval before Lester can be rezoned from parkland. Download the petition, sign it, and mail it in.">
+<meta name="keywords" content="Lester Park Golf Course, Duluth Minnesota, citizen petition, Duluth parks, ourparkourvote, public parkland, citizen initiative, Duluth city council, 267 acres">
+<meta name="author" content="Our Park, Our Vote">
+<link rel="canonical" href="https://ourparkourvote.org/">
+
+<!-- Open Graph (Facebook, Nextdoor, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ourparkourvote.org/">
+<meta property="og:title" content="Our Park, Our Vote — Citizen Petition for Lester's Future">
+<meta property="og:description" content="Our Park Our Vote is a not-for-profit, community-driven initiative. Download the petition, print it, sign it, and mail it in. Help us collect enough Duluth voter signatures to force City Hall to put Lester's future to a public vote.">
+<meta property="og:image" content="https://ourparkourvote.org/og-image.jpg">
+<meta property="og:site_name" content="Our Park, Our Vote">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://ourparkourvote.org/">
+<meta name="twitter:title" content="Our Park, Our Vote — Citizen Petition for Lester's Future">
+<meta name="twitter:description" content="Duluth politicians want to sell 267.5 acres of public parkland to private developers. We want the people to decide.">
+<meta name="twitter:image" content="https://ourparkourvote.org/og-image.jpg">
+
+<!-- Local SEO -->
+<meta name="geo.region" content="US-MN">
+<meta name="geo.placename" content="Duluth, Minnesota">
+
+<!-- Indexing -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --night-sky-deep: #060f1e;
+  --night-sky-mid: #0e1f3a;
+  --night-sky-light: #162a50;
+  --day-sky-top: #4a87c8;
+  --day-sky-mid: #7fb8e8;
+  --day-sky-bottom: #c8dff5;
+  --lake-night: #1a3356;
+  --lake-day: #4a8fc4;
+  --tree-night-dark: #0a1f0a;
+  --tree-night-mid: #122612;
+  --tree-day-dark: #1a4a1a;
+  --tree-day-mid: #2d6e2d;
+  --tree-day-light: #3d8c3d;
+  --hill-night: #0d2a0d;
+  --hill-day: #2d7a2d;
+  --gold: #c8922a;
+  --gold-light: #e8b84a;
+  --gold-pale: #f5d878;
+  --moon: #f2e4a8;
+  --star: #e8e4d8;
+  --cream: #faf4e8;
+  --cream-alt: #f0ebe0;
+  --text-dark: #1a1a2e;
+  --text-mid: #2d3a50;
+  --forest-dark: #0f2a0f;
+  --forest-mid: #1e4a1e;
+  --forest-light: #2d6e2d;
+  --lake-blue: #3a6b8a;
+  --alert-red: #c44b3f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  color: var(--text-dark);
+  background: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.75;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(6,15,30,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--gold);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-brand {
+  font-family: 'Righteous', 'Arial Black', sans-serif;
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.nav-links { display: none; gap: 1.5rem; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--star);
+  text-decoration: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-light); }
+.nav-links a.cta-nav {
+  background: var(--gold);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  font-weight: 800;
+}
+.nav-links a.cta-nav:hover { background: var(--gold-light); }
+
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--forest-dark);
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 120%, rgba(200,146,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fade-up 0.8s ease-out;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.12;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero .subheading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.btn-primary {
+  background: var(--gold);
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border: none; border-radius: 2px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem; font-weight: 800;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 20px rgba(200,146,42,0.5);
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 2px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem; font-weight: 800;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { border-color: var(--gold-light); background: rgba(200,184,74,0.15); }
+
+
+@keyframes fade-up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── DIVIDERS ── */
+#tim-meyer-mobile { display: none; }
+
+.gold-divider {
+  height: 6px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+}
+
+/* ── ALERT BAR ── */
+.alert-bar {
+  background: var(--alert-red);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.alert-bar a { color: var(--gold-pale); text-decoration: underline; }
+
+/* ── SECTIONS ── */
+section { padding: 5rem 0; scroll-margin-top: 70px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.container-narrow { max-width: 850px; margin: 0 auto; padding: 0 2rem; }
+
+.section-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem; font-weight: 800;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+.section-title span { color: var(--gold); }
+.lead-text {
+  font-size: 1.1rem; line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+p { margin-bottom: 1rem; font-size: 1rem; }
+a { color: var(--lake-blue); }
+
+/* ── PETITION ── */
+.sec-petition {
+  background: var(--forest-dark);
+  color: #fff;
+  padding-top: 1.5rem;
+}
+.sec-petition .section-title { color: #fff; }
+.sec-petition .lead-text { color: rgba(255,255,255,0.82); }
+.petition-grid {
+  display: grid; grid-template-columns: 2fr 3fr; gap: 2rem; align-items: start;
+}
+.petition-form {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(200,146,42,0.35);
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+.petition-form h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem; font-weight: 800;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 0.75rem;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-field { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-field.full { grid-column: 1/-1; }
+.form-field label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.form-field input, .form-field textarea, .form-field select {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 2px;
+  color: #fff; padding: 0.6rem 0.8rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  outline: none; transition: border-color 0.2s;
+}
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.6)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  padding-right: 2.2rem;
+  cursor: pointer;
+}
+.form-field select option {
+  background: #0d1f35;
+  color: #fff;
+}
+.form-field input:focus, .form-field textarea:focus { border-color: var(--gold); }
+.sig-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: 0.5rem 0; }
+.sig-fill { height: 100%; background: var(--gold); border-radius: 2px; width: 34%; }
+
+/* ── SIGNATURE TRACKER ── */
+.sig-tracker {
+  margin-top: 2.5rem;
+  padding: 2rem 2.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,146,42,0.25);
+  border-radius: 6px;
+  text-align: center;
+}
+.sig-number {
+  font-family: 'Righteous', 'Arial Black', sans-serif;
+  font-size: 3.5rem;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.sig-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-top: 0.4rem;
+}
+.sig-bar-wrap {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.sig-tracker .sig-bar {
+  height: 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 7px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.sig-tracker .sig-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8a6d20, var(--gold), #e8c84a);
+  border-radius: 7px;
+  position: relative;
+  transition: width 1s ease;
+  box-shadow: 0 0 12px rgba(200,146,42,0.4);
+}
+.sig-milestones {
+  position: relative;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+}
+.sig-milestone {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.sig-milestone::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  margin: 0 auto 0.25rem;
+}
+.sig-milestone span {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.03em;
+}
+.sig-milestone.sig-goal span {
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.72rem;
+}
+.sig-caption {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.25rem;
+}
+.sig-caption strong {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── COLLAPSIBLE SUBSECTIONS ── */
+details.subsection {
+  border-left: 4px solid var(--gold);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  background: rgba(26,26,46,0.04);
+  border-radius: 0 4px 4px 0;
+}
+details.subsection summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2rem;
+}
+details.subsection summary::-webkit-details-marker { display: none; }
+details.subsection summary::after {
+  content: '+';
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  width: 1.5rem;
+  text-align: center;
+  align-self: center;
+}
+details[open].subsection summary::after {
+  content: '−';
+}
+details[open] .more-trigger { display: none; }
+details.subsection summary h3 {
+  margin: 0;
+  align-self: center;
+}
+details.subsection .detail-body {
+  margin-top: 1.25rem;
+}
+/* dark-bg variants */
+.sec-golf details.subsection,
+.sec-dark-content details.subsection {
+  background: rgba(255,255,255,0.05);
+  border-left-color: var(--gold-light);
+}
+.sec-golf details.subsection summary::after,
+.sec-dark-content details.subsection summary::after {
+  color: var(--gold-light);
+}
+
+/* ── ABOUT ── */
+.sec-about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
+.about-sidebar {
+  background: var(--night-sky-mid);
+  color: #fff;
+  padding: 2rem;
+  border-left: 4px solid var(--gold);
+}
+.about-sidebar h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+.about-sidebar p { font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.82); margin-bottom: 0.75rem; }
+.about-sidebar a { color: var(--gold-light); }
+
+/* ── VISION CARDS ── */
+.sec-vision { background: var(--cream-alt); }
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.vision-card {
+  background: #fff;
+  border-top: 4px solid var(--gold);
+  padding: 1.8rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.vision-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+.vision-card .icon { margin-bottom: 1rem; line-height: 1; }
+.vision-card .icon svg { width: 42px; height: 42px; }
+.vision-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; margin-bottom: 0.75rem;
+  color: var(--forest-dark);
+}
+.vision-card p { font-size: 0.88rem; line-height: 1.7; color: #444; margin-bottom: 0; }
+
+/* ── TIMELINE ── */
+.sec-timeline { background: var(--night-sky-deep); color: #fff; }
+.sec-timeline .section-title { color: #fff; }
+.sec-timeline .lead-text { color: rgba(255,255,255,0.75); }
+.timeline { position: relative; margin-top: 2.5rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 120px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, var(--gold), transparent);
+}
+.timeline-item { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
+.timeline-date {
+  width: 120px; min-width: 120px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  padding-top: 0.25rem;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+.timeline-dot {
+  width: 14px; min-width: 14px; height: 14px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 0.4rem;
+  box-shadow: 0 0 12px rgba(200,146,42,0.6);
+}
+.timeline-content { flex: 1; padding-left: 1rem; }
+.timeline-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; color: var(--gold-light);
+  margin-bottom: 0.3rem;
+}
+.timeline-content p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
+.timeline-content a { color: var(--gold-light); }
+
+/* ── INVESTIGATIVE / WHY SECTIONS ── */
+.sec-investigate { background: var(--cream); }
+.sec-dark-content { background: var(--night-sky-mid); color: rgba(255,255,255,0.9); }
+.sec-dark-content .section-title { color: #fff; }
+.sec-dark-content h3 { color: var(--gold-light); }
+.sec-dark-content a { color: var(--gold-light); }
+.sec-dark-content .lead-text { color: rgba(255,255,255,0.75); }
+
+.subsection {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid var(--gold);
+}
+.subsection h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+.subsection p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.8rem; }
+
+/* ── ENDORSEMENTS ── */
+.sec-endorse { background: var(--cream); }
+
+/* ── HOUSING SECTION ── */
+.sec-housing { background: var(--cream-alt); }
+.sec-housing .subsection { margin-bottom: 2rem; }
+.sec-housing .subsection p { font-size: 0.95rem; line-height: 1.85; margin-bottom: 0.9rem; }
+.sec-housing a { color: var(--gold); }
+.sec-housing a:hover { color: var(--gold-light); }
+.sec-housing .subsection h3 { color: var(--forest-dark); }
+
+/* ── SCHOOLS SECTION ── */
+.sec-schools { background: var(--night-sky-deep); color: #fff; }
+.sec-schools .section-title { color: #fff; }
+.sec-schools .subsection { border-left-color: var(--gold-light); }
+.sec-schools .subsection p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.9); margin-bottom: 0.9rem; }
+.sec-schools a { color: var(--gold-light); }
+.sec-schools a:hover { color: var(--gold-pale); }
+
+/* ── FORSMAN SECTION ── */
+
+
+/* ── GOLF & HEALTH SECTION ── */
+.sec-golf { background: #0c1e0c; color: #fff; }
+.sec-golf .section-title { color: #fff; }
+.sec-golf .subsection { border-left-color: var(--gold-light); background: rgba(255,255,255,0.04); }
+.sec-golf .subsection h3 { color: var(--gold-light); }
+.sec-golf .subsection p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.9); margin-bottom: 0.9rem; }
+.sec-golf a { color: var(--gold-light); }
+.sec-golf a:hover { color: var(--gold-pale); }
+.endorser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.endorser-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.endorser-card .name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+.endorser-card .role {
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.endorser-card .quote {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ── ACTION CARDS ── */
+.sec-action { background: var(--night-sky-deep); color: #fff; }
+.sec-action .section-title { color: #fff; }
+.sec-action a { color: var(--gold-light); }
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.action-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(200,146,42,0.2);
+  padding: 2rem;
+  border-top: 4px solid var(--forest-mid);
+  transition: border-color 0.3s;
+}
+.action-card:hover { border-color: var(--gold); }
+.action-card.urgent { border-top-color: var(--alert-red); }
+.action-card h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold-light);
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+.action-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+.action-card .btn {
+  display: inline-block;
+  background: var(--alert-red);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  transition: background 0.3s;
+}
+.action-card .btn:hover { opacity: 0.9; }
+
+.email-block {
+  background: rgba(255,255,255,0.06);
+  padding: 1.2rem;
+  margin: 1rem 0;
+  font-family: monospace;
+  font-size: 0.82rem;
+  word-break: break-all;
+  border-left: 4px solid var(--gold);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+}
+.email-block a { color: var(--gold-light); }
+
+/* ── SHOP ── */
+.sec-shop { background: var(--cream-alt); }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.shop-item {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid var(--cream);
+  transition: border-color 0.3s, transform 0.2s;
+}
+.shop-item:hover { border-color: var(--gold); transform: translateY(-4px); }
+.shop-icon { font-size: 3rem; margin-bottom: 1rem; }
+.shop-icon svg { width: 180px; height: 180px; margin: 0 auto; display: block; }
+.shop-item h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--forest-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+.shop-item .price {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 800;
+  color: var(--gold);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+}
+.shop-item p { font-size: 0.88rem; color: #666; }
+
+/* ── HOMEGROWN ── */
+.sec-homegrown { background: var(--forest-dark); color: rgba(255,255,255,0.9); }
+.sec-homegrown .section-title { color: #fff; }
+.sec-homegrown a { color: var(--gold-light); }
+
+/* ── SHARE BAR ── */
+.share-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.share-bar .share-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-right: 0.3rem;
+}
+.share-bar a, .share-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 4px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
+}
+.share-bar a {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #1a1a0e;
+}
+.share-bar a:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  color: #1a1a0e;
+  transform: translateY(-1px);
+}
+.share-bar button:hover {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.95);
+  transform: translateY(-1px);
+}
+/* Light section overrides */
+.sec-vision .share-bar,
+.sec-housing .share-bar,
+.sec-endorse .share-bar {
+  border-top-color: rgba(0,0,0,0.08);
+}
+.sec-vision .share-bar a,
+.sec-vision .share-bar button,
+.sec-housing .share-bar a,
+.sec-housing .share-bar button,
+.sec-endorse .share-bar a,
+.sec-endorse .share-bar button {
+  border-color: rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,0.55);
+}
+.sec-vision .share-bar a,
+.sec-housing .share-bar a,
+.sec-endorse .share-bar a {
+  background: var(--forest-dark);
+  border-color: var(--forest-dark);
+  color: #fff;
+}
+.sec-vision .share-bar a:hover,
+.sec-housing .share-bar a:hover,
+.sec-endorse .share-bar a:hover {
+  background: var(--forest-mid);
+  border-color: var(--forest-mid);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.sec-vision .share-bar button:hover,
+.sec-housing .share-bar button:hover,
+.sec-endorse .share-bar button:hover {
+  background: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.75);
+  transform: translateY(-1px);
+}
+.sec-vision .share-bar .share-label,
+.sec-housing .share-bar .share-label,
+.sec-endorse .share-bar .share-label {
+  color: rgba(0,0,0,0.4);
+}
+.share-bar .copied-msg {
+  font-size: 0.65rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.share-bar .copied-msg.show { opacity: 1; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--night-sky-deep);
+  color: rgba(255,255,255,0.6);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+footer .footer-brand {
+  font-family: 'Righteous', 'Arial Black', sans-serif;
+  font-size: 1.5rem; color: var(--gold-light);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+footer p { font-size: 0.82rem; line-height: 1.8; margin-bottom: 0.3rem; }
+footer a { color: var(--gold-light); }
+.footer-gold { height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin-bottom: 2rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr !important; }
+  .petition-grid { display: flex !important; flex-direction: column; }
+  .petition-grid > * { min-width: 0; max-width: 100%; }
+  .petition-form { max-width: 100%; box-sizing: border-box; }
+  .sig-tracker { padding: 1.5rem 1.25rem; }
+  .sig-number { font-size: 2.5rem; }
+  .sig-milestone span { font-size: 0.55rem; }
+  .action-grid, .endorser-grid, .vision-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 80px; }
+  .timeline-date { width: 80px; min-width: 80px; font-size: 0.62rem; }
+  nav { padding: 0 1rem; }
+  .nav-links { display: none; }
+  html, body { overflow-x: hidden; max-width: 100%; }
+  section, .container, .container-narrow { max-width: 100%; box-sizing: border-box; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(6,15,30,0.98);
+    padding: 1rem 1.5rem;
+    gap: 0.8rem;
+  }
+  .hamburger { display: block; }
+  #section-nav { display: none !important; }
+  #our-supporters { padding-top: 0 !important; margin-top: 0; }
+  #left-col { width: 100%; text-align: center; }
+  #tim-meyer-desktop { display: none !important; }
+  #tim-meyer-mobile { display: block !important; }
+  section { padding: 3rem 0; }
+  .hero { padding: 4rem 1.5rem 3.5rem; }
+  #petition { padding-top: 4.5rem; }
+
+  .container, .container-narrow { padding: 0 1.25rem; }
+  .subsection { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAVIGATION ══════════ -->
+<nav>
+  <a class="nav-brand" href="#"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="petition.pdf" target="_blank" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petition</a></li>
+    <li><a href="#homegrown" onclick="document.querySelector('.nav-links').classList.remove('open')">This We Believe</a></li>
+    <li><a href="#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">Inside City Hall</a></li>
+    <li><a href="#housing" onclick="document.querySelector('.nav-links').classList.remove('open')">We Support Housing</a></li>
+    <li><a href="#golf" onclick="document.querySelector('.nav-links').classList.remove('open')">Why Not Golf?</a></li>
+    <li><a href="#vision" onclick="document.querySelector('.nav-links').classList.remove('open')">Homegrown Lester</a></li>
+    <li><a href="#schools" onclick="document.querySelector('.nav-links').classList.remove('open')">The School Problem</a></li>
+    <li><a href="#endorsements" onclick="document.querySelector('.nav-links').classList.remove('open')">Stand With Us</a></li>
+    <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Take Action</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ SECTION NAV ══════════ -->
+<div id="section-nav" style="margin-top:60px;background:var(--night-sky-deep);padding:0.75rem 1.5rem;display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 0.6rem;position:sticky;top:60px;z-index:90;border-bottom:1px solid rgba(255,255,255,0.08);">
+  <a href="#homegrown" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">This We Believe</a>
+  <a href="#vision" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Homegrown Lester</a>
+  <a href="#investigate" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Inside City Hall</a>
+  <a href="#housing" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">We Support Housing</a>
+  <a href="#golf" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Why Not Golf?</a>
+  <a href="#schools" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">The School Problem</a>
+  <a href="#endorsements" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Stand With Us</a>
+  <a href="#action" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Take Action</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Lester Is <em>Our</em> Land.<br>City Hall Wants to Sell It<br>Without Asking Us.</h1>
+    <p class="subheading">Sign the Petition to Require Voter Approval</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PETITION
+══════════════════════════════════════ -->
+<section id="petition" class="sec-petition">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold-light);text-align:center;">Citizen Initiative Petition</p>
+    <h2 class="section-title" style="color:#fff;margin-bottom:0.75rem;text-align:center;">Require Voter Approval<br><span style="color:var(--gold);">for Any Lester Rezoning</span></h2>
+    <p style="max-width:700px;margin:0 auto 2.5rem;text-align:center;font-family:'Playfair Display',Georgia,serif;font-size:1.55rem;font-weight:700;color:rgba(255,255,255,0.95);line-height:1.5;letter-spacing:0.01em;">This is your land. They want to sell it without asking you.</p>
+
+    <div style="max-width:750px;margin:0 auto 2.5rem;text-align:center;">
+      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.05rem;color:rgba(255,255,255,0.9);line-height:1.85;margin-bottom:1.25rem;"><strong style="color:#fff;">Our Park Our Vote</strong>, a non-profit, community-driven initiative, believes Duluthians, <strong style="color:var(--gold);">not developers and City Hall</strong>, deserve the final say on what happens to our public land. Our goal: to collect enough signatures to force City Hall to put Lester's future to a public vote.</p>
+    </div>
+
+    <!-- Supporters -->
+    <div style="max-width:750px;margin:0 auto 2.5rem;">
+      <div id="our-supporters" style="padding-top:1.25rem;">
+        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);text-align:center;margin-bottom:1.75rem;">Supporters</h3>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+          <div style="text-align:center;max-width:160px;">
+            <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+              <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+            </div>
+            <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Brett Cease</p>
+          </div>
+          <div style="text-align:center;max-width:160px;">
+            <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+              <img src="michael-bernstein.jpg" alt="Michael Bernstein" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+            </div>
+            <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Michael Bernstein</p>
+          </div>
+          <div style="text-align:center;max-width:160px;">
+            <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+              <img src="meghan-morrow.jpg" alt="Meghan Morrow" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+            </div>
+            <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Meghan Morrow</p>
+          </div>
+          <div style="text-align:center;max-width:160px;">
+            <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+              <img src="laura-erickson.jpg" alt="Laura Erickson" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+            </div>
+            <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Laura Erickson</p>
+          </div>
+          <div style="text-align:center;max-width:160px;">
+            <div style="width:100px;height:100px;border-radius:50%;overflow:hidden;margin:0 auto 0.75rem;border:2px solid var(--gold);background:rgba(255,255,255,0.1);">
+              <img src="thom-storm.jpg" alt="Thom Storm" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+            </div>
+            <p style="font-family:'Source Sans 3',sans-serif;font-weight:700;font-size:0.88rem;color:#fff;margin-bottom:0.3rem;">Thom Storm</p>
+          </div>
+        </div>
+
+        <!-- Tim Meyer - desktop only -->
+        <div id="tim-meyer-desktop" style="margin-top:2rem;text-align:center;">
+          <div style="border-top:2px solid rgba(255,255,255,0.4);margin-bottom:1.5rem;"></div>
+          <p style="font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:rgba(255,255,255,0.95);line-height:1.5;margin:0 0 1rem;text-align:left;">Architect Tim Meyer — the Co-Chair of the Mayor's Lester Park Working Group that studied Lester for over a year — thinks selling Lester is such a big deal, we should consider having a public vote.</p>
+          <p style="color:rgba(255,255,255,0.85);font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;line-height:1.8;margin:0;font-weight:400;text-align:left;">"<strong>This is a significant enough decision that it <em>may</em> warrant resolution by referendum.</strong>"<br><span style="font-size:0.88rem;opacity:0.8;">Tim Meyer<br>Architect<br>Co-Chair of Mayor Reinert's Lester Park Working Group<br><em>Duluth News Tribune</em>, December 3, 2025</span></p>
+        </div>
+        <div style="border-top:2px solid rgba(255,255,255,0.4);margin-top:1.5rem;"></div>
+      </div>
+    </div>
+
+    <!-- Download petition CTA -->
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(200,146,42,0.35);border-radius:4px;padding:2.5rem 2rem;">
+        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem;">Download the Petition</h3>
+        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:1.5rem;">Download the petition, print it, sign it, get all your <strong style="color:#fff;">family, friends, and neighbors who are registered Duluth voters</strong> to sign it, and mail it to the address on the form.</p>
+        <a href="petition.pdf" target="_blank" class="btn-primary" style="display:inline-block;padding:1.1rem 3rem;font-size:1rem;margin-bottom:1.25rem;">Download Petition (PDF)</a>
+        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.6);margin-bottom:0;">Print &bull; Sign &bull; Mail</p>
+      </div>
+
+      <!-- Get 5 Volunteer CTA -->
+      <div style="max-width:640px;margin:2rem auto 0;background:rgba(255,255,255,0.05);border:1px solid rgba(200,146,42,0.35);border-radius:4px;padding:2.5rem 2rem;">
+        <p style="font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;font-weight:900;color:var(--gold);text-align:center;margin-bottom:0.25rem;line-height:1.1;">Get 5.</p>
+        <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.05rem;color:rgba(255,255,255,0.92);line-height:1.7;text-align:center;margin-bottom:0.75rem;">Get 5 people to sign a hard copy of the petition every week. Friends. Neighbors. Every Sunday at 5:55 hop on a 5 minute conference call to report your haul. Receive a complimentary six pack of native plants for every conference call you come on, even if you didn't get any signatures.</p>
+
+        <div style="max-width:320px;margin:0.75rem auto 1.25rem;">
+          <svg viewBox="80 100 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:4px;">
+            <defs>
+              <linearGradient id="sixpackTrayFrontG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e1e1e"/>
+                <stop offset="100%" stop-color="#0c0c0c"/>
+              </linearGradient>
+              <linearGradient id="sixpackTraySideG" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#1a1a1a"/>
+                <stop offset="100%" stop-color="#0f0f0f"/>
+              </linearGradient>
+              <filter id="sixpackDropShadow" x="-10%" y="-5%" width="130%" height="140%">
+                <feGaussianBlur stdDeviation="10" result="b"/>
+                <feOffset in="b" dx="6" dy="10" result="o"/>
+                <feComponentTransfer in="o"><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <rect x="80" y="100" width="680" height="380" fill="#f5f0e4"/>
+            <g filter="url(#sixpackDropShadow)">
+              <polygon points="150,290 640,245 710,320 220,365" fill="#222"/>
+              <polygon points="220,365 710,320 700,410 210,455" fill="url(#sixpackTrayFrontG)"/>
+              <polygon points="150,290 220,365 210,455 160,380" fill="#161616"/>
+              <polygon points="640,245 710,320 700,410 630,335" fill="url(#sixpackTraySideG)"/>
+              <polygon points="150,290 640,245 640,249 150,294" fill="#333" opacity="0.5"/>
+              <polygon points="640,245 710,320 710,323 640,249" fill="#2a2a2a" opacity="0.4"/>
+              <polygon points="150,290 220,365 220,368 150,293" fill="#2a2a2a" opacity="0.35"/>
+              <line x1="313" y1="275" x2="383" y2="350" stroke="#2c2c2c" stroke-width="3.5"/>
+              <line x1="477" y1="260" x2="547" y2="335" stroke="#2c2c2c" stroke-width="3.5"/>
+              <line x1="185" y1="328" x2="675" y2="283" stroke="#2c2c2c" stroke-width="3.5"/>
+              <line x1="383" y1="350" x2="373" y2="440" stroke="#1a1a1a" stroke-width="3"/>
+              <line x1="547" y1="335" x2="537" y2="425" stroke="#1a1a1a" stroke-width="3"/>
+              <line x1="215" y1="410" x2="705" y2="365" stroke="#1a1a1a" stroke-width="2.5"/>
+              <ellipse cx="232" cy="302" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,232,302)"/>
+              <ellipse cx="395" cy="288" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,395,288)"/>
+              <ellipse cx="558" cy="274" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,558,274)"/>
+              <ellipse cx="302" cy="350" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,302,350)"/>
+              <ellipse cx="465" cy="336" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,465,336)"/>
+              <ellipse cx="628" cy="322" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,628,322)"/>
+            </g>
+            <!-- White Trillium -->
+            <g transform="translate(232, 296)">
+              <line x1="-5" y1="0" x2="-7" y2="-78" stroke="#2d8226" stroke-width="2.8"/>
+              <line x1="7" y1="0" x2="5" y2="-68" stroke="#2a7a24" stroke-width="2.2"/>
+              <line x1="0" y1="-1" x2="1" y2="-88" stroke="#2d8226" stroke-width="2.8"/>
+              <path d="M-7,-38 Q-52,-54 -56,-36 Q-40,-28 -7,-38Z" fill="#2e9228" opacity="0.93"/>
+              <path d="M-7,-38 Q28,-56 46,-40 Q30,-32 -7,-38Z" fill="#36a030" opacity="0.9"/>
+              <path d="M0,-44 Q-44,-62 -50,-46 Q-34,-38 0,-44Z" fill="#268a20" opacity="0.88"/>
+              <path d="M5,-34 Q42,-48 48,-34 Q34,-28 5,-34Z" fill="#2e9228" opacity="0.9"/>
+              <path d="M-3,-50 Q-38,-66 -44,-52 Q-30,-44 -3,-50Z" fill="#36a030" opacity="0.85"/>
+              <path d="M7,-42 Q38,-56 44,-44 Q32,-38 7,-42Z" fill="#268a20" opacity="0.86"/>
+              <path d="M-10,-30 Q-42,-40 -46,-30 Q-34,-24 -10,-30Z" fill="#2e9228" opacity="0.82"/>
+              <path d="M10,-32 Q36,-42 42,-32 Q30,-26 10,-32Z" fill="#36a030" opacity="0.82"/>
+              <path d="M1,-88 Q-24,-126 -8,-140 Q1,-118 1,-88Z" fill="#f0e8d4" stroke="#c8bca0" stroke-width="0.8" opacity="0.97"/>
+              <path d="M1,-88 Q22,-126 8,-140 Q1,-118 1,-88Z" fill="#e6dcc4" stroke="#c0b498" stroke-width="0.8" opacity="0.94"/>
+              <path d="M1,-88 Q-4,-128 6,-138 Q9,-116 1,-88Z" fill="#f4ecda" stroke="#c8bca0" stroke-width="0.8" opacity="0.9"/>
+              <circle cx="1" cy="-100" r="4.5" fill="#dcc840"/>
+              <path d="M5,-68 Q-4,-90 2,-100 Q6,-84 5,-68Z" fill="#e8dfc8" stroke="#c0b498" stroke-width="0.7" opacity="0.84"/>
+              <path d="M5,-68 Q16,-90 11,-98 Q6,-82 5,-68Z" fill="#e0d6be" stroke="#b8ac90" stroke-width="0.7" opacity="0.8"/>
+              <circle cx="6" cy="-78" r="3" fill="#ccbc34"/>
+              <path d="M-7,-78 Q-14,-96 -9,-103 Q-5,-90 -7,-78Z" fill="#dcd4bc" stroke="#b8ac90" stroke-width="0.6" opacity="0.7"/>
+            </g>
+            <!-- Wild Lupine -->
+            <g transform="translate(395, 282)">
+              <line x1="-7" y1="0" x2="-5" y2="-108" stroke="#2a7a24" stroke-width="2.8"/>
+              <line x1="7" y1="0" x2="10" y2="-96" stroke="#2d8226" stroke-width="2.8"/>
+              <line x1="16" y1="-1" x2="13" y2="-82" stroke="#2a7a24" stroke-width="2.2"/>
+              <g transform="translate(-24, -18)">
+                <path d="M0,0 Q-20,-30 -10,-42 Q2,-24 0,0Z" fill="#2e9228" opacity="0.92"/>
+                <path d="M0,0 Q-5,-34 7,-45 Q13,-28 0,0Z" fill="#36a030" opacity="0.93"/>
+                <path d="M0,0 Q14,-30 24,-40 Q18,-20 0,0Z" fill="#268a20" opacity="0.9"/>
+                <path d="M0,0 Q22,-24 30,-34 Q22,-15 0,0Z" fill="#2e9228" opacity="0.86"/>
+                <path d="M0,0 Q-22,-20 -28,-30 Q-18,-12 0,0Z" fill="#36a030" opacity="0.84"/>
+              </g>
+              <g transform="translate(18, -14)">
+                <path d="M0,0 Q-16,-28 -6,-38 Q4,-22 0,0Z" fill="#36a030" opacity="0.9"/>
+                <path d="M0,0 Q7,-30 16,-38 Q14,-20 0,0Z" fill="#2e9228" opacity="0.92"/>
+                <path d="M0,0 Q18,-24 26,-32 Q18,-14 0,0Z" fill="#268a20" opacity="0.87"/>
+              </g>
+              <g transform="translate(-4, -32)">
+                <path d="M0,0 Q-18,-24 -8,-34 Q3,-18 0,0Z" fill="#268a20" opacity="0.88"/>
+                <path d="M0,0 Q10,-28 18,-35 Q14,-16 0,0Z" fill="#2e9228" opacity="0.9"/>
+              </g>
+              <g transform="translate(10, -26)">
+                <path d="M0,0 Q-12,-22 -4,-30 Q4,-16 0,0Z" fill="#36a030" opacity="0.85"/>
+                <path d="M0,0 Q12,-20 18,-28 Q12,-12 0,0Z" fill="#268a20" opacity="0.86"/>
+              </g>
+              <ellipse cx="-9" cy="-66" rx="9" ry="6" fill="#6a4aaa"/>
+              <ellipse cx="-3" cy="-74" rx="9" ry="6" fill="#7a5aba"/>
+              <ellipse cx="-7" cy="-82" rx="8.5" ry="5.5" fill="#6a4aaa"/>
+              <ellipse cx="-2" cy="-90" rx="8" ry="5" fill="#8a6aca"/>
+              <ellipse cx="-5" cy="-97" rx="7.5" ry="4.5" fill="#7a5aba"/>
+              <ellipse cx="-3" cy="-103" rx="6" ry="4" fill="#6a4aaa"/>
+              <ellipse cx="-4" cy="-108" rx="4.5" ry="3" fill="#8a6aca"/>
+              <ellipse cx="12" cy="-60" rx="8.5" ry="5.5" fill="#7a5aba"/>
+              <ellipse cx="8" cy="-68" rx="8.5" ry="5.5" fill="#6a4aaa"/>
+              <ellipse cx="11" cy="-76" rx="7.5" ry="5" fill="#8a6aca"/>
+              <ellipse cx="8" cy="-83" rx="7" ry="4.5" fill="#7a5aba"/>
+              <ellipse cx="10" cy="-89" rx="6" ry="3.5" fill="#6a4aaa"/>
+              <ellipse cx="9" cy="-94" rx="4.5" ry="3" fill="#8a6aca"/>
+              <ellipse cx="17" cy="-52" rx="7" ry="5" fill="#6a4aaa"/>
+              <ellipse cx="14" cy="-59" rx="7" ry="4.5" fill="#7a5aba"/>
+              <ellipse cx="16" cy="-65" rx="6" ry="3.5" fill="#8a6aca"/>
+              <ellipse cx="15" cy="-70" rx="4.5" ry="3" fill="#6a4aaa"/>
+            </g>
+            <!-- Common Milkweed -->
+            <g transform="translate(558, 268)">
+              <line x1="-3" y1="0" x2="-5" y2="-98" stroke="#2d8226" stroke-width="3.8"/>
+              <line x1="12" y1="0" x2="10" y2="-82" stroke="#2a7a24" stroke-width="3.2"/>
+              <path d="M-5,-18 Q-55,-34 -60,-18 Q-44,-10 -5,-18Z" fill="#2e9228" opacity="0.93"/>
+              <path d="M-5,-18 Q40,-34 50,-20 Q36,-12 -5,-18Z" fill="#36a030" opacity="0.92"/>
+              <path d="M-5,-42 Q-50,-58 -54,-42 Q-38,-36 -5,-42Z" fill="#268a20" opacity="0.9"/>
+              <path d="M-5,-42 Q36,-58 42,-44 Q28,-38 -5,-42Z" fill="#2e9228" opacity="0.9"/>
+              <path d="M10,-22 Q50,-34 56,-22 Q42,-16 10,-22Z" fill="#36a030" opacity="0.88"/>
+              <path d="M10,-48 Q46,-60 52,-48 Q38,-42 10,-48Z" fill="#268a20" opacity="0.87"/>
+              <path d="M-5,-64 Q-42,-74 -48,-64 Q-34,-58 -5,-64Z" fill="#2e9228" opacity="0.85"/>
+              <path d="M10,-62 Q38,-72 44,-62 Q32,-56 10,-62Z" fill="#36a030" opacity="0.85"/>
+              <path d="M-5,-78 Q-34,-86 -38,-78 Q-28,-72 -5,-78Z" fill="#268a20" opacity="0.82"/>
+              <g transform="translate(-5, -98)">
+                <circle cx="0" cy="0" r="26" fill="#d88098" opacity="0.28"/>
+                <circle cx="-10" cy="-12" r="4.5" fill="#ea8ca4"/>
+                <circle cx="2" cy="-16" r="4" fill="#f6b0c0"/>
+                <circle cx="14" cy="-10" r="4.5" fill="#e27898"/>
+                <circle cx="-16" cy="-2" r="4" fill="#f2a0b4"/>
+                <circle cx="-4" cy="-4" r="4.5" fill="#ea8ca4"/>
+                <circle cx="10" cy="2" r="4" fill="#f6b0c0"/>
+                <circle cx="-8" cy="8" r="4" fill="#e27898"/>
+                <circle cx="6" cy="12" r="4.5" fill="#ea8ca4"/>
+                <circle cx="18" cy="4" r="3.5" fill="#f2a0b4"/>
+                <circle cx="-18" cy="6" r="3.5" fill="#f6b0c0"/>
+                <circle cx="0" cy="16" r="4" fill="#e27898"/>
+                <circle cx="-12" cy="14" r="3" fill="#ea8ca4"/>
+                <circle cx="14" cy="15" r="3" fill="#f2a0b4"/>
+              </g>
+              <g transform="translate(16, -82)">
+                <circle cx="0" cy="0" r="18" fill="#d88098" opacity="0.22"/>
+                <circle cx="-6" cy="-8" r="3.5" fill="#ea8ca4"/>
+                <circle cx="5" cy="-10" r="3" fill="#f6b0c0"/>
+                <circle cx="10" cy="-3" r="3.5" fill="#e27898"/>
+                <circle cx="-10" cy="2" r="3" fill="#f2a0b4"/>
+                <circle cx="0" cy="0" r="3.5" fill="#ea8ca4"/>
+                <circle cx="6" cy="6" r="3" fill="#f6b0c0"/>
+                <circle cx="-4" cy="8" r="3" fill="#e27898"/>
+                <circle cx="8" cy="10" r="2.5" fill="#ea8ca4"/>
+              </g>
+            </g>
+            <!-- Wild Bergamot -->
+            <g transform="translate(302, 344)">
+              <line x1="-7" y1="0" x2="-9" y2="-95" stroke="#2a7a24" stroke-width="2.8"/>
+              <line x1="6" y1="0" x2="4" y2="-105" stroke="#2d8226" stroke-width="2.8"/>
+              <line x1="16" y1="-1" x2="18" y2="-80" stroke="#2a7a24" stroke-width="2.2"/>
+              <line x1="-14" y1="-1" x2="-16" y2="-72" stroke="#2d8226" stroke-width="2"/>
+              <path d="M-9,-24 Q-46,-38 -50,-24 Q-36,-18 -9,-24Z" fill="#2e9228" opacity="0.92"/>
+              <path d="M-9,-24 Q22,-38 32,-28 Q22,-20 -9,-24Z" fill="#36a030" opacity="0.9"/>
+              <path d="M4,-38 Q-32,-50 -38,-38 Q-26,-32 4,-38Z" fill="#268a20" opacity="0.88"/>
+              <path d="M4,-38 Q34,-50 40,-40 Q30,-34 4,-38Z" fill="#2e9228" opacity="0.88"/>
+              <path d="M16,-18 Q42,-28 46,-18 Q34,-14 16,-18Z" fill="#36a030" opacity="0.86"/>
+              <path d="M-14,-16 Q-38,-24 -42,-16 Q-32,-10 -14,-16Z" fill="#268a20" opacity="0.84"/>
+              <path d="M-9,-54 Q-38,-64 -42,-54 Q-30,-48 -9,-54Z" fill="#2e9228" opacity="0.85"/>
+              <path d="M4,-60 Q30,-70 36,-60 Q26,-54 4,-60Z" fill="#36a030" opacity="0.85"/>
+              <path d="M16,-32 Q38,-40 42,-32 Q32,-28 16,-32Z" fill="#268a20" opacity="0.83"/>
+              <path d="M-14,-40 Q-36,-48 -40,-40 Q-30,-34 -14,-40Z" fill="#36a030" opacity="0.83"/>
+              <g transform="translate(4, -105)">
+                <circle cx="0" cy="0" r="17" fill="#7a4a90" opacity="0.28"/>
+                <line x1="0" y1="0" x2="-20" y2="-15" stroke="#c098e0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="-13" y2="-20" stroke="#d0a8f0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="-5" y2="-22" stroke="#c098e0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="5" y2="-22" stroke="#d0a8f0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="13" y2="-20" stroke="#c098e0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="20" y2="-15" stroke="#d0a8f0" stroke-width="2.2"/>
+                <line x1="0" y1="0" x2="22" y2="-6" stroke="#c098e0" stroke-width="2"/>
+                <line x1="0" y1="0" x2="-22" y2="-6" stroke="#d0a8f0" stroke-width="2"/>
+                <circle cx="-20" cy="-15" r="3" fill="#dab4f2"/>
+                <circle cx="-13" cy="-20" r="3" fill="#cea8ea"/>
+                <circle cx="-5" cy="-22" r="3" fill="#dab4f2"/>
+                <circle cx="5" cy="-22" r="3" fill="#cea8ea"/>
+                <circle cx="13" cy="-20" r="3" fill="#dab4f2"/>
+                <circle cx="20" cy="-15" r="3" fill="#cea8ea"/>
+                <circle cx="22" cy="-6" r="2.5" fill="#dab4f2"/>
+                <circle cx="-22" cy="-6" r="2.5" fill="#cea8ea"/>
+                <circle cx="0" cy="0" r="7" fill="#5a3068"/>
+              </g>
+              <g transform="translate(-9, -95)">
+                <circle cx="0" cy="0" r="13" fill="#7a4a90" opacity="0.24"/>
+                <line x1="0" y1="0" x2="-14" y2="-11" stroke="#c098e0" stroke-width="1.6"/>
+                <line x1="0" y1="0" x2="-8" y2="-15" stroke="#d0a8f0" stroke-width="1.6"/>
+                <line x1="0" y1="0" x2="0" y2="-16" stroke="#c098e0" stroke-width="1.6"/>
+                <line x1="0" y1="0" x2="8" y2="-15" stroke="#d0a8f0" stroke-width="1.6"/>
+                <line x1="0" y1="0" x2="14" y2="-11" stroke="#c098e0" stroke-width="1.6"/>
+                <line x1="0" y1="0" x2="16" y2="-4" stroke="#d0a8f0" stroke-width="1.4"/>
+                <line x1="0" y1="0" x2="-16" y2="-4" stroke="#c098e0" stroke-width="1.4"/>
+                <circle cx="-14" cy="-11" r="2.2" fill="#dab4f2"/>
+                <circle cx="-8" cy="-15" r="2.2" fill="#cea8ea"/>
+                <circle cx="0" cy="-16" r="2.2" fill="#dab4f2"/>
+                <circle cx="8" cy="-15" r="2.2" fill="#cea8ea"/>
+                <circle cx="14" cy="-11" r="2.2" fill="#dab4f2"/>
+                <circle cx="16" cy="-4" r="2" fill="#cea8ea"/>
+                <circle cx="-16" cy="-4" r="2" fill="#dab4f2"/>
+                <circle cx="0" cy="0" r="5.5" fill="#5a3068"/>
+              </g>
+              <g transform="translate(18, -80)">
+                <circle cx="0" cy="0" r="8" fill="#7a4a90" opacity="0.3"/>
+                <line x1="0" y1="0" x2="-8" y2="-8" stroke="#b888d0" stroke-width="1.3"/>
+                <line x1="0" y1="0" x2="0" y2="-10" stroke="#c098e0" stroke-width="1.3"/>
+                <line x1="0" y1="0" x2="8" y2="-8" stroke="#b888d0" stroke-width="1.3"/>
+                <circle cx="-8" cy="-8" r="1.8" fill="#cea8ea"/>
+                <circle cx="0" cy="-10" r="1.8" fill="#dab4f2"/>
+                <circle cx="8" cy="-8" r="1.8" fill="#cea8ea"/>
+                <circle cx="0" cy="0" r="4" fill="#5a3068"/>
+              </g>
+              <g transform="translate(-16, -72)">
+                <circle cx="0" cy="0" r="6" fill="#7a4a90" opacity="0.28"/>
+                <line x1="0" y1="0" x2="-6" y2="-6" stroke="#b888d0" stroke-width="1"/>
+                <line x1="0" y1="0" x2="0" y2="-8" stroke="#c098e0" stroke-width="1"/>
+                <line x1="0" y1="0" x2="6" y2="-6" stroke="#b888d0" stroke-width="1"/>
+                <circle cx="-6" cy="-6" r="1.4" fill="#cea8ea"/>
+                <circle cx="0" cy="-8" r="1.4" fill="#dab4f2"/>
+                <circle cx="6" cy="-6" r="1.4" fill="#cea8ea"/>
+                <circle cx="0" cy="0" r="3" fill="#5a3068"/>
+              </g>
+            </g>
+            <!-- Prairie Smoke -->
+            <g transform="translate(465, 330)">
+              <path d="M-18,-3 Q-22,-48 -16,-88" stroke="#2e8a28" stroke-width="2.2" fill="none"/>
+              <path d="M-6,-3 Q-9,-52 -3,-94" stroke="#2a8222" stroke-width="2.2" fill="none"/>
+              <path d="M6,-3 Q3,-48 8,-85" stroke="#2e8a28" stroke-width="2.2" fill="none"/>
+              <path d="M18,-2 Q22,-44 16,-80" stroke="#2a8222" stroke-width="2" fill="none"/>
+              <path d="M-12,-2 Q-16,-40 -10,-76" stroke="#2e8a28" stroke-width="2" fill="none"/>
+              <path d="M24,-1 Q28,-36 22,-68" stroke="#2a8222" stroke-width="1.8" fill="none"/>
+              <path d="M-28,-4 Q-46,-14 -50,-4 Q-40,3 -28,-4Z" fill="#2e9228" opacity="0.92"/>
+              <path d="M-20,-8 Q-36,-20 -42,-10 Q-32,-3 -20,-8Z" fill="#36a030" opacity="0.9"/>
+              <path d="M-10,-2 Q-30,-10 -34,-1 Q-24,5 -10,-2Z" fill="#268a20" opacity="0.88"/>
+              <path d="M28,-2 Q46,-12 50,-2 Q40,5 28,-2Z" fill="#2e9228" opacity="0.92"/>
+              <path d="M20,-6 Q36,-16 40,-8 Q30,-1 20,-6Z" fill="#36a030" opacity="0.9"/>
+              <path d="M10,-1 Q30,-8 34,0 Q24,6 10,-1Z" fill="#268a20" opacity="0.88"/>
+              <path d="M0,-5 Q-18,-14 -22,-5 Q-14,0 0,-5Z" fill="#2e9228" opacity="0.87"/>
+              <path d="M4,-3 Q20,-12 24,-4 Q16,1 4,-3Z" fill="#36a030" opacity="0.87"/>
+              <path d="M-14,-10 Q-28,-18 -32,-10 Q-24,-4 -14,-10Z" fill="#268a20" opacity="0.84"/>
+              <path d="M14,-8 Q28,-16 32,-8 Q24,-2 14,-8Z" fill="#2e9228" opacity="0.84"/>
+              <g transform="translate(-16, -88)">
+                <path d="M0,0 Q-10,11 -8,18 Q0,12 0,0Z" fill="#e27088" opacity="0.95"/>
+                <path d="M0,0 Q10,11 8,18 Q0,12 0,0Z" fill="#f48ca4" opacity="0.92"/>
+                <path d="M0,0 Q-16,-20 -10,-34" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.85"/>
+                <path d="M0,0 Q-6,-22 0,-36" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.85"/>
+                <path d="M0,0 Q10,-20 7,-34" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.85"/>
+                <path d="M0,0 Q-12,-14 -14,-28" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.65"/>
+                <path d="M0,0 Q12,-14 14,-28" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.65"/>
+              </g>
+              <g transform="translate(-3, -94)">
+                <path d="M0,0 Q-9,10 -7,16 Q0,10 0,0Z" fill="#f48ca4" opacity="0.95"/>
+                <path d="M0,0 Q9,10 7,16 Q0,10 0,0Z" fill="#e27088" opacity="0.92"/>
+                <path d="M0,0 Q-14,-18 -8,-30" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.82"/>
+                <path d="M0,0 Q-4,-20 2,-32" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.82"/>
+                <path d="M0,0 Q8,-18 6,-30" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.82"/>
+              </g>
+              <g transform="translate(8, -85)">
+                <path d="M0,0 Q-8,8 -6,14 Q0,9 0,0Z" fill="#e27088" opacity="0.92"/>
+                <path d="M0,0 Q8,8 6,14 Q0,9 0,0Z" fill="#f48ca4" opacity="0.88"/>
+                <path d="M0,0 Q-10,-16 -7,-26" stroke="#f4bcc4" stroke-width="1.1" fill="none" opacity="0.75"/>
+                <path d="M0,0 Q0,-18 3,-28" stroke="#fcccd4" stroke-width="1.1" fill="none" opacity="0.75"/>
+              </g>
+              <g transform="translate(18, -80)">
+                <path d="M0,0 Q-7,7 -5,12 Q0,8 0,0Z" fill="#f48ca4" opacity="0.88"/>
+                <path d="M0,0 Q7,7 5,12 Q0,8 0,0Z" fill="#e27088" opacity="0.84"/>
+                <path d="M0,0 Q-8,-12 -5,-22" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.65"/>
+                <path d="M0,0 Q5,-14 7,-22" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.65"/>
+              </g>
+              <g transform="translate(-10, -76)">
+                <path d="M0,0 Q-6,6 -4,11 Q0,7 0,0Z" fill="#e27088" opacity="0.85"/>
+                <path d="M0,0 Q6,6 4,11 Q0,7 0,0Z" fill="#f48ca4" opacity="0.82"/>
+                <path d="M0,0 Q-6,-10 -4,-18" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.58"/>
+                <path d="M0,0 Q4,-12 6,-20" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.58"/>
+              </g>
+              <g transform="translate(24, -68)">
+                <path d="M0,0 Q-5,5 -3,9 Q0,6 0,0Z" fill="#f48ca4" opacity="0.8"/>
+                <path d="M0,0 Q5,5 3,9 Q0,6 0,0Z" fill="#e27088" opacity="0.76"/>
+                <path d="M0,0 Q-4,-8 -3,-14" stroke="#f4bcc4" stroke-width="0.7" fill="none" opacity="0.5"/>
+              </g>
+            </g>
+            <!-- Paper Birch -->
+            <g transform="translate(628, 316)">
+              <rect x="-5" y="-112" width="10" height="112" rx="3" fill="#e0d9ca"/>
+              <line x1="-4" y1="-94" x2="4" y2="-94" stroke="#b0a898" stroke-width="0.9" opacity="0.6"/>
+              <line x1="-3" y1="-76" x2="5" y2="-76" stroke="#b0a898" stroke-width="0.9" opacity="0.5"/>
+              <line x1="-4" y1="-58" x2="3" y2="-58" stroke="#b0a898" stroke-width="0.9" opacity="0.6"/>
+              <line x1="-3" y1="-40" x2="4" y2="-40" stroke="#b0a898" stroke-width="0.9" opacity="0.5"/>
+              <line x1="-4" y1="-22" x2="3" y2="-22" stroke="#b0a898" stroke-width="0.7" opacity="0.4"/>
+              <line x1="0" y1="-108" x2="-34" y2="-142" stroke="#ccc4b4" stroke-width="2.8"/>
+              <line x1="0" y1="-102" x2="32" y2="-134" stroke="#ccc4b4" stroke-width="2.8"/>
+              <line x1="0" y1="-90" x2="-28" y2="-118" stroke="#ccc4b4" stroke-width="2.2"/>
+              <line x1="0" y1="-80" x2="25" y2="-108" stroke="#ccc4b4" stroke-width="2.2"/>
+              <line x1="0" y1="-68" x2="-22" y2="-92" stroke="#ccc4b4" stroke-width="2"/>
+              <line x1="0" y1="-58" x2="18" y2="-82" stroke="#ccc4b4" stroke-width="2"/>
+              <line x1="0" y1="-48" x2="-14" y2="-68" stroke="#ccc4b4" stroke-width="1.6"/>
+              <g opacity="0.94">
+                <path d="M-34,-142 Q-42,-156 -36,-162 Q-30,-152 -34,-142Z" fill="#36a030"/>
+                <path d="M-29,-138 Q-39,-150 -32,-156 Q-26,-146 -29,-138Z" fill="#2e9228"/>
+                <path d="M-22,-132 Q-30,-142 -24,-148 Q-18,-138 -22,-132Z" fill="#268a20"/>
+                <path d="M-37,-147 Q-47,-157 -41,-164 Q-34,-154 -37,-147Z" fill="#2e9228"/>
+                <path d="M-40,-140 Q-48,-148 -44,-154 Q-38,-145 -40,-140Z" fill="#268a20"/>
+                <path d="M32,-134 Q40,-148 34,-154 Q28,-144 32,-134Z" fill="#2e9228"/>
+                <path d="M27,-129 Q35,-140 29,-146 Q23,-136 27,-129Z" fill="#36a030"/>
+                <path d="M20,-122 Q28,-132 22,-138 Q16,-128 20,-122Z" fill="#268a20"/>
+                <path d="M35,-140 Q44,-150 38,-157 Q32,-147 35,-140Z" fill="#268a20"/>
+                <path d="M37,-133 Q44,-142 40,-148 Q34,-138 37,-133Z" fill="#36a030"/>
+                <path d="M-28,-118 Q-36,-128 -30,-134 Q-24,-124 -28,-118Z" fill="#36a030"/>
+                <path d="M-22,-113 Q-30,-123 -24,-129 Q-18,-119 -22,-113Z" fill="#2e9228"/>
+                <path d="M-16,-107 Q-24,-117 -18,-123 Q-12,-113 -16,-107Z" fill="#268a20"/>
+                <path d="M-32,-123 Q-40,-133 -34,-139 Q-28,-129 -32,-123Z" fill="#2e9228"/>
+                <path d="M25,-108 Q33,-118 27,-124 Q21,-114 25,-108Z" fill="#268a20"/>
+                <path d="M19,-103 Q27,-113 21,-119 Q15,-109 19,-103Z" fill="#2e9228"/>
+                <path d="M28,-113 Q36,-123 30,-129 Q24,-119 28,-113Z" fill="#36a030"/>
+                <path d="M-22,-92 Q-30,-102 -24,-108 Q-18,-98 -22,-92Z" fill="#36a030"/>
+                <path d="M-16,-87 Q-24,-97 -18,-103 Q-12,-93 -16,-87Z" fill="#2e9228"/>
+                <path d="M-26,-97 Q-34,-107 -28,-112 Q-22,-102 -26,-97Z" fill="#268a20"/>
+                <path d="M18,-82 Q26,-92 20,-98 Q14,-88 18,-82Z" fill="#268a20"/>
+                <path d="M12,-77 Q20,-87 14,-93 Q8,-83 12,-77Z" fill="#2e9228"/>
+                <path d="M22,-87 Q30,-97 24,-102 Q18,-92 22,-87Z" fill="#36a030"/>
+                <path d="M-14,-68 Q-22,-78 -16,-84 Q-10,-74 -14,-68Z" fill="#36a030"/>
+                <path d="M-8,-63 Q-16,-73 -10,-79 Q-4,-69 -8,-63Z" fill="#2e9228"/>
+                <path d="M-18,-73 Q-26,-82 -20,-88 Q-14,-78 -18,-73Z" fill="#268a20"/>
+              </g>
+              <path d="M-5,-5 Q-30,-14 -34,-5 Q-24,1 -5,-5Z" fill="#2e9228" opacity="0.8"/>
+              <path d="M5,-3 Q28,-11 32,-3 Q24,3 5,-3Z" fill="#36a030" opacity="0.78"/>
+              <path d="M-8,-10 Q-26,-18 -30,-10 Q-22,-5 -8,-10Z" fill="#268a20" opacity="0.72"/>
+            </g>
+          </svg>
+        </div>
+
+        <form name="volunteer" method="POST" data-netlify="true" action="/thank-you">
+          <input type="hidden" name="form-name" value="volunteer">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem;">
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">First Name *</label>
+              <input type="text" name="first-name" placeholder="Jane" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;">
+              <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Last Name *</label>
+              <input type="text" name="last-name" placeholder="Smith" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Email *</label>
+            <input type="email" name="email" placeholder="jane@example.com" required style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.3rem;margin-bottom:0.75rem;">
+            <label style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Phone</label>
+            <input type="tel" name="phone" placeholder="(218) 555-1234" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:#fff;padding:0.6rem 0.8rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;outline:none;">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">I Will Get 5</button>
+        </form>
+        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.5);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a></p>
+      </div>
+
+  </div>
+</section>
+<!-- Tim Meyer quote standalone - mobile only -->
+<section id="tim-meyer-mobile" style="background:var(--forest-dark);padding:2.5rem 0;">
+  <div class="container-narrow" style="text-align:center;">
+    <div style="border-top:2px solid rgba(255,255,255,0.4);margin-bottom:1.5rem;"></div>
+    <p style="font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:rgba(255,255,255,0.95);line-height:1.5;margin:0 0 1rem;">Architect Tim Meyer — the Co-Chair of the Mayor's Lester Park Working Group that studied Lester for over a year — thinks selling Lester is such a big deal, we should consider having a public vote.</p>
+    <p style="color:rgba(255,255,255,0.85);font-family:'Libre Baskerville',Georgia,serif;font-size:0.95rem;line-height:1.8;margin:0;font-weight:400;">"<strong>This is a significant enough decision that it <em>may</em> warrant resolution by referendum.</strong>"<br><span style="font-size:0.88rem;opacity:0.8;">Tim Meyer<br>Architect<br>Co-Chair of Mayor Reinert's Lester Park Working Group<br><em>Duluth News Tribune</em>, December 3, 2025</span></p>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     DULUTH IS HOMEGROWN
+══════════════════════════════════════ -->
+<section id="homegrown" class="sec-homegrown">
+  <div class="container-narrow">
+    <p class="section-label" style="color:var(--gold-light)">This We Believe</p>
+    <h2 class="section-title">The Best Things About Duluth Are Homegrown,<br><span>Not Built by Developers</span></h2>
+    <details style="border-left:4px solid var(--gold-light);padding:1.5rem 2rem;margin-bottom:2rem;background:rgba(255,255,255,0.04);border-radius:0 4px 4px 0;">
+      <summary style="list-style:none;cursor:pointer;">
+        <span style="display:block;margin:0;"><strong>Our Park Our Vote</strong> believes the things that make Duluth great are homemade.</span>
+        <span style="display:block;margin:0.75rem 0 0;">Grandma's. The Duluth Curling Club (established in 1891). Life House, CHUM, Second Harvest. Outdoor hockey rinks iced by generations of great parents dedicated to raising healthy, happy, hearty kids. <span class="more-trigger" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.85rem;font-weight:700;">More&nbsp;.&nbsp;.&nbsp;.</span></span>
+      </summary>
+      <div class="detail-body">
+        <p style="margin-top:1rem;">Fiberguilds and knitting circles and beautiful religious communities, the ski, hiking, and biking trails and the shops that outfit us for them. Strong Unions. <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a>. A surf shop. Stores that equip us for the Boundary Waters. Duluth's golf community, which has 13 courses to play within a 25-mile radius of town. The Folk School. Hawk Ridge. Bentleyville. Duluth Art Institute. Theaters, symphony and independent bookstores. The North, The Gear Exchange, and the Duluth News Tribune. Breweries, cideries, restaurants and bakeries. Forest and immersion schools. <a href="https://www.aicho.org/" target="_blank">AICHO</a>. The trail-running, polar bear, and seed art clubs. Homegrown Music Festival. Cirrus and Loll. A blog that helps us all have a Perfect Duluth Day. UMD (founded 1895), St. Scholastica (founded 1912 by a Benedictine nun and six students), Lake Superior College (founded 1995). The Duluth Maker Space. The Rowing Club. St. Mary's Hospital (founded 1892). St. Luke's Hospital (founded 1881). The list is practically endless and is constantly growing. None of these things came from developers. All of them are made by people who live here, love it, and spent their time building something.</p>
+        <p>What's in the water? One theory: we are grateful for the opportunity to live in this beautiful and wild place, and are inspired to create things worthy of it.</p>
+        <p>Visitors are nice — Elvis came here once to perform and came back six months later. His driver remembered him saying he'd been all over the world and Duluth was "as pretty as anywhere." We'll take it. But when it comes to building great things in our community we're perfectly capable of doing it ourselves. We don't need consultants from out of town or a Disney developer to decide what we want and enrich themselves building it. All we need is us.</p>
+        <p style="margin-top:1rem;"><span onclick="this.closest('details').removeAttribute('open')" style="cursor:pointer;color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;">Collapse ↑</span></p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+  </div>
+</section>
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     INVESTIGATIVE SECTIONS
+══════════════════════════════════════ -->
+<section id="investigate" class="sec-dark-content">
+  <div class="container-narrow">
+    <p class="section-label" style="color:var(--gold-light)">What Is Going On at City Hall</p>
+    <h2 class="section-title"><span>It Isn't Pretty</span></h2>
+    <p class="lead-text">Before entrusting 230 acres of irreplaceable parkland to this administration's judgment, consider the record — sourced from the Star Tribune, Duluth News Tribune, Northern News Now, and public filings.</p>
+
+        <!-- Sunnarborg -->
+    <details class="subsection" id="sunnarborg">
+      <summary><h3>Who Is Tom Sunnarborg, the Developer Who Has Wanted Lester Since 2019</h3></summary>
+      <div class="detail-body">
+      <p>Sunnarborg, a Duluth native, worked for <a href="https://www.linkedin.com/in/tomsunnarborg/" target="_blank">Walt Disney Imagineering</a> from 1987–2000, then spent four years at <a href="https://www.linkedin.com/in/tomsunnarborg/" target="_blank">Celebration Associates</a>, overseeing aspects of <a href="https://en.wikipedia.org/wiki/Celebration,_Florida" target="_blank">Celebration, Florida</a> — Disney's luxury planned community where homes now range from <a href="https://www.homes.com/celebration-fl/houses-for-sale/" target="_blank">$620,000 to $4.9 million</a>.</p>
+      <p>The <a href="https://www.duluthnewstribune.com/opinion/columns/local-view-redeveloping-lester-has-only-one-best-path-forward" target="_blank">"Sunnarborg Plan"</a> envisions 18-hole golf, 455 housing units (68 designated "affordable/workforce"), restaurants, and retail — developed in partnership with local developers Sandy Hoff (Pier B, The Breakers penthouse at $3 million), Brian Forcier (Ordean building, <a href="https://www.fox21online.com/2023/09/21/duluth-developer-to-transform-downtown-building-into-workforce-housing/" target="_blank">announced as "workforce housing,"</a> now <a href="https://www.fox21online.com/2025/09/19/force-on-fifth-celebrates-grand-opening-in-downtown-duluth/" target="_blank">3–12 month extended stay lodging</a>), and Rob Finnegan. Combined, these developers have over 100 years of experience building high-end commercial and residential properties. None have demonstrated experience building affordable housing.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Enger -->
+    <details class="subsection" id="follow-the-money">
+      <summary><h3>Follow the Money: This Is About a New Clubhouse at Enger</h3></summary>
+      <div class="detail-body">
+      <p>Since at least 2019, <a href="https://www.duluthnewstribune.com/news/duluth-golf-committee-signs-off-on-plan-to-improve-enger-park-course" target="_blank">city officials have explicitly stated</a> that proceeds from any Lester Park land sale would fund improvements at Enger Park Golf Course. In 2021, the Golf Committee stated its expectation "that any sale of past golf property… those funds would be allocated toward the renovation of Enger."</p>
+      <p>As recently as <a href="https://www.duluthnewstribune.com/news/local/duluth-golf-drives-revenues-to-new-heights" target="_blank">November 2025</a>, Councilor Arik Forsman suggested that sale proceeds could help fund a new clubhouse at Enger, which does not currently meet ADA accessibility standards.</p>
+      <p>In effect: if the land is sold, golfers get millions to build a new clubhouse at Enger. But that's not how proceeds from the sale of the <em>public's</em> parkland work. It's all of the public's land. The Enger Golf Course should do what Chester Bowl did — raise money through community fundraising and grant-writing and hustle.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Bad Real Estate Deals -->
+    <details class="subsection" id="track-record">
+      <summary><h3>A Track Record of Bad Real Estate Instincts</h3></summary>
+      <div class="detail-body">
+      <p><strong>Incline Village.</strong> Developer Lazar "Luzy" Ostreicher proposed a $500 million development at the former Duluth Central High School site. Despite a <a href="https://www.startribune.com/duluth-incline-village-central-high-school-site-development-in-limbo-lazar-luzy-ostreicher/601375211" target="_blank">February 2024 city memo warning about "insufficient vetting"</a> of the developer's finances, the city council voted to award him $75 million in TIF financing. When <a href="https://www.northernnewsnow.com/2025/06/06/duluth-leaders-council-members-respond-incline-village-developer-issues/" target="_blank">Councilor Durrwachter asked</a> for credentials, she was told it was "against his religion to brag" — she voted no, calling it a scam.</p>
+      <p>In June 2024, Ostreicher <a href="https://www.startribune.com/ny-developer-in-breach-of-city-agreement-for-500-million-real-estate-project/601366130" target="_blank">stopped making mortgage payments</a> on his Endi property. By November 2024, <a href="https://www.startribune.com/duluth-incline-village-central-high-school-site-development-in-limbo-lazar-luzy-ostreicher/601375211" target="_blank">Fannie Mae sued, alleging fraud and "siphoning rents."</a></p>
+      <p style="font-size:1.25rem;"><strong>Despite all this, <a href="https://www.duluthnewstribune.com/news/local/construction-begins-on-slightly-delayed-500m-duluth-housing-project" target="_blank">Mayor Reinert and several city councilors attended the groundbreaking in December</a>.</strong></p>
+        <p>There's no surprise ending to the story: by June 2025, <a href="https://www.startribune.com/ny-developer-in-breach-of-city-agreement-for-500-million-real-estate-project/601366130" target="_blank">DEDA cited eight contract breaches</a>. <a href="https://www.startribune.com/duluth-luzy-ostreicher-central-high-school-development-contract-terminated-limbo/601441715" target="_blank">The city terminated the TIF contract in July</a>, and now the site sits abandoned. Councilor Forsman said <a href="https://www.northernnewsnow.com/2025/07/24/deda-denies-incline-village-developers-request-contract-extension/" target="_blank">the developer hadn't lost the opportunity to do something with the property</a>, and that the community would give him a second chance to rebuild trust.</p>
+      <p><strong>Merge Urban Development.</strong> Developer was <a href="https://www.startribune.com/iowa-housing-developer-broke-contracts-with-duluth/600387374" target="_blank">issued a breach notice</a> for the Urbane 218 project — leaving a building exposed to weather, missing contractor records, and failing to provide risk insurance. Despite these problems, in <a href="https://www.duluthnewstribune.com/news/local/duluth-council-supports-more-flexibility-in-use-of-pandemic-funds" target="_blank">May 2024 the city still approved $4 million in pandemic relief funds</a> for Merge's second project.</p>
+      <p><strong>The Downtown Library.</strong> In December 2025, Mayor Reinert floated the idea of moving Duluth's beloved downtown public library — designed by architect Gunnar Birkerts — to a former UnitedHealthcare office building in the <a href="https://www.startribune.com/duluth-explores-moving-main-library-from-downtown-to-outskirts-of-city/601544293" target="_blank">Arrowpointe Building on Rice Lake Road</a>, four miles from downtown. Reinert has described the current library site as "one of our best opportunities to add some residential housing into downtown." The pattern: public asset out, private development in.</p>
+      <p><strong>The pattern is clear:</strong> the same agency that approved a developer facing a $52 million default and fraud allegations — and funded another project for a developer already in breach — will now evaluate selling 230 acres of parkland based on affordability promises from developers.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Land Use Study -->
+    <details class="subsection" id="land-use-study">
+      <summary><h3>The Land Use Study Wasn't The City's Idea — They Wanted a Closed, Fast-Tracked Process Instead</h3></summary>
+      <div class="detail-body">
+      <p>The administration's current emphasis on the Bolton &amp; Menk land use study deserves context. In October 2025, the mayor's team asked the Planning Commission to recommend transferring Lester to DEDA <em>before</em> any public planning process. No land use study. No community input. Just conveyance to the development authority.</p>
+      <p>When even the mayor-appointed Planning Commission balked — unable to produce the supermajority needed — the land use study was added as a compromise to secure the eight-vote council supermajority required for a parkland transfer. The study the administration is now promoting as evidence of a transparent process was the price of assembling enough votes to proceed — not the starting point of the process itself.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- COGGS -->
+    <details class="subsection" id="coggs">
+      <summary><h3>COGGS Was Frozen Out of the Land Use Study</h3></summary>
+      <div class="detail-body">
+      <p><a href="https://www.coggs.com" target="_blank">COGGS</a> has been building and maintaining Duluth's world-class trail system since 1994 — over thirty years of volunteer-driven work (the first official trail, Pokegema in Superior, was built in 1999) that earned IMBA Gold Level designation and draws tourists who spend money at Duluth businesses.</p>
+      <p>COGGS Executive Director Ansel Schimpff attended every meeting of the mayor's Lester Park Working Group. He found that the group's stated purpose was quickly abandoned: members pushed for outright sale, and the Sunnarborg proposal was presented as inevitable. At the Planning Commission, Schimpff called for "a transparent community-driven process before any transfer to DEDA."</p>
+      <p>Schimpff was <strong>not selected</strong> for the steering committee of the $197,000 Bolton &amp; Menk land use study — the study that will shape what happens to 230 acres of Duluth's most valuable open land. The Mayor's message is clear: speak the truth and you will be silenced and left out in the process. Where are we? China? Russia?</p>
+      <p>The economic case for COGGS's vision for the parkland is not speculative. The Duluth Traverse visitor survey, conducted in 2021, found that <strong>roughly 30 percent of trail users are tourists</strong> — people who came to Duluth, at least in part, because of the trails. Those visitors stay in hotels, eat in restaurants, rent bikes, buy gear, and support local businesses. They are an economic engine that grows every time the trail system grows. Adding family-accessible terrain at Lester would extend that engine to the single largest category of potential visitors that Duluth's trail system currently underserves: families.</p>
+      <p>Consider what <strong>Bentonville, Arkansas</strong> deliberately built. It created beginner and family-accessible trails alongside its expert terrain, creating a system where a 7-year-old and a seasoned rider could both have the time of their lives on the same day. The result: cycling-related economic activity in the region now generates over <strong>$159 million annually in economic impact</strong>. Duluth has world-class expert trails. What it has lacked is an accessible, family-friendly on-ramp. Lester's 230 acres are precisely that on-ramp. Imagine a week-long summer bike camp where families from across Minnesota — from the Twin Cities, from Rochester, from Brainerd — send their kids to learn trail skills on Lester's gentle singletrack while the parents head out to ride the full Duluth Traverse, sample the breweries, and discover the North Shore. There is currently nowhere in northeastern Minnesota that offers this. A family-accessible Lester could be the reason Duluth becomes Bentonville North.</p>
+      <p><strong>But the Mayor's actions endanger all of this because Schimpff and COGGS are not at the table.</strong></p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('investigate', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-investigate">Copied!</span>
+    </div>
+
+    <p class="section-label" style="color:var(--gold-light);margin-top:3rem;" id="timeline">How We Got Here</p>
+    <h2 class="section-title"><span>A Timeline</span></h2>
+    <p class="lead-text">The push to privatize Lester Park didn't happen overnight. Here are the key dates — all sourced from public records and local reporting.</p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">2018</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Course Closes</h3>
+          <p>The city closes Lester Park Golf Course, citing declining revenue and maintenance costs. The 270-acre site remains public parkland.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>DEDA Takes Control of 37.5 Acres</h3>
+          <p>DEDA takes control of the lower 37.5 acres — the most developable portion, nearest roads and utilities. The city's "Essential Spaces" plan states it "intends to retain as a protected park" the remaining 230 acres.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2023</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Oppidan Selected as Developer</h3>
+          <p>DEDA selects <a href="https://oppidan.com/blog/duluth-selects-preferred-development-proposal-for-lester-park-golf-course" target="_blank">Oppidan Investment Company</a> to develop the 37.5 acres. A <a href="https://www.duluthnewstribune.com/news/local/authority-grants-developer-option-to-buy-part-of-duluth-golf-course" target="_blank">two-year option agreement</a> is approved. There has been no public announcement about the lapse of the option and no construction has commenced.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Mar 2024</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Mayor Convenes Working Group</h3>
+          <p>Mayor Reinert <a href="https://www.duluthnewstribune.com/news/local/duluth-to-take-fresh-look-at-future-of-lester-park-golf-course" target="_blank">convenes a working group</a> for the remaining 230 acres. COGGS Executive Director Ansel Schimpff later describes the process as appearing designed to "move a developer's plan through."</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2025</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Mayor Signals Predetermined Outcome</h3>
+          <p>Following the Working Group's presentation, Mayor Reinert <a href="https://www.northernnewsnow.com/2025/04/29/group-presents-plans-revamp-old-lester-park-golf-course/" target="_blank">issues a press release</a> stating golf must be a <strong>"key element"</strong> — before any public land use study has begun.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2025</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Planning Commission Balks</h3>
+          <p>The Planning Commission is asked to recommend transferring the land to DEDA — <strong>before any land use study or public planning process.</strong> Even this mayor-appointed commission cannot muster the supermajority needed to recommend transfer.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 3, 2025</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>The "Sunnarborg Plan" Emerges</h3>
+          <p>Working Group co-chair Tim Meyer <a href="https://www.duluthnewstribune.com/opinion/columns/local-view-redeveloping-lester-has-only-one-best-path-forward" target="_blank">endorses the "Sunnarborg Plan"</a> in the News Tribune: 18-hole golf, 455 housing units, 68 designated "affordable/workforce housing."</p>
+          <p>Sunnarborg has previously <a href="https://www.duluthnewstribune.com/news/developer-eyes-lester-park-golf-course" target="_blank">told the News Tribune</a> he envisions "something evocative of a ski village/resort, such as <a href="https://finalebreck.com/" target="_blank">Vail or Breckenridge</a>" — with a chalet-style, 120-room hotel. Other golf courses he's developed — <a href="https://forestdunesgolf.com/" target="_blank">Forest Dunes Golf Club</a> in Michigan and <a href="https://www.streamsongresort.com/golf-courses/" target="_blank">Streamsong Resort</a> in Florida — charge between <a href="https://forestdunesgolf.com/greens-fee-rates" target="_blank">$185</a> to <a href="https://www.ukgolfguy.com/streamsong-blue-golf" target="_blank">$419 per round</a>.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 8, 2025</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Council Votes 8–1 to Transfer</h3>
+          <p>City Council passes Ordinance 25-032-O, transferring 230 acres to DEDA contingent on a land use study. The sole "no" vote: <strong>Wendy Durrwachter</strong>, the councilor who actually represents the Lakeside–Lester Park neighborhood.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2026</div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Land Use Study Underway</h3>
+          <p>Bolton &amp; Menk land use study ($197,546) now underway. <a href="https://www.surveymonkey.com/r/LPGCSurvey1" target="_blank">Public survey closes March 8</a>. First open house <strong>March 2, 5 PM</strong> at Lester Park Elementary School.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('timeline', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-timeline">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     THE HOUSING MYTH
+══════════════════════════════════════ -->
+<section id="housing" class="sec-housing">
+  <div class="container">
+    <p class="section-label">This Isn't NIMBYism</p>
+    <h2 class="section-title"><span>We Support Smart, Affordable Housing Solutions</span></h2>
+
+    <p style="max-width:760px; margin: 0 auto 2rem; font-size:1.05rem; line-height:1.7; opacity:0.9;">We support more housing in Duluth — and there's no shortage of places to build it. A 2023 city study found capacity for over 2,400 units on already-developed downtown land. At least eight downtown buildings are sitting vacant right now. And the community land trust programs run by One Roof Community Housing are already getting Duluth families into homes they can actually afford to buy — and keep. The city has real options. Giving away 230 acres of century-old public parkland isn't one of them.</p>
+
+    <!-- Public Land vs Private Land -->
+    <details class="subsection" id="anti-development">
+      <summary><h3>Why This Isn't About Being Anti-Development</h3></summary>
+      <div class="detail-body">
+      <p>There's a critical distinction that often gets lost in the housing debate: the difference between <strong>allowing private development on private land</strong> and <strong>handing public land to private developers</strong>. We support the first. We oppose the second.</p>
+
+      <p>Even within progressive housing circles, there's broad agreement on this point. The pro-development wing — the YIMBYs who want to build more housing, reduce zoning barriers, and streamline permitting — are primarily arguing for building on <em>underutilized private land</em>. Upzone neighborhoods. Convert vacant downtown buildings. Fill empty lots. That's a legitimate policy debate, and reasonable people can disagree about how far to go.</p>
+
+      <p>But almost no serious housing advocate argues that the way to solve a housing shortage is to take public green space — land that belongs to every resident — and transfer it to a private developer. That's not a housing policy. That's a wealth transfer from the community to investors, with no guarantee the public gets a fair return.</p>
+
+      <p>The Lester Park situation is squarely in that second category. This is 230 acres of century-old public parkland. The question is not whether Duluth needs more housing — it does. The question is whether the answer to that need should be selling off a public asset that belongs to all of us. We don't think so, and neither should you. The city has <a href="#housing" onclick="document.querySelectorAll('#housing details.subsection')[1].open=true;document.querySelectorAll('#housing details.subsection')[2].open=true;">better options</a> — options that don't require giving away your land.</p>
+
+      <p>And here's what makes the push into the 230 acres even harder to defend: <strong>the Lake 9 section of Lester is already zoned for development.</strong> The city doesn't need to rezone parkland to build at Lester — it already has a piece of it designated for exactly that. If the housing need is as urgent as the mayor says, start there. The fact that the conversation has leapt past the land already zoned for development and straight to 230 acres of protected parkland tells you this was never just about housing.</p>
+
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Incline Village -->
+    <details class="subsection" id="incline-village">
+      <summary><h3>Solve — and Rethink — Incline Village Development</h3></summary>
+      <div class="detail-body">
+      <p>The city is already building housing at Incline Village — which only underscores the point that Lester Park isn't needed for development. But the city also desperately needs to rethink what that development looks like. For example, why not commit to building from the designs of <a href="https://www.just-housing.org/" target="_blank">Just Housing</a>, a local social benefit corporation building zero net energy homes specifically designed for Duluth's brutal winters — triple-pane windows, airtight construction, extra insulation, all-electric with no fossil fuels on site — that use less than a third of the energy a code-built home would consume, with rooftop solar bringing the annual energy bill to zero. They cost only about 11% more to build than a standard home, and they're designed to still be standing and functional a century from now. Just Housing is also <a href="https://www.just-housing.org/impact-overview" target="_blank">training the next generation of builders in these techniques</a> — working with high school construction students on high-performance building skills — a green-collar workforce pipeline that Duluth badly needs. <a href="https://commongroundduluth.com/" target="_blank">Common Ground Construction</a>, One Roof Community Housing's construction subsidiary, could be enlisted to build them. These are not luxury units aimed at out-of-town buyers. These are homes real Duluth families and seniors would actually want to live in, at prices designed to stay within reach. A site like Incline Village, in the hands of partners like that, could demonstrate that the city doesn't have to choose between housing and values — that building for the community already here is both possible and worth doing.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Downtown Conversion -->
+    <details class="subsection" id="downtown-conversion" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
+      <summary><h3>Downtown Conversion — Done Right, With the Right Partners</h3></summary>
+      <div class="detail-body">
+      <p><strong style="color: var(--gold);">Downtown conversion — done right, with real accountability.</strong> A 2023 study commissioned by the city identified capacity for over 2,400 new housing units on already-disturbed downtown land with existing infrastructure. At least eight downtown buildings are sitting vacant right now. The problem is not that Duluth has run out of places to build — the problem is what happens when we build without strings attached.</p>
+      <p>When the city works with private developers on TIF-funded projects — TIF, or tax increment financing, lets a developer use new tax revenue generated by their own project to pay for infrastructure and construction costs, sometimes for up to 26 years — those projects must come with strong affordable housing requirements, and developers must be held to their agreements. Look at what just went up downtown: <strong>The Lakeview at 333</strong>, a 15-story, $87 million luxury apartment building — with studios starting around $1,500 a month. That's the outcome when public infrastructure supports private development with no affordability mandate. The city has the leverage — through TIF, through zoning, through development agreements — to require that a meaningful share of units be permanently affordable. It just has to use it.</p>
+      <p>Developing downtown through organizations like <a href="https://1roofhousing.org/" target="_blank">One Roof Community Housing</a> and <a href="https://centercityhousing.org/" target="_blank">Center City Housing</a> could also be an option. For large downtown office-to-apartment conversions, the relevant tool is affordable rental development using Low Income Housing Tax Credits, which cap rents at a percentage of area median income for decades. One Roof's Brewery Creek Apartments and Decker Dwellings are local examples. It's not permanent the way a Community Land Trust is, but it keeps rents meaningfully below what a market-rate developer would charge. For seniors especially — who need accessible, affordable living near services and medical care — downtown could be a natural fit, as part of a broader revival. A downtown that adds affordable residential density, fills its vacant storefronts, and builds on anchors like the DECC, the library, aquarium and the medical district becomes somewhere people actually want to live. Every senior who makes that move frees up a family-sized home elsewhere in the city.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Subsection IV -->
+    <details class="subsection" id="affordability-gap" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
+      <summary><h3>Expand the Programs Closing the Affordability Gap</h3></summary>
+      <div class="detail-body">
+
+      <p><strong style="color: var(--gold);">One Roof Community Housing</strong> builds homes in Duluth that people earning working-class wages can actually afford to buy. In recent homes, that's meant selling at $75,000 below appraised value — the gap covered by a mix of city, state, and federal grants. And unlike most affordable housing programs, the model is designed so those grants don't get used up: when a homeowner sells, the next family gets the same deal. The subsidy stays in the home instead of disappearing into the market.</p>
+
+      <p>One Roof has been doing this in Duluth for over 30 years — and the numbers show it. On the homeownership side, they've built and stewarded 375+ permanently affordable CLT homes across the region, with 250 resales that have recycled over $20 million back into affordability for the next buyer. In 2023, they helped 22 households purchase a home; in November 2025, they unveiled five new homes appraised at $300,000 that sold for $160,000. On the rental side, they've developed 350+ affordable units through projects like Brewery Creek Apartments (52 units, including 22 for people experiencing homelessness), Decker Dwellings (42 units in Duluth Heights), Brae View Senior Apartments (72 units with on-site childcare and services), and Plover Place (24 units for unhoused individuals). They're not a theory or a pilot program. They're a proven local institution with a track record that dwarfs anything a market-rate developer has delivered for Duluth families.</p>
+
+      <p>The city already works with One Roof. But how much it prioritizes that partnership — in funding decisions, in development agreements, in how it disposes of public land — is a political choice. Some of these moves are available to the city right now; others require going to the state for new authority. All of them require political will:</p>
+
+      <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
+        <li><strong>Require that any development receiving a TIF subsidy deed a percentage of affordable units into the land trust permanently.</strong> TIF — tax increment financing — is the city's most powerful development subsidy tool: it lets a developer use new tax revenue generated by their own project to pay for infrastructure and construction costs, sometimes for up to 26 years. Cities routinely attach affordability strings to that kind of public money. Chicago requires 10% affordable units from any development over 10 units — doubling to 20% when TIF is involved, with some units placed into a community land trust under a 99-year resale covenant. Portland requires 30% of TIF revenues in its urban renewal areas be spent on affordable housing. Utah mandates 20% of TIF revenues go to affordable housing once a district clears $100,000 annually. The established range is 10–20% of units, scaled to subsidy size. <strong><em>Duluth gave Incline Village $75 million in TIF — up to $100 million across all phases — and required zero affordable units.</em></strong> Councilor Durrwachter was the lone dissenting vote; the developer's response was a verbal promise to "consider" affordability in future phases. The condos were projected to start at $650,000. Developer promises evaporate. Land trust deeds don't.</li>
+        <li><strong>Give One Roof right of first refusal when the city or county disposes of tax-forfeited properties.</strong> Before a vacant lot goes to open auction, One Roof gets first look.</li>
+        <li><strong>Use Duluth's political capital at the state legislature to fight for sustained One Roof funding.</strong> In 2023, under a DFL trifecta, One Roof received over $50 million from Minnesota's historic $1 billion housing omnibus — a generation's worth of work in a single cycle. That's likely a ceiling: it required an unusual alignment that won't repeat on demand. But the baseline is worth fighting for. In the most recent annual cycle, One Roof received $3.1 million for 10 homes. There's real room between those numbers, and how much Duluth gets depends partly on how hard the city advocates for it.</li>
+        <li><strong>Push the legislature for authorization to create a dedicated surcharge on high-value home sales, with proceeds going directly to the land trust.</strong> Duluth can't do this without state enabling legislation — but it could with it. Los Angeles taxes sales above $5 million at 4–5.5% and has raised over $830 million for affordable housing, though critics note the broad application to commercial properties has had unintended consequences. Vermont's approach is more targeted: a sharply higher transfer tax rate on non-primary residences that has outperformed revenue forecasts while protecting primary homeowners. Duluth's high-end market is closer to Vermont's than LA's — lake-view properties, North Shore second homes, Congdon Park estates. A modest surcharge on sales above $600,000 or $750,000, applied only to the amount above the threshold and exempt for affordable housing organizations, would generate real dedicated revenue for the land trust year over year. Not enough to replace state funding. Enough to matter.</li>
+      </ul>
+
+      <p>None of these require giving away parkland. They require the same political will the city has shown when subsidizing private development — directed instead toward a partner with a 30-year track record of delivering for Duluth families.</p>
+
+      <p><strong style="color: var(--gold);">Expand first-time buyer programs.</strong> The city and the Duluth HRA could aggressively promote and fund down payment assistance programs targeted at families and first-time buyers in the $50,000–$80,000 income range — the people most likely to buy an existing Duluth home if they can get over the barrier of a down payment. The federal CDBG and HOME programs are the primary funding source for exactly this kind of initiative — and despite the Trump administration's attempt to eliminate both entirely, the money was preserved through Democratic negotiations and made it into the FY2026 appropriations bill signed into law on February 3, 2026. Getting more buyers into the existing housing stock also creates natural upward mobility: a family that buys a starter home frees up a rental unit. These programs work without building anything new and without touching public land.</p>
+
+
+            <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+        <!-- Subsection I -->
+    <details class="subsection" id="mayor-housing" style="background: rgba(26,26,46,0.04); border-left-color: var(--gold);">
+      <summary><h3>The Mayor's Housing Argument, Examined</h3></summary>
+      <div class="detail-body">
+      <p>Mayor Roger Reinert has made housing a centerpiece of his administration, arguing that Duluth is <a href="https://www.wdio.com/front-page/top-stories/study-shows-scale-of-duluths-housing-shortage/" target="_blank">failing to attract people "simply due to a lack of housing"</a> and that major employers like <a href="https://www.startribune.com/is-population-stuck-duluth-finally-growing/601143248" target="_blank">Cirrus Aircraft and Essentia Health are struggling to hire</a> because workers can't find places to live. His goal is <a href="https://www.startribune.com/duluth-mayor-pledges-population-growth-in-the-long-stalled-city/600361869" target="_blank">90,000 residents by 2030</a>. Notably, this agenda is oriented largely toward people who don't live here yet — and the solution he has landed on involves selling public land, including parkland, to private developers — while he has 37.5 acres of potentially developable land in Lester that's already zoned for mixed use.</p>
+      <p>The mayor's framing doesn't pass inspection. The first problem is that the 90,000 population target is an assertion, not an argument. Duluth has hovered between 85,000 and 92,000 residents for most of the past 40 years. The city provides services, maintains infrastructure, and functions. Growth for its own sake primarily benefits developers and expands the tax base — but it also increases demands on schools, roads, and city services. The <a href="https://www.duluthnewstribune.com/news/local/capacity-crunch-prompts-districtwide-study-at-duluth-public-schools" target="_blank">east side schools are already over capacity</a>, and the mayor has offered no plan for how Duluth Public Schools absorbs more families. The question of whether Duluth needs to grow, or whether it needs to become more livable and affordable for the people already here, is one the mayor has decided without asking anyone.</p>
+      <p>The second problem is the assumption that a city must house every person who works there. No major American city does. Minneapolis and St. Paul have thriving downtowns and growing tax bases — and a significant share of their workforce lives in the suburbs. The regional housing market doesn't begin and end at the Duluth city limits, and the city isn't obligated to house every worker by selling parkland.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('housing', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-housing">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     GOLF, HEALTH & NATURE
+══════════════════════════════════════ -->
+<section id="golf" class="sec-golf">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold-light)">The Evidence</p>
+    <h2 class="section-title">Why Not Golf?<br><span>It's Bad For Human Health and Nature</span></h2>
+
+    <p style="font-size:0.95rem; line-height:1.85; color:rgba(255,255,255,0.9); margin-bottom:2rem;">According to the <a href="https://www.nytimes.com/2024/02/15/climate/golf-courses-conservation-nature.html" target="_blank"><em>New York Times</em></a>, the United States has more golf courses than McDonald's locations — over 16,000 courses compared to roughly 13,800 McDonald's restaurants. Golf courses collectively occupy more than 2 million acres of land, much of it treated with pesticides, herbicides, and fungicides at concentrations that would be illegal in most other contexts. The research on what this means for human health and ecological health is not reassuring.</p>
+
+    <!-- Human Health -->
+    <details class="subsection" id="health-effects" style="border-left-color: var(--gold-light);">
+      <summary><h3>Human Health Effects</h3></summary>
+      <div class="detail-body">
+      <p>A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12062912/" target="_blank">2025 study</a> led by researchers at Barrow Neurological Institute and Mayo Clinic, published in <em>JAMA Network Open</em> — drawing on 25 years of medical records collected across Minnesota and western Wisconsin — found that living near a golf course significantly raises Parkinson's disease risk. Residents within one to two miles of a course faced nearly triple the odds of diagnosis compared to those living six or more miles away, with elevated risk extending to three miles. The suspected mechanism is pesticide contamination of groundwater — and the risk was 82 percent higher when a course sat on geology vulnerable to that kind of migration.</p>
+      <p>That last detail matters here. Lester Park's shallow bedrock is precisely the geology the study flags as accelerating pesticide movement into surrounding soil and water. The Lester River, which borders the property and drains into Lake Superior, is exactly the kind of surface water pathway researchers identify as a primary route for off-site pesticide transport. No public record indicates the river was ever tested for golf course pesticides while the course was operating — not in MPCA surface water monitoring data, not in USGS station records, not in any document released through the city's development process.</p>
+      <p>The health concerns extend well beyond Parkinson's. A <a href="https://pubmed.ncbi.nlm.nih.gov/34352232/" target="_blank">2022 systematic review</a> in <em>Environmental Research</em> covering 25 studies of greenspace workers — including golf course employees — found elevated risks for leukemia, soft-tissue sarcoma, multiple myeloma, and non-Hodgkin lymphoma. A peer-reviewed review of turf pesticides found substantial laboratory and epidemiological evidence linking several chemicals routinely used on golf courses — including iprodione, chlorothalonil, and 2,4-D — to cancer in humans. And even a <a href="https://pubmed.ncbi.nlm.nih.gov/8732923/" target="_blank">1996 University of Iowa study</a> commissioned by the golf industry itself found that golf course superintendents die of prostate cancer at nearly triple the expected rate, and of brain cancer and non-Hodgkin's lymphoma at more than double.</p>
+      <p>The risk is particularly acute for the population most likely to move into new residential development: families with young children and women of childbearing age. Research has linked <a href="https://www.nrdc.org/stories/24-d-most-dangerous-pesticide-youve-never-heard" target="_blank">2,4-D</a> — one of the most common golf course herbicides, and a component of Agent Orange — to birth abnormalities and reduced fertility. Chlorpyrifos, another standard turf pesticide, has been <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3390915/" target="_blank">associated with delays in psychomotor and mental development in children</a> and with lower birth weights in newborns. The WHO's International Agency for Research on Cancer <a href="https://www.iarc.who.int/featured-news/media-centre-iarc-news-glyphosate/" target="_blank">classified glyphosate</a>, the active ingredient in Roundup, as a probable human carcinogen in 2015; glyphosate is among the most widely applied herbicides on American golf courses.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Nature -->
+    <details class="subsection" id="golf-nature" style="border-left-color: var(--gold-light);">
+      <summary><h3>Nature</h3></summary>
+      <div class="detail-body">
+      <p>Pesticides are among the most ecologically destructive substances in routine, legal use in the United States. A <a href="https://www.nature.com/articles/s41467-025-56732-x" target="_blank">2025 meta-analysis</a> in <em>Nature Communications</em> — synthesizing evidence from 1,705 studies — found that pesticides cause negative effects on more than 800 non-target species, including microbes, fungi, plants, insects, fish, birds, and mammals, affecting growth, reproduction, behavior, and cellular health. The authors identify pesticide use as a primary driver of global biodiversity collapse.</p>
+      <p>That collapse is severe. One quarter of the global insect population has been lost since 1990, according to a <a href="https://www.science.org/doi/10.1126/science.aax9931" target="_blank">2020 meta-analysis in <em>Science</em></a>. A <a href="https://www.science.org/doi/10.1126/science.adp4671" target="_blank">2025 study in <em>Science</em></a> found that across 554 recorded butterfly species, total populations have fallen 22 percent since 2000 — nearly one in five butterflies gone in a single generation. The monarch is the most visible casualty: the eastern population has declined 80 percent over the past few decades, and the US Fish and Wildlife Service <a href="https://www.fws.gov/press-release/2024-12/monarch-butterfly-proposed-endangered-species-act-protection" target="_blank">proposed listing it as a threatened species</a> in December 2024.</p>
+      <p>Insects are not a peripheral part of the food web — they are integral, particularly to birds. In Minnesota, an estimated 90 percent of all land bird individuals are insectivores during the breeding season. A <a href="https://www.science.org/doi/10.1126/science.aaw1313" target="_blank">2019 study in <em>Science</em></a> found that North America as a whole has lost nearly 3 billion birds — approximately 30 percent of total population — since 1970. Fewer insects means fewer birds. The cascade moves in one direction.</p>
+      <p>The turfgrass itself is part of the problem, independent of what's sprayed on it. Research consistently shows that native insect and spider diversity declines sharply in areas dominated by turfgrass, which functions as a biological monoculture offering almost nothing to native wildlife. The grasses used on golf courses and lawns evolved in Europe and Asia; American insects did not evolve alongside them and cannot use them as habitat or food. A <a href="https://www.sciencedirect.com/science/article/pii/S0169204617301081" target="_blank">study across seven US cities</a> found that residential lawn maintenance is producing continental-scale ecological homogenization — the same impoverished, non-native plant communities appearing coast to coast.</p>
+      <p>According to the <a href="https://www.nytimes.com/2024/02/15/climate/golf-courses-conservation-nature.html" target="_blank"><em>New York Times</em></a>, golf courses in the U.S. represent 42 percent of all golf courses on earth. That ratio holds locally: within 25 miles of Duluth, there are roughly eight golf courses and only five McDonald's. Globally and locally, that is an enormous amount of land chemically maintained as biological desert, draining into watersheds, fragmenting habitat, and poisoning the species that remain. Golf is not something the city should be choosing for a site bordered by the Lester River and draining into Lake Superior — one of the world's largest freshwater ecosystems.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <!-- Golf in Decline -->
+    <details class="subsection" id="golf-decline" style="border-left-color: var(--gold-light);">
+      <summary><h3>Golf Is in Decline — and Other Communities Are Making Smarter Choices</h3></summary>
+      <div class="detail-body">
+      <p>The National Golf Foundation reports that course closures have exceeded new course openings annually since 2006, representing a net reduction of approximately 8% of total U.S. golf course supply. Duluth's experience confirms this pattern: Lester Park Golf Course closed due to sustained financial losses. The question merits consideration: why designate a failing land use as a "key element" of a development intended to operate for decades?</p>
+      <p>According to the <a href="https://www.nytimes.com/2024/02/15/climate/golf-courses-conservation-nature.html" target="_blank"><em>New York Times</em></a> and others, communities across the country facing the same question Duluth now faces — what to do with a shuttered municipal golf course — have chosen a different path than housing development. And the results are instructive.</p>
+      <p>In <strong style="color:var(--gold-light)">Akron, Ohio</strong>, Summit Metro Parks <a href="https://www.akronlife.com/education/total-restoration/" target="_blank">acquired the 194-acre Valley View Golf Course</a> in 2016. Drain tiles that had suppressed wetlands for decades were removed. The Cuyahoga River, which ran through the property, was restored to its natural, winding course. Non-native vegetation — 90 percent of the plant life on the old course — was stripped and replaced with native meadow mixes, wildflowers, and over 120,000 native nut trees. The rewilded site connected three surrounding parks into 1,900 contiguous acres of public green space.</p>
+      <p>In <strong style="color:var(--gold-light)">California's Marin County</strong>, the San Geronimo Golf Course was acquired by the Trust for Public Land in 2018. Floodplains were reconnected, and water that had been diverted from Larsen Creek to irrigate the golf course was returned to the stream to support endangered coho salmon and threatened steelhead trout. San Geronimo Creek provides roughly 40 percent of the available spawning habitat in the entire Lagunitas Creek watershed — a species that had been functionally absent from the watershed for years. The site is now a public commons with trails, native habitat, and open access.</p>
+      <p>In <strong style="color:var(--gold-light)">Cherry Valley, Illinois</strong>, a nonprofit called <a href="https://www.rockrivercurrent.com/2024/06/severson-dells-to-buy-former-elliot-golf-course-convert-it-to-nature-preserve-in-cherry-valley/" target="_blank">Severson Dells is converting the former Elliot Golf Course</a> into native prairies, oak savannas, and wetlands, with the old clubhouse becoming a nature center for education and community events. Similar projects have been completed or are underway in Detroit, Pennsylvania, Colorado, the Finger Lakes, and at least four sites in California.</p>
+      <p>The Lester Park site shares key features with every one of these success stories: a river corridor, relatively flat and accessible terrain, adjacency to existing natural areas, and a community that has already demonstrated it values outdoor space. It carries the same potential to support native fish, birds, and plant communities that golf course monoculture has suppressed for decades.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('golf', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-golf">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+
+<!-- ══════════════════════════════════════
+     VISION
+══════════════════════════════════════ -->
+<section id="vision" class="sec-vision">
+  <div class="container">
+    <p class="section-label">What's Possible</p>
+    <h2 class="section-title">A Community Vision for<br><span>Lester's Future</span></h2>
+    <p class="lead-text" style="max-width:720px">Duluth deserves a living park that serves the whole community for generations.</p>
+
+    <div class="vision-grid">
+      <div class="vision-card">
+        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="22" r="13" stroke="#5a6e3a" stroke-width="2"/><circle cx="20" cy="22" r="2" fill="#5a6e3a"/><line x1="20" y1="22" x2="20" y2="9" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="9" y2="29" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="31" y2="29" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="7" y2="20" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="33" y2="20" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="13" y2="11" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="27" y2="11" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="12" y2="33" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="28" y2="33" stroke="#5a6e3a" stroke-width="1.2"/><path d="M14 8L20 5L26 8" stroke="#5a6e3a" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></div>
+        <h3>Family-Friendly Trail Network</h3>
+        <p>Duluth is one of only seven International Mountain Bicycling Association Gold Level Ride Centers in the world — but much of the terrain is expert-level. Lester's gently rolling former fairways are a blank canvas for the beginner and intermediate trails that would make Duluth a destination for families who currently go to places like Cuyuna instead. Think: Bentonville North.</p>
+      </div>
+      <div class="vision-card">
+        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C14 4 8 12 8 20C8 26 12 30 16 32V38H24V32C28 30 32 26 32 20C32 12 26 4 20 4Z" fill="#5a6e3a" fill-opacity="0.12" stroke="#5a6e3a" stroke-width="1.8"/><rect x="17" y="28" width="6" height="10" fill="#5a6e3a" fill-opacity="0.25" stroke="#5a6e3a" stroke-width="1"/><circle cx="20" cy="16" r="3" stroke="#5a6e3a" stroke-width="1.2" fill="#5a6e3a" fill-opacity="0.15"/><path d="M15 22C17 20 23 20 25 22" stroke="#5a6e3a" stroke-width="1" stroke-linecap="round"/></svg></div>
+        <h3>Nature Center &amp; Preschool</h3>
+        <p>Modeled on Hartley Nature Center, whose preschool is so well-regarded that some parents drive from an hour away in Wisconsin to bring their kids. There is a severe daycare and preschool shortage that a Lester nature center and preschool could address. Or, thinking bigger: why not create a campus along the lines of Wolf Ridge — to serve as an environmental learning center for Duluth schools year-round and visiting students from across the region?</p>
+      </div>
+      <div class="vision-card">
+        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 38V18" stroke="#5a6e3a" stroke-width="1.8" stroke-linecap="round"/><path d="M14 38V22" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><path d="M26 38V20" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><circle cx="20" cy="14" r="4" fill="#5a6e3a" fill-opacity="0.2" stroke="#5a6e3a" stroke-width="1.5"/><circle cx="14" cy="18" r="3" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.2"/><circle cx="26" cy="16" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.2"/><path d="M20 14L18 10M20 14L22 10M20 14L20 9" stroke="#5a6e3a" stroke-width="1" stroke-linecap="round"/></svg></div>
+        <h3>Native Plant Restoration</h3>
+        <p>Transitioning former fairways from managed turf to native plantings has been shown to increase local biodiversity by 30% within two years.. <a href="#golf" style="color:var(--forest-light);">Golf is in decline, and other communities are investing in re-wilding the land</a>.</p>
+      </div>
+      <div class="vision-card">
+        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="10" r="4" fill="#5a6e3a" fill-opacity="0.2" stroke="#5a6e3a" stroke-width="1.5"/><circle cx="10" cy="18" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><circle cx="30" cy="18" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><path d="M20 14V20L14 26" stroke="#5a6e3a" stroke-width="1.3" stroke-linecap="round"/><path d="M20 20L26 26" stroke="#5a6e3a" stroke-width="1.3" stroke-linecap="round"/><path d="M10 22V28L16 34" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><path d="M30 22V28L24 34" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+        <h3>Community Spaces</h3>
+        <p>A home for the Duluth Art Institute (currently in an office building downtown). Workshop space for the Duluth Folk School, which has outgrown its current location. A kids' maker space mentored by UMD and Lake Superior College engineering students. A family birding club with Hawk Ridge next door. The only constraint on the possibilities is our imagination.</p>
+      </div>
+      <div class="vision-card">
+        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 4C28 4 24 8 22 14C20 20 18 28 16 36" stroke="#5a6e3a" stroke-width="1.8" stroke-linecap="round"/><path d="M28 4C26 6 20 8 16 12C12 16 10 22 10 28" stroke="#5a6e3a" stroke-width="1.3" fill="#5a6e3a" fill-opacity="0.08"/><path d="M28 4C30 8 32 14 30 20C28 26 24 30 16 36" stroke="#5a6e3a" stroke-width="1.3" fill="#5a6e3a" fill-opacity="0.08"/><line x1="24" y1="12" x2="20" y2="16" stroke="#5a6e3a" stroke-width="0.8" opacity="0.4"/><line x1="22" y1="18" x2="18" y2="22" stroke="#5a6e3a" stroke-width="0.8" opacity="0.4"/><line x1="20" y1="24" x2="17" y2="28" stroke="#5a6e3a" stroke-width="0.8" opacity="0.4"/></svg></div>
+        <h3>Land Back</h3>
+        <p>Recognize the Indigenous history of this land by returning a portion to Native communities. In recent years, the Esselen Tribe received 1,199 acres in Big Sur; Machias, Maine, returned land to the Passamaquoddy Tribe; and Oakland transferred parkland to an Indigenous-led consortium. These transfers have resulted in ecological restoration and expanded public access — not less.</p>
+      </div>
+    </div>
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('vision', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-vision">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     SCHOOLS
+══════════════════════════════════════ -->
+<section id="schools" class="sec-schools">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold-light)">What the Mayor's Failed to Mention</p>
+    <h2 class="section-title" style="color:#fff">The Schools<br><span>Can't Handle It</span></h2>
+
+    <details class="subsection" id="schools-detail" style="border-left-color: var(--gold-light);">
+      <summary style="list-style:none;cursor:pointer;">
+        <p style="margin:0;">Nobody in this debate is talking about Duluth Public Schools. They should be. The east side schools are already out of room. <span style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.85rem;font-weight:700;">More&nbsp;.&nbsp;.&nbsp;.</span></p>
+      </summary>
+      <div class="detail-body">
+      <p>In the 2025–2026 school year, <a href="https://www.duluthnewstribune.com/news/local/capacity-crunch-prompts-districtwide-study-at-duluth-public-schools" target="_blank">Duluth Public Schools enrolled 8,272 students</a> — about 240 more than the previous year, and the superintendent described space as "getting tight in a number of places." The growth has been concentrated on the east side. Lester Park Elementary is operating at capacity with no classroom space left. Congdon Park Elementary is at 108 percent of capacity. Ordean East Middle School and East High School are both absorbing enrollment increases the district says it cannot adequately staff because there are no rooms to put additional teachers in. At Homecroft Elementary, the teacher's lounge has been converted into a classroom. At Myers-Wilkins, the transition of Lowell's Spanish immersion program has made space "tight." Parents at Lester Park have noted classes already exceeding 25 students.</p>
+      <p><strong style="color: var(--gold-light);">The Lester Park golf course development would add up to 455 housing units to a neighborhood already feeding these schools.</strong> If those units attract even a modest share of families with children, the east side schools would face additional enrollment pressure on top of a crisis the district is already commissioning a districtwide study to address. The city has offered no plan for how Duluth Public Schools would absorb that growth. The mayor's housing narrative treats school capacity as someone else's problem.</p>
+      <p>Namely, School Superintendent John Magas, who is on the Land Use Study's Steering Committee. Surely, he will be inundated with questions from concerned parents.</p>
+      <div class="share-bar" style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);justify-content:flex-start;">
+        <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a>
+        <button onclick="copySubLink(this)">Share This Section</button>
+      </div>
+      </div>
+    </details>
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('schools', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-schools">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     ENDORSEMENTS
+══════════════════════════════════════ -->
+<section id="endorsements" class="sec-endorse">
+  <div class="container">
+    <p class="section-label">Support Growing</p>
+    <h2 class="section-title">Who Stands<br><span>With Us</span></h2>
+    <p class="lead-text">Individuals, businesses, and organizations endorsing the call for a public referendum on Lester's future. Contact us to add your name.</p>
+
+    <h3 style="margin-top:2rem; font-family:'Playfair Display',serif; color:var(--forest-dark); font-size:1.1rem;">Individuals</h3>
+    <div class="endorser-grid">
+      <div class="endorser-card">
+        <div class="name">Your Name Here</div>
+        <div class="role">Duluth Resident</div>
+        <div class="quote">We're building this list. Email info[at]ourparkourvote.org to add your endorsement.</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:2rem; font-family:'Playfair Display',serif; color:var(--forest-dark); font-size:1.1rem;">Businesses and Groups</h3>
+    <div class="endorser-grid">
+      <div class="endorser-card">
+        <div class="name">Your Business Here</div>
+        <div class="role">Duluth Business</div>
+        <div class="quote">Want to endorse the referendum effort? Request a hard-copy petition and a counter placard for your shop by emailing info[at]ourparkourvote.org. Let your customers know where you stand.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <h3 style="font-family:'Playfair Display',serif;color:var(--forest-dark);font-size:1.2rem;margin-bottom:1rem;">For Community Groups &amp; Organizations</h3>
+      <p style="color:var(--text);font-size:0.95rem;">Share this website. Bring up the petition effort in your newsletters, email lists, and meetings. Whether you're a neighborhood association, a church group, a trail crew, a book club, or a union local — this affects your community. A one-line mention and a link in your next communication can reach hundreds of people we can't reach alone.</p>
+    </div>
+
+    <div class="share-bar">
+      <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('endorsements', this)" title="Copy link">Share This Section</button>
+      <span class="copied-msg" id="copied-endorsements">Copied!</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════════════════════════════════
+     TAKE ACTION
+══════════════════════════════════════ -->
+<section id="action" class="sec-action">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold-light)">Make a Difference</p>
+    <h2 class="section-title" style="color:#fff">Take Action:<br><span>How You Can Help</span></h2>
+
+    <div class="action-grid">
+      <div class="action-card urgent">
+        <h4>Download &amp; Sign the Petition</h4>
+        <p>This is the single most important thing you can do. <strong>Download the petition, print it, sign it, and mail it in.</strong> Then print extra copies and ask your family, friends, and neighbors to sign too. Every signature brings us closer to a public vote on Lester's future.</p>
+        <a href="petition.pdf" target="_blank" class="btn">Download Petition (PDF) →</a>
+      </div>
+
+      <div class="action-card">
+        <h4>🏫 Attend the Open House — March 2</h4>
+        <p><strong>Monday, March 2, 2026, 5 PM</strong> at Lester Park Elementary School, 5300 Glenwood Street. A second open house is expected in May. Be at both. Bring neighbors. Be direct: you don't want development at Lester Park.</p>
+      </div>
+
+      <div class="action-card urgent">
+        <h4>🏛️ Attend City Council &amp; Speak Out</h4>
+        <p>The Duluth City Council meets on the <strong>2nd and 4th Monday of every month at 6:00 PM</strong> in the Council Chambers, 3rd Floor, City Hall. The public can address the Council during the "Opportunity for Citizens to be Heard" portion. Sign up at the Clerk's desk in the front of the room.</p>
+        <p style="font-size:0.88rem;"><strong>Upcoming meetings:</strong></p>
+        <p style="font-size:0.85rem; line-height:1.9; margin-top:0.3rem;">
+          Monday, March 9, 2026 — 6:00 PM<br>
+          Monday, March 23, 2026 — 6:00 PM<br>
+          Monday, April 13, 2026 — 6:00 PM<br>
+          Monday, April 27, 2026 — 6:00 PM
+        </p>
+      </div>
+
+      <div class="action-card">
+        <h4>📧 Contact the Mayor &amp; Council</h4>
+        <p>Tell them you want a referendum on the sale, that you oppose development at Lester, and that rezoning parkland for private development is not something you will accept.</p>
+        <p style="font-size:0.85rem;"><strong>Mayor Reinert:</strong> mayor[at]duluthmn.gov | 218-730-5230</p>
+        <div class="email-block">
+          wdurrwachter[at]duluthmn.gov;
+          ddesotelle[at]duluthmn.gov;
+          rrandorf[at]duluthmn.gov;
+          dclanaugh[at]duluthmn.gov;
+          jkennedy[at]duluthmn.gov;
+          jjohnson[at]duluthmn.gov;
+          aforsman[at]duluthmn.gov;
+          lnephew[at]duluthmn.gov;
+          ttomanek[at]duluthmn.gov
+        </div>
+        <p style="font-size:0.82rem;margin-top:0.75rem;">Copy the addresses above into the "To:" field to email all nine councilors at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+function copyLink(sectionId, btn) {
+  const url = window.location.origin + window.location.pathname + '#' + sectionId;
+  navigator.clipboard.writeText(url).then(function() {
+    const msg = document.getElementById('copied-' + sectionId);
+    if (msg) {
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    }
+  }).catch(function() {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const msg = document.getElementById('copied-' + sectionId);
+    if (msg) {
+      msg.classList.add('show');
+      setTimeout(function() { msg.classList.remove('show'); }, 2000);
+    }
+  });
+}
+
+function copySubLink(btn) {
+  // Find the nearest details or section ancestor with an id
+  let el = btn;
+  while (el && el.tagName !== 'DETAILS' && el.tagName !== 'SECTION') {
+    el = el.parentElement;
+  }
+  // If we found a details with an id, use it; otherwise fall back to section
+  if (el && el.tagName === 'DETAILS' && !el.id) {
+    while (el && el.tagName !== 'SECTION') {
+      el = el.parentElement;
+    }
+  }
+  const sectionId = el ? el.id : '';
+  const url = window.location.origin + window.location.pathname + (sectionId ? '#' + sectionId : '');
+  navigator.clipboard.writeText(url).then(function() {
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = orig; }, 2000);
+  }).catch(function() {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = orig; }, 2000);
+  });
+}
+
+// On page load, if hash targets a <details>, open it and scroll to it
+document.addEventListener('DOMContentLoaded', function() {
+  var hash = window.location.hash.substring(1);
+  if (!hash) return;
+  var target = document.getElementById(hash);
+  if (target && target.tagName === 'DETAILS') {
+    target.open = true;
+    setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+  }
+});
+</script>
+
+</body>
+</html>
