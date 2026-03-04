@@ -314,7 +314,7 @@ footer a { color: var(--gold-light); }
 <div class="hero">
   <div class="hero-content">
     <h1>Lester Is <em>Our</em> Land.<br>City Hall Wants to Sell It<br>Without Asking Us.</h1>
-    <p class="subheading">Sign the Petition to Require Voter Approval</p>
+    <p class="subheading">Sign the Petition in Support of a Ballot Initiative to Require Voter Approval</p>
     <div class="hero-cta">
       <a href="petition.pdf" target="_blank" class="btn-primary">Download the Petition</a>
       <a href="#volunteer" class="btn-outline">Volunteer &amp; Earn Native Plants</a>
@@ -338,41 +338,15 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="info-card">
         <h3>What We're Doing</h3>
-        <p>Our Park Our Vote is collecting citizen petition signatures to force a public referendum. If we gather enough signatures, the city <strong>must</strong> let voters decide Lester's future.</p>
-      </div>
-      <div class="info-card">
-        <h3>How to Help</h3>
-        <p><a href="petition.pdf" target="_blank">Download the petition</a>, print it, sign it, and mail it in. Share this page with your neighbors. Every signature brings us closer to a vote.</p>
+        <p>Our Park Our Vote is collecting citizen petition signatures to force a ballot initiative. If we gather enough signatures, the city <strong>must</strong> let voters decide Lester's future.</p>
       </div>
       <div class="info-card">
         <h3>Why It Matters</h3>
-        <p>Once public land is sold, it's gone forever. Once sold, developers -- not Duluthians -- get to decide its future. This is about whether the people of Duluth get a say in what happens to 230 acres that belong to all of us.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="gold-divider"></div>
-
-<!-- ══════════ HOW DID WE GET HERE ══════════ -->
-<section class="sec-backstory">
-  <div class="container">
-    <p class="section-label" style="text-align:center;color:var(--gold-light);">The Backstory</p>
-    <h2 class="section-title" style="text-align:center;">How Did We<br><span>Get Here?</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Mayor wants to bring golf back to Lester Park. The problem? The city can't afford it. But a private developer from Florida can &mdash; and the deal isn't what it sounds like.</p>
-
-    <div class="backstory-grid">
-      <div class="backstory-card">
-        <h3>The Developer's Vision</h3>
-        <p>A Florida-based developer envisions a &ldquo;Vail-Breckenridge&rdquo; style chalet hotel on public parkland. Other courses he's developed charge up to <strong style="color:var(--gold-light);">$415 per round</strong>. This isn't community golf &mdash; it's a luxury resort built on land that belongs to Duluthians.</p>
-      </div>
-      <div class="backstory-card">
-        <h3>Why City Hall Wants the Deal</h3>
-        <p>Enger Park Golf Course needs a new clubhouse, and the money from selling Lester is earmarked to build it. In other words, one public park is being sacrificed to fund improvements at another &mdash; without voters ever being asked.</p>
+        <p>Once public land is sold, it's gone forever. Developers &mdash; not Duluthians &mdash; will get to decide its future. That's bass-ackwards. This is about whether the people of Duluth get a say in what happens to 230 acres that belong to all of us.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
-      <a href="index.html#investigate" class="btn-primary">Read the Full Backstory</a>
+      <a href="#volunteer" class="btn-primary">Volunteer &amp; Earn Native Plants</a>
     </div>
   </div>
 </section>
@@ -384,7 +358,33 @@ footer a { color: var(--gold-light); }
   <div class="container">
     <p class="section-label" style="text-align:center;">How Volunteering Works</p>
     <h2 class="section-title" style="text-align:center;">Earn Native Plants<br><span>by Volunteering</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">The easiest volunteer gig you'll ever have &mdash; with native plants as your reward.</p>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">The easiest volunteer gig you'll ever have &mdash; with homegrown native plants as your reward.</p>
+
+    <div style="max-width:600px;margin:2.5rem auto 0;">
+      <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
+        <input type="hidden" name="form-name" value="volunteer-landing">
+        <div class="get5-form">
+          <div class="form-field">
+            <label>First Name *</label>
+            <input type="text" name="first-name" placeholder="Jane" required>
+          </div>
+          <div class="form-field">
+            <label>Last Name *</label>
+            <input type="text" name="last-name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-field" style="margin-bottom:0.75rem;">
+          <label>Email *</label>
+          <input type="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-field" style="margin-bottom:0.75rem;">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="(218) 555-1234">
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">I Will Get 5</button>
+      </form>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a></p>
+    </div>
 
     <div class="sixpack-wrap">
           <svg viewBox="80 100 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:4px;">
@@ -724,7 +724,7 @@ footer a { color: var(--gold-light); }
       <div class="step">
         <div class="step-number">2</div>
         <h3>Call in on Sunday</h3>
-        <p>Every Sunday at <strong>5:55</strong> PM, hop on a <strong>5-minute</strong> conference call. Report your haul and any lessons learned. That's it &mdash; five minutes, done.</p>
+        <p>Every Sunday at <strong>5:55</strong> PM, hop on a <strong>5-minute</strong> conference call. Report your haul and any lessons learned.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
@@ -732,32 +732,27 @@ footer a { color: var(--gold-light); }
         <p>For every Sunday call you join, receive a complimentary six-pack of native plants &mdash; even if you didn't get any signatures that week.</p>
       </div>
     </div>
+  </div>
+<div class="gold-divider"></div>
+<!-- ══════════ HOW DID WE GET HERE ══════════ -->
+<section class="sec-backstory">
+  <div class="container">
+    <p class="section-label" style="text-align:center;color:var(--gold-light);">The Backstory</p>
+    <h2 class="section-title" style="text-align:center;">How Did We<br><span>Get Here?</span></h2>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Mayor wants to bring golf back to Lester Park. The problem? The city can't afford it. But a private developer from Florida can &mdash; and the deal isn't what it sounds like.</p>
 
-
-    <div style="max-width:600px;margin:2.5rem auto 0;">
-      <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
-        <input type="hidden" name="form-name" value="volunteer-landing">
-        <div class="get5-form">
-          <div class="form-field">
-            <label>First Name *</label>
-            <input type="text" name="first-name" placeholder="Jane" required>
-          </div>
-          <div class="form-field">
-            <label>Last Name *</label>
-            <input type="text" name="last-name" placeholder="Smith" required>
-          </div>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Email *</label>
-          <input type="email" name="email" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(218) 555-1234">
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">I Will Get 5</button>
-      </form>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a></p>
+    <div class="backstory-grid">
+      <div class="backstory-card">
+        <h3>The Developer's Vision</h3>
+        <p>A Florida-based developer envisions a &ldquo;Vail-Breckenridge&rdquo; style chalet hotel on public parkland. Other courses he's developed charge up to <strong style="color:var(--gold-light);">$415 per round</strong>. This isn't community golf &mdash; it's a luxury resort built on land that belongs to Duluthians.</p>
+      </div>
+      <div class="backstory-card">
+        <h3>Why City Hall Wants the Deal</h3>
+        <p>Enger Park Golf Course needs a new clubhouse, and the money from selling Lester is earmarked to build it. In other words, one public park is being sacrificed to fund improvements at another &mdash; without voters ever being asked.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="index.html#investigate" class="btn-primary">Read the Full Backstory</a>
     </div>
   </div>
 </section>
