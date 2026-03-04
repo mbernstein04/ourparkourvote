@@ -869,9 +869,7 @@ footer a { color: var(--gold-light); }
   <ul class="nav-links">
     <li><a href="petition.pdf" target="_blank" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petition</a></li>
     <li><a href="#homegrown" onclick="document.querySelector('.nav-links').classList.remove('open')">This We Believe</a></li>
-    <li><a href="#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">It Ain't Pretty</a></li>
     <li><a href="#investigate" onclick="document.querySelector('.nav-links').classList.remove('open')">Inside City Hall</a></li>
-    <li><a href="#timeline" onclick="document.querySelector('.nav-links').classList.remove('open')">A Timeline</a></li>
     <li><a href="#housing" onclick="document.querySelector('.nav-links').classList.remove('open')">We Support Housing</a></li>
     <li><a href="#golf" onclick="document.querySelector('.nav-links').classList.remove('open')">Why Not Golf?</a></li>
     <li><a href="#vision" onclick="document.querySelector('.nav-links').classList.remove('open')">Homegrown Lester</a></li>
@@ -886,7 +884,6 @@ footer a { color: var(--gold-light); }
   <a href="#homegrown" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">This We Believe</a>
   <a href="#vision" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Homegrown Lester</a>
   <a href="#investigate" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Inside City Hall</a>
-  <a href="#timeline" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">A Timeline</a>
   <a href="#housing" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">We Support Housing</a>
   <a href="#golf" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">Why Not Golf?</a>
   <a href="#schools" style="color:var(--gold-light);font-family:'Source Sans 3',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;padding:0.35rem 0.75rem;border:1px solid rgba(255,255,255,0.15);border-radius:4px;transition:background 0.2s;">The School Problem</a>
@@ -1460,19 +1457,9 @@ footer a { color: var(--gold-light); }
       <a href="petition.pdf" target="_blank" style="text-decoration:none;">Download Petition</a> <button onclick="copyLink('investigate', this)" title="Copy link">Share This Section</button>
       <span class="copied-msg" id="copied-investigate">Copied!</span>
     </div>
-  </div>
-</section>
 
-
-<div class="gold-divider"></div>
-
-<!-- ══════════════════════════════════════
-     TIMELINE
-══════════════════════════════════════ -->
-<section id="timeline" class="sec-timeline">
-  <div class="container">
-    <p class="section-label" style="color:var(--gold-light)">How We Got Here</p>
-    <h2 class="section-title">A Timeline</h2>
+    <p class="section-label" style="color:var(--gold-light);margin-top:3rem;" id="timeline">How We Got Here</p>
+    <h2 class="section-title"><span>A Timeline</span></h2>
     <p class="lead-text">The push to privatize Lester Park didn't happen overnight. Here are the key dates — all sourced from public records and local reporting.</p>
 
     <div class="timeline">
