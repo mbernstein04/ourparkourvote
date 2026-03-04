@@ -249,6 +249,14 @@ a { color: var(--lake-blue); }
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem;
 }
+.card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.card-header h3 { margin-bottom: 0; }
+.supporter-avatars { display: flex; }
+.supporter-avatars img {
+  width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
+  border: 2px solid #fff; margin-left: -8px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.supporter-avatars img:first-child { margin-left: 0; }
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── CTA SECTION ── */
@@ -333,8 +341,17 @@ footer a { color: var(--gold-light); }
 
     <div class="info-grid">
       <div class="info-card">
-        <h3>Who We Are</h3>
-        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="index.html#our-supporters">Learn more about us&nbsp;&rarr;</a></p>
+        <div class="card-header">
+          <h3>Who We Are</h3>
+          <div class="supporter-avatars">
+            <img src="michael-bernstein.jpg" alt="Michael Bernstein">
+            <img src="laura-erickson.jpg" alt="Laura Erickson">
+            <img src="courtney-stein.jpg" alt="Courtney Stein">
+            <img src="meghan-morrow.jpg" alt="Meghan Morrow">
+            <img src="thom-storm.jpg" alt="Thom Storm">
+          </div>
+        </div>
+        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="index.html#our-supporters">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="info-card">
         <h3>What We're Doing</h3>
