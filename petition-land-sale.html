@@ -249,15 +249,32 @@ a { color: var(--lake-blue); }
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem;
 }
-.card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.card-header { margin-bottom: 0.75rem; }
 .card-header h3 { margin-bottom: 0; }
-.supporter-avatars { display: flex; }
+.supporter-avatars { display: flex; gap: 0.5rem; margin-top: 1rem; }
 .supporter-avatars img {
-  width: 32px; height: 32px; border-radius: 50%; object-fit: cover;
-  border: 2px solid #fff; margin-left: -8px; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
+  border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
 .supporter-avatars img:first-child { margin-left: 0; }
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
+
+/* ── HOUSING SECTION ── */
+.sec-housing-q { background: var(--night-sky-deep); color: #fff; }
+.sec-housing-q .section-title { color: #fff; }
+.sec-housing-q .lead-text { color: rgba(255,255,255,0.82); }
+.housing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
+.housing-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-top: 3px solid var(--gold); border-radius: 2px; padding: 2rem;
+}
+.housing-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;
+}
+.housing-card p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; }
+.housing-card a { color: var(--gold-light); }
+.housing-card a:hover { color: var(--gold); }
 
 /* ── CTA SECTION ── */
 .sec-cta { background: var(--night-sky-deep); color: #fff; text-align: center; }
@@ -281,6 +298,7 @@ footer a { color: var(--gold-light); }
 @media (max-width: 800px) {
   .info-grid { grid-template-columns: 1fr; }
   .backstory-grid { grid-template-columns: 1fr; }
+  .housing-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .get5-form { grid-template-columns: 1fr; }
   nav { padding: 0 1rem; }
@@ -342,15 +360,15 @@ footer a { color: var(--gold-light); }
       <div class="info-card">
         <div class="card-header">
           <h3>Who We Are</h3>
-          <div class="supporter-avatars">
-            <img src="michael-bernstein.jpg" alt="Michael Bernstein">
-            <img src="laura-erickson.jpg" alt="Laura Erickson">
-            <img src="meghan-morrow.jpg" alt="Meghan Morrow">
-            <img src="thom-storm.jpg" alt="Thom Storm">
-            <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease">
-          </div>
         </div>
         <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public. <a href="index.html#our-supporters">Learn more&nbsp;&rarr;</a></p>
+        <div class="supporter-avatars">
+          <img src="michael-bernstein.jpg" alt="Michael Bernstein">
+          <img src="laura-erickson.jpg" alt="Laura Erickson">
+          <img src="meghan-morrow.jpg" alt="Meghan Morrow">
+          <img src="thom-storm.jpg" alt="Thom Storm">
+          <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease">
+        </div>
       </div>
       <div class="info-card">
         <h3>What We're Doing</h3>
@@ -362,7 +380,37 @@ footer a { color: var(--gold-light); }
       </div>
       <div class="info-card">
         <h3>How to Help</h3>
-        <p>Sign up to collect petition signatures in your neighborhood and earn a free six-pack of homegrown native plants for every weekly check-in. It's the easiest volunteer gig you'll ever have. <a href="#volunteer">Learn more &amp; sign up&nbsp;&rarr;</a></p>
+        <p>Sign up to collect petition signatures in your neighborhood and earn a free six-pack of homegrown native plants for every weekly check-in. And get homegrown native plants as your reward (while supplies last). <a href="#volunteer">Learn more &amp; sign up&nbsp;&rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════ HOUSING? ══════════ -->
+<section class="sec-housing-q">
+  <div class="container">
+    <p class="section-label" style="text-align:center;color:var(--gold-light);">Housing?</p>
+    <h2 class="section-title" style="text-align:center;"><span>37.5 Acres of Lester Is Already</span><br>Zoned for Housing</h2>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The mayor says we need to sell parkland for housing. But 37.5 acres of Lester is <strong style="color:var(--gold-light);">already zoned residential</strong>. We don't need to give away more park.</p>
+
+    <div class="housing-grid">
+      <div class="housing-card">
+        <h3>&ldquo;We Need Housing&rdquo;</h3>
+        <p>The mayor claims selling Lester is necessary to address Duluth's housing shortage. But the city's own studies show thousands of units can be built on already-disturbed land downtown &mdash; without touching a single acre of parkland. <a href="index.html#housing">Learn more&nbsp;&rarr;</a></p>
+      </div>
+      <div class="housing-card">
+        <h3>&ldquo;This Land Is Underused&rdquo;</h3>
+        <p>City Hall frames Lester as vacant, underutilized land. In reality, it's 230 acres of public green space used by walkers, skiers, and wildlife &mdash; and 37.5 acres are already zoned for development. <a href="index.html#housing">Learn more&nbsp;&rarr;</a></p>
+      </div>
+      <div class="housing-card">
+        <h3>&ldquo;It Will Be Affordable&rdquo;</h3>
+        <p>Past developer proposals have included as few as 68 &ldquo;affordable&rdquo; units out of 455 total &mdash; just 15%. History shows luxury development on public land rarely delivers on affordability promises. <a href="index.html#housing">Learn more&nbsp;&rarr;</a></p>
+      </div>
+      <div class="housing-card">
+        <h3>We Aren&rsquo;t NIMBYs</h3>
+        <p>We support smart, affordable housing &mdash; on private land, vacant lots, and underused downtown buildings. What we oppose is handing irreplaceable public green space to private developers. That&rsquo;s not NIMBYism. That&rsquo;s common sense. <a href="index.html#housing">Learn more&nbsp;&rarr;</a></p>
       </div>
     </div>
   </div>
