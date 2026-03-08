@@ -257,11 +257,31 @@ a { color: var(--lake-blue); }
 .card-header { margin-bottom: 0.75rem; }
 .card-header h3 { margin-bottom: 0; }
 .supporter-avatars { display: flex; gap: 0.5rem; margin-top: 1rem; }
+.supporter-avatars .avatar-wrap {
+  position: relative; cursor: pointer;
+}
 .supporter-avatars img {
   width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
   border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.supporter-avatars img:first-child { margin-left: 0; }
+.supporter-avatars .avatar-wrap:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.supporter-avatars .avatar-tooltip {
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  background: var(--forest-dark, #1a3a2a); color: #fff; padding: 0.35rem 0.65rem;
+  border-radius: 6px; font-family: 'Source Sans 3', sans-serif; font-size: 0.72rem;
+  font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none;
+  transition: opacity 0.2s; z-index: 10;
+}
+.supporter-avatars .avatar-tooltip::after {
+  content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: var(--forest-dark, #1a3a2a);
+}
+.supporter-avatars .avatar-wrap:hover .avatar-tooltip { opacity: 1; }
+.supporter-avatars .avatar-wrap:first-child { margin-left: 0; }
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── HOUSING SECTION ── */
@@ -441,11 +461,11 @@ footer a { color: var(--gold-light); }
         </div>
         <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public.</p>
         <div class="supporter-avatars">
-          <img src="michael-bernstein.jpg" alt="Michael Bernstein" title="Michael Bernstein">
-          <img src="laura-erickson.jpg" alt="Laura Erickson" title="Laura Erickson">
-          <img src="meghan-morrow.jpg" alt="Meghan Morrow" title="Meghan Morrow">
-          <img src="thom-storm.jpg" alt="Thom Storm" title="Thom Storm">
-          <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease" title="Brett Cease">
+          <span class="avatar-wrap"><span class="avatar-tooltip">Michael Bernstein</span><img src="michael-bernstein.jpg" alt="Michael Bernstein"></span>
+          <span class="avatar-wrap"><span class="avatar-tooltip">Laura Erickson</span><img src="laura-erickson.jpg" alt="Laura Erickson"></span>
+          <span class="avatar-wrap"><span class="avatar-tooltip">Meghan Morrow</span><img src="meghan-morrow.jpg" alt="Meghan Morrow"></span>
+          <span class="avatar-wrap"><span class="avatar-tooltip">Thom Storm</span><img src="thom-storm.jpg" alt="Thom Storm"></span>
+          <span class="avatar-wrap"><span class="avatar-tooltip">Brett Cease</span><img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease"></span>
         </div>
       </div>
       <div class="info-card">
