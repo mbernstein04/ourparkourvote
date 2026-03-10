@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who We Are — Our Park Our Vote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night-sky-deep: #060f1e;
+  --night-sky-mid: #0e1f3a;
+  --gold: #c8922a;
+  --gold-light: #e8b84a;
+  --gold-pale: #f5d878;
+  --cream: #faf4e8;
+  --text-dark: #1a1a2e;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--night-sky-deep);
+  color: #fff;
+  min-height: 100vh;
+}
+a { color: var(--gold-light); }
+a:hover { color: var(--gold-pale); }
+.back-link {
+  display: inline-block;
+  margin: 2rem 0 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--gold-light);
+}
+.back-link:hover { text-decoration: underline; }
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.bio-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.bio-card:last-child { border-bottom: none; }
+.bio-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  flex-shrink: 0;
+}
+.bio-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #fff;
+}
+.bio-info p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+.bio-info .substack-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 600px) {
+  .bio-card { flex-direction: column; align-items: center; text-align: center; }
+  .bio-photo { width: 100px; height: 100px; }
+  h1 { font-size: 1.7rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back-link">&larr; Back to Our Park Our Vote</a>
+  <h1>Who We Are</h1>
+
+  <div id="michael-bernstein" class="bio-card">
+    <img src="michael-bernstein.jpg" alt="Michael Bernstein" class="bio-photo">
+    <div class="bio-info">
+      <h2>Michael Bernstein</h2>
+      <p>Otherwise known as Bernie, Michael is a Minnesota licensed attorney and an environmentalist.</p>
+    </div>
+  </div>
+
+  <div id="laura-erickson" class="bio-card">
+    <img src="laura-erickson.jpg" alt="Laura Erickson" class="bio-photo">
+    <div class="bio-info">
+      <h2>Laura Erickson</h2>
+      <p>Award-winning author, broadcaster, and conservationist behind "For the Birds" — Duluth's longest-running birding program.</p>
+      <a href="https://lauraerickson.substack.com/" target="_blank" class="substack-link">Read on Substack &rarr;</a>
+    </div>
+  </div>
+
+  <div id="meghan-morrow" class="bio-card">
+    <img src="meghan-morrow.jpg" alt="Meghan Morrow" class="bio-photo">
+    <div class="bio-info">
+      <h2>Meghan Morrow</h2>
+      <p>Founder of Secret Forest Playschool, Duluth's first nature-based preschool and a champion of outdoor education.</p>
+    </div>
+  </div>
+
+  <div id="thom-storm" class="bio-card">
+    <img src="thom-storm.jpg" alt="Thom Storm" class="bio-photo">
+    <div class="bio-info">
+      <h2>Thom Storm</h2>
+      <p>Former executive director of the Chester Bowl Improvement Club and lifelong Duluth parks advocate.</p>
+    </div>
+  </div>
+
+  <div id="brett-cease" class="bio-card">
+    <img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease" class="bio-photo">
+    <div class="bio-info">
+      <h2>Brett Cease</h2>
+      <p>Vice President of Field Operations at Citizens' Climate Lobby and dedicated Duluth community advocate.</p>
+    </div>
+  </div>
+
+  <div id="dan-proctor" class="bio-card">
+    <img src="dan-proctor.jpg" alt="Dan Proctor" class="bio-photo">
+    <div class="bio-info">
+      <h2>Dan Proctor</h2>
+      <p>Co-owner of Positively 3rd Street Bakery and legendary volunteer trail builder — the Dan Proctor Trail at Chester Bowl bears his name.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
