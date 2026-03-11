@@ -6,7 +6,7 @@
 <title>Our Park Our Vote — Earn Native Plants by Volunteering</title>
 
 <!-- SEO -->
-<meta name="description" content="Lester is our land. City Hall wants to sell it without asking us. Sign the petition, get 5 signatures a week, and earn a free six-pack of native plants for every Sunday call you join.">
+<meta name="description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Sign our two petitions — one for each parcel — to put Lester's future to a public vote.">
 <meta name="keywords" content="Lester Park Golf Course, Duluth Minnesota, citizen petition, land sale, voter approval, public parkland, native plants, volunteer, Get 5, ourparkourvote">
 <meta name="author" content="Our Park, Our Vote">
 <link rel="canonical" href="https://ourparkourvote.org/petition-land-sale.html">
@@ -15,14 +15,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ourparkourvote.org/petition-land-sale.html">
 <meta property="og:title" content="Our Park Our Vote — Earn Native Plants by Volunteering">
-<meta property="og:description" content="Lester is our land. City Hall wants to sell it without asking us. Get 5 petition signatures a week, earn free native plants.">
+<meta property="og:description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Sign our two petitions to put Lester's future to a public vote.">
 <meta property="og:image" content="https://ourparkourvote.org/og-image.jpg">
 <meta property="og:site_name" content="Our Park, Our Vote">
 
 <!-- Twitter/X Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our Park Our Vote — Earn Native Plants by Volunteering">
-<meta name="twitter:description" content="Lester is our land. City Hall wants to sell it without asking us. Get 5 petition signatures a week, earn free native plants.">
+<meta name="twitter:description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Sign our two petitions to put Lester's future to a public vote.">
 <meta name="twitter:image" content="https://ourparkourvote.org/og-image.jpg">
 
 <!-- Indexing -->
@@ -96,14 +96,23 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  margin-top: 60px; background: var(--forest-dark);
+  margin-top: 60px;
+  background: var(--forest-dark);
+  background-image: url('photos/IMG_4661.jpeg');
+  background-size: cover;
+  background-position: center 40%;
   padding: 8rem 2rem 6rem; text-align: center;
   position: relative; overflow: hidden;
 }
 .hero::before {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 50% 120%, rgba(200,146,42,0.12) 0%, transparent 70%);
+  background: linear-gradient(
+    to bottom,
+    rgba(6,15,30,0.72) 0%,
+    rgba(6,15,30,0.65) 50%,
+    rgba(6,15,30,0.80) 100%
+  );
   pointer-events: none;
 }
 .hero-content {
@@ -123,7 +132,171 @@ nav {
 }
 .hero .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-@keyframes fade-up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+/* ── FAQ ── */
+.faq-list { margin-top: 2rem; }
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 0;
+}
+.faq-item summary {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--text-dark); cursor: pointer;
+  padding: 1.1rem 2rem 1.1rem 0;
+  position: relative; list-style: none;
+  outline: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+'; position: absolute;
+  right: 0; top: 50%; transform: translateY(-50%);
+  font-size: 1.4rem; color: var(--gold);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300; transition: transform 0.2s;
+}
+.faq-item[open] summary::after {
+  content: '−';
+}
+.faq-item summary:hover { color: var(--forest-dark); }
+.faq-body {
+  padding: 0 0 1.25rem 0;
+  font-size: 0.95rem; line-height: 1.8;
+  color: var(--text-mid);
+}
+.faq-body p { margin-bottom: 0.75rem; }
+.faq-body p:last-child { margin-bottom: 0; }
+.faq-body a { color: var(--forest-light); }
+.faq-body a:hover { color: var(--forest-dark); }
+
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  height: 280px;
+  overflow: hidden;
+}
+.photo-strip-item {
+  overflow: hidden; position: relative;
+  cursor: default;
+}
+.photo-strip-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transition: transform 0.6s ease;
+  display: block;
+}
+.photo-strip-item:hover img { transform: scale(1.05); }
+.photo-strip-caption {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem; color: rgba(255,255,255,0.45);
+  text-align: center; padding: 0.6rem 0;
+  background: var(--night-sky-deep);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .photo-strip { grid-template-columns: repeat(3, 1fr); height: 180px; }
+  .photo-strip-item:nth-child(4),
+  .photo-strip-item:nth-child(5) { display: none; }
+}
+
+
+.sig-counter {
+  max-width: 480px; margin: 2rem auto 0;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(200,146,42,0.35);
+  border-radius: 4px; padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+.sig-counter-label {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.4rem;
+}
+.sig-counter-numbers {
+  display: flex; align-items: baseline; gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.sig-count {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem; font-weight: 900;
+  color: #fff; line-height: 1;
+}
+.sig-goal {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem; color: rgba(255,255,255,0.55);
+}
+.sig-bar-wrap { margin-bottom: 0.6rem; }
+.sig-bar-track {
+  position: relative; height: 8px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px; overflow: visible;
+  margin-bottom: 0.3rem;
+}
+.sig-bar-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transition: width 1s ease-out;
+}
+.sig-bar-threshold {
+  position: absolute; top: -3px;
+  width: 2px; height: 14px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 1px;
+}
+.sig-bar-labels {
+  display: flex; justify-content: space-between;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.7rem; color: rgba(255,255,255,0.4);
+}
+.sig-threshold-label { color: rgba(255,255,255,0.55); }
+.sig-note {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.78rem; color: rgba(255,255,255,0.5);
+  line-height: 1.5; margin: 0;
+}
+
+/* ── HERO FORM ── */
+.hero-form {
+  max-width: 480px; margin: 2rem auto 0;
+  display: flex; flex-direction: column; gap: 0.65rem;
+}
+.hero-form-row { display: flex; gap: 0.65rem; }
+.hero-form input[type="text"],
+.hero-form input[type="email"] {
+  width: 100%; padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 2px; color: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.hero-form input::placeholder { color: rgba(255,255,255,0.45); }
+.hero-form input:focus {
+  outline: none;
+  border-color: var(--gold-light);
+  background: rgba(255,255,255,0.15);
+}
+.hero-form-check {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.82rem; color: rgba(255,255,255,0.7);
+  text-align: left; cursor: pointer;
+}
+.hero-form-check input[type="checkbox"] {
+  margin-top: 2px; flex-shrink: 0;
+  width: 15px; height: 15px;
+  accent-color: var(--gold);
+}
+.hero-form-divider {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem; color: rgba(255,255,255,0.35);
+  text-align: center; letter-spacing: 0.1em;
+  margin: 0.25rem 0;
+}
+
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -283,6 +456,19 @@ a { color: var(--lake-blue); }
 }
 .supporter-avatars .avatar-wrap:hover .avatar-tooltip { opacity: 1; }
 .supporter-avatars .avatar-wrap:first-child { margin-left: 0; }
+.avatar-initial {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.72rem; font-weight: 800; color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+  letter-spacing: 0.03em;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.supporter-avatars .avatar-wrap:hover .avatar-initial {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── HOUSING SECTION ── */
@@ -428,7 +614,8 @@ footer a { color: var(--gold-light); }
   </button>
   <ul class="nav-links">
     <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petitions</a></li>
-<li><a href="#volunteer" onclick="document.querySelector('.nav-links').classList.remove('open')">Volunteer</a></li>
+    <li><a href="#faq" onclick="document.querySelector('.nav-links').classList.remove('open')">FAQ</a></li>
+    <li><a href="#volunteer" onclick="document.querySelector('.nav-links').classList.remove('open')">Volunteer</a></li>
     <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Stay Informed</a></li>
   </ul>
 </nav>
@@ -436,50 +623,102 @@ footer a { color: var(--gold-light); }
 <!-- ══════════ HERO ══════════ -->
 <div class="hero">
   <div class="hero-content">
-    <h1>Lester Is <em>Our</em> Land.<br>City Hall Wants to Sell It<br>Without Asking Us.</h1>
-    <p class="subheading">Sign our two petitions — one for each parcel — to put Lester's future to a public vote.</p>
-    <div class="hero-cta">
-      <a href="#action" class="btn-primary">Download &amp; Sign the Petitions</a>
-      <a href="#volunteer" class="btn-outline">Volunteer &amp; Earn Native Plants</a>
+    <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
+    <p class="subheading">The former Lester Park Golf Course is public land. Duluthians should decide its future.</p>
+    <p class="subheading" style="font-size:0.92em;margin-top:0.4rem;opacity:0.85;color:#fff;font-weight:400;">We're collecting hard-copy signatures to force a public vote on Lester's future.</p>
+
+    <!-- ── SIGNATURE COUNTER ── -->
+    <div class="sig-counter">
+      <div class="sig-counter-label">Signatures Collected</div>
+      <div class="sig-counter-numbers">
+        <span class="sig-count" id="sigCount">59</span>
+        <span class="sig-goal"> of 5,000 goal</span>
+      </div>
+      <div class="sig-bar-wrap">
+        <div class="sig-bar-track">
+          <div class="sig-bar-fill" id="sigBar"></div>
+          <div class="sig-bar-threshold" id="sigThreshold" title="3,664 valid signatures required"></div>
+        </div>
+        <div class="sig-bar-labels">
+          <span>0</span>
+          <span class="sig-threshold-label">3,664 needed</span>
+          <span>5,000</span>
+        </div>
+      </div>
+      <p class="sig-note">We need 3,664 valid signatures per petition. We're collecting 5,000 to account for normal disqualifications. <a href="#action" style="color:var(--gold-light);">Every signature counts.</a></p>
     </div>
+    <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
+      <input type="hidden" name="form-name" value="hero-signup">
+      <div class="hero-form-row">
+        <input type="text" name="first-name" placeholder="First name" required>
+        <input type="text" name="last-name" placeholder="Last name">
+      </div>
+      <input type="email" name="email" placeholder="Email address" required>
+      <label class="hero-form-check">
+        <input type="checkbox" name="volunteer" value="yes">
+        <span>I'm interested in volunteering — knocking doors in my neighborhood.</span>
+      </label>
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:0.25rem;">I'm In</button>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.45);text-align:center;margin:0.4rem 0 0;">This form signs you up for campaign updates only — not a petition signature. To sign the petition, download and print it below.</p>
+      <div class="hero-form-divider">or</div>
+      <a href="#action" class="btn-outline" style="text-align:center;">Download, Print &amp; Sign the Petitions</a>
+    </form>
   </div>
 </div>
 
 <div class="gold-divider"></div>
 
-<!-- ══════════ INFO ══════════ -->
+<!-- ══════════ PHOTO STRIP ══════════ -->
+<div class="photo-strip">
+  <div class="photo-strip-item">
+    <img src="photos/IMG_4661.jpeg" alt="Former Lester Park Golf Course in winter — open field with treeline and Lake Superior beyond">
+  </div>
+  <div class="photo-strip-item">
+    <img src="photos/IMG_4897.jpeg" alt="Lone tree on the former Lester Park Golf Course on a winter morning">
+  </div>
+  <div class="photo-strip-item">
+    <img src="photos/IMG_4778.jpeg" alt="Ski tracks through the snow on the former Lester Park Golf Course">
+  </div>
+  <div class="photo-strip-item">
+    <img src="photos/IMG_4646.jpeg" alt="Sun through bare trees at dusk on the Lester Park land">
+  </div>
+  <div class="photo-strip-item">
+    <img src="photos/IMG_4783.jpeg" alt="White pine standing on the former Lester Park Golf Course in winter">
+  </div>
+</div>
+<p class="photo-strip-caption">The former Lester Park Golf Course — March 2026 — Photos: Our Park Our Vote</p>
+
+
 <section class="sec-info">
   <div class="container">
-    <p class="section-label" style="text-align:center;">Why This Matters</p>
-    <h2 class="section-title" style="text-align:center;">267 Acres of Public Parkland<br><span>Need Your Help</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">Duluth politicians want to rezone and sell Lester Park to private developers &mdash; all 267 acres of it. <strong>We believe Duluthians should have the final say &mdash; that's how democracy is supposed to work.</strong></p>
+    <h2 class="section-title" style="text-align:center;">What's at Stake</h2>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The city is moving to rezone and sell 267 acres of public land to private developers — without a public vote. <strong>We believe Duluthians should have the final say. That's how democracy is supposed to work.</strong></p>
 
     <div class="info-grid">
       <div class="info-card">
-        <div class="card-header">
-          <h3>Who We Are</h3>
-        </div>
-        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one simple belief: public land decisions belong to the public.</p>
-        <div class="supporter-avatars">
-          <a href="bios.html#michael-bernstein" class="avatar-wrap"><span class="avatar-tooltip">Michael Bernstein</span><img src="michael-bernstein.jpg" alt="Michael Bernstein"></a>
-          <a href="bios.html#laura-erickson" class="avatar-wrap"><span class="avatar-tooltip">Laura Erickson</span><img src="laura-erickson.jpg" alt="Laura Erickson"></a>
-          <a href="bios.html#meghan-morrow" class="avatar-wrap"><span class="avatar-tooltip">Meghan Morrow</span><img src="meghan-morrow.jpg" alt="Meghan Morrow"></a>
-          <a href="bios.html#thom-storm" class="avatar-wrap"><span class="avatar-tooltip">Thom Storm</span><img src="thom-storm.jpg" alt="Thom Storm"></a>
-          <a href="bios.html#brett-cease" class="avatar-wrap"><span class="avatar-tooltip">Brett Cease</span><img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease"></a>
-          <a href="bios.html#dan-proctor" class="avatar-wrap"><span class="avatar-tooltip">Dan Proctor</span><img src="dan-proctor.jpg" alt="Dan Proctor"></a>
-        </div>
+        <h3>What's Happening</h3>
+        <p>The Mayor and DEDA are moving to transfer the former Lester Park Golf Course to private developers for a luxury resort, golf course, and housing — on land that belongs to all Duluthians. The city transferred the 37.5-acre Lake Nine parcel to DEDA in December 2025. The remaining 230 acres are next.</p>
       </div>
       <div class="info-card">
-        <h3>What We're Doing</h3>
-        <p>Our Park Our Vote is running <strong>two citizen petitions</strong> to protect all of Lester Park. The first requires a public vote before the 230-acre former golf course can be rezoned for private development. The second returns the 37.5-acre Lake Nine parcel &mdash; currently zoned mixed-use &mdash; to permanent parkland status, protecting it from development under any administration.</p>
+        <h3>The Window</h3>
+        <p>A DEDA land use study — mandated under a resolution that explicitly favors housing development and a golf course — is due July 2026. <strong>Sign before they act.</strong></p>
       </div>
       <div class="info-card">
         <h3>Why It Matters</h3>
-        <p>Once public land is sold, it's gone forever. Developers &mdash; not Duluthians &mdash; will get to decide its future. We need to use our voice to tell city hall this isn't what we want.</p>
+        <p>Once public land is sold, it's gone forever. Duluth already has the trail builders, skiers, cyclists, and park planners to build something extraordinary here — on our own terms, without selling it. We don't need developers at the table. In fact, it's better if they're not. <a href="learn-more.html">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="info-card">
-        <h3>How to Help</h3>
-        <p>Sign up to collect petition signatures in your neighborhood and earn a free six-pack of homegrown native plants for every weekly check-in. And get homegrown native plants as your reward (while supplies last). <a href="#volunteer">Join us&nbsp;&rarr;</a></p>
+        <h3>Who We Are</h3>
+        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one belief: public land decisions belong to the public.</p>
+        <div class="supporter-avatars">
+          <a href="bios.html#michael-bernstein" class="avatar-wrap"><span class="avatar-tooltip">Michael Bernstein</span><span class="avatar-initial" style="background:var(--forest-mid);">MB</span></a>
+          <a href="bios.html#laura-erickson" class="avatar-wrap"><span class="avatar-tooltip">Laura Erickson</span><span class="avatar-initial" style="background:var(--lake-blue);">LE</span></a>
+          <a href="bios.html#meghan-morrow" class="avatar-wrap"><span class="avatar-tooltip">Meghan Morrow</span><span class="avatar-initial" style="background:var(--forest-light);">MM</span></a>
+          <a href="bios.html#thom-storm" class="avatar-wrap"><span class="avatar-tooltip">Thom Storm</span><span class="avatar-initial" style="background:#5a3e7a;">TS</span></a>
+          <a href="bios.html#brett-cease" class="avatar-wrap"><span class="avatar-tooltip">Brett Cease</span><span class="avatar-initial" style="background:#7a4a2a;">BC</span></a>
+          <a href="bios.html#dan-proctor" class="avatar-wrap"><span class="avatar-tooltip">Dan Proctor</span><span class="avatar-initial" style="background:var(--forest-mid);">DP</span></a>
+        </div>
+        <p style="margin-top:0.75rem;"><a href="bios.html">Learn More About Us&nbsp;&rarr;</a></p>
       </div>
     </div>
   </div>
@@ -487,375 +726,38 @@ footer a { color: var(--gold-light); }
 
 <div class="gold-divider"></div>
 
-<!-- ══════════ HOW IT WORKS ══════════ -->
+<!-- ══════════ TWO PETITIONS ══════════ -->
+<section class="sec-housing-q">
+  <div class="container">
+    <p class="section-label" style="text-align:center;color:var(--gold-light);">Two Petitions. One Goal.</p>
+    <h2 class="section-title" style="text-align:center;"><span>Put Lester's Future</span><br>to a Public Vote</h2>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">Under the Duluth City Charter, enough hard-copy signatures can force a public vote. We need 3,664 valid signatures per petition — we're collecting 5,000 to account for normal disqualifications. Two parcels are at issue, so two petitions are required.</p>
+
+    <div class="housing-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="housing-card">
+        <h3>Petition #1 — Require a Public Vote</h3>
+        <p>The 230-acre former golf course cannot be transferred to private developers without first being rezoned. This petition requires that rezoning to go to a public ballot — giving every Duluthian a direct vote before any land changes hands.</p>
+      </div>
+      <div class="housing-card">
+        <h3>Petition #2 — Return Lake Nine to Parkland</h3>
+        <p>The 37.5-acre Lake Nine parcel was conveyed to DEDA in December 2025 and is currently zoned mixed-use. This petition directs the City to rezone it back to permanent parkland status, recovering it for the public.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ══════════ VOLUNTEER ══════════ -->
 <section id="volunteer" class="sec-how">
   <div class="container">
-    <p class="section-label" style="text-align:center;">Volunteer</p>
-    <h2 class="section-title" style="text-align:center;">Small Time Commitment.<br><span>Big Impact.</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 1.5rem;">Receive homegrown native plants as your reward (while supplies last).</p>
-
-    <div class="sixpack-wrap">
-          <svg viewBox="80 100 680 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:4px;">
-            <defs>
-              <linearGradient id="sixpackTrayFrontG" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#1e1e1e"/>
-                <stop offset="100%" stop-color="#0c0c0c"/>
-              </linearGradient>
-              <linearGradient id="sixpackTraySideG" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#1a1a1a"/>
-                <stop offset="100%" stop-color="#0f0f0f"/>
-              </linearGradient>
-              <filter id="sixpackDropShadow" x="-10%" y="-5%" width="130%" height="140%">
-                <feGaussianBlur stdDeviation="10" result="b"/>
-                <feOffset in="b" dx="6" dy="10" result="o"/>
-                <feComponentTransfer in="o"><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
-                <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-            </defs>
-            <rect x="80" y="100" width="680" height="380" fill="#f5f0e4"/>
-            <g filter="url(#sixpackDropShadow)">
-              <polygon points="150,290 640,245 710,320 220,365" fill="#222"/>
-              <polygon points="220,365 710,320 700,410 210,455" fill="url(#sixpackTrayFrontG)"/>
-              <polygon points="150,290 220,365 210,455 160,380" fill="#161616"/>
-              <polygon points="640,245 710,320 700,410 630,335" fill="url(#sixpackTraySideG)"/>
-              <polygon points="150,290 640,245 640,249 150,294" fill="#333" opacity="0.5"/>
-              <polygon points="640,245 710,320 710,323 640,249" fill="#2a2a2a" opacity="0.4"/>
-              <polygon points="150,290 220,365 220,368 150,293" fill="#2a2a2a" opacity="0.35"/>
-              <line x1="313" y1="275" x2="383" y2="350" stroke="#2c2c2c" stroke-width="3.5"/>
-              <line x1="477" y1="260" x2="547" y2="335" stroke="#2c2c2c" stroke-width="3.5"/>
-              <line x1="185" y1="328" x2="675" y2="283" stroke="#2c2c2c" stroke-width="3.5"/>
-              <line x1="383" y1="350" x2="373" y2="440" stroke="#1a1a1a" stroke-width="3"/>
-              <line x1="547" y1="335" x2="537" y2="425" stroke="#1a1a1a" stroke-width="3"/>
-              <line x1="215" y1="410" x2="705" y2="365" stroke="#1a1a1a" stroke-width="2.5"/>
-              <ellipse cx="232" cy="302" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,232,302)"/>
-              <ellipse cx="395" cy="288" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,395,288)"/>
-              <ellipse cx="558" cy="274" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,558,274)"/>
-              <ellipse cx="302" cy="350" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,302,350)"/>
-              <ellipse cx="465" cy="336" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,465,336)"/>
-              <ellipse cx="628" cy="322" rx="58" ry="10" fill="#3a2818" transform="rotate(-3,628,322)"/>
-            </g>
-            <!-- White Trillium -->
-            <g transform="translate(232, 296)">
-              <line x1="-5" y1="0" x2="-7" y2="-78" stroke="#2d8226" stroke-width="2.8"/>
-              <line x1="7" y1="0" x2="5" y2="-68" stroke="#2a7a24" stroke-width="2.2"/>
-              <line x1="0" y1="-1" x2="1" y2="-88" stroke="#2d8226" stroke-width="2.8"/>
-              <path d="M-7,-38 Q-52,-54 -56,-36 Q-40,-28 -7,-38Z" fill="#2e9228" opacity="0.93"/>
-              <path d="M-7,-38 Q28,-56 46,-40 Q30,-32 -7,-38Z" fill="#36a030" opacity="0.9"/>
-              <path d="M0,-44 Q-44,-62 -50,-46 Q-34,-38 0,-44Z" fill="#268a20" opacity="0.88"/>
-              <path d="M5,-34 Q42,-48 48,-34 Q34,-28 5,-34Z" fill="#2e9228" opacity="0.9"/>
-              <path d="M-3,-50 Q-38,-66 -44,-52 Q-30,-44 -3,-50Z" fill="#36a030" opacity="0.85"/>
-              <path d="M7,-42 Q38,-56 44,-44 Q32,-38 7,-42Z" fill="#268a20" opacity="0.86"/>
-              <path d="M-10,-30 Q-42,-40 -46,-30 Q-34,-24 -10,-30Z" fill="#2e9228" opacity="0.82"/>
-              <path d="M10,-32 Q36,-42 42,-32 Q30,-26 10,-32Z" fill="#36a030" opacity="0.82"/>
-              <path d="M1,-88 Q-24,-126 -8,-140 Q1,-118 1,-88Z" fill="#f0e8d4" stroke="#c8bca0" stroke-width="0.8" opacity="0.97"/>
-              <path d="M1,-88 Q22,-126 8,-140 Q1,-118 1,-88Z" fill="#e6dcc4" stroke="#c0b498" stroke-width="0.8" opacity="0.94"/>
-              <path d="M1,-88 Q-4,-128 6,-138 Q9,-116 1,-88Z" fill="#f4ecda" stroke="#c8bca0" stroke-width="0.8" opacity="0.9"/>
-              <circle cx="1" cy="-100" r="4.5" fill="#dcc840"/>
-              <path d="M5,-68 Q-4,-90 2,-100 Q6,-84 5,-68Z" fill="#e8dfc8" stroke="#c0b498" stroke-width="0.7" opacity="0.84"/>
-              <path d="M5,-68 Q16,-90 11,-98 Q6,-82 5,-68Z" fill="#e0d6be" stroke="#b8ac90" stroke-width="0.7" opacity="0.8"/>
-              <circle cx="6" cy="-78" r="3" fill="#ccbc34"/>
-              <path d="M-7,-78 Q-14,-96 -9,-103 Q-5,-90 -7,-78Z" fill="#dcd4bc" stroke="#b8ac90" stroke-width="0.6" opacity="0.7"/>
-            </g>
-            <!-- Wild Lupine -->
-            <g transform="translate(395, 282)">
-              <line x1="-7" y1="0" x2="-5" y2="-108" stroke="#2a7a24" stroke-width="2.8"/>
-              <line x1="7" y1="0" x2="10" y2="-96" stroke="#2d8226" stroke-width="2.8"/>
-              <line x1="16" y1="-1" x2="13" y2="-82" stroke="#2a7a24" stroke-width="2.2"/>
-              <g transform="translate(-24, -18)">
-                <path d="M0,0 Q-20,-30 -10,-42 Q2,-24 0,0Z" fill="#2e9228" opacity="0.92"/>
-                <path d="M0,0 Q-5,-34 7,-45 Q13,-28 0,0Z" fill="#36a030" opacity="0.93"/>
-                <path d="M0,0 Q14,-30 24,-40 Q18,-20 0,0Z" fill="#268a20" opacity="0.9"/>
-                <path d="M0,0 Q22,-24 30,-34 Q22,-15 0,0Z" fill="#2e9228" opacity="0.86"/>
-                <path d="M0,0 Q-22,-20 -28,-30 Q-18,-12 0,0Z" fill="#36a030" opacity="0.84"/>
-              </g>
-              <g transform="translate(18, -14)">
-                <path d="M0,0 Q-16,-28 -6,-38 Q4,-22 0,0Z" fill="#36a030" opacity="0.9"/>
-                <path d="M0,0 Q7,-30 16,-38 Q14,-20 0,0Z" fill="#2e9228" opacity="0.92"/>
-                <path d="M0,0 Q18,-24 26,-32 Q18,-14 0,0Z" fill="#268a20" opacity="0.87"/>
-              </g>
-              <g transform="translate(-4, -32)">
-                <path d="M0,0 Q-18,-24 -8,-34 Q3,-18 0,0Z" fill="#268a20" opacity="0.88"/>
-                <path d="M0,0 Q10,-28 18,-35 Q14,-16 0,0Z" fill="#2e9228" opacity="0.9"/>
-              </g>
-              <g transform="translate(10, -26)">
-                <path d="M0,0 Q-12,-22 -4,-30 Q4,-16 0,0Z" fill="#36a030" opacity="0.85"/>
-                <path d="M0,0 Q12,-20 18,-28 Q12,-12 0,0Z" fill="#268a20" opacity="0.86"/>
-              </g>
-              <ellipse cx="-9" cy="-66" rx="9" ry="6" fill="#6a4aaa"/>
-              <ellipse cx="-3" cy="-74" rx="9" ry="6" fill="#7a5aba"/>
-              <ellipse cx="-7" cy="-82" rx="8.5" ry="5.5" fill="#6a4aaa"/>
-              <ellipse cx="-2" cy="-90" rx="8" ry="5" fill="#8a6aca"/>
-              <ellipse cx="-5" cy="-97" rx="7.5" ry="4.5" fill="#7a5aba"/>
-              <ellipse cx="-3" cy="-103" rx="6" ry="4" fill="#6a4aaa"/>
-              <ellipse cx="-4" cy="-108" rx="4.5" ry="3" fill="#8a6aca"/>
-              <ellipse cx="12" cy="-60" rx="8.5" ry="5.5" fill="#7a5aba"/>
-              <ellipse cx="8" cy="-68" rx="8.5" ry="5.5" fill="#6a4aaa"/>
-              <ellipse cx="11" cy="-76" rx="7.5" ry="5" fill="#8a6aca"/>
-              <ellipse cx="8" cy="-83" rx="7" ry="4.5" fill="#7a5aba"/>
-              <ellipse cx="10" cy="-89" rx="6" ry="3.5" fill="#6a4aaa"/>
-              <ellipse cx="9" cy="-94" rx="4.5" ry="3" fill="#8a6aca"/>
-              <ellipse cx="17" cy="-52" rx="7" ry="5" fill="#6a4aaa"/>
-              <ellipse cx="14" cy="-59" rx="7" ry="4.5" fill="#7a5aba"/>
-              <ellipse cx="16" cy="-65" rx="6" ry="3.5" fill="#8a6aca"/>
-              <ellipse cx="15" cy="-70" rx="4.5" ry="3" fill="#6a4aaa"/>
-            </g>
-            <!-- Common Milkweed -->
-            <g transform="translate(558, 268)">
-              <line x1="-3" y1="0" x2="-5" y2="-98" stroke="#2d8226" stroke-width="3.8"/>
-              <line x1="12" y1="0" x2="10" y2="-82" stroke="#2a7a24" stroke-width="3.2"/>
-              <path d="M-5,-18 Q-55,-34 -60,-18 Q-44,-10 -5,-18Z" fill="#2e9228" opacity="0.93"/>
-              <path d="M-5,-18 Q40,-34 50,-20 Q36,-12 -5,-18Z" fill="#36a030" opacity="0.92"/>
-              <path d="M-5,-42 Q-50,-58 -54,-42 Q-38,-36 -5,-42Z" fill="#268a20" opacity="0.9"/>
-              <path d="M-5,-42 Q36,-58 42,-44 Q28,-38 -5,-42Z" fill="#2e9228" opacity="0.9"/>
-              <path d="M10,-22 Q50,-34 56,-22 Q42,-16 10,-22Z" fill="#36a030" opacity="0.88"/>
-              <path d="M10,-48 Q46,-60 52,-48 Q38,-42 10,-48Z" fill="#268a20" opacity="0.87"/>
-              <path d="M-5,-64 Q-42,-74 -48,-64 Q-34,-58 -5,-64Z" fill="#2e9228" opacity="0.85"/>
-              <path d="M10,-62 Q38,-72 44,-62 Q32,-56 10,-62Z" fill="#36a030" opacity="0.85"/>
-              <path d="M-5,-78 Q-34,-86 -38,-78 Q-28,-72 -5,-78Z" fill="#268a20" opacity="0.82"/>
-              <g transform="translate(-5, -98)">
-                <circle cx="0" cy="0" r="26" fill="#d88098" opacity="0.28"/>
-                <circle cx="-10" cy="-12" r="4.5" fill="#ea8ca4"/>
-                <circle cx="2" cy="-16" r="4" fill="#f6b0c0"/>
-                <circle cx="14" cy="-10" r="4.5" fill="#e27898"/>
-                <circle cx="-16" cy="-2" r="4" fill="#f2a0b4"/>
-                <circle cx="-4" cy="-4" r="4.5" fill="#ea8ca4"/>
-                <circle cx="10" cy="2" r="4" fill="#f6b0c0"/>
-                <circle cx="-8" cy="8" r="4" fill="#e27898"/>
-                <circle cx="6" cy="12" r="4.5" fill="#ea8ca4"/>
-                <circle cx="18" cy="4" r="3.5" fill="#f2a0b4"/>
-                <circle cx="-18" cy="6" r="3.5" fill="#f6b0c0"/>
-                <circle cx="0" cy="16" r="4" fill="#e27898"/>
-                <circle cx="-12" cy="14" r="3" fill="#ea8ca4"/>
-                <circle cx="14" cy="15" r="3" fill="#f2a0b4"/>
-              </g>
-              <g transform="translate(16, -82)">
-                <circle cx="0" cy="0" r="18" fill="#d88098" opacity="0.22"/>
-                <circle cx="-6" cy="-8" r="3.5" fill="#ea8ca4"/>
-                <circle cx="5" cy="-10" r="3" fill="#f6b0c0"/>
-                <circle cx="10" cy="-3" r="3.5" fill="#e27898"/>
-                <circle cx="-10" cy="2" r="3" fill="#f2a0b4"/>
-                <circle cx="0" cy="0" r="3.5" fill="#ea8ca4"/>
-                <circle cx="6" cy="6" r="3" fill="#f6b0c0"/>
-                <circle cx="-4" cy="8" r="3" fill="#e27898"/>
-                <circle cx="8" cy="10" r="2.5" fill="#ea8ca4"/>
-              </g>
-            </g>
-            <!-- Wild Bergamot -->
-            <g transform="translate(302, 344)">
-              <line x1="-7" y1="0" x2="-9" y2="-95" stroke="#2a7a24" stroke-width="2.8"/>
-              <line x1="6" y1="0" x2="4" y2="-105" stroke="#2d8226" stroke-width="2.8"/>
-              <line x1="16" y1="-1" x2="18" y2="-80" stroke="#2a7a24" stroke-width="2.2"/>
-              <line x1="-14" y1="-1" x2="-16" y2="-72" stroke="#2d8226" stroke-width="2"/>
-              <path d="M-9,-24 Q-46,-38 -50,-24 Q-36,-18 -9,-24Z" fill="#2e9228" opacity="0.92"/>
-              <path d="M-9,-24 Q22,-38 32,-28 Q22,-20 -9,-24Z" fill="#36a030" opacity="0.9"/>
-              <path d="M4,-38 Q-32,-50 -38,-38 Q-26,-32 4,-38Z" fill="#268a20" opacity="0.88"/>
-              <path d="M4,-38 Q34,-50 40,-40 Q30,-34 4,-38Z" fill="#2e9228" opacity="0.88"/>
-              <path d="M16,-18 Q42,-28 46,-18 Q34,-14 16,-18Z" fill="#36a030" opacity="0.86"/>
-              <path d="M-14,-16 Q-38,-24 -42,-16 Q-32,-10 -14,-16Z" fill="#268a20" opacity="0.84"/>
-              <path d="M-9,-54 Q-38,-64 -42,-54 Q-30,-48 -9,-54Z" fill="#2e9228" opacity="0.85"/>
-              <path d="M4,-60 Q30,-70 36,-60 Q26,-54 4,-60Z" fill="#36a030" opacity="0.85"/>
-              <path d="M16,-32 Q38,-40 42,-32 Q32,-28 16,-32Z" fill="#268a20" opacity="0.83"/>
-              <path d="M-14,-40 Q-36,-48 -40,-40 Q-30,-34 -14,-40Z" fill="#36a030" opacity="0.83"/>
-              <g transform="translate(4, -105)">
-                <circle cx="0" cy="0" r="17" fill="#7a4a90" opacity="0.28"/>
-                <line x1="0" y1="0" x2="-20" y2="-15" stroke="#c098e0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="-13" y2="-20" stroke="#d0a8f0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="-5" y2="-22" stroke="#c098e0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="5" y2="-22" stroke="#d0a8f0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="13" y2="-20" stroke="#c098e0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="20" y2="-15" stroke="#d0a8f0" stroke-width="2.2"/>
-                <line x1="0" y1="0" x2="22" y2="-6" stroke="#c098e0" stroke-width="2"/>
-                <line x1="0" y1="0" x2="-22" y2="-6" stroke="#d0a8f0" stroke-width="2"/>
-                <circle cx="-20" cy="-15" r="3" fill="#dab4f2"/>
-                <circle cx="-13" cy="-20" r="3" fill="#cea8ea"/>
-                <circle cx="-5" cy="-22" r="3" fill="#dab4f2"/>
-                <circle cx="5" cy="-22" r="3" fill="#cea8ea"/>
-                <circle cx="13" cy="-20" r="3" fill="#dab4f2"/>
-                <circle cx="20" cy="-15" r="3" fill="#cea8ea"/>
-                <circle cx="22" cy="-6" r="2.5" fill="#dab4f2"/>
-                <circle cx="-22" cy="-6" r="2.5" fill="#cea8ea"/>
-                <circle cx="0" cy="0" r="7" fill="#5a3068"/>
-              </g>
-              <g transform="translate(-9, -95)">
-                <circle cx="0" cy="0" r="13" fill="#7a4a90" opacity="0.24"/>
-                <line x1="0" y1="0" x2="-14" y2="-11" stroke="#c098e0" stroke-width="1.6"/>
-                <line x1="0" y1="0" x2="-8" y2="-15" stroke="#d0a8f0" stroke-width="1.6"/>
-                <line x1="0" y1="0" x2="0" y2="-16" stroke="#c098e0" stroke-width="1.6"/>
-                <line x1="0" y1="0" x2="8" y2="-15" stroke="#d0a8f0" stroke-width="1.6"/>
-                <line x1="0" y1="0" x2="14" y2="-11" stroke="#c098e0" stroke-width="1.6"/>
-                <line x1="0" y1="0" x2="16" y2="-4" stroke="#d0a8f0" stroke-width="1.4"/>
-                <line x1="0" y1="0" x2="-16" y2="-4" stroke="#c098e0" stroke-width="1.4"/>
-                <circle cx="-14" cy="-11" r="2.2" fill="#dab4f2"/>
-                <circle cx="-8" cy="-15" r="2.2" fill="#cea8ea"/>
-                <circle cx="0" cy="-16" r="2.2" fill="#dab4f2"/>
-                <circle cx="8" cy="-15" r="2.2" fill="#cea8ea"/>
-                <circle cx="14" cy="-11" r="2.2" fill="#dab4f2"/>
-                <circle cx="16" cy="-4" r="2" fill="#cea8ea"/>
-                <circle cx="-16" cy="-4" r="2" fill="#dab4f2"/>
-                <circle cx="0" cy="0" r="5.5" fill="#5a3068"/>
-              </g>
-              <g transform="translate(18, -80)">
-                <circle cx="0" cy="0" r="8" fill="#7a4a90" opacity="0.3"/>
-                <line x1="0" y1="0" x2="-8" y2="-8" stroke="#b888d0" stroke-width="1.3"/>
-                <line x1="0" y1="0" x2="0" y2="-10" stroke="#c098e0" stroke-width="1.3"/>
-                <line x1="0" y1="0" x2="8" y2="-8" stroke="#b888d0" stroke-width="1.3"/>
-                <circle cx="-8" cy="-8" r="1.8" fill="#cea8ea"/>
-                <circle cx="0" cy="-10" r="1.8" fill="#dab4f2"/>
-                <circle cx="8" cy="-8" r="1.8" fill="#cea8ea"/>
-                <circle cx="0" cy="0" r="4" fill="#5a3068"/>
-              </g>
-              <g transform="translate(-16, -72)">
-                <circle cx="0" cy="0" r="6" fill="#7a4a90" opacity="0.28"/>
-                <line x1="0" y1="0" x2="-6" y2="-6" stroke="#b888d0" stroke-width="1"/>
-                <line x1="0" y1="0" x2="0" y2="-8" stroke="#c098e0" stroke-width="1"/>
-                <line x1="0" y1="0" x2="6" y2="-6" stroke="#b888d0" stroke-width="1"/>
-                <circle cx="-6" cy="-6" r="1.4" fill="#cea8ea"/>
-                <circle cx="0" cy="-8" r="1.4" fill="#dab4f2"/>
-                <circle cx="6" cy="-6" r="1.4" fill="#cea8ea"/>
-                <circle cx="0" cy="0" r="3" fill="#5a3068"/>
-              </g>
-            </g>
-            <!-- Prairie Smoke -->
-            <g transform="translate(465, 330)">
-              <path d="M-18,-3 Q-22,-48 -16,-88" stroke="#2e8a28" stroke-width="2.2" fill="none"/>
-              <path d="M-6,-3 Q-9,-52 -3,-94" stroke="#2a8222" stroke-width="2.2" fill="none"/>
-              <path d="M6,-3 Q3,-48 8,-85" stroke="#2e8a28" stroke-width="2.2" fill="none"/>
-              <path d="M18,-2 Q22,-44 16,-80" stroke="#2a8222" stroke-width="2" fill="none"/>
-              <path d="M-12,-2 Q-16,-40 -10,-76" stroke="#2e8a28" stroke-width="2" fill="none"/>
-              <path d="M24,-1 Q28,-36 22,-68" stroke="#2a8222" stroke-width="1.8" fill="none"/>
-              <path d="M-28,-4 Q-46,-14 -50,-4 Q-40,3 -28,-4Z" fill="#2e9228" opacity="0.92"/>
-              <path d="M-20,-8 Q-36,-20 -42,-10 Q-32,-3 -20,-8Z" fill="#36a030" opacity="0.9"/>
-              <path d="M-10,-2 Q-30,-10 -34,-1 Q-24,5 -10,-2Z" fill="#268a20" opacity="0.88"/>
-              <path d="M28,-2 Q46,-12 50,-2 Q40,5 28,-2Z" fill="#2e9228" opacity="0.92"/>
-              <path d="M20,-6 Q36,-16 40,-8 Q30,-1 20,-6Z" fill="#36a030" opacity="0.9"/>
-              <path d="M10,-1 Q30,-8 34,0 Q24,6 10,-1Z" fill="#268a20" opacity="0.88"/>
-              <path d="M0,-5 Q-18,-14 -22,-5 Q-14,0 0,-5Z" fill="#2e9228" opacity="0.87"/>
-              <path d="M4,-3 Q20,-12 24,-4 Q16,1 4,-3Z" fill="#36a030" opacity="0.87"/>
-              <path d="M-14,-10 Q-28,-18 -32,-10 Q-24,-4 -14,-10Z" fill="#268a20" opacity="0.84"/>
-              <path d="M14,-8 Q28,-16 32,-8 Q24,-2 14,-8Z" fill="#2e9228" opacity="0.84"/>
-              <g transform="translate(-16, -88)">
-                <path d="M0,0 Q-10,11 -8,18 Q0,12 0,0Z" fill="#e27088" opacity="0.95"/>
-                <path d="M0,0 Q10,11 8,18 Q0,12 0,0Z" fill="#f48ca4" opacity="0.92"/>
-                <path d="M0,0 Q-16,-20 -10,-34" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.85"/>
-                <path d="M0,0 Q-6,-22 0,-36" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.85"/>
-                <path d="M0,0 Q10,-20 7,-34" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.85"/>
-                <path d="M0,0 Q-12,-14 -14,-28" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.65"/>
-                <path d="M0,0 Q12,-14 14,-28" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.65"/>
-              </g>
-              <g transform="translate(-3, -94)">
-                <path d="M0,0 Q-9,10 -7,16 Q0,10 0,0Z" fill="#f48ca4" opacity="0.95"/>
-                <path d="M0,0 Q9,10 7,16 Q0,10 0,0Z" fill="#e27088" opacity="0.92"/>
-                <path d="M0,0 Q-14,-18 -8,-30" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.82"/>
-                <path d="M0,0 Q-4,-20 2,-32" stroke="#f4bcc4" stroke-width="1.3" fill="none" opacity="0.82"/>
-                <path d="M0,0 Q8,-18 6,-30" stroke="#fcccd4" stroke-width="1.3" fill="none" opacity="0.82"/>
-              </g>
-              <g transform="translate(8, -85)">
-                <path d="M0,0 Q-8,8 -6,14 Q0,9 0,0Z" fill="#e27088" opacity="0.92"/>
-                <path d="M0,0 Q8,8 6,14 Q0,9 0,0Z" fill="#f48ca4" opacity="0.88"/>
-                <path d="M0,0 Q-10,-16 -7,-26" stroke="#f4bcc4" stroke-width="1.1" fill="none" opacity="0.75"/>
-                <path d="M0,0 Q0,-18 3,-28" stroke="#fcccd4" stroke-width="1.1" fill="none" opacity="0.75"/>
-              </g>
-              <g transform="translate(18, -80)">
-                <path d="M0,0 Q-7,7 -5,12 Q0,8 0,0Z" fill="#f48ca4" opacity="0.88"/>
-                <path d="M0,0 Q7,7 5,12 Q0,8 0,0Z" fill="#e27088" opacity="0.84"/>
-                <path d="M0,0 Q-8,-12 -5,-22" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.65"/>
-                <path d="M0,0 Q5,-14 7,-22" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.65"/>
-              </g>
-              <g transform="translate(-10, -76)">
-                <path d="M0,0 Q-6,6 -4,11 Q0,7 0,0Z" fill="#e27088" opacity="0.85"/>
-                <path d="M0,0 Q6,6 4,11 Q0,7 0,0Z" fill="#f48ca4" opacity="0.82"/>
-                <path d="M0,0 Q-6,-10 -4,-18" stroke="#fcccd4" stroke-width="0.9" fill="none" opacity="0.58"/>
-                <path d="M0,0 Q4,-12 6,-20" stroke="#f4bcc4" stroke-width="0.9" fill="none" opacity="0.58"/>
-              </g>
-              <g transform="translate(24, -68)">
-                <path d="M0,0 Q-5,5 -3,9 Q0,6 0,0Z" fill="#f48ca4" opacity="0.8"/>
-                <path d="M0,0 Q5,5 3,9 Q0,6 0,0Z" fill="#e27088" opacity="0.76"/>
-                <path d="M0,0 Q-4,-8 -3,-14" stroke="#f4bcc4" stroke-width="0.7" fill="none" opacity="0.5"/>
-              </g>
-            </g>
-            <!-- Paper Birch -->
-            <g transform="translate(628, 316)">
-              <rect x="-5" y="-112" width="10" height="112" rx="3" fill="#e0d9ca"/>
-              <line x1="-4" y1="-94" x2="4" y2="-94" stroke="#b0a898" stroke-width="0.9" opacity="0.6"/>
-              <line x1="-3" y1="-76" x2="5" y2="-76" stroke="#b0a898" stroke-width="0.9" opacity="0.5"/>
-              <line x1="-4" y1="-58" x2="3" y2="-58" stroke="#b0a898" stroke-width="0.9" opacity="0.6"/>
-              <line x1="-3" y1="-40" x2="4" y2="-40" stroke="#b0a898" stroke-width="0.9" opacity="0.5"/>
-              <line x1="-4" y1="-22" x2="3" y2="-22" stroke="#b0a898" stroke-width="0.7" opacity="0.4"/>
-              <line x1="0" y1="-108" x2="-34" y2="-142" stroke="#ccc4b4" stroke-width="2.8"/>
-              <line x1="0" y1="-102" x2="32" y2="-134" stroke="#ccc4b4" stroke-width="2.8"/>
-              <line x1="0" y1="-90" x2="-28" y2="-118" stroke="#ccc4b4" stroke-width="2.2"/>
-              <line x1="0" y1="-80" x2="25" y2="-108" stroke="#ccc4b4" stroke-width="2.2"/>
-              <line x1="0" y1="-68" x2="-22" y2="-92" stroke="#ccc4b4" stroke-width="2"/>
-              <line x1="0" y1="-58" x2="18" y2="-82" stroke="#ccc4b4" stroke-width="2"/>
-              <line x1="0" y1="-48" x2="-14" y2="-68" stroke="#ccc4b4" stroke-width="1.6"/>
-              <g opacity="0.94">
-                <path d="M-34,-142 Q-42,-156 -36,-162 Q-30,-152 -34,-142Z" fill="#36a030"/>
-                <path d="M-29,-138 Q-39,-150 -32,-156 Q-26,-146 -29,-138Z" fill="#2e9228"/>
-                <path d="M-22,-132 Q-30,-142 -24,-148 Q-18,-138 -22,-132Z" fill="#268a20"/>
-                <path d="M-37,-147 Q-47,-157 -41,-164 Q-34,-154 -37,-147Z" fill="#2e9228"/>
-                <path d="M-40,-140 Q-48,-148 -44,-154 Q-38,-145 -40,-140Z" fill="#268a20"/>
-                <path d="M32,-134 Q40,-148 34,-154 Q28,-144 32,-134Z" fill="#2e9228"/>
-                <path d="M27,-129 Q35,-140 29,-146 Q23,-136 27,-129Z" fill="#36a030"/>
-                <path d="M20,-122 Q28,-132 22,-138 Q16,-128 20,-122Z" fill="#268a20"/>
-                <path d="M35,-140 Q44,-150 38,-157 Q32,-147 35,-140Z" fill="#268a20"/>
-                <path d="M37,-133 Q44,-142 40,-148 Q34,-138 37,-133Z" fill="#36a030"/>
-                <path d="M-28,-118 Q-36,-128 -30,-134 Q-24,-124 -28,-118Z" fill="#36a030"/>
-                <path d="M-22,-113 Q-30,-123 -24,-129 Q-18,-119 -22,-113Z" fill="#2e9228"/>
-                <path d="M-16,-107 Q-24,-117 -18,-123 Q-12,-113 -16,-107Z" fill="#268a20"/>
-                <path d="M-32,-123 Q-40,-133 -34,-139 Q-28,-129 -32,-123Z" fill="#2e9228"/>
-                <path d="M25,-108 Q33,-118 27,-124 Q21,-114 25,-108Z" fill="#268a20"/>
-                <path d="M19,-103 Q27,-113 21,-119 Q15,-109 19,-103Z" fill="#2e9228"/>
-                <path d="M28,-113 Q36,-123 30,-129 Q24,-119 28,-113Z" fill="#36a030"/>
-                <path d="M-22,-92 Q-30,-102 -24,-108 Q-18,-98 -22,-92Z" fill="#36a030"/>
-                <path d="M-16,-87 Q-24,-97 -18,-103 Q-12,-93 -16,-87Z" fill="#2e9228"/>
-                <path d="M-26,-97 Q-34,-107 -28,-112 Q-22,-102 -26,-97Z" fill="#268a20"/>
-                <path d="M18,-82 Q26,-92 20,-98 Q14,-88 18,-82Z" fill="#268a20"/>
-                <path d="M12,-77 Q20,-87 14,-93 Q8,-83 12,-77Z" fill="#2e9228"/>
-                <path d="M22,-87 Q30,-97 24,-102 Q18,-92 22,-87Z" fill="#36a030"/>
-                <path d="M-14,-68 Q-22,-78 -16,-84 Q-10,-74 -14,-68Z" fill="#36a030"/>
-                <path d="M-8,-63 Q-16,-73 -10,-79 Q-4,-69 -8,-63Z" fill="#2e9228"/>
-                <path d="M-18,-73 Q-26,-82 -20,-88 Q-14,-78 -18,-73Z" fill="#268a20"/>
-              </g>
-              <path d="M-5,-5 Q-30,-14 -34,-5 Q-24,1 -5,-5Z" fill="#2e9228" opacity="0.8"/>
-              <path d="M5,-3 Q28,-11 32,-3 Q24,3 5,-3Z" fill="#36a030" opacity="0.78"/>
-              <path d="M-8,-10 Q-26,-18 -30,-10 Q-22,-5 -8,-10Z" fill="#268a20" opacity="0.72"/>
-            </g>
-          </svg>
-      </div>
-
-    <div style="max-width:600px;margin:2.5rem auto 0;">
-      <form name="volunteer-landing" method="POST" data-netlify="true" action="/thank-you">
-        <input type="hidden" name="form-name" value="volunteer-landing">
-        <div class="get5-form">
-          <div class="form-field">
-            <label>First Name *</label>
-            <input type="text" name="first-name" placeholder="Jane" required>
-          </div>
-          <div class="form-field">
-            <label>Last Name *</label>
-            <input type="text" name="last-name" placeholder="Smith" required>
-          </div>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Email *</label>
-          <input type="email" name="email" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-field" style="margin-bottom:0.75rem;">
-          <label>Phone</label>
-          <input type="tel" name="phone" placeholder="(218) 555-1234">
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Sign Up</button>
-      </form>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">By signing up to volunteer you are also agreeing to receive occasional emails updating you about our campaign.</p>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);text-align:center;margin-top:0.75rem;margin-bottom:0;">Questions? <a href="contact.html">Contact us</a>.</p>
-    </div>
-
-    <p class="section-label" style="text-align:center;margin-top:2rem;">How it Works</p>
+    <p class="section-label" style="text-align:center;">Knock Doors</p>
+    <h2 class="section-title" style="text-align:center;">The Most Powerful Thing<br><span>You Can Do</span></h2>
+    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The most effective petition signatures come from personal asks — a neighbor asking a neighbor. Start in your own neighborhood, or at places where people gather. Sign up and we'll help coordinate routes as we get organized.</p>
 
     <div class="steps-grid">
       <div class="step">
         <div class="step-icon">
-          <!-- Clipboard with pen illustration -->
           <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
             <rect x="22" y="16" width="42" height="58" rx="4" fill="none" stroke="#c8922a" stroke-width="2.5"/>
             <rect x="33" y="10" width="20" height="10" rx="3" fill="#c8922a"/>
@@ -871,190 +773,135 @@ footer a { color: var(--gold-light); }
           </svg>
         </div>
         <div class="step-number">1</div>
-        <h3>Get 5 Signatures</h3>
-        <p><a href="#action">Download the petitions</a>, print them, and get <strong>5 people</strong> to sign hard copies every week. Friends. Neighbors. Anyone.</p>
+        <h3>Get Petition Sheets</h3>
+        <p>Download and print the petitions below, or sign up and we'll send them to you. We'll also send a simple door script.</p>
       </div>
       <div class="step">
         <div class="step-icon">
-          <!-- Classic phone receiver icon (standard telephone symbol) -->
           <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <!-- Based on standard phone/call icon - the classic "pick up the phone" receiver shape -->
-            <path d="M18.4,37.8c-1.8-4.3-3-8.8-3.4-13.4c-0.2-2.8,1.7-5.3,4.5-5.9l5.8-1.3c2.2-0.5,4.4,0.7,5.2,2.8l3.2,8.4 c0.7,1.8,0,3.9-1.6,5l-4.4,3c3.4,7.2,9.2,13,16.4,16.4l3-4.4c1.1-1.6,3.2-2.3,5-1.6l8.4,3.2c2.1,0.8,3.3,3,2.8,5.2l-1.3,5.8 c-0.6,2.7-3.1,4.7-5.9,4.5c-4.6-0.4-9.1-1.6-13.4-3.4C31.2,57.4,23,49.2,18.4,37.8z" fill="#c8922a"/>
-            <!-- Sound waves -->
-            <path d="M56,22c3.5-2.5,7.5,0.5,5,4.5" fill="none" stroke="#e8b84a" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M62,15c5.5-3.5,12,1.5,7.5,8" fill="none" stroke="#e8b84a" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <rect x="15" y="20" width="60" height="55" rx="4" fill="none" stroke="#c8922a" stroke-width="2.5"/>
+            <rect x="30" y="14" width="30" height="12" rx="3" fill="#c8922a"/>
+            <line x1="27" y1="42" x2="63" y2="42" stroke="#e8b84a" stroke-width="2" stroke-linecap="round"/>
+            <line x1="27" y1="52" x2="63" y2="52" stroke="#e8b84a" stroke-width="2" stroke-linecap="round"/>
+            <line x1="27" y1="62" x2="50" y2="62" stroke="#e8b84a" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="63" cy="62" r="10" fill="#2d6e2d"/>
+            <line x1="63" y1="56" x2="63" y2="68" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="57" y1="62" x2="69" y2="62" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="step-number">2</div>
-        <h3>5-Minute Sunday Call-In</h3>
-        <p>Every Sunday at <strong>5:55</strong> PM, hop on a <strong>5-minute</strong> conference call. Report your haul and any lessons learned.</p>
+        <h3>Get Out There</h3>
+        <p>Walk your street, knock on doors, or ask at places where neighbors gather. Don't wait for perfect logistics — your neighborhood needs you now. If you'd like us to assign you a specific street or area, sign up and we'll coordinate.</p>
       </div>
       <div class="step">
         <div class="step-icon">
-          <!-- Six native plants in dark six-pack tray -->
           <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-            <!-- Dark tray -->
-            <rect x="10" y="52" width="70" height="24" rx="2" fill="#1a1a1a"/>
-            <rect x="12" y="50" width="66" height="4" rx="1" fill="#2a2a2a"/>
-            <!-- Tray dividers -->
-            <line x1="33" y1="54" x2="33" y2="74" stroke="#2a2a2a" stroke-width="1.5"/>
-            <line x1="57" y1="54" x2="57" y2="74" stroke="#2a2a2a" stroke-width="1.5"/>
-            <line x1="12" y1="63" x2="78" y2="63" stroke="#2a2a2a" stroke-width="1.5"/>
-            <!-- Soil circles in all 6 cells -->
-            <ellipse cx="22" cy="57" rx="9" ry="3" fill="#3a2818"/>
-            <ellipse cx="45" cy="57" rx="9" ry="3" fill="#3a2818"/>
-            <ellipse cx="68" cy="57" rx="9" ry="3" fill="#3a2818"/>
-            <ellipse cx="22" cy="68" rx="9" ry="3" fill="#3a2818"/>
-            <ellipse cx="45" cy="68" rx="9" ry="3" fill="#3a2818"/>
-            <ellipse cx="68" cy="68" rx="9" ry="3" fill="#3a2818"/>
-            <!-- Top row: 3 plants -->
-            <g fill="#2d6e2d">
-              <ellipse cx="20" cy="47" rx="3" ry="6" transform="rotate(-10,20,47)"/>
-              <ellipse cx="25" cy="48" rx="3" ry="5" transform="rotate(12,25,48)"/>
-              <line x1="22" y1="57" x2="22" y2="45" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="20" cy="41" r="1.5" fill="#e8b84a" opacity="0.7"/>
-            </g>
-            <g fill="#2d6e2d">
-              <ellipse cx="43" cy="45" rx="3" ry="7" transform="rotate(-8,43,45)"/>
-              <ellipse cx="48" cy="46" rx="3" ry="6" transform="rotate(10,48,46)"/>
-              <line x1="45" y1="57" x2="45" y2="43" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="48" cy="40" r="1.5" fill="#f5d878" opacity="0.7"/>
-            </g>
-            <g fill="#2d6e2d">
-              <ellipse cx="66" cy="46" rx="3" ry="6" transform="rotate(-12,66,46)"/>
-              <ellipse cx="71" cy="47" rx="3" ry="5" transform="rotate(8,71,47)"/>
-              <line x1="68" y1="57" x2="68" y2="44" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="66" cy="41" r="1.5" fill="#e8b84a" opacity="0.6"/>
-            </g>
-            <!-- Bottom row: 3 plants (same size as top row) -->
-            <g fill="#2d6e2d">
-              <ellipse cx="20" cy="58" rx="3" ry="5.5" transform="rotate(-8,20,58)"/>
-              <ellipse cx="25" cy="59" rx="3" ry="5" transform="rotate(10,25,59)"/>
-              <line x1="22" y1="68" x2="22" y2="56" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="20" cy="53" r="1.5" fill="#f5d878" opacity="0.7"/>
-            </g>
-            <g fill="#2d6e2d">
-              <ellipse cx="43" cy="57" rx="3" ry="6" transform="rotate(-10,43,57)"/>
-              <ellipse cx="48" cy="58" rx="3" ry="5.5" transform="rotate(8,48,58)"/>
-              <line x1="45" y1="68" x2="45" y2="55" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="48" cy="52" r="1.5" fill="#e8b84a" opacity="0.7"/>
-            </g>
-            <g fill="#2d6e2d">
-              <ellipse cx="66" cy="58" rx="3" ry="5.5" transform="rotate(-12,66,58)"/>
-              <ellipse cx="70" cy="59" rx="3" ry="5" transform="rotate(6,70,59)"/>
-              <line x1="68" y1="68" x2="68" y2="56" stroke="#2a7a24" stroke-width="1.5"/>
-              <circle cx="66" cy="53" r="1.5" fill="#f5d878" opacity="0.6"/>
-            </g>
+            <path d="M18.4,37.8c-1.8-4.3-3-8.8-3.4-13.4c-0.2-2.8,1.7-5.3,4.5-5.9l5.8-1.3c2.2-0.5,4.4,0.7,5.2,2.8l3.2,8.4 c0.7,1.8,0,3.9-1.6,5l-4.4,3c3.4,7.2,9.2,13,16.4,16.4l3-4.4c1.1-1.6,3.2-2.3,5-1.6l8.4,3.2c2.1,0.8,3.3,3,2.8,5.2l-1.3,5.8 c-0.6,2.7-3.1,4.7-5.9,4.5c-4.6-0.4-9.1-1.6-13.4-3.4C31.2,57.4,23,49.2,18.4,37.8z" fill="#c8922a"/>
           </svg>
         </div>
         <div class="step-number">3</div>
-        <h3>Earn Native Plants</h3>
-        <p>For every Sunday call you join, receive a complimentary six-pack of homegrown native plants &mdash; even if you didn't get any signatures that week.</p>
+        <h3>Return Completed Sheets</h3>
+        <p>Mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> to arrange drop-off. We review every sheet before submitting to the City Clerk.</p>
       </div>
-    </div>
-
-    <div style="background:var(--cream);border:1px solid rgba(200,146,42,0.25);border-top:4px solid var(--gold);border-radius:4px;padding:2.5rem 2.5rem 2rem;max-width:700px;margin:3rem auto 0;text-align:center;">
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--forest-dark);margin-bottom:1rem;line-height:1.3;">Build Community and<br>Protect Democracy</h2>
-      <p style="font-size:1.05rem;line-height:1.8;color:var(--text);margin-bottom:0;">Our volunteer program seeks to build community around democratic participation and environmental conservation. The effort you commit will have a direct effect on saving all 267 acres of precious Duluth parkland.</p>
-    </div>
-  </div>
-<div class="gold-divider"></div>
-<!-- ══════════ HOW DID WE GET HERE ══════════ -->
-<section class="sec-backstory">
-  <div class="container">
-    <p class="section-label" style="text-align:center;color:var(--gold-light);">The Backstory</p>
-    <h2 class="section-title" style="text-align:center;">How Did We<br><span>Get Here?</span></h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Mayor wants to bring golf back to Lester Park. The problem? The city can't afford it. But a private developer from Florida can.</p>
-
-    <div class="backstory-grid">
-      <div class="backstory-card">
-        <h3>The Developer's Vision</h3>
-        <p>A Florida-based developer envisions a &ldquo;Vail-Breckenridge&rdquo; style chalet hotel on public parkland. Other courses he's developed charge up to <strong style="color:var(--gold-light);">$185 per round</strong>. This isn't community golf &mdash; it's a luxury resort built on land that belongs to Duluthians.</p>
-      </div>
-      <div class="backstory-card">
-        <h3>Why City Hall Wants the Deal</h3>
-        <p>Enger Park Golf Course needs a new clubhouse, and the money from selling Lester is earmarked to build it. In other words, one public park is being sacrificed to fund improvements at another &mdash; without voters ever being asked.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="full-site.html#investigate" class="btn-primary">Read the Full Backstory</a>
     </div>
   </div>
 </section>
 
 <div class="gold-divider"></div>
 
-<!-- ══════════ HOUSING? ══════════ -->
-<section class="sec-housing-q">
-  <div class="container">
-    <p class="section-label" style="text-align:center;color:var(--gold-light);">Two Petitions. One Goal.</p>
-    <h2 class="section-title" style="text-align:center;"><span>Protect All 267 Acres</span><br>of Lester Park</h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The Reinert administration wants to develop both the 230-acre former golf course <em>and</em> the 37.5-acre Lake Nine parcel. We're running two petitions to stop both &mdash; and return every acre to permanent public protection.</p>
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" class="sec-info">
+  <div class="container" style="max-width:860px;">
+    <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
 
-    <div class="housing-grid">
-      <div class="housing-card">
-        <h3>Petition #1: Require a Public Vote</h3>
-        <p>The 230-acre former golf course cannot be transferred to private developers without first being rezoned. Our primary petition requires that rezoning to go to a public ballot &mdash; giving every Duluthian a direct vote on Lester's future before any land changes hands.</p>
-      </div>
-      <div class="housing-card">
-        <h3>Petition #2: Return Lake Nine to Parkland</h3>
-        <p>The 37.5-acre Lake Nine parcel is currently zoned mixed-use &mdash; a vulnerability the Reinert administration could exploit for development independent of the main transfer. Our companion petition rezones it back to permanent parkland status, closing that door entirely.</p>
-      </div>
-      <div class="housing-card">
-        <h3>We Support Affordable Housing</h3>
-        <p>We support smart, affordable housing &mdash; on private land, vacant lots, and underused downtown buildings. The city's own studies show thousands of units can be built on already-disturbed land without touching a single acre of parkland. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
-      </div>
-      <div class="housing-card">
-        <h3>We Aren&rsquo;t NIMBYs</h3>
-        <p>What we oppose is handing irreplaceable public green space to private developers without a public vote. Once public land is sold, it&rsquo;s gone forever. That&rsquo;s not NIMBYism. That&rsquo;s common sense. <a href="full-site.html#housing">Learn more&nbsp;&rarr;</a></p>
-      </div>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>What will the petitions actually do?</summary>
+        <div class="faq-body">
+          <p><strong>Petition #1 (230 acres):</strong> The former Lester Park Golf Course is currently zoned parkland. Before it can be developed, it must be rezoned. This petition requires that rezoning to go to a public vote first — giving every Duluth voter a direct say before any land changes hands. It does not block development permanently. It requires a vote.</p>
+          <p><strong>Petition #2 (Lake Nine, 37.5 acres):</strong> The Lake Nine parcel was conveyed to DEDA in December 2025 and is currently zoned mixed-use. This petition directs the City to rezone it back to the Park and Open Space District (P-1) — and requires a majority vote of Duluth voters before it can be rezoned for private development. It recovers the parcel for public protection and gives future Duluthians a say in its future.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why are there two petitions?</summary>
+        <div class="faq-body">
+          <p>Because there are two legally distinct parcels. The 230-acre former golf course is still held by the City. The 37.5-acre Lake Nine parcel has already been conveyed to DEDA. Each parcel requires its own petition under Section 51 of the Duluth City Charter. Sign both.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How many signatures do you need?</summary>
+        <div class="faq-body">
+          <p>Under Section 51 of the Duluth City Charter, thresholds are based on total ballots cast in the last general municipal election. <strong>10%</strong> — approximately 3,664 valid signatures — places the ordinance on the November 2027 ballot. <strong>20%</strong> — approximately 7,328 — forces the City Council to either adopt the ordinance or call a special election within about 75 days.</p>
+          <p>We are collecting <strong>5,000 signatures per petition</strong> to account for the roughly 20–25% of signatures typically disqualified for technical reasons — illegible addresses, unsigned circulator affidavits, non-registered voters. A buffer is standard practice.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens after you collect enough signatures?</summary>
+        <div class="faq-body">
+          <p>Completed petition sheets go to the Duluth City Clerk, who has 10 days to verify signatures and certify the threshold. At 10%, the ordinance goes to the City Council, which can adopt it directly or let it go to the November 2027 ballot. At 20%, the Council must adopt it or call a special election within about 75 days. The Council may also pass an alternative ordinance — as they did with Right to Repair — but if a majority of petitioners don't withdraw, both ordinances go to voters.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>If I sign, will people know?</summary>
+        <div class="faq-body">
+          <p>Petition signatures become part of the public record when submitted to the City Clerk — that is required by state law. Our Park Our Vote will not record, share, or use your signature information for any purpose other than submitting it to the City Clerk. We will not contact you based on your signature.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>There's a land use study underway. Shouldn't we wait?</summary>
+        <div class="faq-body">
+          <p>No. The resolution mandating the study explicitly favors housing development and a golf course as outcomes. A golf course alone requires 150–220 acres — leaving only 70–80 acres for 455 housing units, a hotel, retail, trails, and parking. <a href="lester-space.html">See how the land actually divides up →</a></p>
+          <p>We're not asking anyone to prejudge the outcome. We're asking that Duluthians get to vote on it. The study is due July 2026. Sign before the Council acts.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>When was Our Park Our Vote formed?</summary>
+        <div class="faq-body">
+          <p>Mid-February 2026, following the City Council's passage of Ordinance 25-032-O in December 2025 authorizing the conditional transfer of the former Lester Park Golf Course to DEDA.</p>
+        </div>
+      </details>
+
     </div>
-
-    <!-- Track Record -->
-    <div class="track-record">
-      <h3>The Track Record Speaks for Itself</h3>
-      <p>The developers behind the Lester Park proposal say they&rsquo;ll include 68 units of &ldquo;affordable or workforce&rdquo; housing. Two things are worth understanding about that promise.</p>
-      <p><strong>First, the math.</strong> Genuinely affordable housing &mdash; units restricted to families earning 30&ndash;60% of area median income &mdash; generates less rental revenue than market-rate units. That gap is normally covered by public tax credits, grants, or deed restrictions enforced by government agencies. Without those mechanisms, there is no legal obligation keeping any unit affordable. A developer who funds their own project privately answers to no one on affordability once the deal closes.</p>
-      <p><strong>Second, we&rsquo;ve seen this before &mdash; right here in Duluth.</strong> One of the Lester Park proposal&rsquo;s own local partners publicly announced the Ordean building downtown as &ldquo;workforce housing.&rdquo; It opened as 3&ndash;12 month extended-stay corporate lodging. That wasn&rsquo;t a financing failure. The money was there. The promise just quietly became something else.</p>
-      <p><strong>Meanwhile, the promises keep coming &mdash; and falling short:</strong></p>
-      <ul>
-        <li><strong>Affordability that expires.</strong> When developers do include affordable units, the affordability requirements often have sunset clauses. After a few years, rents climb to market rate and the &ldquo;affordable&rdquo; housing quietly disappears.</li>
-        <li><strong>Promised units that never materialize.</strong> Developers routinely pledge affordable units to win public support and approvals, then scale back or eliminate them during construction, citing rising costs or changing market conditions.</li>
-        <li><strong>Public land given away, public benefit withheld.</strong> Duluth has seen developers receive public land, tax breaks, and other incentives in exchange for affordable housing commitments &mdash; only to underdeliver or walk away entirely.</li>
-      </ul>
-      <p>Now we&rsquo;re being asked to trust that a private developer from Florida will deliver 68 units of &ldquo;affordable or workforce&rdquo; housing on public parkland &mdash; with no binding mechanism to enforce that promise. <strong>History says otherwise.</strong></p>
-    </div>
-
   </div>
 </section>
 
 <div class="gold-divider"></div>
 
-<!-- ══════════ STAY INFORMED ══════════ -->
+<!-- ══════════ TAKE ACTION ══════════ -->
 <section id="action" class="sec-action">
   <div class="container">
-    <p class="section-label" style="color:var(--gold-light)">Stay Informed</p>
+    <p class="section-label" style="color:var(--gold-light)">Take Action</p>
     <h2 class="section-title" style="color:#fff">Use Your Voice</h2>
+
+    <div style="background:rgba(200,146,42,0.15);border:1px solid rgba(200,146,42,0.5);border-left:4px solid var(--gold);border-radius:3px;padding:0.9rem 1.25rem;margin-bottom:2rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.85);">
+      📋 <strong style="color:var(--gold-light);">Signatures must be collected on paper.</strong> The City Clerk only accepts original hard-copy signatures — no digital or electronic signatures. Download the petitions, print them, sign in ink, and mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a> to arrange drop-off.
+    </div>
 
     <div class="action-grid">
       <div class="action-card urgent">
         <h4>📋 Petition #1: Require a Public Vote</h4>
-        <p>Force a public ballot before the 230-acre former golf course can be rezoned for private development. <strong>Download, print, sign, and mail it in.</strong> Ask your family, friends, and neighbors to sign too. Every signature counts.</p>
+        <p>Force a public ballot before the 230-acre former golf course can be rezoned for private development. <strong>Download, print, and sign in ink.</strong> Ask your family, friends, and neighbors to sign too.</p>
         <a href="petition.pdf" target="_blank" class="btn">Download Petition #1 (PDF) →</a>
       </div>
 
       <div class="action-card urgent">
         <h4>📋 Petition #2: Return Lake Nine to Parkland</h4>
-        <p>Rezone the 37.5-acre Lake Nine parcel back to permanent parkland status &mdash; permanently closing the door to development on those acres under any administration. <strong>Download, print, sign, and mail it in.</strong></p>
+        <p>Direct the City to rezone the 37.5-acre Lake Nine parcel back to permanent parkland. <strong>Download, print, and sign in ink.</strong></p>
         <a href="lake9_companion_petition.pdf" target="_blank" class="btn">Download Petition #2 (PDF) →</a>
       </div>
 
       <div class="action-card urgent">
         <h4>🏛️ Attend City Council &amp; Speak Out</h4>
-        <p>The Duluth City Council meets on the <strong>2nd and 4th Monday of every month at 6:00 PM</strong> in the Council Chambers, 3rd Floor, City Hall. The public can address the Council during the "Opportunity for Citizens to be Heard" portion. Sign up at the Clerk's desk in the front of the room.</p>
-        <p style="font-size:0.88rem;"><strong>Upcoming meetings:</strong></p>
-        <p style="font-size:0.85rem; line-height:1.9; margin-top:0.3rem;">
-          Monday, March 9, 2026 — 6:00 PM<br>
+        <p>The Duluth City Council meets on the <strong>2nd and 4th Monday of every month at 6:00 PM</strong> in Council Chambers, 3rd Floor, City Hall. Sign up at the Clerk's desk to speak during "Opportunity for Citizens to be Heard."</p>
+        <p style="font-size:0.85rem;line-height:1.9;margin-top:0.5rem;">
+          <strong>Upcoming meetings:</strong><br>
           Monday, March 23, 2026 — 6:00 PM<br>
           Monday, April 13, 2026 — 6:00 PM<br>
           Monday, April 27, 2026 — 6:00 PM
@@ -1062,15 +909,9 @@ footer a { color: var(--gold-light); }
       </div>
 
       <div class="action-card">
-        <h4>🤝 Volunteer With Us</h4>
-        <p>Join our weekly volunteer effort. <strong>Get 5 signatures</strong> on the petition each week, then hop on a <strong>5-minute call every Sunday at 5:55 PM</strong> to report your progress. As a thank-you, every volunteer earns a <strong>free six-pack of native plants</strong> to put in the ground. It's simple, it's social, and it makes a real difference.</p>
-        <a href="#volunteer" class="btn">Sign Up Above ↑</a>
-      </div>
-
-      <div class="action-card">
         <h4>📧 Contact the Mayor &amp; Council</h4>
-        <p>Tell them you want a referendum on the sale, that you oppose development at Lester, and that rezoning parkland for private development is not something you will accept.</p>
-        <p style="font-size:0.85rem;"><strong>Mayor Reinert:</strong> mayor[at]duluthmn.gov | 218-730-5230</p>
+        <p>Tell them you want a public vote before any rezoning of Lester Park.</p>
+        <p style="font-size:0.85rem;margin-top:0.5rem;"><strong>Mayor Reinert:</strong> mayor[at]duluthmn.gov | 218-730-5230</p>
         <div class="email-block">
           wdurrwachter[at]duluthmn.gov;
           ddesotelle[at]duluthmn.gov;
@@ -1082,7 +923,13 @@ footer a { color: var(--gold-light); }
           lnephew[at]duluthmn.gov;
           ttomanek[at]duluthmn.gov
         </div>
-        <p style="font-size:0.82rem;margin-top:0.75rem;">Copy the addresses above into the "To:" field to email all nine councilors at once.</p>
+        <p style="font-size:0.82rem;margin-top:0.75rem;">Copy all addresses into your "To:" field to email all nine councilors at once.</p>
+      </div>
+
+      <div class="action-card">
+        <h4>📖 Read the Full Backstory</h4>
+        <p>The developer, the working group, the land use study, the affordable housing promises, and DEDA's track record — all of it in one place.</p>
+        <a href="learn-more.html" class="btn">Learn More →</a>
       </div>
     </div>
   </div>
@@ -1096,5 +943,25 @@ footer a { color: var(--gold-light); }
   <p><a href="/">ourparkourvote.org</a></p>
 </footer>
 
+<script>
+// ── SIGNATURE COUNTER ──────────────────────────────────────
+// To update: change SIGNATURES_COLLECTED to the current count
+const SIGNATURES_COLLECTED = 59;
+const GOAL = 5000;
+const THRESHOLD = 3664;
+
+(function() {
+  const fill = document.getElementById('sigBar');
+  const tick = document.getElementById('sigThreshold');
+  if (!fill || !tick) return;
+  const pct = Math.min(SIGNATURES_COLLECTED / GOAL * 100, 100);
+  const thresholdPct = THRESHOLD / GOAL * 100;
+  tick.style.left = thresholdPct + '%';
+  // Animate fill on load
+  requestAnimationFrame(function() {
+    setTimeout(function() { fill.style.width = pct + '%'; }, 200);
+  });
+})();
+</script>
 </body>
 </html>

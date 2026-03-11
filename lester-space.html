@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How the Land Divides Up — Our Park Our Vote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #060f1e;
+  --navy-mid: #0e1f3a;
+  --gold: #c8922a;
+  --gold-light: #e8b84a;
+  --forest: #1e4a1e;
+  --forest-light: #2d6e2d;
+  --lake: #3a6b8a;
+  --cream: #faf4e8;
+  --text: #1a1a2e;
+  --text-mid: #2d3a50;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--navy);
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
+}
+.page { max-width: 900px; margin: 0 auto; }
+.back {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--gold-light); text-decoration: none;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 2.5rem;
+  opacity: 0.8; transition: opacity 0.2s;
+}
+.back:hover { opacity: 1; }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900; line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+h1 em { font-style: italic; color: var(--gold); }
+.intro {
+  font-size: 1rem; line-height: 1.75;
+  color: rgba(255,255,255,0.75);
+  max-width: 680px; margin-bottom: 3rem;
+}
+.chart-section { margin-bottom: 3.5rem; }
+.chart-label {
+  font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.chart-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 1.5rem; line-height: 1.3;
+}
+
+/* ── PARK COMPARISON ── */
+.park-bars { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem; }
+.park-row { display: flex; align-items: center; gap: 1rem; }
+.park-name {
+  width: 130px; flex-shrink: 0;
+  font-size: 0.82rem; font-weight: 700;
+  color: rgba(255,255,255,0.85); text-align: right;
+}
+.park-bar-wrap { flex: 1; }
+.park-bar {
+  height: 36px; border-radius: 3px;
+  display: flex; align-items: center; padding-left: 10px;
+  font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.9);
+  transition: width 1s ease-out;
+}
+.park-acres {
+  margin-left: 0.6rem;
+  font-size: 0.72rem; color: rgba(255,255,255,0.5); font-weight: 400;
+}
+
+/* ── LAND SPLIT ── */
+.split-wrap { margin: 1.5rem 0; }
+.split-bar {
+  display: flex; height: 64px; border-radius: 4px; overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.split-golf {
+  background: var(--forest);
+  display: flex; flex-direction: column;
+  justify-content: center; padding: 0 12px;
+}
+.split-other {
+  background: var(--lake);
+  display: flex; flex-direction: column;
+  justify-content: center; padding: 0 12px;
+}
+.split-label { font-size: 0.78rem; font-weight: 800; color: var(--gold-light); }
+.split-sub { font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+.split-legend {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  font-size: 0.78rem; color: rgba(255,255,255,0.55);
+  margin-top: 0.75rem;
+}
+.split-legend span { display: flex; align-items: center; gap: 0.4rem; }
+.dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+/* ── UNIT DENSITY ── */
+.density-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7px, 1fr));
+  gap: 3px; max-width: 600px; margin: 1rem 0;
+}
+.density-cell {
+  width: 100%; aspect-ratio: 1;
+  border-radius: 1px;
+}
+.density-note {
+  font-size: 0.78rem; color: rgba(255,255,255,0.5);
+  margin-top: 0.75rem; line-height: 1.6;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  background: rgba(200,146,42,0.1);
+  border: 1px solid rgba(200,146,42,0.35);
+  border-left: 4px solid var(--gold);
+  border-radius: 3px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 0.95rem; line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+}
+.callout strong { color: var(--gold-light); }
+
+.divider {
+  border: none; border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 3rem 0;
+}
+
+.source {
+  font-size: 0.72rem; color: rgba(255,255,255,0.35);
+  line-height: 1.6; margin-top: 0.5rem;
+}
+.source a { color: rgba(255,255,255,0.45); }
+
+@media (max-width: 600px) {
+  .park-name { width: 90px; font-size: 0.75rem; }
+  .park-bar { height: 30px; }
+  .split-bar { height: 52px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a href="/" class="back">← Back to ourparkourvote.org</a>
+
+  <h1>267 Acres.<br>Here's How It <em>Actually</em> Divides Up.</h1>
+  <p class="intro">The developer's plan encompasses all 267.5 acres of the former Lester Park Golf Course — the 230-acre main parcel plus the 37.5-acre Lake Nine parcel. A regulation 18-hole golf course requires 150–180 acres minimum. Here's what's left.</p>
+
+  <!-- SECTION 1: PARK COMPARISON -->
+  <div class="chart-section">
+    <p class="chart-label">Context</p>
+    <p class="chart-title">How Big Is the Lester Parcel, Really?</p>
+    <div class="park-bars" id="parkBars">
+      <div class="park-row">
+        <div class="park-name">Hartley Park</div>
+        <div class="park-bar-wrap">
+          <div class="park-bar" style="background:#1e4a1e;width:0%" data-width="100%">
+            <span>660 acres</span>
+          </div>
+        </div>
+      </div>
+      <div class="park-row">
+        <div class="park-name">Entire Lester Parcel</div>
+        <div class="park-bar-wrap">
+          <div class="park-bar" style="background:#2d5e3e;width:0%" data-width="40.5%">
+            <span>267.5 acres</span>
+          </div>
+        </div>
+      </div>
+      <div class="park-row">
+        <div class="park-name">Chester Bowl Park</div>
+        <div class="park-bar-wrap">
+          <div class="park-bar" style="background:#1e4a1e;width:0%" data-width="18.2%">
+            <span>120 acres</span>
+          </div>
+        </div>
+      </div>
+      <div class="park-row">
+        <div class="park-name">Housing + Everything Else</div>
+        <div class="park-bar-wrap">
+          <div class="park-bar" style="background:#3a6b8a;width:0%" data-width="15.2%">
+            <span>~100 acres</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="source">The "housing + everything else" bar reflects the acreage remaining after a minimum-standard 18-hole golf course (~165 acres) is carved out of the full 267.5-acre parcel. Sources: Duluth Parks and Recreation; developer presentations to City Council.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 2: LAND SPLIT -->
+  <div class="chart-section">
+    <p class="chart-label">The Proposed Plan</p>
+    <p class="chart-title">How the 267.5 Acres Would Be Divided</p>
+
+    <div class="split-wrap">
+      <div class="split-bar">
+        <!-- Golf: ~65% = 150 acres minimum -->
+        <div class="split-golf" style="width:62%">
+          <span class="split-label">GOLF COURSE</span>
+          <span class="split-sub">~165 acres (18-hole minimum)</span>
+        </div>
+        <!-- Housing + rest: ~35% -->
+        <div class="split-other" style="width:38%">
+          <span class="split-label">EVERYTHING ELSE</span>
+          <span class="split-sub">~102 acres</span>
+        </div>
+      </div>
+      <div class="split-legend">
+        <span><span class="dot" style="background:var(--forest);"></span>Golf course (~165 ac, 18-hole minimum)</span>
+        <span><span class="dot" style="background:var(--lake);"></span>455 housing units + hotel + retail + trails + parking (~102 ac)</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The developer's plan calls for 455 housing units</strong> on a parcel that — after the golf course takes its ~165 acres — leaves roughly 100 acres for housing, a hotel, retail space, trails, and parking. That's still less than <strong>Chester Bowl Park</strong> (120 acres), with far more packed into it.
+    </div>
+
+    <p class="source">Golf course acreage based on USGA and Golf Course Superintendents Association minimum standards for regulation 18-hole courses (150–220 acres); midpoint ~165 acres used here. Developer's 455-unit figure from Tim Meyer's December 3, 2025 DNT op-ed and working group presentations to City Council. Total parcel: 267.5 acres (230-acre main parcel + 37.5-acre Lake Nine parcel).</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 3: DENSITY -->
+  <div class="chart-section">
+    <p class="chart-label">The Housing Math</p>
+    <p class="chart-title">455 Units on ~100 Acres — How Tight Is That?</p>
+
+    <!-- Acre grid: 75 squares, each = 1 acre -->
+    <p style="color:rgba(255,255,255,0.6);font-size:0.82rem;margin-bottom:1rem;">Each square = 1 acre. 100 acres total for housing, hotel, retail, trails, and parking.</p>
+
+    <div style="position:relative;margin-bottom:1.5rem;">
+      <svg id="acreGrid" viewBox="0 0 750 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:750px;display:block;">
+        <!-- 75 squares: 15 columns x 5 rows, each 44px with 4px gap -->
+        <!-- Row 1-2: housing footprint (assuming ~450 sq ft/unit avg = 455 units needs ~4.7ac just floors, but with roads/parking/setbacks realistically 20-25ac for housing) -->
+        <!-- Color coding: gold = housing (~25ac), blue = hotel/retail (~15ac), green = trails/parks (~15ac), gray = roads/parking (~20ac) -->
+      </svg>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;" id="acreBreakdown">
+      <div class="acre-card" style="background:rgba(200,146,42,0.15);border:1px solid rgba(200,146,42,0.4);border-radius:3px;padding:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+          <div style="width:14px;height:14px;background:#c8922a;border-radius:2px;flex-shrink:0;"></div>
+          <span style="font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-light);">Housing</span>
+        </div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:'Playfair Display',serif;line-height:1;">~40 acres</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;">455 units + setbacks + internal roads</div>
+      </div>
+      <div class="acre-card" style="background:rgba(58,107,138,0.2);border:1px solid rgba(58,107,138,0.5);border-radius:3px;padding:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+          <div style="width:14px;height:14px;background:#3a6b8a;border-radius:2px;flex-shrink:0;"></div>
+          <span style="font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(100,180,220,0.9);">Hotel + Retail</span>
+        </div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:'Playfair Display',serif;line-height:1;">~20 acres</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;">Resort hotel, two restaurants, shops</div>
+      </div>
+      <div class="acre-card" style="background:rgba(30,74,30,0.3);border:1px solid rgba(45,110,45,0.5);border-radius:3px;padding:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+          <div style="width:14px;height:14px;background:#2d6e2d;border-radius:2px;flex-shrink:0;"></div>
+          <span style="font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(100,200,100,0.9);">Trails + Open Space</span>
+        </div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:'Playfair Display',serif;line-height:1;">~22 acres</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;">All remaining green space and trail connections</div>
+      </div>
+      <div class="acre-card" style="background:rgba(60,60,60,0.3);border:1px solid rgba(100,100,100,0.4);border-radius:3px;padding:1rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;">
+          <div style="width:14px;height:14px;background:#555;border-radius:2px;flex-shrink:0;"></div>
+          <span style="font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(180,180,180,0.9);">Roads + Parking</span>
+        </div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:'Playfair Display',serif;line-height:1;">~20 acres</div>
+        <div style="font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:0.3rem;">Access roads, surface lots, infrastructure</div>
+      </div>
+    </div>
+
+    <!-- Visual acre grid rendered by JS -->
+    <div id="gridContainer" style="margin-bottom:1rem;"></div>
+
+    <div class="callout">
+      <strong>~22 acres of trails and open space</strong> — for a development the city is calling a park-connected resort. Chester Bowl Park is 120 acres. The Lester River trail corridor alone is miles long. Fitting meaningful trail connectivity and green space into 22 acres alongside a resort development is not realistic.
+    </div>
+
+    <div class="callout" style="margin-top:1rem;">
+      <strong>For comparison:</strong> Greater downtown Duluth — already served by existing roads, water, sewer, and transit — could support <a href="https://duluthmn.gov/media/15840/greater-downtown-study-area_duluthmn-2023.pdf" target="_blank" rel="noopener" style="color:var(--gold-light);">approximately 2,175 new housing units annually</a> according to a 2023 city study, on land that's already developed. Greenfield infrastructure costs run <a href="https://sgsep.com.au/publications/insights/housing-and-sustainable-cities" target="_blank" rel="noopener" style="color:var(--gold-light);">3–4× higher</a> than infill.
+    </div>
+
+    <p class="source">Acreage estimates are illustrative based on standard development ratios. The developer has not released a detailed site plan. Housing footprint assumes ~2,400 sq ft average lot equivalent per unit including internal circulation. Hotel/retail estimate based on Sunnarborg's stated program. Roads/parking assumes standard suburban ratios (~25% of net developable area).</p>
+  </div>
+
+  <hr class="divider">
+
+  <div style="text-align:center;padding:1rem 0 2rem;">
+    <a href="/" style="display:inline-block;background:var(--gold);color:#fff;padding:0.9rem 2.2rem;border-radius:2px;font-size:0.85rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;">← Back to ourparkourvote.org</a>
+  </div>
+
+</div>
+
+<script>
+// Animate park bars on load
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.querySelectorAll('.park-bar[data-width]').forEach(function(bar) {
+      bar.style.transition = 'width 1s ease-out';
+      bar.style.width = bar.dataset.width;
+    });
+  }, 200);
+
+  // Render acre grid: 75 squares
+  // housing=25, hotel=15, trails=15, roads=20
+  var colors = {
+    housing: '#c8922a',
+    hotel:   '#3a6b8a',
+    trails:  '#2d6e2d',
+    roads:   '#444'
+  };
+  var acres = [];
+  for (var i = 0; i < 25; i++) acres.push('housing');
+  for (var i = 0; i < 15; i++) acres.push('hotel');
+  for (var i = 0; i < 15; i++) acres.push('trails');
+  for (var i = 0; i < 20; i++) acres.push('roads');
+
+  var container = document.getElementById('gridContainer');
+  if (!container) return;
+
+  var grid = document.createElement('div');
+  grid.style.cssText = 'display:grid;grid-template-columns:repeat(15,1fr);gap:4px;max-width:660px;margin-bottom:0.5rem;';
+
+  acres.forEach(function(type, idx) {
+    var cell = document.createElement('div');
+    cell.style.cssText = 'aspect-ratio:1;border-radius:2px;background:' + colors[type] + ';opacity:0;transition:opacity 0.3s;';
+    cell.title = type.charAt(0).toUpperCase() + type.slice(1);
+    grid.appendChild(cell);
+    setTimeout(function() { cell.style.opacity = '1'; }, 300 + idx * 18);
+  });
+
+  container.appendChild(grid);
+
+  var legend = document.createElement('p');
+  legend.style.cssText = 'font-size:0.72rem;color:rgba(255,255,255,0.35);';
+  legend.textContent = 'Each square = 1 acre of the ~75 acres remaining after golf course. Estimates are illustrative.';
+  container.appendChild(legend);
+});
+</script>
+</script>
+</body>
+</html>
