@@ -4,104 +4,101 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <style>
-        /* Landscape setup: 11in x 8.5in. Left margin 0.8in for clipboard. */
         @page { size: landscape; margin: 0; }
-        * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; font-size: 10pt; line-height: 1.1; color: #1a1a1a; margin: 0; padding: 0; }
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; }
+        body { font-family: Arial, sans-serif; font-size: 9pt; line-height: 1.1; color: #1a1a1a; margin: 0; padding: 0; }
         
         .page-container { 
             position: relative; 
-            page-break-after: always; 
-            height: 8.5in; 
             width: 11in;
-            padding: 0.4in 0.4in 0.1in 0.8in; /* Top, Right, Bottom, Left */
+            height: 8.5in;
+            padding: 0.3in 0.4in 0.2in 0.8in; 
             display: flex;
             flex-direction: column;
+            page-break-after: always;
             overflow: hidden;
         }
+
+        .top-indicator-row { display: flex; justify-content: space-between; align-items: flex-start; height: 20px; }
+        .branding-left { font-family: 'Righteous', cursive; font-size: 11pt; }
+        .petition-indicator { font-weight: bold; font-size: 11pt; }
         
-        /* Branding & Indicators */
-        .branding-left { position: absolute; top: 0.4in; left: 0.8in; font-family: 'Righteous', cursive; font-size: 13pt; }
-        .petition-indicator { position: absolute; top: 0.4in; right: 0.4in; font-weight: bold; font-size: 13pt; }
-        .branding-center { font-family: 'Righteous', cursive; font-size: 26pt; text-align: center; margin-bottom: 5px; margin-top: 0; }
+        .branding-center { font-family: 'Righteous', cursive; font-size: 24pt; text-align: center; margin-top: -5px; margin-bottom: 2px; }
         
-        /* Title Area */
-        .title { font-weight: bold; font-size: 12.5pt; text-align: center; text-transform: uppercase; margin-bottom: 2px; }
-        .subtitle { font-size: 9pt; text-align: center; margin-bottom: 6px; border-bottom: 2px solid #333; padding-bottom: 2px; }
+        .title { font-weight: bold; font-size: 11pt; text-align: center; text-transform: uppercase; margin-bottom: 2px; }
+        .subtitle { font-size: 8.5pt; text-align: center; margin-bottom: 4px; border-bottom: 1.5px solid #333; padding-bottom: 2px; }
         
-        /* Summary Box */
-        .summary-box { border: 1.5px solid #000; padding: 6px; margin-bottom: 8px; background: #fdfdfd; line-height: 1.2; font-size: 9.5pt; }
+        .summary-box { border: 1.2px solid #000; padding: 4px 8px; margin-bottom: 5px; background: #fdfdfd; line-height: 1.1; font-size: 8.5pt; }
         
-        /* Signature Table - Rows set to 33px for safe fit */
-        table { width: 100%; border-collapse: collapse; margin-bottom: 8px; table-layout: fixed; }
-        th { background: #eeeeee; color: #000000; padding: 5px; font-size: 8.5pt; border: 1px solid #333; text-align: center; }
-        td { border: 1px solid #333; height: 33px; padding: 2px; }
+        /* Signature Table - Height set for maximum writing room */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 5px; table-layout: fixed; flex-grow: 1; }
+        th { background: #eeeeee !important; color: #000; padding: 3px; font-size: 7.5pt; border: 1px solid #333; text-align: left; }
+        td { border: 1px solid #333; height: 36px; padding: 2px; }
         
-        /* Affidavit */
-        .affidavit { border: 1px solid #999; padding: 8px; font-size: 8.5pt; background: #f9f9f9; line-height: 1.1; }
+        .affidavit { border: 1px solid #999; padding: 6px; font-size: 7.5pt; background: #f9f9f9 !important; margin-bottom: 4px; line-height: 1; }
+        .footer { font-size: 7pt; text-align: center; border-top: 1px solid #ccc; padding-top: 4px; color: #444; }
         
-        /* Footer */
-        .footer { font-size: 7.5pt; text-align: center; margin-top: auto; border-top: 1px solid #ccc; padding-top: 4px; padding-bottom: 4px; color: #444; }
-        
-        /* Page 2 & 4 Styling (Ordinance Text) */
-        .full-text { font-size: 9pt; text-align: justify; columns: 2; column-gap: 35pt; line-height: 1.2; }
-        .section-header { font-weight: bold; margin-top: 6px; text-decoration: underline; }
-        .page2-header { text-align: center; font-weight: bold; font-size: 15pt; margin-top: 0; margin-bottom: 12px; text-transform: uppercase; }
+        /* Full Text Styling */
+        .full-text { font-size: 8.8pt; text-align: justify; columns: 2; column-gap: 35pt; line-height: 1.2; }
+        .section-header { font-weight: bold; margin-top: 4px; text-decoration: underline; }
+        .page2-header { text-align: center; font-weight: bold; font-size: 15pt; margin-bottom: 10px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
-    <!-- PAGE 1: FRONT (PARCEL 1 - 230 ACRES) -->
+    <!-- PAGE 1: SIGNATURES - PARCEL 1 (230 ACRES) -->
     <div class="page-container">
-        <div class="branding-left">OurParkOurVote.org</div>
-        <div class="petition-indicator">(Petition 1 of 2)</div>
+        <div class="top-indicator-row">
+            <div class="branding-left">OurParkOurVote.org</div>
+            <div class="petition-indicator">(Petition 1 of 2)</div>
+        </div>
         <div class="branding-center">Our Park. Our Vote.</div>
         <div class="title">CITIZEN INITIATIVE PETITION — LESTER PARKLAND PROTECTION (Parcel 1 of 2)</div>
         <div class="subtitle">City of Duluth, Minnesota • Proposed Ordinance Under Section 51 of the Duluth City Charter</div>
-
-        <p style="font-size: 8.5pt; margin: 2px 0;"><b>TO THE CITY COUNCIL OF THE CITY OF DULUTH:</b> We, the undersigned registered voters respectfully petition for the submission of the following proposed ordinance to a vote of the people, as provided by Section 51 of the Duluth City Charter.</p>
 
         <div class="summary-box">
             <b>SUMMARY:</b> This ordinance would require voter approval before the approximately <b>230 acres</b> of the former Lester Park Golf Course can be rezoned from parkland to allow private development. The full text of the proposed ordinance is printed on the reverse side.
         </div>
 
-        <p style="font-size: 8pt; font-style: italic; margin-bottom: 4px;"><b>Sign in ink.</b> You must be a registered voter in the City of Duluth. Provide legal name, year born, residence address (no P.O. boxes), and date.</p>
+        <p style="font-size: 7.5pt; font-style: italic; margin: 0 0 4px 0;">Sign in ink. You must be a registered voter in Duluth. Provide full legal name, year born, residence address (no P.O. boxes), and date.</p>
 
         <table>
             <tr>
                 <th style="width: 3%;">#</th>
-                <th style="width: 26.5%; text-align: left;">Printed Full Name</th>
-                <th style="width: 26.5%; text-align: left;">Signature (sign in ink)</th>
-                <th style="width: 6%;">Year Born</th>
-                <th style="width: 29%; text-align: left;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
+                <th style="width: 26%;">Printed Full Name</th>
+                <th style="width: 7%;">Year Born</th>
+                <th style="width: 26%;">Signature (sign in ink)</th>
+                <th style="width: 29%;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
                 <th style="width: 9%;">Date Signed</th>
             </tr>
-            <tr><td><center>1</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>2</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>3</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>4</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>5</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>6</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>7</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>8</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>9</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>10</center></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <!-- 12 Rows -->
+            <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>7</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>11</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>12</td><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
 
         <div class="affidavit">
             <center><b>CIRCULATOR'S AFFIDAVIT</b></center>
-            <p style="font-size: 7.5pt; font-weight: bold; margin: 1px 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW.</p>
-            I, ____________________________________________, being duly sworn, depose and say that I, and I only, personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be the genuine signatures of the persons whose names they purport to be.<br><br>
+            <p style="font-size: 7pt; font-weight: bold; margin: 1px 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW.</p>
+            I, ____________________________________________, being duly sworn, depose and say that I personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be genuine.<br>
             <b>Signature:</b> _______________________________________ <b>Date:</b> _________________ <b>Address:</b> _____________________________________________
         </div>
 
         <div class="footer">
-            Organized by Our Park, Our Vote, A Minnesota Nonprofit Organization | ourparkourvote.org<br>
-            Mail completed sheets to: Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811, or make alternative arrangements for getting it to us by emailing info@ourparkourvote.org.
+            Organized by Our Park, Our Vote, A Minnesota Nonprofit Organization | ourparkourvote.org | 1346 W. Arrowhead Rd. #324, Duluth MN 55811 | info@ourparkourvote.org
         </div>
     </div>
 
-    <!-- PAGE 2: BACK (FULL TEXT - PARCEL 1) -->
+    <!-- PAGE 2: TEXT - PARCEL 1 -->
     <div class="page-container">
         <div class="page2-header">PROPOSED ORDINANCE — FULL TEXT (Parcel 1 of 2)</div>
         <div class="full-text">
@@ -125,57 +122,59 @@
         </div>
     </div>
 
-    <!-- PAGE 3: FRONT (PARCEL 2 - 37.5 ACRES) -->
+    <!-- PAGE 3: SIGNATURES - PARCEL 2 (37.5 ACRES) -->
     <div class="page-container">
-        <div class="branding-left">OurParkOurVote.org</div>
-        <div class="petition-indicator">(Petition 2 of 2)</div>
+        <div class="top-indicator-row">
+            <div class="branding-left">OurParkOurVote.org</div>
+            <div class="petition-indicator">(Petition 2 of 2)</div>
+        </div>
         <div class="branding-center">Our Park. Our Vote.</div>
         <div class="title">CITIZEN INITIATIVE PETITION — LESTER PARKLAND PROTECTION (Parcel 2 of 2)</div>
         <div class="subtitle">City of Duluth, Minnesota • Proposed Ordinance Under Section 51 of the Duluth City Charter</div>
 
-        <p style="font-size: 8.5pt; margin: 2px 0;"><b>TO THE CITY COUNCIL OF THE CITY OF DULUTH:</b> We, the undersigned registered voters respectfully petition for the submission of the following proposed ordinance to a vote of the people, as provided by Section 51 of the Duluth City Charter.</p>
-
         <div class="summary-box">
-            <b>SUMMARY:</b> This ordinance would direct the City of Duluth to rezone the approximately <b>37.5 acres</b> parcel commonly known as the Lake 9 parcel of the former Lester Park Golf Course — currently held by the Duluth Economic Development Authority — to a park, open space, or conservation zoning classification, and would require any future rezoning of the parcel to allow private development to first be approved by a majority of Duluth voters. The full text of the proposed ordinance is printed on the reverse side.
+            <b>SUMMARY:</b> This ordinance would direct the City of Duluth to rezone the approximately <b>37.5 acres</b> parcel commonly known as the Lake 9 parcel of the former Lester Park Golf Course to a park, open space, or conservation zoning classification, and would require any future rezoning of the parcel to allow private development to first be approved by a majority of Duluth voters. The full text of the proposed ordinance is printed on the reverse side.
         </div>
 
-        <p style="font-size: 8pt; font-style: italic; margin-bottom: 4px;"><b>Sign in ink.</b> You must be a registered voter in the City of Duluth. Provide legal name, year born, residence address (no P.O. boxes), and date.</p>
+        <p style="font-size: 7.5pt; font-style: italic; margin: 0 0 4px 0;">Sign in ink. You must be a registered voter in Duluth. Provide full legal name, year born, residence address (no P.O. boxes), and date.</p>
 
         <table>
             <tr>
                 <th style="width: 3%;">#</th>
-                <th style="width: 26.5%; text-align: left;">Printed Full Name</th>
-                <th style="width: 26.5%; text-align: left;">Signature (sign in ink)</th>
-                <th style="width: 6%;">Year Born</th>
-                <th style="width: 29%; text-align: left;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
+                <th style="width: 26%;">Printed Full Name</th>
+                <th style="width: 7%;">Year Born</th>
+                <th style="width: 26%;">Signature (sign in ink)</th>
+                <th style="width: 29%;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
                 <th style="width: 9%;">Date Signed</th>
             </tr>
-            <tr><td><center>1</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>2</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>3</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>4</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>5</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>6</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>7</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>8</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>9</center></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td><center>10</center></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <!-- 12 Rows -->
+            <tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>7</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>8</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>11</td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>12</td><td></td><td></td><td></td><td></td><td></td></tr>
         </table>
 
         <div class="affidavit">
             <center><b>CIRCULATOR'S AFFIDAVIT</b></center>
-            <p style="font-size: 7.5pt; font-weight: bold; margin: 1px 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW.</p>
-            I, ____________________________________________, being duly sworn, depose and say that I, and I only, personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be the genuine signatures of the persons whose names they purport to be.<br><br>
+            <p style="font-size: 7pt; font-weight: bold; margin: 1px 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW.</p>
+            I, ____________________________________________, being duly sworn, depose and say that I personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be genuine.<br>
             <b>Signature:</b> _______________________________________ <b>Date:</b> _________________ <b>Address:</b> _____________________________________________
         </div>
 
         <div class="footer">
-            Organized by Our Park, Our Vote, A Minnesota Nonprofit Organization | ourparkourvote.org<br>
-            Mail completed sheets to: Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811, or make alternative arrangements for getting it to us by emailing info@ourparkourvote.org.
+            Organized by Our Park, Our Vote, A Minnesota Nonprofit Organization | ourparkourvote.org | 1346 W. Arrowhead Rd. #324, Duluth MN 55811 | info@ourparkourvote.org
         </div>
     </div>
 
-    <!-- PAGE 4: BACK (FULL TEXT - PARCEL 2) -->
+    <!-- PAGE 4: TEXT - PARCEL 2 -->
     <div class="page-container">
         <div class="page2-header">PROPOSED ORDINANCE — FULL TEXT (Parcel 2 of 2)</div>
         <div class="full-text">
