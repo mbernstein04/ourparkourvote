@@ -97,27 +97,31 @@ nav {
 /* ── HERO ── */
 .hero {
   margin-top: 60px;
-  background: var(--forest-dark);
-  background-image: url('IMG_4661.jpeg');
-  background-size: cover;
-  background-position: center 40%;
   padding: 8rem 2rem 6rem; text-align: center;
   position: relative; overflow: hidden;
+  background: var(--forest-dark);
 }
-.hero::before {
+.hero-bg {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover; background-position: center 40%;
+  transition: opacity 1.8s ease-in-out;
+}
+.hero-bg-1 { background-image: url('lester-hero-1.jpg'); opacity: 1; }
+.hero-bg-2 { background-image: url('lester-hero-2.jpg'); opacity: 0; }
+.hero::after {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(6,15,30,0.72) 0%,
-    rgba(6,15,30,0.65) 50%,
-    rgba(6,15,30,0.80) 100%
+    rgba(6,15,30,0.55) 0%,
+    rgba(6,15,30,0.45) 50%,
+    rgba(6,15,30,0.70) 100%
   );
-  pointer-events: none;
+  pointer-events: none; z-index: 1;
 }
 .hero-content {
   position: relative; max-width: 900px; margin: 0 auto;
-  animation: fade-up 0.8s ease-out;
+  animation: fade-up 0.8s ease-out; z-index: 2;
 }
 .hero h1 {
   font-family: 'Playfair Display', serif;
@@ -622,6 +626,8 @@ footer a { color: var(--gold-light); }
 
 <!-- ══════════ HERO ══════════ -->
 <div class="hero">
+  <div class="hero-bg hero-bg-1"></div>
+  <div class="hero-bg hero-bg-2"></div>
   <div class="hero-content">
     <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
     <p class="subheading">The former Lester Park Golf Course is public land. Duluthians should decide its future.</p>
@@ -671,22 +677,22 @@ footer a { color: var(--gold-light); }
 <!-- ══════════ PHOTO STRIP ══════════ -->
 <div class="photo-strip">
   <div class="photo-strip-item">
-    <img src="IMG_4661.jpeg" alt="Former Lester Park Golf Course in winter — open field with treeline and Lake Superior beyond">
+    <img src="lester-meadow.jpg" alt="Dried wildflower meadow in winter snow — former Lester Park Golf Course">
   </div>
   <div class="photo-strip-item">
-    <img src="IMG_4897.jpeg" alt="Lone tree on the former Lester Park Golf Course on a winter morning">
+    <img src="lester-pine.jpg" alt="Lone white pine standing tall on the former Lester Park Golf Course in winter">
   </div>
   <div class="photo-strip-item">
-    <img src="IMG_4778.jpeg" alt="Ski tracks through the snow on the former Lester Park Golf Course">
+    <img src="lester-forest.jpg" alt="Mixed boreal forest edge at the former Lester Park Golf Course">
   </div>
   <div class="photo-strip-item">
-    <img src="IMG_4646.jpeg" alt="Sun through bare trees at dusk on the Lester Park land">
+    <img src="lester-dawn.jpg" alt="Golden dawn light through bare trees on the former Lester Park Golf Course">
   </div>
   <div class="photo-strip-item">
-    <img src="IMG_4783.jpeg" alt="White pine standing on the former Lester Park Golf Course in winter">
+    <img src="lester-sunset.jpg" alt="Winter sunset over the former Lester Park Golf Course treeline">
   </div>
 </div>
-<p class="photo-strip-caption">The former Lester Park Golf Course — March 2026 — Photos: Our Park Our Vote</p>
+<p class="photo-strip-caption">The former Lester Park Golf Course — winter 2025–26 — Photos: Our Park Our Vote</p>
 
 
 <section class="sec-info">
@@ -801,7 +807,7 @@ footer a { color: var(--gold-light); }
         </div>
         <div class="step-number">3</div>
         <h3>Return Completed Sheets</h3>
-        <p>Mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> to arrange drop-off. We review every sheet before submitting to the City Clerk.</p>
+        <p>Mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="/cdn-cgi/l/email-protection#c5acaba3aa85aab0b7b5a4b7aeaab0b7b3aab1a0ebaab7a2"><span class="__cf_email__" data-cfemail="c9a0a7afa689a6bcbbb9a8bba2a6bcbbbfa6bdace7a6bbae">[email&#160;protected]</span></a> to arrange drop-off. We review every sheet before submitting to the City Clerk.</p>
       </div>
     </div>
   </div>
@@ -881,7 +887,7 @@ footer a { color: var(--gold-light); }
     <h2 class="section-title" style="color:#fff">Use Your Voice</h2>
 
     <div style="background:rgba(200,146,42,0.15);border:1px solid rgba(200,146,42,0.5);border-left:4px solid var(--gold);border-radius:3px;padding:0.9rem 1.25rem;margin-bottom:2rem;font-family:'Source Sans 3',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.85);">
-      📋 <strong style="color:var(--gold-light);">Signatures must be collected on paper.</strong> The City Clerk only accepts original hard-copy signatures — no digital or electronic signatures. Download the petitions, print them, sign in ink, and mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a> to arrange drop-off.
+      📋 <strong style="color:var(--gold-light);">Signatures must be collected on paper.</strong> The City Clerk only accepts original hard-copy signatures — no digital or electronic signatures. Download the petitions, print them, sign in ink, and mail completed sheets to <strong>Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811</strong> — or email <a href="/cdn-cgi/l/email-protection#bcd5d2dad3fcd3c9ceccddced7d3c9cecad3c8d992d3cedb" style="color:var(--gold-light);"><span class="__cf_email__" data-cfemail="127b7c747d527d6760627360797d6760647d66773c7d6075">[email&#160;protected]</span></a> to arrange drop-off.
     </div>
 
     <div class="action-grid">
@@ -943,7 +949,19 @@ footer a { color: var(--gold-light); }
   <p><a href="/">ourparkourvote.org</a></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ── HERO CROSSFADE ──────────────────────────────────────────
+(function() {
+  const bg1 = document.querySelector('.hero-bg-1');
+  const bg2 = document.querySelector('.hero-bg-2');
+  let showing1 = true;
+  setInterval(function() {
+    showing1 = !showing1;
+    bg1.style.opacity = showing1 ? '1' : '0';
+    bg2.style.opacity = showing1 ? '0' : '1';
+  }, 6000);
+})();
+
 // ── SIGNATURE COUNTER ──────────────────────────────────────
 // To update: change SIGNATURES_COLLECTED to the current count
 const SIGNATURES_COLLECTED = 59;
@@ -952,16 +970,4 @@ const THRESHOLD = 3664;
 
 (function() {
   const fill = document.getElementById('sigBar');
-  const tick = document.getElementById('sigThreshold');
-  if (!fill || !tick) return;
-  const pct = Math.min(SIGNATURES_COLLECTED / GOAL * 100, 100);
-  const thresholdPct = THRESHOLD / GOAL * 100;
-  tick.style.left = thresholdPct + '%';
-  // Animate fill on load
-  requestAnimationFrame(function() {
-    setTimeout(function() { fill.style.width = pct + '%'; }, 200);
-  });
-})();
-</script>
-</body>
-</html>
+  const tic
