@@ -97,44 +97,59 @@ nav {
 /* ── HERO ── */
 .hero {
   margin-top: 60px;
-  padding: 8rem 2rem 6rem; text-align: center;
+  background-image: url('lester-hero-1.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  padding: 5rem 2rem 5rem;
   position: relative; overflow: hidden;
-  background: var(--forest-dark);
 }
-.hero-bg {
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover; background-position: center 40%;
-  transition: opacity 1.8s ease-in-out;
-}
-.hero-bg-1 { background-image: url('lester-hero-1.jpg'); opacity: 1; }
-.hero-bg-2 { background-image: url('lester-hero-2.jpg'); opacity: 0; }
 .hero::after {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(6,15,30,0.55) 0%,
-    rgba(6,15,30,0.45) 50%,
-    rgba(6,15,30,0.70) 100%
-  );
+  background: rgba(6,15,30,0.52);
   pointer-events: none; z-index: 1;
 }
 .hero-content {
-  position: relative; max-width: 900px; margin: 0 auto;
-  animation: fade-up 0.8s ease-out; z-index: 2;
+  position: relative; z-index: 2;
+  max-width: 1060px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
+.hero-text { text-align: left; }
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
-  font-weight: 900; line-height: 1.12; color: #fff; margin-bottom: 1.5rem;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 1rem;
 }
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero .subheading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  font-weight: 700; color: var(--gold-light); line-height: 1.4; margin-bottom: 2.5rem;
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.88); line-height: 1.6; margin-bottom: 0;
 }
-.hero .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+/* ── HERO FORM CARD ── */
+.hero-form-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+}
+.hero-form-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 900;
+  color: var(--text-dark); margin-bottom: 0.25rem;
+}
+.hero-form-card-sub {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.8rem; color: #666;
+  margin-bottom: 1.25rem; line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-text { text-align: center; }
+}
 
 /* ── FAQ ── */
 .faq-list { margin-top: 2rem; }
@@ -261,32 +276,31 @@ nav {
   line-height: 1.5; margin: 0;
 }
 
-/* ── HERO FORM ── */
+/* ── HERO FORM (inside white card) ── */
 .hero-form {
-  max-width: 480px; margin: 2rem auto 0;
-  display: flex; flex-direction: column; gap: 0.65rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
 }
-.hero-form-row { display: flex; gap: 0.65rem; }
+.hero-form-row { display: flex; gap: 0.6rem; }
 .hero-form input[type="text"],
 .hero-form input[type="email"] {
   width: 100%; padding: 0.75rem 1rem;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 2px; color: #fff;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 2px; color: var(--text-dark);
   font-family: 'Source Sans 3', sans-serif;
   font-size: 0.9rem;
   transition: border-color 0.2s, background 0.2s;
 }
-.hero-form input::placeholder { color: rgba(255,255,255,0.45); }
+.hero-form input::placeholder { color: #999; }
 .hero-form input:focus {
   outline: none;
-  border-color: var(--gold-light);
-  background: rgba(255,255,255,0.15);
+  border-color: var(--gold);
+  background: #fff;
 }
 .hero-form-check {
   display: flex; align-items: flex-start; gap: 0.6rem;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.82rem; color: rgba(255,255,255,0.7);
+  font-size: 0.82rem; color: #444;
   text-align: left; cursor: pointer;
 }
 .hero-form-check input[type="checkbox"] {
@@ -296,9 +310,9 @@ nav {
 }
 .hero-form-divider {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.75rem; color: rgba(255,255,255,0.35);
+  font-size: 0.75rem; color: #aaa;
   text-align: center; letter-spacing: 0.1em;
-  margin: 0.25rem 0;
+  margin: 0.1rem 0;
 }
 
 
@@ -626,49 +640,31 @@ footer a { color: var(--gold-light); }
 
 <!-- ══════════ HERO ══════════ -->
 <div class="hero">
-  <div class="hero-bg hero-bg-1"></div>
-  <div class="hero-bg hero-bg-2"></div>
   <div class="hero-content">
-    <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
-    <p class="subheading">The former Lester Park Golf Course is public land. Duluthians should decide its future.</p>
-    <p class="subheading" style="font-size:0.92em;margin-top:0.4rem;opacity:0.85;color:#fff;font-weight:400;">We're collecting hard-copy signatures to force a public vote on Lester's future.</p>
-
-    <!-- ── SIGNATURE COUNTER ── -->
-    <div class="sig-counter">
-      <div class="sig-counter-label">Signatures Collected</div>
-      <div class="sig-counter-numbers">
-        <span class="sig-count" id="sigCount">59</span>
-        <span class="sig-goal"> of 5,000 goal</span>
-      </div>
-      <div class="sig-bar-wrap">
-        <div class="sig-bar-track">
-          <div class="sig-bar-fill" id="sigBar"></div>
-          <div class="sig-bar-threshold" id="sigThreshold" title="3,664 valid signatures required"></div>
-        </div>
-        <div class="sig-bar-labels">
-          <span>0</span>
-          <span class="sig-threshold-label">3,664 needed</span>
-          <span>5,000</span>
-        </div>
-      </div>
-      <p class="sig-note">We need 3,664 valid signatures per petition. We're collecting 5,000 to account for normal disqualifications. <a href="#action" style="color:var(--gold-light);">Every signature counts.</a></p>
+    <div class="hero-text">
+      <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
+      <p class="subheading">The former Lester Park Golf Course is public land. Sign our petition to put its future to a public vote — before the city acts without asking you.</p>
     </div>
-    <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
-      <input type="hidden" name="form-name" value="hero-signup">
-      <div class="hero-form-row">
-        <input type="text" name="first-name" placeholder="First name" required>
-        <input type="text" name="last-name" placeholder="Last name">
-      </div>
-      <input type="email" name="email" placeholder="Email address" required>
-      <label class="hero-form-check">
-        <input type="checkbox" name="volunteer" value="yes">
-        <span>I'm interested in volunteering — knocking doors in my neighborhood.</span>
-      </label>
-      <button type="submit" class="btn-primary" style="width:100%;margin-top:0.25rem;">I'm In</button>
-      <p style="font-family:'Source Sans 3',sans-serif;font-size:0.75rem;color:rgba(255,255,255,0.45);text-align:center;margin:0.4rem 0 0;">This form signs you up for campaign updates only — not a petition signature. To sign the petition, download and print it below.</p>
-      <div class="hero-form-divider">or</div>
-      <a href="petitions-combined.pdf" target="_blank" class="btn-outline" style="text-align:center;">Download, Print &amp; Sign the Petitions</a>
-    </form>
+    <div class="hero-form-card">
+      <p class="hero-form-card-title">Stay Informed &amp; Get Involved</p>
+      <p class="hero-form-card-sub">Sign up for campaign updates. We'll also send you petition sheets and a door-knocking script if you'd like to volunteer.</p>
+      <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
+        <input type="hidden" name="form-name" value="hero-signup">
+        <div class="hero-form-row">
+          <input type="text" name="first-name" placeholder="First name" required>
+          <input type="text" name="last-name" placeholder="Last name">
+        </div>
+        <input type="email" name="email" placeholder="Email address" required>
+        <label class="hero-form-check">
+          <input type="checkbox" name="volunteer" value="yes">
+          <span>I'd like to volunteer — knock doors in my neighborhood.</span>
+        </label>
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">I'm In</button>
+        <div class="hero-form-divider">or</div>
+        <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;background:var(--forest-mid);">Download &amp; Print the Petitions</a>
+        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.72rem;color:#999;text-align:center;margin:0.5rem 0 0;line-height:1.5;">The form above is for campaign updates only — not a petition signature. Petition signatures must be collected on paper.</p>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -950,18 +946,6 @@ footer a { color: var(--gold-light); }
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── HERO CROSSFADE ──────────────────────────────────────────
-(function() {
-  const bg1 = document.querySelector('.hero-bg-1');
-  const bg2 = document.querySelector('.hero-bg-2');
-  let showing1 = true;
-  setInterval(function() {
-    showing1 = !showing1;
-    bg1.style.opacity = showing1 ? '1' : '0';
-    bg2.style.opacity = showing1 ? '0' : '1';
-  }, 6000);
-})();
-
 // ── SIGNATURE COUNTER ──────────────────────────────────────
 // To update: change SIGNATURES_COLLECTED to the current count
 const SIGNATURES_COLLECTED = 59;
