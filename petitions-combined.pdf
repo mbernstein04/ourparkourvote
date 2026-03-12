@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        /* Margins: Top: 0.5in, Right: 0.4in, Bottom: 0.1in, Left: 0.8in */
+        @page { size: landscape; margin: 0.5in 0.4in 0.1in 0.8in; }
+        body { font-family: Arial, sans-serif; font-size: 10pt; line-height: 1.1; color: #1a1a1a; margin: 0; }
+        .page-container { position: relative; page-break-after: always; min-height: 7in; }
+        
+        /* Header Branding */
+        .branding-left { position: absolute; top: 0; left: 0; font-family: 'Righteous', cursive; font-size: 13pt; }
+        .petition-indicator { position: absolute; top: 0; right: 0; font-weight: bold; font-size: 13pt; font-family: Arial, sans-serif; }
+        .branding-center { font-family: 'Righteous', cursive; font-size: 26pt; text-align: center; margin-bottom: 15pt; margin-top: 5pt; }
+        
+        /* Titles and Subtitles */
+        .title { font-weight: bold; font-size: 13pt; text-align: center; text-transform: uppercase; margin-bottom: 2pt; }
+        .subtitle { font-size: 9pt; text-align: center; margin-bottom: 5pt; border-bottom: 2px solid #333; padding-bottom: 3pt; }
+        
+        /* Summary and Table */
+        .summary-box { border: 1.5px solid #000; padding: 6pt; margin-bottom: 6pt; background: #fdfdfd; line-height: 1.2; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 6pt; table-layout: fixed; }
+        th { background: #eeeeee; color: #000000; padding: 4pt; font-size: 8.5pt; border: 1px solid #333; text-align: left; }
+        td { border: 1px solid #333; height: 25px; padding: 2pt; overflow: hidden; }
+        
+        /* Affidavit and Footer */
+        .affidavit { border: 1px solid #999; padding: 6pt; font-size: 8.5pt; background: #f9f9f9; }
+        .footer { font-size: 7.5pt; text-align: center; margin-top: 6pt; border-top: 1px solid #ccc; padding-top: 3pt; color: #444; }
+        
+        /* Page 2 Styling */
+        .full-text { font-size: 9pt; text-align: justify; columns: 2; column-gap: 30pt; line-height: 1.2; }
+        .section-header { font-weight: bold; margin-top: 5pt; text-decoration: underline; }
+        .page2-header { text-align: center; font-weight: bold; font-size: 16pt; margin-top: 0; margin-bottom: 10pt; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <!-- PETITION 1: FRONT -->
+    <div class="page-container">
+        <div class="branding-left">OurParkOurVote.org</div>
+        <div class="petition-indicator">(Petition 1 of 2)</div>
+        <div class="branding-center">Our Park. Our Vote.</div>
+        <div class="title">CITIZEN INITIATIVE PETITION — LESTER PARKLAND PROTECTION (Parcel 1 of 2)</div>
+        <div class="subtitle">City of Duluth, Minnesota • Proposed Ordinance Under Section 51 of the Duluth City Charter</div>
+
+        <p style="font-size: 8.5pt; margin: 3pt 0;"><b>TO THE CITY COUNCIL OF THE CITY OF DULUTH:</b> We, the undersigned registered voters of the City of Duluth, Minnesota, respectfully petition for the submission of the following proposed ordinance to a vote of the people, as provided by Section 51 of the Duluth City Charter.</p>
+
+        <div class="summary-box">
+            <b>SUMMARY:</b> This ordinance would require voter approval before the approximately <b>230 acres</b> of the former Lester Park Golf Course can be rezoned from parkland to allow private development. The full text of the proposed ordinance is printed on the reverse side.
+        </div>
+
+        <p style="font-size: 8pt; font-style: italic; margin-bottom: 4pt;"><b>Sign in ink.</b> You must be a registered voter in the City of Duluth. Provide your full legal name, residence address (no P.O. boxes), and date of signature.</p>
+
+        <table>
+            <tr>
+                <th style="width: 3%;">#</th>
+                <th style="width: 28.5%;">Printed Full Name</th>
+                <th style="width: 28.5%;">Signature (sign in ink)</th>
+                <th style="width: 31%;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
+                <th style="width: 9%;">Date Signed</th>
+            </tr>
+            <!-- 10 Signature Rows -->
+            <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>7</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>8</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="affidavit">
+            <center><b>CIRCULATOR'S AFFIDAVIT</b></center>
+            <p style="font-size: 7.5pt; font-weight: bold; margin: 1pt 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW. THE CIRCULATOR MAY ALSO BE A SIGNER.</p>
+            I, ____________________________________________, being duly sworn, depose and say that I, and I only, personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be the genuine signatures of the persons whose names they purport to be.<br><br>
+            <b>Signature:</b> _______________________________________ <b>Date:</b> _________________ <b>Address:</b> _____________________________________________
+        </div>
+
+        <div class="footer">
+            Organized by Our Park, Our Vote, A Minnesota Nonprofit Organization | ourparkourvote.org<br>
+            Mail completed sheets to: Our Park Our Vote, 1346 W. Arrowhead Rd. #324, Duluth MN 55811, or make alternative arrangements for getting it to us by emailing info@ourparkourvote.org.
+        </div>
+    </div>
+
+    <!-- PETITION 1: BACK -->
+    <div class="page-container">
+        <div class="page2-header">PROPOSED ORDINANCE — FULL TEXT (Parcel 1 of 2)</div>
+        <div class="full-text">
+            <p><b>The city of Duluth does ordain:</b></p>
+            <div class="section-header">SECTION 1. PURPOSE AND FINDINGS.</div>
+            The People of Duluth find that the former Lester Park Golf Course, comprising approximately 230 acres of public parkland, is an irreplaceable natural asset held in trust for the benefit of current and future residents of Duluth. The People further find that the rezoning of public parkland from park or open space classification to a classification permitting private development is functionally equivalent to the disposition of parkland, as such rezoning eliminates the legal protections that preserve the land for public use. The rezoning of parkland to permit private development is a legislative act properly subject to voter approval under the City's home rule charter. The People further find that the disposition of public parkland within the City of Duluth is a matter of local municipal concern, affecting the residents and taxpayers of Duluth who bear the consequences of the loss of public open space and who are entitled to a direct voice in decisions of this magnitude. This ordinance ensures that the Property may not be rezoned for private development without the approval of the voters of Duluth. Nothing in this ordinance shall be construed to exempt the City from compliance with any applicable state law.
+            <div class="section-header">SECTION 2. DEFINITIONS.</div>
+            As used in this ordinance: (a) "Property" means all land constituting the former Lester Park Golf Course authorized for conditional conveyance to the Duluth Economic Development Authority by Ordinance 25-032-O, comprising approximately 230 acres, together with any land subsequently added to or consolidated with said parcel by city action. The Property does not include the approximately 37.5-acre parcel commonly known as the Lake 9 parcel previously conveyed to DEDA. (b) "Covered Rezoning" means any rezoning, land use amendment, comprehensive plan amendment, or other regulatory action that would change the classification of the Property, or any portion thereof, from a park, open space, or conservation designation to a classification that authorizes or facilitates private residential, commercial, industrial, hospitality, or mixed-use development.
+            <div class="section-header">SECTION 3. VOTER APPROVAL REQUIRED.</div>
+            (a) No Covered Rezoning of the Property or any portion thereof shall be effective unless approved by a majority of the voters voting on the question at a regular or special City election. (b) The City Council shall not adopt any ordinance, resolution, or other legislative action authorizing or effectuating a Covered Rezoning unless voter approval has first been obtained as required by this section. (c) The ballot question presented to the voters shall describe the proposed Covered Rezoning in plain language, including the approximate acreage affected and the general nature of the proposed use.
+            <div class="section-header">SECTION 4. APPLICATION TO PENDING AND FUTURE ACTIONS.</div>
+            This ordinance applies to all Covered Rezonings occurring on or after its effective date, regardless of whether preliminary authorizations, conditional conveyances, land use studies, or other preparatory actions were undertaken prior to the effective date.
+            <div class="section-header">SECTION 5. EXCEPTIONS.</div>
+            The following actions shall not constitute a Covered Rezoning and shall not require voter approval: (a) The formal designation, rezoning, or reclassification of the Property to a park, open space, conservation, or public recreation zoning classification that strengthens its public parkland character. (b) Any variance, conditional use permit, or other land use approval that does not change the underlying zoning classification of the Property and that is consistent with park, open space, conservation, or public recreation use.
+            <div class="section-header">SECTION 6. ENFORCEMENT.</div>
+            Any resident or taxpayer of the City of Duluth shall have standing to bring an action in the District Court of St. Louis County to enjoin any Covered Rezoning that has not received voter approval as required by this ordinance. The court shall award reasonable attorney's fees and costs to a prevailing plaintiff.
+            <div class="section-header">SECTION 7. SEVERABILITY.</div>
+            If any provision of this ordinance or its application to any person or circumstance is held invalid, the invalidity does not affect other provisions or applications that can be given effect without the invalid provision or application.
+            <div class="section-header">SECTION 8. EFFECTIVE DATE.</div>
+            This ordinance shall take effect upon its adoption by the voters at a regular or special election, as provided by Section 16 of the Duluth City Charter.
+        </div>
+    </div>
+
+    <!-- PETITION 2: FRONT -->
+    <div class="page-container">
+        <div class="branding-left">OurParkOurVote.org</div>
+        <div class="petition-indicator">(Petition 2 of 2)</div>
+        <div class="branding-center">Our Park. Our Vote.</div>
+        <div class="title">CITIZEN INITIATIVE PETITION — LESTER PARKLAND PROTECTION (Parcel 2 of 2)</div>
+        <div class="subtitle">City of Duluth, Minnesota • Proposed Ordinance Under Section 51 of the Duluth City Charter</div>
+
+        <p style="font-size: 8.5pt; margin: 3pt 0;"><b>TO THE CITY COUNCIL OF THE CITY OF DULUTH:</b> We, the undersigned registered voters of the City of Duluth, Minnesota, respectfully petition for the submission of the following proposed ordinance to a vote of the people, as provided by Section 51 of the Duluth City Charter.</p>
+
+        <div class="summary-box">
+            <b>SUMMARY:</b> This ordinance would direct the City of Duluth to rezone the approximately <b>37.5 acres</b> parcel commonly known as the Lake 9 parcel of the former Lester Park Golf Course — currently held by the Duluth Economic Development Authority — to a park, open space, or conservation zoning classification, and would require any future rezoning of the parcel to allow private development to first be approved by a majority of Duluth voters. The full text of the proposed ordinance is printed on the reverse side.
+        </div>
+
+        <p style="font-size: 8pt; font-style: italic; margin-bottom: 4pt;"><b>Sign in ink.</b> You must be a registered voter in the City of Duluth. Provide your full legal name, residence address (no P.O. boxes), and date of signature.</p>
+
+        <table>
+            <tr>
+                <th style="width: 3%;">#</th>
+                <th style="width: 28.5%;">Printed Full Name</th>
+                <th style="width: 28.5%;">Signature (sign in ink)</th>
+                <th style="width: 31%;">Residence Address (street, Duluth, MN — no P.O. boxes)</th>
+                <th style="width: 9%;">Date Signed</th>
+            </tr>
+            <!-- 10 Signature Rows -->
+            <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>7</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>8</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>9</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td></td><td></td><td></td><td></td></tr>
+        </table>
+
+        <div class="affidavit">
+            <center><b>CIRCULATOR'S AFFIDAVIT</b></center>
+            <p style="font-size: 7.5pt; font-weight: bold; margin
