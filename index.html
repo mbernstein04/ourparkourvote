@@ -647,7 +647,26 @@ footer a { color: var(--gold-light); }
   <div class="hero-content">
     <div class="hero-text">
       <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
-      <p class="subheading">The former Lester Park Golf Course is public land. Sign our petition to put its future to a public vote — before the city acts without asking you.</p>
+      <p class="subheading">The former Lester Park Golf Course is public land. Sign our petitions to put its future to a public vote — before the city acts without asking you. <strong>Because there are two parcels of land we are trying to preserve as parkland, YOU MUST SIGN BOTH PETITION SHEETS.</strong></p>
+      <div class="sig-counter">
+        <div class="sig-counter-label">Signatures Collected</div>
+        <div class="sig-counter-numbers">
+          <span class="sig-count" id="sigCount">0</span>
+          <span class="sig-goal">/ <span id="sigGoal">5,000</span> goal</span>
+        </div>
+        <div class="sig-bar-wrap">
+          <div class="sig-bar-track">
+            <div class="sig-bar-fill" id="sigBar" style="width:0%"></div>
+            <div class="sig-bar-threshold" id="sigThreshold"></div>
+          </div>
+          <div class="sig-bar-labels">
+            <span>0</span>
+            <span class="sig-threshold-label">3,664 required</span>
+            <span>5,000</span>
+          </div>
+        </div>
+        <p class="sig-note">We're collecting 5,000 per petition to account for normal disqualifications.</p>
+      </div>
     </div>
     <div class="hero-form-card">
       <div class="hero-card-section">
@@ -879,15 +898,9 @@ footer a { color: var(--gold-light); }
 
     <div class="action-grid">
       <div class="action-card urgent">
-        <h4>📋 Petition #1: Require a Public Vote</h4>
-        <p>Force a public ballot before the 230-acre former golf course can be rezoned for private development. <strong>Download, print, and sign in ink.</strong> Ask your family, friends, and neighbors to sign too.</p>
-        <a href="petition1.pdf" target="_blank" class="btn">Download Petition #1 (PDF) →</a>
-      </div>
-
-      <div class="action-card urgent">
-        <h4>📋 Petition #2: Return Lake Nine to Parkland</h4>
-        <p>Direct the City to rezone the 37.5-acre Lake Nine parcel back to permanent parkland. <strong>Download, print, and sign in ink.</strong></p>
-        <a href="petition2.pdf" target="_blank" class="btn">Download Petition #2 (PDF) →</a>
+        <h4>📋 Download Both Petitions</h4>
+        <p>There are two petitions — one to require a public vote before the 230-acre former golf course can be rezoned, and one to return the 37.5-acre Lake Nine parcel to permanent parkland. <strong>You must sign both. Download, print, and sign in ink.</strong> Ask your family, friends, and neighbors to sign too.</p>
+        <a href="petitions-combined.pdf" target="_blank" class="btn">Download Both Petitions (PDF) →</a>
       </div>
 
       <div class="action-card urgent">
@@ -939,10 +952,24 @@ footer a { color: var(--gold-light); }
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── SIGNATURE COUNTER ──────────────────────────────────────
 // To update: change SIGNATURES_COLLECTED to the current count
-const SIGNATURES_COLLECTED = 59;
+const SIGNATURES_COLLECTED = 120;
 const GOAL = 5000;
 const THRESHOLD = 3664;
 
 (function() {
   const fill = document.getElementById('sigBar');
-  const tic
+  const tick = document.getElementById('sigThreshold');
+  const countEl = document.getElementById('sigCount');
+
+  if (!fill) return;
+
+  const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
+  const threshPct = (THRESHOLD / GOAL) * 100;
+
+  fill.style.width = pct + '%';
+  tick.style.left = threshPct + '%';
+  countEl.textContent = SIGNATURES_COLLECTED.toLocaleString();
+})();
+</script>
+</body>
+</html>
