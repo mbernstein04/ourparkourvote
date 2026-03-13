@@ -133,13 +133,9 @@ nav {
 .hero-form-card {
   background: #fff;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 0;
   box-shadow: 0 8px 40px rgba(0,0,0,0.35);
-}
-.hero-form-card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem; font-weight: 900;
-  color: var(--text-dark); margin-bottom: 0.25rem;
+  overflow: hidden;
 }
 .hero-form-card-sub {
   font-family: 'Source Sans 3', sans-serif;
@@ -308,11 +304,19 @@ nav {
   width: 15px; height: 15px;
   accent-color: var(--gold);
 }
-.hero-form-divider {
+.hero-card-section-label {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.75rem; color: #aaa;
-  text-align: center; letter-spacing: 0.1em;
-  margin: 0.1rem 0;
+  font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--forest-mid); margin-bottom: 0.25rem;
+}
+.hero-card-divider-line {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+}
+.hero-card-section {
+  padding: 1.5rem 2rem;
 }
 
 
@@ -646,24 +650,29 @@ footer a { color: var(--gold-light); }
       <p class="subheading">The former Lester Park Golf Course is public land. Sign our petition to put its future to a public vote — before the city acts without asking you.</p>
     </div>
     <div class="hero-form-card">
-      <p class="hero-form-card-title">Stay Informed &amp; Get Involved</p>
-      <p class="hero-form-card-sub">Sign up for campaign updates. We'll also send you petition sheets and a door-knocking script if you'd like to volunteer.</p>
-      <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
-        <input type="hidden" name="form-name" value="hero-signup">
-        <div class="hero-form-row">
-          <input type="text" name="first-name" placeholder="First name" required>
-          <input type="text" name="last-name" placeholder="Last name">
-        </div>
-        <input type="email" name="email" placeholder="Email address" required>
-        <label class="hero-form-check">
-          <input type="checkbox" name="volunteer" value="yes">
-          <span>I'd like to volunteer — knock doors in my neighborhood.</span>
-        </label>
-        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">I'm In</button>
-        <div class="hero-form-divider">or</div>
-        <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;background:var(--forest-mid);">Download &amp; Print the Petitions</a>
-        <p style="font-family:'Source Sans 3',sans-serif;font-size:0.72rem;color:#999;text-align:center;margin:0.5rem 0 0;line-height:1.5;">The form above is for campaign updates only — not a petition signature. Petition signatures must be collected on paper.</p>
-      </form>
+      <div class="hero-card-section">
+        <p class="hero-card-section-label">Step 1 — Sign the Petition</p>
+        <p class="hero-form-card-sub">Petition signatures must be collected on paper. Download, print, sign, and return.</p>
+        <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Download &amp; Print the Petitions</a>
+      </div>
+      <div class="hero-card-divider-line"></div>
+      <div class="hero-card-section">
+        <p class="hero-card-section-label">Step 2 — Volunteer</p>
+        <p class="hero-form-card-sub">Get campaign updates, petition sheets, and a door-knocking script. <strong>This is not a petition signature.</strong></p>
+        <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
+          <input type="hidden" name="form-name" value="hero-signup">
+          <div class="hero-form-row">
+            <input type="text" name="first-name" placeholder="First name" required>
+            <input type="text" name="last-name" placeholder="Last name">
+          </div>
+          <input type="email" name="email" placeholder="Email address" required>
+          <label class="hero-form-check">
+            <input type="checkbox" name="volunteer" value="yes">
+            <span>I'd like to volunteer — knock doors in my neighborhood.</span>
+          </label>
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
