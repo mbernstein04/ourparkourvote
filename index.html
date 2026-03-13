@@ -272,6 +272,22 @@ nav {
   line-height: 1.5; margin: 0;
 }
 
+/* ── PHOTO STRIP ── */
+.photo-strip {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+  background: var(--bg-dark);
+}
+.photo-strip img {
+  height: 140px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 /* ── HERO FORM (inside white card) ── */
 .hero-form {
   display: flex; flex-direction: column; gap: 0.6rem;
@@ -677,7 +693,7 @@ footer a { color: var(--gold-light); }
       <div class="hero-card-divider-line"></div>
       <div class="hero-card-section">
         <p class="hero-card-section-label">Step 2 — Volunteer</p>
-        <p class="hero-form-card-sub">Get campaign updates, petition sheets, and a door-knocking script. <strong>This is not a petition signature.</strong></p>
+        <p class="hero-form-card-sub">Sign up to table and door-knock. <strong>This is not a petition signature.</strong></p>
         <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
           <input type="hidden" name="form-name" value="hero-signup">
           <div class="hero-form-row">
@@ -685,10 +701,6 @@ footer a { color: var(--gold-light); }
             <input type="text" name="last-name" placeholder="Last name">
           </div>
           <input type="email" name="email" placeholder="Email address" required>
-          <label class="hero-form-check">
-            <input type="checkbox" name="volunteer" value="yes">
-            <span>I'd like to volunteer — knock doors in my neighborhood.</span>
-          </label>
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
@@ -709,15 +721,15 @@ footer a { color: var(--gold-light); }
     <div class="info-grid">
       <div class="info-card">
         <h3>What's Happening</h3>
-        <p>The Mayor and DEDA are moving to transfer the former Lester Park Golf Course to private developers for a luxury resort, golf course, and housing — on land that belongs to all Duluthians. The city transferred the 37.5-acre Lake Nine parcel to DEDA in December 2021. The remaining 230 acres are next.</p>
+        <p>Private developers want to put a luxury resort, a private golf course and a housing development on land that belongs to all Duluthians. A ~$200k Land Use Study is underway but nothing it says will stop the developers from getting the land.</p>
       </div>
       <div class="info-card">
         <h3>The Window</h3>
-        <p>A DEDA land use study — mandated under a resolution that explicitly favors housing development and a golf course — is due July 2026. <strong>Sign before they act.</strong></p>
+        <p>The Land Use Study is due back in July. The goal is to have 5,000 signatures collected well before then so that city hall knows we'll be voting on this before public land is sold.</p>
       </div>
       <div class="info-card">
         <h3>Why It Matters</h3>
-        <p>Once public land is sold, it's gone forever. Duluth already has the trail builders, skiers, cyclists, and park planners to build something extraordinary here — on our own terms, without selling it. We don't need developers at the table. In fact, it's better if they're not. <a href="learn-more.html">Learn more&nbsp;&rarr;</a></p>
+        <p>Once public land is sold, it's gone forever. Duluth already has the trail builders, skiers, cyclists, naturalists, and park planners to build something extraordinary here — on our own terms, without selling it. We don't need developers at the table. In fact, it's better if they're not. <a href="learn-more.html">Learn more&nbsp;&rarr;</a></p>
       </div>
       <div class="info-card">
         <h3>Who We Are</h3>
@@ -735,6 +747,15 @@ footer a { color: var(--gold-light); }
     </div>
   </div>
 </section>
+
+<div class="photo-strip">
+  <img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park">
+  <img src="lester-dawn.jpg" alt="Winter dawn at Lester Park">
+  <img src="lester-forest.jpg" alt="Forest at Lester Park">
+  <img src="lester-hero-1.jpg" alt="Lester Park in winter">
+  <img src="lester-meadow.jpg" alt="Meadow at Lester Park">
+  <img src="lester-sunset.jpg" alt="Sunset at Lester Park">
+</div>
 
 <div class="gold-divider"></div>
 
