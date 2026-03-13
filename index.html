@@ -648,6 +648,25 @@ footer a { color: var(--gold-light); }
     <div class="hero-text">
       <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
       <p class="subheading">The former Lester Park Golf Course is public land. Sign our petitions to put its future to a public vote — before the city acts without asking you. <strong>Because there are two parcels of land we are trying to preserve as parkland, YOU MUST SIGN BOTH PETITION SHEETS.</strong></p>
+      <div class="sig-counter">
+        <div class="sig-counter-label">Signatures Collected</div>
+        <div class="sig-counter-numbers">
+          <span class="sig-count" id="sigCount">0</span>
+          <span class="sig-goal">/ <span id="sigGoal">5,000</span> goal</span>
+        </div>
+        <div class="sig-bar-wrap">
+          <div class="sig-bar-track">
+            <div class="sig-bar-fill" id="sigBar" style="width:0%"></div>
+            <div class="sig-bar-threshold" id="sigThreshold"></div>
+          </div>
+          <div class="sig-bar-labels">
+            <span>0</span>
+            <span class="sig-threshold-label">3,664 required</span>
+            <span>5,000</span>
+          </div>
+        </div>
+        <p class="sig-note">We're collecting 5,000 per petition to account for normal disqualifications.</p>
+      </div>
     </div>
     <div class="hero-form-card">
       <div class="hero-card-section">
@@ -939,4 +958,18 @@ const THRESHOLD = 3664;
 
 (function() {
   const fill = document.getElementById('sigBar');
-  const tic
+  const tick = document.getElementById('sigThreshold');
+  const countEl = document.getElementById('sigCount');
+
+  if (!fill) return;
+
+  const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
+  const threshPct = (THRESHOLD / GOAL) * 100;
+
+  fill.style.width = pct + '%';
+  tick.style.left = threshPct + '%';
+  countEl.textContent = SIGNATURES_COLLECTED.toLocaleString();
+})();
+</script>
+</body>
+</html>
