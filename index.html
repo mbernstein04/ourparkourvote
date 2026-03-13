@@ -186,9 +186,9 @@ nav {
 
 .photo-strip {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  height: 280px;
+  height: 220px;
   overflow: hidden;
 }
 .photo-strip-item {
@@ -210,9 +210,7 @@ nav {
   letter-spacing: 0.1em; text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .photo-strip { grid-template-columns: repeat(3, 1fr); height: 180px; }
-  .photo-strip-item:nth-child(4),
-  .photo-strip-item:nth-child(5) { display: none; }
+  .photo-strip { grid-template-columns: repeat(2, 1fr); height: 160px; }
 }
 
 
@@ -273,18 +271,7 @@ nav {
 }
 
 /* ── PHOTO STRIP ── */
-.photo-strip {
-  display: flex;
-  gap: 0.5rem;
-  padding: 1.5rem 2rem;
-  overflow-x: auto;
-  background: var(--bg-dark);
-}
-.photo-strip img {
-  height: 140px;
-  width: auto;
-  border-radius: 4px;
-  object-fit: cover;
+/* photo-strip overrides removed — using grid version above */
   flex-shrink: 0;
 }
 
@@ -664,7 +651,7 @@ footer a { color: var(--gold-light); }
   <div class="hero-content">
     <div class="hero-text">
       <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
-      <p class="subheading">The former Lester Park Golf Course is public land. Sign our petitions to put its future to a public vote — before the city acts without asking you. <strong>Because there are two parcels of land we are trying to preserve as parkland, YOU MUST SIGN BOTH PETITION SHEETS.</strong></p>
+      <p class="subheading">The former Lester Park Golf Course is public land. Sign our petitions to put its future to a public vote — before the city acts without asking you.</p>
       <div class="sig-counter">
         <div class="sig-counter-label">Signatures Collected</div>
         <div class="sig-counter-numbers">
@@ -688,7 +675,7 @@ footer a { color: var(--gold-light); }
     <div class="hero-form-card">
       <div class="hero-card-section">
         <p class="hero-card-section-label">Step 1 — Sign the Petition</p>
-        <p class="hero-form-card-sub">Petition signatures must be collected on paper. Download, print, sign, and return.</p>
+        <p class="hero-form-card-sub"><strong>Because there are two parcels of land that make up the former course, YOU MUST SIGN BOTH PETITION SHEETS.</strong> Download, print, sign, and return.</p>
         <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Download &amp; Print the Petitions</a>
       </div>
       <div class="hero-card-divider-line"></div>
@@ -750,10 +737,10 @@ footer a { color: var(--gold-light); }
 </section>
 
 <div class="photo-strip">
-  <img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park">
-  <img src="lester-dawn.jpg" alt="Winter dawn at Lester Park">
-  <img src="lester-forest.jpg" alt="Forest at Lester Park">
-  <img src="lester-hero-1.jpg" alt="Lester Park in winter">
+  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-hero-1.jpg" alt="Lester Park in winter"></div>
 </div>
 
 <div class="gold-divider"></div>
