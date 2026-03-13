@@ -272,6 +272,22 @@ nav {
   line-height: 1.5; margin: 0;
 }
 
+/* ── PHOTO STRIP ── */
+.photo-strip {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem;
+  overflow-x: auto;
+  background: var(--bg-dark);
+}
+.photo-strip img {
+  height: 140px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 /* ── HERO FORM (inside white card) ── */
 .hero-form {
   display: flex; flex-direction: column; gap: 0.6rem;
@@ -731,6 +747,15 @@ footer a { color: var(--gold-light); }
     </div>
   </div>
 </section>
+
+<div class="photo-strip">
+  <img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park">
+  <img src="lester-dawn.jpg" alt="Winter dawn at Lester Park">
+  <img src="lester-forest.jpg" alt="Forest at Lester Park">
+  <img src="lester-hero-1.jpg" alt="Lester Park in winter">
+  <img src="lester-meadow.jpg" alt="Meadow at Lester Park">
+  <img src="lester-sunset.jpg" alt="Sunset at Lester Park">
+</div>
 
 <div class="gold-divider"></div>
 
