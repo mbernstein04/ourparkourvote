@@ -169,9 +169,7 @@ nav {
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 300; transition: transform 0.2s;
 }
-.faq-item[open] summary::after {
-  content: '−';
-}
+.faq-item[open] summary::after { content: '−'; }
 .faq-item summary:hover { color: var(--forest-dark); }
 .faq-body {
   padding: 0 0 1.25rem 0;
@@ -182,7 +180,6 @@ nav {
 .faq-body p:last-child { margin-bottom: 0; }
 .faq-body a { color: var(--forest-light); }
 .faq-body a:hover { color: var(--forest-dark); }
-
 
 .photo-strip {
   display: grid;
@@ -212,7 +209,6 @@ nav {
 @media (max-width: 768px) {
   .photo-strip { grid-template-columns: repeat(2, 1fr); height: 160px; }
 }
-
 
 .sig-counter {
   max-width: 480px; margin: 2rem auto 0;
@@ -270,11 +266,6 @@ nav {
   line-height: 1.5; margin: 0;
 }
 
-/* ── PHOTO STRIP ── */
-/* photo-strip overrides removed — using grid version above */
-  flex-shrink: 0;
-}
-
 /* ── HERO FORM (inside white card) ── */
 .hero-form {
   display: flex; flex-direction: column; gap: 1rem;
@@ -318,10 +309,7 @@ nav {
   border-top: 1px solid #e0e0e0;
   margin: 0;
 }
-.hero-card-section {
-  padding: 1.5rem 2rem;
-}
-
+.hero-card-section { padding: 1.5rem 2rem; }
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -404,9 +392,6 @@ a { color: var(--lake-blue); }
 .step p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.7; }
 .step-icon { width: 90px; height: 90px; margin: 0 auto 1rem; }
 .step-icon svg { width: 100%; height: 100%; }
-.whats-the-point { max-width: 640px; margin: 3rem auto 0; text-align: center; }
-.whats-the-point .section-label { margin-bottom: 0.75rem; }
-.whats-the-point p { font-size: 1rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── GET 5 SECTION ── */
 .sec-get5 { background: var(--forest-dark); color: #fff; }
@@ -426,8 +411,6 @@ a { color: var(--lake-blue); }
   font-size: 1.05rem; color: rgba(255,255,255,0.92);
   line-height: 1.7; text-align: center; margin-bottom: 0.75rem;
 }
-.sixpack-wrap { max-width: 320px; margin: 0.75rem auto 1.25rem; }
-.sixpack-wrap svg { width: 100%; height: auto; display: block; border-radius: 4px; }
 .get5-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
 .form-field { display: flex; flex-direction: column; gap: 0.3rem; }
 .form-field label {
@@ -456,18 +439,13 @@ a { color: var(--lake-blue); }
 .card-header { margin-bottom: 0.75rem; }
 .card-header h3 { margin-bottom: 0; }
 .supporter-avatars { display: flex; gap: 0.5rem; margin-top: 1rem; padding-bottom: 2rem; }
-.supporter-avatars .avatar-wrap {
-  position: relative; cursor: pointer; text-decoration: none;
-}
+.supporter-avatars .avatar-wrap { position: relative; cursor: pointer; text-decoration: none; }
 .supporter-avatars img {
   width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
   border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.supporter-avatars .avatar-wrap:hover img {
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
+.supporter-avatars .avatar-wrap:hover img { transform: scale(1.1); box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
 .supporter-avatars .avatar-tooltip {
   position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
   background: var(--forest-dark, #1a3a2a); color: #fff; padding: 0.35rem 0.65rem;
@@ -480,7 +458,6 @@ a { color: var(--lake-blue); }
   border: 5px solid transparent; border-bottom-color: var(--forest-dark, #1a3a2a);
 }
 .supporter-avatars .avatar-wrap:hover .avatar-tooltip { opacity: 1; }
-.supporter-avatars .avatar-wrap:first-child { margin-left: 0; }
 .avatar-initial {
   width: 52px; height: 52px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -490,10 +467,7 @@ a { color: var(--lake-blue); }
   letter-spacing: 0.03em;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.supporter-avatars .avatar-wrap:hover .avatar-initial {
-  transform: scale(1.1);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
+.supporter-avatars .avatar-wrap:hover .avatar-initial { transform: scale(1.1); box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
 .info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
 
 /* ── HOUSING SECTION ── */
@@ -512,7 +486,6 @@ a { color: var(--lake-blue); }
 .housing-card p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; }
 .housing-card a { color: var(--gold-light); }
 .housing-card a:hover { color: var(--gold); }
-
 .track-record {
   margin-top: 3.5rem; padding: 2.5rem;
   background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1);
@@ -531,9 +504,7 @@ a { color: var(--lake-blue); }
   padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
   padding-left: 1.5rem; position: relative;
 }
-.track-record li::before {
-  content: '\2717'; color: var(--gold); position: absolute; left: 0; font-weight: 700;
-}
+.track-record li::before { content: '\2717'; color: var(--gold); position: absolute; left: 0; font-weight: 700; }
 .track-record .highlight-stat {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem; font-weight: 700; color: var(--gold-light);
@@ -547,8 +518,7 @@ a { color: var(--lake-blue); }
 .action-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem; margin-top: 1.5rem;
 }
 .action-card {
   background: rgba(255,255,255,0.06);
@@ -561,34 +531,20 @@ a { color: var(--lake-blue); }
 .action-card.urgent { border-top-color: var(--alert-red); }
 .action-card h4 {
   font-family: 'Playfair Display', serif;
-  color: var(--gold-light);
-  margin-bottom: 0.8rem;
-  font-size: 1.05rem;
+  color: var(--gold-light); margin-bottom: 0.8rem; font-size: 1.05rem;
 }
 .action-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
 .action-card .btn {
-  display: inline-block;
-  background: var(--alert-red);
-  color: white;
-  padding: 0.6rem 1.5rem;
-  text-decoration: none;
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
-  letter-spacing: 0.05em;
-  transition: background 0.3s;
+  display: inline-block; background: var(--alert-red); color: white;
+  padding: 0.6rem 1.5rem; text-decoration: none;
+  font-family: 'Source Sans 3', sans-serif; font-weight: 700; font-size: 0.85rem;
+  margin-top: 0.5rem; letter-spacing: 0.05em; transition: background 0.3s;
 }
 .action-card .btn:hover { opacity: 0.9; }
 .email-block {
-  background: rgba(255,255,255,0.06);
-  padding: 1.2rem;
-  margin: 1rem 0;
-  font-family: monospace;
-  font-size: 0.82rem;
-  word-break: break-all;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.8;
+  background: rgba(255,255,255,0.06); padding: 1.2rem; margin: 1rem 0;
+  font-family: monospace; font-size: 0.82rem; word-break: break-all;
+  color: rgba(255,255,255,0.85); line-height: 1.8;
 }
 
 /* ── FOOTER ── */
@@ -676,7 +632,7 @@ footer a { color: var(--gold-light); }
       <div class="hero-card-section">
         <p class="hero-card-section-label">Step 1 — Sign the Petition</p>
         <p class="hero-form-card-sub">You must be a registered Duluth voter to sign. Because there are two parcels of land that make up the former course, you <strong>MUST SIGN BOTH PETITION SHEETS.</strong> Download, print, sign, and return.</p>
-        <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Download &amp; Print the Petitions</a>
+        <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Download Instructions &amp; Petitions</a>
       </div>
       <div class="hero-card-divider-line"></div>
       <div class="hero-card-section">
@@ -697,9 +653,6 @@ footer a { color: var(--gold-light); }
 </div>
 
 <div class="gold-divider"></div>
-
-
-
 
 <section class="sec-info">
   <div class="container">
@@ -762,7 +715,7 @@ footer a { color: var(--gold-light); }
       </div>
     </div>
     <div style="text-align:center;margin-top:2rem;">
-      <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="display:inline-block;">Download &amp; Print the Petitions</a>
+      <a href="petitions-combined.pdf" target="_blank" class="btn-primary" style="display:inline-block;">Download Instructions &amp; Petitions</a>
     </div>
   </div>
 </section>
@@ -796,7 +749,7 @@ footer a { color: var(--gold-light); }
         <div class="step-number">1</div>
         <h3>Get Petition Sheets</h3>
         <p>Download and print the petitions below, or sign up and we'll send them to you. We'll also send a simple door script.</p>
-        <a href="petitions-combined.pdf" target="_blank" class="btn" style="margin-top:0.75rem;">Download &amp; Print the Petitions →</a>
+        <a href="petitions-combined.pdf" target="_blank" class="btn" style="margin-top:0.75rem;">Download Instructions &amp; Petitions →</a>
       </div>
       <div class="step">
         <div class="step-icon">
@@ -910,7 +863,7 @@ footer a { color: var(--gold-light); }
       <div class="action-card urgent">
         <h4>📋 Download Both Petitions</h4>
         <p>There are two petitions — one to require a public vote before the 230-acre former golf course can be rezoned, and one to return the 37.5-acre Lake Nine parcel to permanent parkland. <strong>You must sign both. Download, print, and sign in ink.</strong> Ask your family, friends, and neighbors to sign too.</p>
-        <a href="petitions-combined.pdf" target="_blank" class="btn">Download Both Petitions (PDF) →</a>
+        <a href="petitions-combined.pdf" target="_blank" class="btn">Download Instructions &amp; Petitions →</a>
       </div>
 
       <div class="action-card urgent">
