@@ -597,7 +597,7 @@ footer a { color: var(--gold-light); }
     <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petitions</a></li>
     <li><a href="#faq" onclick="document.querySelector('.nav-links').classList.remove('open')">FAQ</a></li>
     <li><a href="#volunteer" onclick="document.querySelector('.nav-links').classList.remove('open')">Volunteer</a></li>
-    <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Stay Informed</a></li>
+    <li><a href="#stay-connected" onclick="document.querySelector('.nav-links').classList.remove('open')">Stay Informed</a></li>
     <li><a href="learn-more.html" onclick="document.querySelector('.nav-links').classList.remove('open')">Learn More</a></li>
   </ul>
 </nav>
@@ -629,15 +629,17 @@ footer a { color: var(--gold-light); }
       </div>
     </div>
     <div class="hero-form-card">
+      <!-- Step 1: Download -->
       <div class="hero-card-section">
         <p class="hero-card-section-label">Step 1 — Sign the Petition</p>
         <p class="hero-form-card-sub">You must be a registered Duluth voter to sign. Because there are two parcels of land that make up the former course, you <strong>MUST SIGN BOTH PETITION SHEETS.</strong> Download, print, sign, and return.</p>
         <a href="sign-the-petition.pdf" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">Download Petitions and Instructions</a>
       </div>
       <div class="hero-card-divider-line"></div>
-      <div class="hero-card-section">
-        <p class="hero-card-section-label">Step 2 — Volunteer</p>
-        <p class="hero-form-card-sub">Sign up to table and door-knock. <strong>This is not a petition signature.</strong></p>
+      <!-- Step 2: Stay Connected -->
+      <div class="hero-card-section" id="stay-connected">
+        <p class="hero-card-section-label">Step 2 — Stay Connected</p>
+        <p class="hero-form-card-sub">Get campaign updates and signature-gathering news. <strong>This is not a petition signature.</strong></p>
         <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
           <input type="hidden" name="form-name" value="hero-signup">
           <div class="hero-form-row">
@@ -645,6 +647,10 @@ footer a { color: var(--gold-light); }
             <input type="text" name="last-name" placeholder="Last name">
           </div>
           <input type="email" name="email" placeholder="Email address" required>
+          <label class="hero-form-check">
+            <input type="checkbox" name="volunteer" value="yes">
+            I'd like to help gather signatures — knock doors, table at events, or organize.
+          </label>
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
