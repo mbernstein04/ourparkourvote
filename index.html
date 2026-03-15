@@ -596,7 +596,7 @@ footer a { color: var(--gold-light); }
   <ul class="nav-links">
     <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petitions</a></li>
     <li><a href="#faq" onclick="document.querySelector('.nav-links').classList.remove('open')">FAQ</a></li>
-    <li><a href="#volunteer" onclick="document.querySelector('.nav-links').classList.remove('open')">Volunteer</a></li>
+    <li><a href="volunteer.html" onclick="document.querySelector('.nav-links').classList.remove('open')">Volunteer</a></li>
     <li><a href="#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Stay Informed</a></li>
     <li><a href="learn-more.html" onclick="document.querySelector('.nav-links').classList.remove('open')">Learn More</a></li>
   </ul>
@@ -638,15 +638,7 @@ footer a { color: var(--gold-light); }
       <div class="hero-card-section">
         <p class="hero-card-section-label">Step 2 — Volunteer</p>
         <p class="hero-form-card-sub">Sign up to table and door-knock. <strong>This is not a petition signature.</strong></p>
-        <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
-          <input type="hidden" name="form-name" value="hero-signup">
-          <div class="hero-form-row">
-            <input type="text" name="first-name" placeholder="First name" required>
-            <input type="text" name="last-name" placeholder="Last name">
-          </div>
-          <input type="email" name="email" placeholder="Email address" required>
-          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
-        </form>
+        <a href="volunteer.html" class="btn-primary" style="width:100%;text-align:center;display:block;">Sign Up to Volunteer</a>
       </div>
     </div>
   </div>
