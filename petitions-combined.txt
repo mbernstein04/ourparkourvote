@@ -76,7 +76,7 @@
         <div class="affidavit">
             <center><b>CIRCULATOR'S AFFIDAVIT</b></center>
             <p style="font-size: 7.5pt; font-weight: bold; margin: 1pt 0;">NOTE: A COMPLETED SHEET REQUIRES ONLY ONE SIGNATURE ABOVE AND ONE CIRCULATOR'S AFFIDAVIT BELOW. THE CIRCULATOR MAY ALSO BE A SIGNER.</p>
-            I, ____________________________________________, being duly sworn, depose and say that I, and I only, personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be the genuine signatures of the persons whose names they purport to be.<br><br>
+            I, ____________________________________________, certify that I personally circulated the foregoing petition paper, that all the signatures appended thereto were made in my presence, and that I believe them to be genuine.<br><br>
             <b>Signature:</b> _______________________________________ <b>Date:</b> _________________ <b>Address:</b> _____________________________________________
         </div>
 
