@@ -29,23 +29,23 @@
 <!-- Indexing -->
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --night-sky-deep: #060f1e;
-  --night-sky-mid: #0e1f3a;
-  --gold: #c8922a;
-  --gold-light: #e8b84a;
-  --gold-pale: #f5d878;
-  --cream: #faf4e8;
-  --cream-alt: #f0ebe0;
-  --text-dark: #1a1a2e;
-  --text-mid: #2d3a50;
-  --forest-dark: #0f2a0f;
-  --forest-mid: #1e4a1e;
-  --forest-light: #2d6e2d;
-  --lake-blue: #3a6b8a;
+  --night-sky-deep: #0c1824;
+  --night-sky-mid: #142838;
+  --gold: #d49b2a;
+  --gold-light: #f0b84e;
+  --gold-pale: #f8dc7a;
+  --cream: #f8f5ee;
+  --cream-alt: #f0ece3;
+  --text-dark: #1a2332;
+  --text-mid: #3d4e60;
+  --forest-dark: #122a18;
+  --forest-mid: #1e5230;
+  --forest-light: #2d7a40;
+  --lake-blue: #3a7fa6;
   --alert-red: #c44b3f;
 }
 
@@ -53,19 +53,20 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: var(--text-dark);
   background: var(--cream);
   overflow-x: hidden;
-  line-height: 1.75;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── NAVIGATION ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(6,15,30,0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 2px solid var(--gold);
+  background: rgba(12,24,36,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212,155,42,0.4);
   padding: 0 2rem;
   display: flex; align-items: center; justify-content: space-between;
   height: 60px;
@@ -80,16 +81,17 @@ nav {
 }
 .nav-links a {
   color: rgba(255,255,255,0.85); text-decoration: none;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.72rem; font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 0.4rem 0.7rem; border-radius: 2px;
+  padding: 0.4rem 0.7rem; border-radius: 4px;
   transition: color 0.2s, background 0.2s;
 }
 .nav-links a:hover { color: var(--gold-light); background: rgba(255,255,255,0.06); }
 .nav-links a.cta-nav {
   background: var(--gold); color: #fff;
-  margin-left: 0.5rem; padding: 0.45rem 1rem; font-weight: 800;
+  margin-left: 0.5rem; padding: 0.45rem 1rem; font-weight: 700;
+  border-radius: 6px;
 }
 .nav-links a.cta-nav:hover { background: var(--gold-light); }
 .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
@@ -107,7 +109,7 @@ nav {
 .hero::after {
   content: ''; position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(6,15,30,0.52);
+  background: linear-gradient(170deg, rgba(12,24,36,0.6) 0%, rgba(18,42,24,0.5) 100%);
   pointer-events: none; z-index: 1;
 }
 .hero-content {
@@ -126,22 +128,23 @@ nav {
 }
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero .subheading {
-  font-family: 'Libre Baskerville', serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255,255,255,0.88); line-height: 1.6; margin-bottom: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.9); line-height: 1.65; margin-bottom: 0;
 }
 /* ── HERO FORM CARD ── */
 .hero-form-card {
   background: #fff;
-  border-radius: 4px;
+  border-radius: 12px;
   padding: 0;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 .hero-form-card-sub {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.8rem; color: #666;
-  margin-bottom: 1.25rem; line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem; color: #555;
+  margin-bottom: 1.25rem; line-height: 1.55;
 }
 @media (max-width: 800px) {
   .hero-content { grid-template-columns: 1fr; gap: 2rem; }
@@ -167,7 +170,7 @@ nav {
   content: '+'; position: absolute;
   right: 0; top: 50%; transform: translateY(-50%);
   font-size: 1.4rem; color: var(--gold);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 300; transition: transform 0.2s;
 }
 .faq-item[open] summary::after { content: '−'; }
@@ -201,7 +204,7 @@ nav {
 }
 .photo-strip-item:hover img { transform: scale(1.05); }
 .photo-strip-caption {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.72rem; color: rgba(255,255,255,0.45);
   text-align: center; padding: 0.6rem 0;
   background: var(--night-sky-deep);
@@ -213,16 +216,17 @@ nav {
 
 .sig-counter {
   max-width: 480px; margin: 2rem auto 0;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(200,146,42,0.35);
-  border-radius: 4px; padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(212,155,42,0.3);
+  border-radius: 10px; padding: 1.25rem 1.5rem;
   text-align: left;
+  backdrop-filter: blur(4px);
 }
 .sig-counter-label {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.72rem; font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.4rem;
+  color: var(--gold-light); margin-bottom: 0.4rem;
 }
 .sig-counter-numbers {
   display: flex; align-items: baseline; gap: 0.4rem;
@@ -234,20 +238,21 @@ nav {
   color: #fff; line-height: 1;
 }
 .sig-goal {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem; color: rgba(255,255,255,0.55);
 }
 .sig-bar-wrap { margin-bottom: 0.6rem; }
 .sig-bar-track {
   position: relative; height: 8px;
-  background: rgba(255,255,255,0.12);
-  border-radius: 4px; overflow: visible;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px; overflow: visible;
   margin-bottom: 0.3rem;
 }
 .sig-bar-fill {
-  height: 100%; border-radius: 4px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  transition: width 1s ease-out;
+  height: 100%; border-radius: 6px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold-pale));
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 0 12px rgba(212,155,42,0.4);
 }
 .sig-bar-threshold {
   position: absolute; top: -3px;
@@ -257,12 +262,12 @@ nav {
 }
 .sig-bar-labels {
   display: flex; justify-content: space-between;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem; color: rgba(255,255,255,0.4);
 }
 .sig-threshold-label { color: rgba(255,255,255,0.55); }
 .sig-note {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.78rem; color: rgba(255,255,255,0.5);
   line-height: 1.5; margin: 0;
 }
@@ -276,22 +281,23 @@ nav {
 .hero-form input[type="email"],
 .hero-form input[type="tel"] {
   width: 100%; padding: 0.75rem 1rem;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
-  border-radius: 2px; color: var(--text-dark);
-  font-family: 'Source Sans 3', sans-serif;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
 }
-.hero-form input::placeholder { color: #999; }
+.hero-form input::placeholder { color: #aaa; }
 .hero-form input:focus {
   outline: none;
   border-color: var(--gold);
   background: #fff;
+  box-shadow: 0 0 0 3px rgba(212,155,42,0.15);
 }
 .hero-form-check {
   display: flex; align-items: flex-start; gap: 0.6rem;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem; color: #444;
   text-align: left; cursor: pointer;
 }
@@ -301,9 +307,9 @@ nav {
   accent-color: var(--gold);
 }
 .hero-card-section-label {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.1em;
+  text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--forest-mid); margin-bottom: 0.25rem;
 }
 .hero-card-divider-line {
@@ -316,21 +322,21 @@ nav {
 /* ── BUTTONS ── */
 .btn-primary {
   background: var(--gold); color: #fff;
-  padding: 0.9rem 2.2rem; border: none; border-radius: 2px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.85rem; font-weight: 800;
-  letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 0.9rem 2.2rem; border: none; border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
   text-decoration: none; cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  box-shadow: 0 4px 20px rgba(200,146,42,0.5);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(212,155,42,0.35);
 }
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(212,155,42,0.45); }
 .btn-outline {
-  background: transparent; border: 2px solid rgba(255,255,255,0.6); color: #fff;
-  padding: 0.9rem 2.2rem; border-radius: 2px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.85rem; font-weight: 800;
-  letter-spacing: 0.15em; text-transform: uppercase;
+  background: transparent; border: 2px solid rgba(255,255,255,0.5); color: #fff;
+  padding: 0.9rem 2.2rem; border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
   text-decoration: none; cursor: pointer;
   transition: border-color 0.2s, background 0.2s;
 }
@@ -338,7 +344,7 @@ nav {
 
 /* ── DIVIDERS ── */
 .gold-divider {
-  height: 6px;
+  height: 3px;
   background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
 }
 
@@ -347,9 +353,9 @@ section { padding: 5rem 0; scroll-margin-top: 70px; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 .container-narrow { max-width: 850px; margin: 0 auto; padding: 0 2rem; }
 .section-label {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.7rem; font-weight: 800;
-  letter-spacing: 0.35em; text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 0.75rem;
 }
 .section-title {
@@ -358,7 +364,7 @@ section { padding: 5rem 0; scroll-margin-top: 70px; }
   line-height: 1.1; color: var(--text-dark); margin-bottom: 1.5rem;
 }
 .section-title span { color: var(--gold); }
-.lead-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-mid); margin-bottom: 1.5rem; }
+.lead-text { font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 1.5rem; }
 p { margin-bottom: 1rem; font-size: 1rem; }
 a { color: var(--lake-blue); }
 
@@ -368,8 +374,8 @@ a { color: var(--lake-blue); }
 .sec-backstory .lead-text { color: rgba(255,255,255,0.82); }
 .backstory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
 .backstory-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-top: 3px solid var(--gold); border-radius: 2px; padding: 2rem;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
 }
 .backstory-card h3 {
   font-family: 'Playfair Display', serif;
@@ -386,8 +392,8 @@ a { color: var(--lake-blue); }
   font-size: 3rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.75rem;
 }
 .step h3 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.9rem; font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--text-dark); margin-bottom: 0.5rem;
 }
@@ -400,8 +406,8 @@ a { color: var(--lake-blue); }
 .get5-card {
   max-width: 700px; margin: 0 auto;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(200,146,42,0.35);
-  border-radius: 4px; padding: 3rem 2.5rem;
+  border: 1px solid rgba(212,155,42,0.3);
+  border-radius: 12px; padding: 3rem 2.5rem;
 }
 .get5-title {
   font-family: 'Playfair Display', Georgia, serif;
@@ -409,20 +415,20 @@ a { color: var(--lake-blue); }
   text-align: center; margin-bottom: 0.25rem; line-height: 1.1;
 }
 .get5-desc {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.05rem; color: rgba(255,255,255,0.92);
   line-height: 1.7; text-align: center; margin-bottom: 0.75rem;
 }
 .get5-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
 .form-field { display: flex; flex-direction: column; gap: 0.3rem; }
 .form-field label {
-  font-family: 'Source Sans 3', sans-serif; font-size: 0.7rem; font-weight: 600;
+  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid);
 }
 .form-field input {
   background: #fff; border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 2px; color: var(--text-dark); padding: 0.6rem 0.8rem;
-  font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; outline: none;
+  border-radius: 8px; color: var(--text-dark); padding: 0.6rem 0.8rem;
+  font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none;
 }
 .form-field input:focus { border-color: var(--gold); }
 
@@ -431,8 +437,9 @@ a { color: var(--lake-blue); }
 .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
 .info-card {
   background: #fff; border: 1px solid rgba(0,0,0,0.06);
-  border-top: 3px solid var(--gold); border-radius: 2px; padding: 2rem;
+  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
   overflow: visible;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
 .info-card h3 {
   font-family: 'Playfair Display', serif;
@@ -451,7 +458,7 @@ a { color: var(--lake-blue); }
 .supporter-avatars .avatar-tooltip {
   position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
   background: var(--forest-dark, #1a3a2a); color: #fff; padding: 0.35rem 0.65rem;
-  border-radius: 6px; font-family: 'Source Sans 3', sans-serif; font-size: 0.72rem;
+  border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.72rem;
   font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none;
   transition: opacity 0.2s; z-index: 10;
 }
@@ -463,7 +470,7 @@ a { color: var(--lake-blue); }
 .avatar-initial {
   width: 52px; height: 52px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.72rem; font-weight: 800; color: #fff;
   border: 2px solid rgba(255,255,255,0.4);
   letter-spacing: 0.03em;
@@ -478,8 +485,8 @@ a { color: var(--lake-blue); }
 .sec-housing-q .lead-text { color: rgba(255,255,255,0.82); }
 .housing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
 .housing-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-  border-top: 3px solid var(--gold); border-radius: 2px; padding: 2rem;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
 }
 .housing-card h3 {
   font-family: 'Playfair Display', serif;
@@ -490,8 +497,8 @@ a { color: var(--lake-blue); }
 .housing-card a:hover { color: var(--gold); }
 .track-record {
   margin-top: 3.5rem; padding: 2.5rem;
-  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1);
-  border-left: 4px solid var(--gold); border-radius: 2px;
+  background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.08);
+  border-left: 4px solid var(--gold); border-radius: 8px;
 }
 .track-record h3 {
   font-family: 'Playfair Display', serif;
@@ -524,10 +531,11 @@ a { color: var(--lake-blue); }
 }
 .action-card {
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(200,146,42,0.2);
+  border: 1px solid rgba(212,155,42,0.15);
   padding: 2rem;
   border-top: 4px solid var(--forest-mid);
-  transition: border-color 0.3s;
+  border-radius: 8px;
+  transition: border-color 0.3s, background 0.3s;
 }
 .action-card:hover { border-color: var(--gold); }
 .action-card.urgent { border-top-color: var(--alert-red); }
@@ -538,14 +546,15 @@ a { color: var(--lake-blue); }
 .action-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
 .action-card .btn {
   display: inline-block; background: var(--alert-red); color: white;
-  padding: 0.6rem 1.5rem; text-decoration: none;
-  font-family: 'Source Sans 3', sans-serif; font-weight: 700; font-size: 0.85rem;
+  padding: 0.6rem 1.5rem; text-decoration: none; border-radius: 6px;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.85rem;
   margin-top: 0.5rem; letter-spacing: 0.05em; transition: background 0.3s;
 }
 .action-card .btn:hover { opacity: 0.9; }
 .email-block {
   background: rgba(255,255,255,0.06); padding: 1.2rem; margin: 1rem 0;
-  font-family: monospace; font-size: 0.82rem; word-break: break-all;
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; word-break: break-all;
   color: rgba(255,255,255,0.85); line-height: 1.8;
 }
 
@@ -555,7 +564,7 @@ details.subsection {
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
   background: rgba(26,26,46,0.04);
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 8px 8px 0;
 }
 details.subsection summary {
   cursor: pointer;
@@ -569,7 +578,7 @@ details.subsection summary {
 details.subsection summary::-webkit-details-marker { display: none; }
 details.subsection summary::after {
   content: '+';
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--gold);
@@ -629,11 +638,11 @@ details.subsection .detail-body {
   background: #fff;
   border-top: 4px solid var(--gold);
   padding: 1.8rem;
-  border-radius: 2px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.vision-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+.vision-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
 .vision-card .icon { margin-bottom: 1rem; line-height: 1; }
 .vision-card .icon svg { width: 42px; height: 42px; }
 .vision-card h3 {
@@ -652,8 +661,8 @@ details.subsection .detail-body {
 .timeline-item { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
 .timeline-date {
   width: 120px; min-width: 120px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.72rem; font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--gold-light);
   padding-top: 0.25rem;
@@ -724,7 +733,7 @@ details.subsection .detail-body {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 .share-bar .share-label {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -737,8 +746,8 @@ details.subsection .detail-body {
   align-items: center;
   gap: 0.4rem;
   padding: 0.55rem 1.1rem;
-  border-radius: 4px;
-  font-family: 'Source Sans 3', sans-serif;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -820,7 +829,7 @@ footer .footer-brand {
 }
 footer p { font-size: 0.82rem; line-height: 1.8; margin-bottom: 0.3rem; }
 footer a { color: var(--gold-light); }
-.footer-gold { height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin-bottom: 2rem; }
+.footer-gold { height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin-bottom: 2rem; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 800px) {
@@ -836,7 +845,7 @@ footer a { color: var(--gold-light); }
   .nav-links.open {
     display: flex; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
-    background: rgba(6,15,30,0.98); padding: 1rem 1.5rem; gap: 0.8rem;
+    background: rgba(12,24,36,0.98); padding: 1rem 1.5rem; gap: 0.8rem;
   }
   .hamburger { display: block; }
   section { padding: 3rem 0; }
@@ -902,12 +911,12 @@ footer a { color: var(--gold-light); }
           </div>
           <input type="email" name="email" placeholder="Email address" required>
           <input type="tel" name="phone" placeholder="Phone number">
-          <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;">We'll send you campaign updates by email.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;">We'll send you campaign updates by email.</p>
           <label class="hero-form-check">
             <input type="checkbox" name="volunteer" value="yes">
             I want to volunteer
           </label>
-          <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;">Collect signatures, canvass, staff a table.</p>
+          <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;">Collect signatures, canvass, staff a table.</p>
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
@@ -1341,24 +1350,24 @@ footer a { color: var(--gold-light); }
     <div class="steps-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;">
 
       <!-- Step 1 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
         <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">1</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Sign Up</h3>
+        <h3 style="font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Sign Up</h3>
         <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:1.25rem;">Fill out the volunteer form above. We'll be in touch with opportunities to help — from knocking doors to tabling at events.</p>
         <a href="#stay-connected" class="btn-primary" style="display:inline-block;font-size:0.82rem;padding:0.7rem 1.6rem;">Volunteer Now →</a>
       </div>
 
       <!-- Step 2 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
         <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">2</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Talk to Your Neighbors</h3>
+        <h3 style="font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Talk to Your Neighbors</h3>
         <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:0;">Walk your street or a nearby neighborhood and spread the word. A neighbor talking to a neighbor is the most effective thing you can do.</p>
       </div>
 
       <!-- Step 3 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.05);">
         <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">3</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Show Up &amp; Speak Out</h3>
+        <h3 style="font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Show Up &amp; Speak Out</h3>
         <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:0;">Attend City Council meetings, contact your councilors, and make your voice heard. Email <a href="mailto:info@ourparkourvote.org" style="color:var(--forest-mid);font-weight:700;">info@ourparkourvote.org</a> to learn more.</p>
       </div>
 
