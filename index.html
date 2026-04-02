@@ -913,10 +913,11 @@ footer a { color: var(--gold-light); }
           <input type="email" name="email" placeholder="Email address" required>
           <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;font-style:italic;">We'll send you campaign updates by email.</p>
           <label class="hero-form-check">
-            <input type="checkbox" name="volunteer" value="yes">
+            <input type="checkbox" name="volunteer" value="yes" id="volunteerCheck">
             <span>I want to volunteer</span>
           </label>
           <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;font-style:italic;">Collect signatures, canvass, staff a table.</p>
+          <input type="tel" name="phone" placeholder="Phone number" id="volunteerPhone" style="display:none;">
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
@@ -1154,6 +1155,10 @@ function copySubLink(btn) {
     setTimeout(function() { btn.textContent = orig; }, 2000);
   });
 }
+
+document.getElementById('volunteerCheck').addEventListener('change', function() {
+  document.getElementById('volunteerPhone').style.display = this.checked ? '' : 'none';
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash.substring(1);
