@@ -894,16 +894,23 @@ footer a { color: var(--gold-light); }
       <div class="hero-card-section" id="stay-connected">
         <p class="hero-card-section-label">Volunteer &amp; Stay Connected</p>
         <p class="hero-form-card-sub">Sign up to volunteer and get campaign updates.</p>
-        <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
-          <input type="hidden" name="form-name" value="hero-signup">
-          <div class="hero-form-row">
-            <input type="text" name="first-name" placeholder="First name" required>
-            <input type="text" name="last-name" placeholder="Last name">
-          </div>
-          <input type="email" name="email" placeholder="Email address" required>
-          <input type="tel" name="phone" placeholder="Phone number">
-          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
-        </form>
+       <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form" id="hero-signup-form">
+  <input type="hidden" name="form-name" value="hero-signup">
+  <div style="display:none"><input name="bot-field"></div>
+
+  <div class="hero-form-row">
+    <input type="text" name="first-name" placeholder="First name" required>
+    <input type="text" name="last-name" placeholder="Last name">
+  </div>
+
+  <input type="email" name="email" placeholder="Email address" required>
+  <small style="display:block;margin-top:0.3rem;margin-bottom:0.5rem;color:#8a9bb0;font-style:italic;font-size:0.75rem;">We'll send you campaign updates by email.</small>
+
+  <div id="hero-volunteer-toggle" onclick="toggleHeroVolunteer()" style="border:1px solid rgba(200,146,42,0.25);border-radius:4px;padding:0.75rem 1rem;cursor:pointer;margin-bottom:0.5rem;transition:border-color 0.2s,background 0.2s;">
+    <label style="display:flex;align-items:center;gap:0.75rem;cursor:pointer;user-select:none;margin:0;">
+      <input type="checkbox" id="hero-volunteer-check" name="volunteer" value="yes" style="display:none;">
+      <div id="hero-check-box" style="width:18px;height:18px;min-width:18px;border:1.5px solid rgba(138,155,176,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;">
+        <span id="hero
       </div>
     </div>
   </div>
