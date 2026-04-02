@@ -259,10 +259,13 @@ footer a { color: var(--gold-light); }
 <!-- ══════════ SIGNUP FORM ══════════ -->
 <section class="signup-section">
   <div class="container">
-    <h2>Get Notified When Shifts Are Scheduled</h2>
-    <p class="lead">This is <strong>not</strong> a petition signature. Fill out the form below and we'll notify you when organized canvassing shifts are scheduled in your neighborhood.</p>
-    <form name="volunteer-signup" method="POST" data-netlify="true" action="/thank-you">
+    <h2>Join the Campaign</h2>
+    <p class="lead">Get updates — and if you'd like to help collect signatures, let us know.</p>
+
+    <form name="volunteer-signup" method="POST" data-netlify="true" action="/thank-you.html" id="signup-form">
       <input type="hidden" name="form-name" value="volunteer-signup">
+      <div style="display:none"><input name="bot-field"></div>
+
       <div class="form-row">
         <div class="form-field">
           <label>First Name *</label>
@@ -273,13 +276,56 @@ footer a { color: var(--gold-light); }
           <input type="text" name="last-name" placeholder="Last name">
         </div>
       </div>
+
       <div class="form-field">
         <label>Email *</label>
         <input type="email" name="email" placeholder="you@example.com" required>
+        <small style="display:block;margin-top:0.35rem;color:#8a9bb0;font-style:italic;">We'll send you campaign updates by email.</small>
       </div>
-      <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Notify Me</button>
+
+      <div class="form-field" id="volunteer-toggle" onclick="toggleVolunteer()" style="border:1px solid rgba(200,146,42,0.25);border-radius:4px;padding:0.85rem 1rem;cursor:pointer;margin-top:0.25rem;transition:border-color 0.2s,background 0.2s;">
+        <label style="display:flex;align-items:center;gap:0.85rem;cursor:pointer;user-select:none;margin:0;">
+          <input type="checkbox" id="volunteer-check" name="volunteer" value="yes" style="display:none;">
+          <div id="check-box" style="width:18px;height:18px;min-width:18px;border:1.5px solid rgba(138,155,176,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;">
+            <span id="check-mark" style="opacity:0;color:#0f1f35;font-size:11px;font-weight:700;transition:all 0.15s;">✓</span>
+          </div>
+          <div>
+            <span style="display:block;font-weight:600;font-size:0.85rem;letter-spacing:0.03em;">I want to volunteer</span>
+            <span style="font-size:0.78rem;color:#8a9bb0;font-style:italic;">Collect signatures, canvass, staff a table</span>
+          </div>
+        </label>
+      </div>
+
+      <div id="phone-field" style="overflow:hidden;max-height:0;opacity:0;transition:max-height 0.35s ease,opacity 0.3s ease;">
+        <div class="form-field" style="padding-top:0.75rem;">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:1rem;">Join the Campaign</button>
     </form>
   </div>
+</section>
+
+<script>
+  var isVolunteer = false;
+  function toggleVolunteer() {
+    isVolunteer = !isVolunteer;
+    document.getElementById('volunteer-check').checked = isVolunteer;
+    var toggle = document.getElementById('volunteer-toggle');
+    var box = document.getElementById('check-box');
+    var mark = document.getElementById('check-mark');
+    var phone = document.getElementById('phone-field');
+    toggle.style.borderColor = isVolunteer ? 'var(--gold)' : 'rgba(200,146,42,0.25)';
+    toggle.style.background = isVolunteer ? 'rgba(200,146,42,0.08)' : '';
+    box.style.background = isVolunteer ? 'var(--gold)' : 'transparent';
+    box.style.borderColor = isVolunteer ? 'var(--gold)' : 'rgba(138,155,176,0.4)';
+    mark.style.opacity = isVolunteer ? '1' : '0';
+    phone.style.maxHeight = isVolunteer ? '100px' : '0';
+    phone.style.opacity = isVolunteer ? '1' : '0';
+  }
+</script>
 </section>
 
 <!-- ══════════ HOW IT WORKS ══════════ -->
