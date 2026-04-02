@@ -296,21 +296,21 @@ nav {
   box-shadow: 0 0 0 3px rgba(212,155,42,0.15);
 }
 .hero-form-check {
-  display: flex; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem; font-weight: 600; color: #333;
-  text-align: left; cursor: pointer;
-  line-height: 1;
+  cursor: pointer; margin: 0; padding: 0;
 }
 .hero-form-check input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
   flex-shrink: 0;
   width: 18px; height: 18px;
-  margin: 0;
+  margin: 0; padding: 0;
   accent-color: var(--gold);
-  vertical-align: middle;
 }
 .hero-form-check span {
-  line-height: 18px;
+  display: inline; line-height: 1;
 }
 .hero-card-section-label {
   font-family: 'Playfair Display', serif;
