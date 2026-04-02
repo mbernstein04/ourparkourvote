@@ -892,16 +892,22 @@ footer a { color: var(--gold-light); }
     </div>
     <div class="hero-form-card">
       <div class="hero-card-section" id="stay-connected">
-        <p class="hero-card-section-label">Volunteer &amp; Stay Connected</p>
-        <p class="hero-form-card-sub">Sign up to volunteer and get campaign updates.</p>
+        <p class="hero-card-section-label">Join the Campaign</p>
+        <p class="hero-form-card-sub">267.5 acres of public land. Duluthians deserve a say.</p>
         <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you" class="hero-form">
           <input type="hidden" name="form-name" value="hero-signup">
           <div class="hero-form-row">
             <input type="text" name="first-name" placeholder="First name" required>
-            <input type="text" name="last-name" placeholder="Last name">
+            <input type="text" name="last-name" placeholder="Last name" required>
           </div>
           <input type="email" name="email" placeholder="Email address" required>
           <input type="tel" name="phone" placeholder="Phone number">
+          <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;">We'll send you campaign updates by email.</p>
+          <label class="hero-form-check">
+            <input type="checkbox" name="volunteer" value="yes">
+            I want to volunteer
+          </label>
+          <p style="font-family:'Source Sans 3',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;">Collect signatures, canvass, staff a table.</p>
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
