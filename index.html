@@ -312,6 +312,17 @@ nav {
 .hero-form-check span {
   display: inline; line-height: 1;
 }
+.volunteer-phone-field {
+  max-height: 0; opacity: 0; overflow: hidden;
+  padding-top: 0 !important; padding-bottom: 0 !important;
+  margin: 0; border-color: transparent !important;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease, margin 0.35s ease, border-color 0.35s ease;
+}
+.volunteer-phone-field.visible {
+  max-height: 60px; opacity: 1;
+  padding-top: 0.75rem !important; padding-bottom: 0.75rem !important;
+  border-color: #e0e0e0 !important;
+}
 .hero-card-section-label {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem; font-weight: 900;
@@ -914,7 +925,7 @@ footer a { color: var(--gold-light); }
             <span>I want to volunteer</span>
           </label>
           <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;font-style:italic;">Collect signatures, canvass, staff a table.</p>
-          <input type="tel" name="phone" placeholder="Phone number" id="volunteerPhone" style="display:none;">
+          <input type="tel" name="phone" placeholder="Phone number" id="volunteerPhone" class="volunteer-phone-field">
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
@@ -922,7 +933,12 @@ footer a { color: var(--gold-light); }
   </div>
 </div>
 
-<div class="gold-divider"></div>
+<div class="photo-strip">
+  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
+</div>
 
 <section class="sec-info">
   <div class="container">
@@ -957,12 +973,7 @@ footer a { color: var(--gold-light); }
   </div>
 </section>
 
-<div class="photo-strip">
-  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
-</div>
+<div class="gold-divider"></div>
 
 <section id="vision" class="sec-vision">
   <div class="container">
@@ -1150,7 +1161,7 @@ function copySubLink(btn) {
 }
 
 document.getElementById('volunteerCheck').addEventListener('change', function() {
-  document.getElementById('volunteerPhone').style.display = this.checked ? '' : 'none';
+  document.getElementById('volunteerPhone').classList.toggle('visible', this.checked);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
