@@ -312,17 +312,6 @@ nav {
 .hero-form-check span {
   display: inline; line-height: 1;
 }
-.volunteer-phone-field {
-  max-height: 0; opacity: 0; overflow: hidden;
-  padding-top: 0 !important; padding-bottom: 0 !important;
-  margin: 0; border-color: transparent !important;
-  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease, margin 0.35s ease, border-color 0.35s ease;
-}
-.volunteer-phone-field.visible {
-  max-height: 60px; opacity: 1;
-  padding-top: 0.75rem !important; padding-bottom: 0.75rem !important;
-  border-color: #e0e0e0 !important;
-}
 .hero-card-section-label {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem; font-weight: 900;
@@ -919,13 +908,13 @@ footer a { color: var(--gold-light); }
             <input type="text" name="last-name" placeholder="Last name" required>
           </div>
           <input type="email" name="email" placeholder="Email address" required>
+          <input type="tel" name="phone" placeholder="Phone number">
           <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;font-style:italic;">We'll send you campaign updates by email.</p>
           <label class="hero-form-check">
-            <input type="checkbox" name="volunteer" value="yes" id="volunteerCheck">
+            <input type="checkbox" name="volunteer" value="yes">
             <span>I want to volunteer</span>
           </label>
           <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;font-style:italic;">Collect signatures, canvass, staff a table.</p>
-          <input type="tel" name="phone" placeholder="Phone number" id="volunteerPhone" class="volunteer-phone-field">
           <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
         </form>
       </div>
@@ -1159,10 +1148,6 @@ function copySubLink(btn) {
     setTimeout(function() { btn.textContent = orig; }, 2000);
   });
 }
-
-document.getElementById('volunteerCheck').addEventListener('change', function() {
-  document.getElementById('volunteerPhone').classList.toggle('visible', this.checked);
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   var hash = window.location.hash.substring(1);
