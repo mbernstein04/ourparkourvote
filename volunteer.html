@@ -4,370 +4,195 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Volunteer — Our Park, Our Vote</title>
-
-<meta name="description" content="Volunteer with Our Park, Our Vote. Help protect Lester Park by spreading the word in your neighborhood and earn free native plants.">
-<meta name="robots" content="index, follow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --night-sky-deep: #060f1e;
-  --night-sky-mid: #0e1f3a;
-  --gold: #c8922a;
-  --gold-light: #e8b84a;
-  --gold-pale: #f5d878;
-  --cream: #faf4e8;
-  --cream-alt: #f0ebe0;
-  --text-dark: #1a1a2e;
-  --text-mid: #2d3a50;
-  --forest-dark: #0f2a0f;
-  --forest-mid: #1e4a1e;
-  --forest-light: #2d6e2d;
-  --lake-blue: #3a6b8a;
-  --alert-red: #c44b3f;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --forest: #1a2e1e; --gold: #c9993a; --gold-light: #e8b84b; --cream: #f5f0e8; --text-dark: #1a1a18; --text-mid: #4a4a44; }
+  body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text-dark); }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+  nav { background: var(--forest); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; }
+  .nav-logo span { color: var(--gold); }
+  nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 2rem; transition: color 0.2s; }
+  nav a:hover { color: var(--gold); }
 
-body {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  color: var(--text-dark);
-  background: var(--cream);
-  overflow-x: hidden;
-  line-height: 1.75;
-}
+  .hero { background: var(--forest); text-align: center; padding: 4.5rem 2rem 3.5rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px); pointer-events: none; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #fff; line-height: 1.15; margin-bottom: 0.9rem; }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto; line-height: 1.7; font-weight: 300; }
 
-/* ── NAVIGATION ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(6,15,30,0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 2px solid var(--gold);
-  padding: 0 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 60px;
-}
-.nav-brand {
-  font-family: 'Righteous', 'Arial Black', sans-serif;
-  font-size: 1.1rem;
-  color: var(--gold-light);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
-.nav-links a {
-  color: #e8e4d8;
-  text-decoration: none;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--gold-light); }
-.nav-links a.cta-nav {
-  background: var(--gold);
-  color: #fff;
-  padding: 0.4rem 1rem;
-  border-radius: 2px;
-  font-weight: 800;
-}
-.nav-links a.cta-nav:hover { background: var(--gold-light); }
+  .urgency-bar { background: var(--gold); padding: 0.9rem 2rem; text-align: center; }
+  .urgency-bar p { font-size: 0.95rem; font-weight: 600; color: var(--forest); }
 
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-.hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+  .main { max-width: 860px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
 
-/* ── HERO HEADER ── */
-.page-header {
-  margin-top: 60px;
-  background: var(--night-sky-deep);
-  color: #fff;
-  padding: 5rem 2rem 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.page-header::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: url('lester-meadow.jpg');
-  background-size: cover;
-  background-position: center 40%;
-  opacity: 0.3;
-}
-.page-header > * { position: relative; z-index: 2; }
-.page-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-.page-header h1 em { color: var(--gold); font-style: italic; }
-.page-header p {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.85);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+  .form-block { background: var(--forest); border-radius: 8px; padding: 2.5rem 2rem; }
+  .form-block h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #fff; margin-bottom: 0.4rem; }
+  .form-block h2 em { color: var(--gold); font-style: normal; }
+  .form-intro { color: rgba(255,255,255,0.55); font-size: 0.95rem; font-weight: 300; margin-bottom: 2rem; line-height: 1.6; }
 
-/* ── SIGNUP SECTION ── */
-.signup-section {
-  padding: 4rem 0;
-  background: var(--cream);
-}
-.signup-section .container {
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.signup-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 900;
-  color: var(--text-dark);
-  text-align: center;
-  margin-bottom: 0.75rem;
-  line-height: 1.15;
-}
-.signup-section .lead {
-  text-align: center;
-  font-size: 0.95rem;
-  color: var(--text-mid);
-  margin-bottom: 2rem;
-  line-height: 1.7;
-}
-.form-field { margin-bottom: 1rem; }
-.form-field label {
-  display: block;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  margin-bottom: 0.35rem;
-}
-.form-field input, .form-field textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #d0c8b8;
-  border-radius: 2px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.95rem;
-  background: #fff;
-  transition: border-color 0.2s;
-}
-.form-field input:focus, .form-field textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-}
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
+  .field-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 0.5rem; }
+  .field { display: flex; flex-direction: column; gap: 0.35rem; }
+  .field label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .field input { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; padding: 0.65rem 0.85rem; font-size: 0.95rem; color: #fff; font-family: 'Source Sans 3', sans-serif; transition: border-color 0.2s; outline: none; }
+  .field input::placeholder { color: rgba(255,255,255,0.28); }
+  .field input:focus { border-color: var(--gold); }
 
-.btn-primary {
-  background: var(--gold);
-  color: #fff;
-  padding: 0.9rem 2.2rem;
-  border: none; border-radius: 2px;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.85rem; font-weight: 800;
-  letter-spacing: 0.15em; text-transform: uppercase;
-  text-decoration: none; cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-  box-shadow: 0 4px 20px rgba(200,146,42,0.5);
-}
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .shift-section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 2.25rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-/* ── HOW IT WORKS ── */
-.how-section {
-  padding: 4rem 0;
-  background: var(--cream-alt);
-}
-.how-section .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.how-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 900;
-  color: var(--text-dark);
-  text-align: center;
-  margin-bottom: 2.5rem;
-  line-height: 1.15;
-}
-.how-section h2 span { color: var(--gold); }
+  .shift-table { width: 100%; border-collapse: collapse; }
+  .shift-table th { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); padding: 0 0.75rem 0.6rem; text-align: center; }
+  .shift-table th:first-child { text-align: left; padding-left: 0; min-width: 200px; }
+  .shift-table td { padding: 0.45rem 0.75rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+  .shift-table td:first-child { text-align: left; padding-left: 0; }
+  .shift-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .shift-label { display: flex; flex-direction: column; gap: 1px; }
+  .shift-label-time { font-size: 0.7rem; color: var(--gold); font-weight: 600; letter-spacing: 0.04em; }
+  .shift-label-name { font-size: 0.88rem; color: rgba(255,255,255,0.82); }
 
-/* ── FOOTER ── */
-.footer-gold { height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-footer {
-  background: var(--night-sky-deep); color: rgba(255,255,255,0.6);
-  padding: 3rem 2rem; text-align: center;
-  font-family: 'Source Sans 3', sans-serif;
-}
-footer .footer-brand {
-  font-family: 'Righteous', sans-serif; font-size: 1.2rem;
-  color: var(--gold-light); margin-bottom: 0.5rem;
-}
-footer p { font-size: 0.82rem; line-height: 1.8; margin-bottom: 0.3rem; }
-footer a { color: var(--gold-light); }
+  .shift-table input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border: 1.5px solid rgba(255,255,255,0.22); border-radius: 3px; background: rgba(255,255,255,0.05); cursor: pointer; position: relative; transition: background 0.15s, border-color 0.15s; display: inline-block; vertical-align: middle; }
+  .shift-table input[type="checkbox"]:checked { background: var(--gold); border-color: var(--gold); }
+  .shift-table input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 4px; top: 1px; width: 6px; height: 10px; border: 2px solid var(--forest); border-top: none; border-left: none; transform: rotate(45deg); }
+  .shift-table input[type="checkbox"]:hover { border-color: rgba(201,153,58,0.6); }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: rgba(6,15,30,0.97); flex-direction: column; padding: 1rem; gap: 0.5rem; }
-  .nav-links.open { display: flex; }
-  .hamburger { display: block; }
-  .form-row { grid-template-columns: 1fr; }
-  .steps-grid { grid-template-columns: 1fr !important; }
-}
+  .btn-submit { display: block; width: 100%; margin-top: 2.25rem; background: var(--gold); color: var(--forest); font-family: 'Source Sans 3', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 1rem; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  footer { background: var(--forest); padding: 1.5rem 2rem; text-align: center; }
+  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
 </style>
 </head>
-
 <body>
 
-<!-- ══════════ NAVIGATION ══════════ -->
 <nav>
-  <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
-  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="/#action" onclick="document.querySelector('.nav-links').classList.remove('open')">Download Petitions</a></li>
-    <li><a href="/#faq" onclick="document.querySelector('.nav-links').classList.remove('open')">FAQ</a></li>
-    <li><a href="/" onclick="document.querySelector('.nav-links').classList.remove('open')" class="cta-nav">Home</a></li>
-  </ul>
+  <div class="nav-logo">Our Park. <span>Our Vote.</span></div>
+  <div>
+    <a href="/faq">FAQ</a>
+    <a href="/">Back to Home</a>
+  </div>
 </nav>
 
-<!-- ══════════ HEADER ══════════ -->
-<div class="page-header">
-  <h1>Volunteer With <em>Us</em></h1>
-  <p>Sign up to table and door-knock. The most effective petition signatures come from personal asks — a neighbor asking a neighbor.</p>
+<section class="hero">
+  <h1>Sign up to<br><em>collect signatures.</em></h1>
+  <p>We need 124 signatures every day through June 1. Pick the shifts that work for your schedule and show up consistently.</p>
+</section>
+
+<div class="urgency-bar">
+  <p>June 1 deadline · 7,200 signatures needed · Every shift matters</p>
 </div>
 
-<div style="height:6px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);"></div>
+<main class="main">
+  <div class="form-block">
+    <h2>Your <em>availability</em></h2>
+    <p class="form-intro">Select every shift you're regularly available for. This weekly schedule repeats through June 1. We'll confirm your assignments by email or phone.</p>
 
-<!-- ══════════ SIGNUP FORM ══════════ -->
-<section class="signup-section">
-  <div class="container">
-    <h2>Join the Campaign</h2>
-    <p class="lead">Get updates — and if you'd like to help collect signatures, let us know.</p>
+    <form name="volunteer-shifts" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+      <input type="hidden" name="form-name" value="volunteer-shifts">
+      <input type="hidden" name="bot-field">
 
-    <form name="volunteer-signup" method="POST" data-netlify="true" action="/thank-you.html" id="signup-form">
-      <input type="hidden" name="form-name" value="volunteer-signup">
-      <div style="display:none"><input name="bot-field"></div>
-
-      <div class="form-row">
-        <div class="form-field">
-          <label>First Name *</label>
-          <input type="text" name="first-name" placeholder="First name" required>
+      <div class="field-row">
+        <div class="field">
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="name" placeholder="Jane Smith" required>
         </div>
-        <div class="form-field">
-          <label>Last Name</label>
-          <input type="text" name="last-name" placeholder="Last name">
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(218) 555-0100" required>
         </div>
-      </div>
-
-      <div class="form-field">
-        <label>Email *</label>
-        <input type="email" name="email" placeholder="you@example.com" required>
-        <small style="display:block;margin-top:0.35rem;color:#8a9bb0;font-style:italic;">We'll send you campaign updates by email.</small>
-      </div>
-
-      <div class="form-field" id="volunteer-toggle" onclick="toggleVolunteer()" style="border:1px solid rgba(200,146,42,0.25);border-radius:4px;padding:0.85rem 1rem;cursor:pointer;margin-top:0.25rem;transition:border-color 0.2s,background 0.2s;">
-        <label style="display:flex;align-items:center;gap:0.85rem;cursor:pointer;user-select:none;margin:0;">
-          <input type="checkbox" id="volunteer-check" name="volunteer" value="yes" style="display:none;">
-          <div id="check-box" style="width:18px;height:18px;min-width:18px;border:1.5px solid rgba(138,155,176,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0;">
-            <span id="check-mark" style="opacity:0;color:#0f1f35;font-size:11px;font-weight:700;transition:all 0.15s;">✓</span>
-          </div>
-          <div>
-            <span style="display:block;font-weight:600;font-size:0.85rem;letter-spacing:0.03em;">I can volunteer</span>
-            <span style="font-size:0.78rem;color:#8a9bb0;font-style:italic;">We won't be able to stop the sale of the land without your help. Check this box if you'd like to hear how you can get involved.</span>
-          </div>
-        </label>
-      </div>
-
-      <div id="phone-field" style="overflow:hidden;max-height:0;opacity:0;transition:max-height 0.35s ease,opacity 0.3s ease;">
-        <div class="form-field" style="padding-top:0.75rem;">
-          <label>Phone Number</label>
-          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
         </div>
       </div>
 
-      <button type="submit" class="btn-primary" style="width:100%;margin-top:1rem;">Join the Campaign</button>
+      <div class="shift-section-label">Weekday Shifts — Monday through Friday</div>
+      <table class="shift-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">7:00 – 9:30 am</span><span class="shift-label-name">Coffee Shop</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Coffee"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">11:30 am – 2:00 pm</span><span class="shift-label-name">Lunch Rush</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Lunch"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">5:30 – 8:00 pm</span><span class="shift-label-name">Door Knocking</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Doors"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">5:30 – 8:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Grocery"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="shift-section-label">Weekend Shifts — Saturday &amp; Sunday</div>
+      <table class="shift-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sat</th><th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">10:00 am – 12:30 pm</span><span class="shift-label-name">Coffee Shop / Grocery</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Morning"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Morning"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">1:00 – 3:30 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Afternoon1"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Afternoon1"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">3:30 – 6:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Afternoon2"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Afternoon2"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">6:00 – 8:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Eve-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Eve-Grocery"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">6:00 – 8:00 pm</span><span class="shift-label-name">Door Knocking</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Eve-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Eve-Doors"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="btn-submit">Submit My Availability</button>
     </form>
   </div>
-</section>
+</main>
 
-<script>
-  var isVolunteer = false;
-  function toggleVolunteer() {
-    isVolunteer = !isVolunteer;
-    document.getElementById('volunteer-check').checked = isVolunteer;
-    var toggle = document.getElementById('volunteer-toggle');
-    var box = document.getElementById('check-box');
-    var mark = document.getElementById('check-mark');
-    var phone = document.getElementById('phone-field');
-    toggle.style.borderColor = isVolunteer ? 'var(--gold)' : 'rgba(200,146,42,0.25)';
-    toggle.style.background = isVolunteer ? 'rgba(200,146,42,0.08)' : '';
-    box.style.background = isVolunteer ? 'var(--gold)' : 'transparent';
-    box.style.borderColor = isVolunteer ? 'var(--gold)' : 'rgba(138,155,176,0.4)';
-    mark.style.opacity = isVolunteer ? '1' : '0';
-    phone.style.maxHeight = isVolunteer ? '100px' : '0';
-    phone.style.opacity = isVolunteer ? '1' : '0';
-  }
-</script>
-</section>
-
-<!-- ══════════ HOW IT WORKS ══════════ -->
-<section class="how-section">
-  <div class="container">
-    <p style="font-family:'Source Sans 3',sans-serif;font-size:0.7rem;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;text-align:center;">Knock Doors</p>
-    <h2>The Most Powerful Thing <span>You Can Do</span></h2>
-
-    <div class="steps-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;">
-
-      <!-- Step 1 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">1</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Download, Print & Sign</h3>
-        <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:1.25rem;">Your packet includes the signature gatherer guide and both petition sheets. Print everything, sign both petitions in ink, and bring the guide when you canvass.</p>
-        <a href="print-and-walk.pdf" target="_blank" style="display:inline-block;background:var(--gold);color:#fff;padding:0.7rem 1.6rem;text-decoration:none;font-family:'Source Sans 3',sans-serif;font-weight:800;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;">Download Your Packet →</a>
-      </div>
-
-      <!-- Step 2 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">2</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Canvass Your Neighborhood</h3>
-        <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:0;">Walk your street or a nearby neighborhood with petition sheets. A neighbor asking a neighbor is the most effective thing you can do. The guide has everything you need to answer questions at the door.</p>
-      </div>
-
-      <!-- Step 3 -->
-      <div style="text-align:center;padding:2rem 1.5rem;background:#fff;border-top:4px solid var(--gold);box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;margin-bottom:1rem;">3</div>
-        <h3 style="font-family:'Source Sans 3',sans-serif;font-size:0.88rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dark);margin-bottom:0.75rem;">Return Completed Sheets</h3>
-        <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.7;margin-bottom:0;">Mail completed sheets to <strong>Our Park, Our Vote, 1346 W. Arrowhead Rd. #324, Duluth, MN 55811</strong> — or email <a href="mailto:info@ourparkourvote.org" style="color:var(--forest-mid);font-weight:700;">info@ourparkourvote.org</a> to arrange a drop-off.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="footer-gold"></div>
 <footer>
-  <div class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</div>
-  <p>A not-for-profit, community-driven initiative.</p>
-  <p><a href="/">ourparkourvote.org</a></p>
-</footer>
-
-</body>
-</html>
+  <p>Our Park, Our Vote · 1346 W. Arrowhead Rd. #324, Duluth MN 55811 · <a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9d6cccbc9d8cbd2d6cccbcfd6cddc97d6cbde"><span class="__cf_email__" data-cfemail="6e070008012e011b1c1e0f1c05011b1c180
