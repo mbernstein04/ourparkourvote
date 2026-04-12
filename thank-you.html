@@ -7,8 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --forest: #1a2e1e; --gold: #c9993a; --gold-light: #e8b84b; --cream: #f5f0e8; --text-mid: #4a4a44; }
-  body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text-mid); }
+  :root { --forest: #1a2e1e; --gold: #c9993a; --gold-light: #e8b84b; --cream: #f5f0e8; --text-dark: #1a1a18; --text-mid: #4a4a44; }
+  body { font-family: 'Source Sans 3', sans-serif; background: var(--cream); color: var(--text-dark); }
 
   nav { background: var(--forest); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -16,21 +16,47 @@
   nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 2rem; transition: color 0.2s; }
   nav a:hover { color: var(--gold); }
 
-  .page { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 4rem 2rem; }
+  .hero { background: var(--forest); text-align: center; padding: 4rem 2rem 3rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px); pointer-events: none; }
+  .checkmark { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+  .checkmark svg { width: 24px; height: 24px; stroke: var(--gold); stroke-width: 2.5; fill: none; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; line-height: 1.2; margin-bottom: 0.6rem; }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero p { font-size: 1rem; color: rgba(255,255,255,0.6); max-width: 480px; margin: 0 auto; line-height: 1.7; font-weight: 300; }
 
-  .card { background: var(--forest); border-radius: 8px; padding: 3.5rem 2.5rem; max-width: 520px; width: 100%; text-align: center; }
+  .urgency-bar { background: var(--gold); padding: 0.85rem 2rem; text-align: center; }
+  .urgency-bar p { font-size: 0.92rem; font-weight: 600; color: var(--forest); }
 
-  .checkmark { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.75rem; }
-  .checkmark svg { width: 28px; height: 28px; stroke: var(--gold); stroke-width: 2.5; fill: none; }
+  .main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #fff; line-height: 1.2; margin-bottom: 0.75rem; }
-  h1 em { color: var(--gold); font-style: normal; }
+  .form-block { background: var(--forest); border-radius: 8px; padding: 2.25rem 2rem; }
+  .form-block h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #fff; margin-bottom: 0.35rem; }
+  .form-block h2 em { color: var(--gold); font-style: normal; }
+  .form-intro { color: rgba(255,255,255,0.55); font-size: 0.92rem; font-weight: 300; margin-bottom: 1.75rem; line-height: 1.6; }
 
-  p { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; font-weight: 300; margin-bottom: 0.5rem; }
+  .shift-section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 2rem 0 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-  .divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 2rem 0; }
+  .shift-table { width: 100%; border-collapse: collapse; }
+  .shift-table th { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); padding: 0 0.75rem 0.6rem; text-align: center; }
+  .shift-table th:first-child { text-align: left; padding-left: 0; min-width: 180px; }
+  .shift-table td { padding: 0.42rem 0.75rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); }
+  .shift-table td:first-child { text-align: left; padding-left: 0; }
+  .shift-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .shift-label { display: flex; flex-direction: column; gap: 1px; }
+  .shift-label-time { font-size: 0.68rem; color: var(--gold); font-weight: 600; letter-spacing: 0.04em; }
+  .shift-label-name { font-size: 0.87rem; color: rgba(255,255,255,0.82); }
 
-  .detail { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+  .shift-table input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border: 1.5px solid rgba(255,255,255,0.22); border-radius: 3px; background: rgba(255,255,255,0.05); cursor: pointer; position: relative; transition: background 0.15s, border-color 0.15s; display: inline-block; vertical-align: middle; }
+  .shift-table input[type="checkbox"]:checked { background: var(--gold); border-color: var(--gold); }
+  .shift-table input[type="checkbox"]:checked::after { content: ''; position: absolute; left: 4px; top: 1px; width: 6px; height: 10px; border: 2px solid var(--forest); border-top: none; border-left: none; transform: rotate(45deg); }
+  .shift-table input[type="checkbox"]:hover { border-color: rgba(201,153,58,0.6); }
+
+  .btn-submit { display: block; width: 100%; margin-top: 2rem; background: var(--gold); color: var(--forest); font-family: 'Source Sans 3', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 1rem; border: none; border-radius: 4px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .success-msg { display: none; text-align: center; padding: 2.5rem 1rem; }
+  .success-msg h3 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.8rem; margin-bottom: 0.75rem; }
+  .success-msg p { color: rgba(255,255,255,0.65); font-weight: 300; font-size: 1rem; line-height: 1.6; }
 
   footer { background: var(--forest); padding: 1.5rem 2rem; text-align: center; }
   footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
@@ -48,18 +74,153 @@
   </div>
 </nav>
 
-<div class="page">
-  <div class="card">
-    <div class="checkmark">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-    </div>
-    <h1>You're in.<br><em>Thank you.</em></h1>
-    <p>We'll confirm your shift assignments by email or phone within 24 hours.</p>
-    <p>Show up, bring a pen, and help us get to 7,200 signatures by June 1.</p>
-    <hr class="divider">
-    <p class="detail">Questions? Email info<!---->@<!---->ourparkourvote.org</p>
+<section class="hero">
+  <div class="checkmark">
+    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
   </div>
+  <h1>You're in.<br><em>Now pick your shifts.</em></h1>
+  <p>Check every shift you're regularly available for. This schedule repeats weekly through June 1.</p>
+</section>
+
+<div class="urgency-bar">
+  <p>We need <strong>124 signatures every day</strong> through June 1 — every shift matters.</p>
 </div>
 
+<main class="main">
+  <div class="form-block">
+    <h2>Choose <em>your shifts</em></h2>
+    <p class="form-intro">Select all shifts you can commit to each week. We'll confirm your assignments by email or phone within 24 hours.</p>
+
+    <form name="volunteer-shifts" method="POST" data-netlify="true" id="shiftForm">
+      <input type="hidden" name="form-name" value="volunteer-shifts">
+      <!-- Contact info carried over from index form via URL params -->
+      <input type="hidden" name="first-name" id="h-first-name">
+      <input type="hidden" name="last-name" id="h-last-name">
+      <input type="hidden" name="email" id="h-email">
+      <input type="hidden" name="phone" id="h-phone">
+
+      <div class="shift-section-label">Weekday Shifts — Monday through Friday</div>
+      <table class="shift-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">7:00 – 9:30 am</span><span class="shift-label-name">Coffee Shop</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Coffee"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Coffee"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">11:30 am – 2:00 pm</span><span class="shift-label-name">Lunch Rush</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Lunch"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Lunch"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">5:30 – 8:00 pm</span><span class="shift-label-name">Door Knocking</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Doors"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">5:30 – 8:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Mon-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Tue-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Wed-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Thu-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Fri-Grocery"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="shift-section-label">Weekend Shifts — Saturday &amp; Sunday</div>
+      <table class="shift-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sat</th><th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">10:00 am – 12:30 pm</span><span class="shift-label-name">Coffee Shop / Grocery</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Morning"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Morning"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">1:00 – 3:30 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Afternoon1"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Afternoon1"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">3:30 – 6:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Afternoon2"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Afternoon2"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">6:00 – 8:00 pm</span><span class="shift-label-name">Grocery / Sidewalk</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Eve-Grocery"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Eve-Grocery"></td>
+          </tr>
+          <tr>
+            <td><div class="shift-label"><span class="shift-label-time">6:00 – 8:00 pm</span><span class="shift-label-name">Door Knocking</span></div></td>
+            <td><input type="checkbox" name="shifts" value="Sat-Eve-Doors"></td>
+            <td><input type="checkbox" name="shifts" value="Sun-Eve-Doors"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="btn-submit">Submit My Availability</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <h3>You're all set!</h3>
+      <p>We'll confirm your shift assignments by email or phone within 24 hours.<br>Show up, bring a pen, and help us get to 7,200 signatures by June 1.</p>
+      <p style="margin-top:1rem;font-size:0.85rem;">Questions? Email info<!---->@<!---->ourparkourvote.org</p>
+    </div>
+  </div>
+</main>
+
 <footer>
-  <p>Our Park, Our Vote · 1346 W. Arrowhead Rd. #324, Duluth MN 55811 · <a href="/cdn-cgi/l/
+  <p>Our Park, Our Vote · 1346 W. Arrowhead Rd. #324, Duluth MN 55811 · info<!---->@<!---->ourparkourvote.org · <a href="https://ourparkourvote.org">ourparkourvote.org</a></p>
+</footer>
+
+<script>
+  // Read URL params and populate hidden fields
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('h-first-name').value = params.get('first-name') || '';
+    document.getElementById('h-last-name').value  = params.get('last-name')  || '';
+    document.getElementById('h-email').value       = params.get('email')      || '';
+    document.getElementById('h-phone').value       = params.get('phone')      || '';
+  })();
+
+  // Submit shift form to Netlify via fetch
+  document.getElementById('shiftForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function() {
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    })
+    .catch(function() { form.submit(); });
+  });
+</script>
+
+</body>
+</html>
