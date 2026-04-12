@@ -1173,5 +1173,30 @@ const GOAL = 7200;
   countEl.textContent = SIGNATURES_COLLECTED.toLocaleString();
 })();
 </script>
+  <script>
+document.querySelector('form[name="hero-signup"]').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var data = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  })
+  .then(function() {
+    var params = new URLSearchParams({
+      'first-name': data.get('first-name') || '',
+      'last-name':  data.get('last-name')  || '',
+      'email':      data.get('email')      || '',
+      'phone':      data.get('phone')      || ''
+    });
+    window.location.href = '/thank-you?' + params.toString();
+  })
+  .catch(function() {
+    form.setAttribute('action', '/thank-you');
+    form.submit();
+  });
+});
+</script>
 </body>
 </html>
