@@ -63,11 +63,15 @@ body {
 
 /* ── ANNOUNCEMENT BANNER ── */
 .announce-bar {
-  background: #1e4d1a;
+  background: #1e4d1a !important;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 102;
+  min-height: 45px;
 }
 .announce-bar-inner {
   display: flex; align-items: center; justify-content: center;
@@ -100,7 +104,7 @@ body {
 
 /* ── NAVIGATION ── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 45px; left: 0; right: 0; z-index: 100;
   background: rgba(12,24,36,0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(212,155,42,0.4);
@@ -819,7 +823,7 @@ footer a { color: var(--gold-light); }
   .action-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .get5-form { grid-template-columns: 1fr; }
-  nav { padding: 0 1rem; }
+  nav { padding: 0 1rem; top: 0; }
   .nav-links { display: none; }
   html, body { overflow-x: hidden; max-width: 100%; }
   .nav-links.open {
@@ -829,7 +833,7 @@ footer a { color: var(--gold-light); }
   }
   .hamburger { display: block; }
   section { padding: 3rem 0; }
-  .hero { padding: 5rem 1.5rem 4rem; }
+  .hero { padding: 5rem 1.5rem 4rem; margin-top: 60px; }
   .get5-card { padding: 2rem 1.5rem; }
   .container, .container-narrow { padding: 0 1.25rem; }
 }
