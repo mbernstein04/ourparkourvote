@@ -61,6 +61,42 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── ANNOUNCEMENT BANNER ── */
+.announce-bar {
+  background: #1e4d1a;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  width: 100%;
+  z-index: 101;
+}
+.announce-bar-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; padding: 11px 24px; flex-wrap: wrap; row-gap: 6px;
+}
+.announce-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #e8a020; flex-shrink: 0;
+}
+.announce-tag {
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: #e8a020;
+}
+.announce-text {
+  font-size: 0.88rem; font-weight: 600; color: #f5f0e0;
+}
+.announce-text strong { color: #e8a020; font-weight: 700; }
+.announce-hours {
+  color: rgba(245,240,224,0.55); font-size: 0.75rem;
+  font-weight: 400; margin-left: 4px;
+}
+.announce-sep {
+  color: rgba(245,240,224,0.25); font-size: 0.9rem;
+}
+@media (max-width: 800px) {
+  .announce-sep { display: none; }
+  .announce-bar-inner { flex-direction: column; align-items: flex-start; padding: 10px 16px; gap: 4px; }
+}
+
 /* ── NAVIGATION ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -99,7 +135,7 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  margin-top: 60px;
+  margin-top: 105px;
   background-image: url('lester-sunrise.jpg');
   background-size: cover;
   background-position: center 40%;
@@ -149,6 +185,7 @@ nav {
 @media (max-width: 800px) {
   .hero-content { grid-template-columns: 1fr; gap: 2rem; }
   .hero-text { text-align: center; }
+  .hero { margin-top: 60px; }
 }
 
 /* ── FAQ ── */
@@ -604,7 +641,6 @@ details.subsection summary h3 {
 details.subsection .detail-body {
   margin-top: 1.25rem;
 }
-/* dark-bg variants */
 .sec-golf details.subsection,
 .sec-dark-content details.subsection {
   background: rgba(255,255,255,0.05);
@@ -729,98 +765,36 @@ details.subsection .detail-body {
 
 /* ── SHARE BAR ── */
 .share-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-top: 2rem;
-  padding-top: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.6rem; margin-top: 2rem; padding-top: 1.2rem;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 .share-bar .share-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.45;
-  margin-right: 0.3rem;
+  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.45; margin-right: 0.3rem;
 }
 .share-bar a, .share-bar button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1.1rem; border-radius: 6px;
+  font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.04em; text-decoration: none; cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.1s;
   border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75);
 }
-.share-bar a {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: #1a1a0e;
+.share-bar a { background: var(--gold); border-color: var(--gold); color: #1a1a0e; }
+.share-bar a:hover { background: var(--gold-light); border-color: var(--gold-light); color: #1a1a0e; transform: translateY(-1px); }
+.share-bar button:hover { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.95); transform: translateY(-1px); }
+.sec-vision .share-bar, .sec-housing .share-bar { border-top-color: rgba(0,0,0,0.08); }
+.sec-vision .share-bar a, .sec-vision .share-bar button,
+.sec-housing .share-bar a, .sec-housing .share-bar button {
+  border-color: rgba(0,0,0,0.15); background: rgba(0,0,0,0.06); color: rgba(0,0,0,0.55);
 }
-.share-bar a:hover {
-  background: var(--gold-light);
-  border-color: var(--gold-light);
-  color: #1a1a0e;
-  transform: translateY(-1px);
-}
-.share-bar button:hover {
-  background: rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.95);
-  transform: translateY(-1px);
-}
-/* Light section overrides */
-.sec-vision .share-bar,
-.sec-housing .share-bar {
-  border-top-color: rgba(0,0,0,0.08);
-}
-.sec-vision .share-bar a,
-.sec-vision .share-bar button,
-.sec-housing .share-bar a,
-.sec-housing .share-bar button {
-  border-color: rgba(0,0,0,0.15);
-  background: rgba(0,0,0,0.06);
-  color: rgba(0,0,0,0.55);
-}
-.sec-vision .share-bar a,
-.sec-housing .share-bar a {
-  background: var(--forest-dark);
-  border-color: var(--forest-dark);
-  color: #fff;
-}
-.sec-vision .share-bar a:hover,
-.sec-housing .share-bar a:hover {
-  background: var(--forest-mid);
-  border-color: var(--forest-mid);
-  color: #fff;
-  transform: translateY(-1px);
-}
-.sec-vision .share-bar button:hover,
-.sec-housing .share-bar button:hover {
-  background: rgba(0,0,0,0.1);
-  color: rgba(0,0,0,0.75);
-  transform: translateY(-1px);
-}
-.sec-vision .share-bar .share-label,
-.sec-housing .share-bar .share-label {
-  color: rgba(0,0,0,0.4);
-}
-.share-bar .copied-msg {
-  font-size: 0.65rem;
-  color: var(--gold);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+.sec-vision .share-bar a, .sec-housing .share-bar a { background: var(--forest-dark); border-color: var(--forest-dark); color: #fff; }
+.sec-vision .share-bar a:hover, .sec-housing .share-bar a:hover { background: var(--forest-mid); border-color: var(--forest-mid); color: #fff; transform: translateY(-1px); }
+.sec-vision .share-bar button:hover, .sec-housing .share-bar button:hover { background: rgba(0,0,0,0.1); color: rgba(0,0,0,0.75); transform: translateY(-1px); }
+.sec-vision .share-bar .share-label, .sec-housing .share-bar .share-label { color: rgba(0,0,0,0.4); }
+.share-bar .copied-msg { font-size: 0.65rem; color: var(--gold); opacity: 0; transition: opacity 0.3s; }
 .share-bar .copied-msg.show { opacity: 1; }
 
 /* ── FOOTER ── */
@@ -862,6 +836,19 @@ footer a { color: var(--gold-light); }
 </head>
 
 <body>
+
+<!-- ══════════ ANNOUNCEMENT BANNER ══════════ -->
+<div class="announce-bar">
+  <div class="announce-bar-inner">
+    <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+      <div class="announce-dot"></div>
+      <span class="announce-tag">New</span>
+    </div>
+    <span class="announce-text">Sign our petitions at <strong>Amity Coffee</strong><span class="announce-hours">Tue–Fri 7am–3pm · Sat 8am–3pm · Sun 8am–1pm</span></span>
+    <span class="announce-sep">·</span>
+    <span class="announce-text"><strong>Duluth Gear Exchange</strong><span class="announce-hours">Tue–Fri 11am–6pm · Sat–Sun 10am–5pm</span></span>
+  </div>
+</div>
 
 <!-- ══════════ NAVIGATION ══════════ -->
 <nav>
@@ -992,7 +979,6 @@ footer a { color: var(--gold-light); }
         <p>A home for the Duluth Art Institute (currently in an office building downtown). Workshop space for the Duluth Folk School, which has outgrown its current location. A kids' maker space mentored by UMD and Lake Superior College engineering students. A family birding club with Hawk Ridge next door. The only constraint on the possibilities is our imagination.</p>
       </div>
     </div>
-
 
   </div>
 </section>
