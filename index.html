@@ -190,7 +190,7 @@ nav {
 /* SIGN PETITIONS */
 .sign-sec { background: var(--forest); padding: 4.5rem 2rem; }
 .sign-sec .section-title { color: #fff; }
-.locations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.locations { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
 .location-card {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(212,155,42,0.25);
@@ -279,7 +279,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 
 @media (max-width: 700px) {
   .two-col { grid-template-columns: 1fr; }
-  .locations { grid-template-columns: 1fr; }
+  .locations { grid-template-columns: repeat(2, 1fr); }
   .form-row { flex-direction: column; }
   .btn-outline { margin-left: 0; }
   .hero-btns { flex-direction: column; align-items: center; }
@@ -305,15 +305,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
   </div>
 </div>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip">
-  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
-</div>
 
-<!-- COUNTER -->
 <div class="counter-bar">
   <div>
     <div class="counter-label">Signatures Collected</div>
@@ -332,7 +324,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="container">
     <p class="section-label">What's happening</p>
     <h2 class="section-title">Public Land. Private Developers. No Vote.</h2>
-    <p class="lead" style="max-width:640px;margin-bottom:2rem;">The Duluth City Council authorized the transfer of 267.5 acres of the former Lester Park Golf Course to DEDA for $1 — with the intent to hand it to out-of-state developers for a private golf resort, luxury housing, and a hotel. No public vote was held. We believe that's wrong.</p>
+    <p class="lead" style="max-width:640px;margin-bottom:2rem;">The Duluth City Council authorized the transfer of 267.5 acres of the former Lester Park Golf Course to DEDA for $1 — with the intent to hand it to out-of-state developers for a private golf resort, luxury housing, and a "Vail/Breckenridge-style" chalet hotel. No public vote was held. We believe that's wrong.</p>
     <div class="two-col">
       <div class="card">
         <h3>The Land</h3>
@@ -353,8 +345,8 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="container">
     <p class="section-label">Sign in person</p>
     <h2 class="section-title">Find a Petition Near You</h2>
-    <p class="lead" style="color:rgba(255,255,255,0.65);max-width:560px;margin-bottom:0;">Petition sheets are available at three locations across Duluth. You must be a registered Duluth voter to sign.</p>
-    <div class="locations" style="grid-template-columns: repeat(4, 1fr);">
+    <p class="lead" style="color:rgba(255,255,255,0.65);max-width:560px;margin-bottom:0;">Petition sheets are available at four locations across Duluth. You must be a registered Duluth voter to sign.</p>
+    <div class="locations">
       <div class="location-card">
         <div class="location-name">Amity Coffee</div>
         <div class="location-hours">
@@ -390,6 +382,14 @@ footer a { color: var(--gold-light); text-decoration: none; }
       </div>
     </div>
   </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
+  <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
 </div>
 
 <!-- DEADLINE -->
@@ -430,7 +430,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </footer>
 
 <script>
-const SIGNATURES_COLLECTED = 811;
+const SIGNATURES_COLLECTED = 955;
 const GOAL = 7200;
 (function() {
   const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
