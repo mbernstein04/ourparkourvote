@@ -3,230 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Park Our Vote — Volunteer to Protect Lester Park</title>
-
-<!-- SEO -->
-<meta name="description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Volunteer with Our Park Our Vote to protect 267 acres of public parkland.">
-<meta name="keywords" content="Lester Park Golf Course, Duluth Minnesota, volunteer, public parkland, native plants, ourparkourvote, community action">
-<meta name="author" content="Our Park, Our Vote">
-<link rel="canonical" href="https://ourparkourvote.org/">
-<link rel="preload" as="image" href="lester-sunrise.jpg" fetchpriority="high">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ourparkourvote.org/">
-<meta property="og:title" content="Our Park Our Vote — Volunteer to Protect Lester Park">
-<meta property="og:description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Volunteer with Our Park Our Vote to protect 267 acres of public parkland.">
-<meta property="og:image" content="https://ourparkourvote.org/og-image.jpg">
-<meta property="og:site_name" content="Our Park, Our Vote">
-
-<!-- Twitter/X Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Our Park Our Vote — Volunteer to Protect Lester Park">
-<meta name="twitter:description" content="The former Lester Park Golf Course is public land. Duluthians should decide its future. Volunteer with Our Park Our Vote to protect 267 acres of public parkland.">
-<meta name="twitter:image" content="https://ourparkourvote.org/og-image.jpg">
-
-<!-- Indexing -->
-<meta name="robots" content="index, follow">
+<title>Our Park, Our Vote — Protect Lester Park</title>
+<meta name="description" content="Sign our petitions to force a city-wide vote on the future of Lester Park before 267 acres of public land is sold to developers.">
+<link rel="canonical" href="https://ourparkourvote.org/simple">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700;800&family=Righteous&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
 <style>
 :root {
-  --night-sky-deep: #0c1824;
-  --night-sky-mid: #142838;
+  --forest: #122a18;
+  --forest-mid: #1e5230;
   --gold: #d49b2a;
   --gold-light: #f0b84e;
-  --gold-pale: #f8dc7a;
   --cream: #f8f5ee;
   --cream-alt: #f0ece3;
   --text-dark: #1a2332;
   --text-mid: #3d4e60;
-  --forest-dark: #122a18;
-  --forest-mid: #1e5230;
-  --forest-light: #2d7a40;
-  --lake-blue: #3a7fa6;
-  --alert-red: #c44b3f;
+  --night: #0c1824;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
 body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-dark);
   background: var(--cream);
-  overflow-x: hidden;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── ANNOUNCEMENT BANNER ── */
-.announce-bar {
-  background: #1e4d1a !important;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 102;
-  min-height: 45px;
-}
-.announce-bar-inner {
-  display: flex; align-items: center; justify-content: center;
-  gap: 16px; padding: 11px 24px; flex-wrap: wrap; row-gap: 6px;
-}
-.announce-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: #e8a020; flex-shrink: 0;
-}
-.announce-tag {
-  font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: #e8a020;
-}
-.announce-text {
-  font-size: 0.88rem; font-weight: 600; color: #f5f0e0;
-}
-.announce-text strong { color: #e8a020; font-weight: 700; }
-.announce-hours {
-  color: rgba(245,240,224,0.55); font-size: 0.75rem;
-  font-weight: 400; margin-left: 4px;
-}
-.announce-sep {
-  color: rgba(245,240,224,0.25); font-size: 0.9rem;
-}
-@media (max-width: 800px) {
-  .announce-sep { display: none; }
-  .announce-bar-inner { flex-direction: column; align-items: flex-start; padding: 10px 16px; gap: 4px; }
-}
-
-/* ── NAVIGATION ── */
+/* NAV */
 nav {
-  position: fixed; top: 45px; left: 0; right: 0; z-index: 100;
-  background: rgba(12,24,36,0.94);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212,155,42,0.4);
+  background: var(--night);
   padding: 0 2rem;
   display: flex; align-items: center; justify-content: space-between;
-  height: 60px;
+  height: 56px;
 }
 .nav-brand {
-  font-family: 'Righteous', 'Arial Black', sans-serif;
-  font-size: 1.1rem; color: var(--gold-light);
+  font-family: 'Righteous', sans-serif;
+  font-size: 1rem; color: var(--gold-light);
   text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
 }
-.nav-links {
-  display: flex; gap: 0.3rem; list-style: none; align-items: center;
+.nav-link {
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
 }
-.nav-links a {
-  color: rgba(255,255,255,0.85); text-decoration: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 0.4rem 0.7rem; border-radius: 4px;
-  transition: color 0.2s, background 0.2s;
-}
-.nav-links a:hover { color: var(--gold-light); background: rgba(255,255,255,0.06); }
-.nav-links a.cta-nav {
-  background: var(--gold); color: #fff;
-  margin-left: 0.5rem; padding: 0.45rem 1rem; font-weight: 700;
-  border-radius: 6px;
-}
-.nav-links a.cta-nav:hover { background: var(--gold-light); }
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-.hamburger span { display: block; width: 24px; height: 2px; background: white; margin: 5px 0; transition: 0.3s; }
+.nav-link:hover { color: var(--gold-light); }
 
-/* ── HERO ── */
+/* HERO */
 .hero {
-  margin-top: 105px;
+  background: var(--night);
   background-image: url('lester-sunrise.jpg');
-  background-size: cover;
-  background-position: center 40%;
-  padding: 5rem 2rem 5rem;
-  position: relative; overflow: hidden;
+  background-size: cover; background-position: center 40%;
+  position: relative; padding: 6rem 2rem;
 }
 .hero::after {
-  content: ''; position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(170deg, rgba(12,24,36,0.6) 0%, rgba(18,42,24,0.5) 100%);
-  pointer-events: none; z-index: 1;
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(170deg, rgba(12,24,36,0.75) 0%, rgba(18,42,24,0.65) 100%);
+  pointer-events: none;
 }
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 1060px; margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+.hero-inner {
+  position: relative; z-index: 1;
+  max-width: 700px; margin: 0 auto; text-align: center;
 }
-.hero-text { text-align: left; }
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
   font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 1rem;
 }
 .hero h1 em { font-style: italic; color: var(--gold); }
-.hero .subheading {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  font-weight: 400;
-  color: rgba(255,255,255,0.9); line-height: 1.65; margin-bottom: 0;
+.hero p {
+  font-size: 1.1rem; color: rgba(255,255,255,0.88);
+  max-width: 560px; margin: 0 auto 2rem; line-height: 1.7;
 }
-/* ── HERO FORM CARD ── */
-.hero-form-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 0;
-  box-shadow: 0 12px 48px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
+.btn {
+  display: inline-block;
+  background: var(--gold); color: #fff;
+  padding: 0.9rem 2.4rem; border-radius: 8px;
+  font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
 }
-.hero-form-card-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem; color: #555;
-  margin-bottom: 1.25rem; line-height: 1.55;
+.btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.5); color: #fff;
+  padding: 0.9rem 2.4rem; border-radius: 8px;
+  font-weight: 700; font-size: 0.85rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; margin-left: 1rem;
+  transition: border-color 0.2s;
 }
-@media (max-width: 800px) {
-  .hero-content { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-text { text-align: center; }
-  .hero { margin-top: 60px; }
-}
+.btn-outline:hover { border-color: var(--gold-light); }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-/* ── FAQ ── */
-.faq-list { margin-top: 2rem; }
-.faq-item {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  margin-bottom: 0;
-}
-.faq-item summary {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem; font-weight: 700;
-  color: var(--text-dark); cursor: pointer;
-  padding: 1.1rem 2rem 1.1rem 0;
-  position: relative; list-style: none;
-  outline: none;
-}
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
-  content: '+'; position: absolute;
-  right: 0; top: 50%; transform: translateY(-50%);
-  font-size: 1.4rem; color: var(--gold);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300; transition: transform 0.2s;
-}
-.faq-item[open] summary::after { content: '−'; }
-.faq-item summary:hover { color: var(--forest-dark); }
-.faq-body {
-  padding: 0 0 1.25rem 0;
-  font-size: 0.95rem; line-height: 1.8;
-  color: var(--text-mid);
-}
-.faq-body p { margin-bottom: 0.75rem; }
-.faq-body p:last-child { margin-bottom: 0; }
-.faq-body a { color: var(--forest-light); }
-.faq-body a:hover { color: var(--forest-dark); }
-
+/* PHOTO STRIP */
 .photo-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -234,10 +104,7 @@ nav {
   height: 220px;
   overflow: hidden;
 }
-.photo-strip-item {
-  overflow: hidden; position: relative;
-  cursor: default;
-}
+.photo-strip-item { overflow: hidden; }
 .photo-strip-item img {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center;
@@ -245,675 +112,200 @@ nav {
   display: block;
 }
 .photo-strip-item:hover img { transform: scale(1.05); }
-.photo-strip-caption {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem; color: rgba(255,255,255,0.45);
-  text-align: center; padding: 0.6rem 0;
-  background: var(--night-sky-deep);
-  letter-spacing: 0.1em; text-transform: uppercase;
-}
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .photo-strip { grid-template-columns: repeat(2, 1fr); height: 160px; }
 }
 
-.sig-counter {
-  max-width: 480px; margin: 2rem auto 0;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(212,155,42,0.3);
-  border-radius: 10px; padding: 1.25rem 1.5rem;
-  text-align: left;
-  backdrop-filter: blur(4px);
+/* COUNTER */
+.counter-bar {
+  background: var(--forest);
+  padding: 1.25rem 2rem;
+  display: flex; align-items: center; justify-content: center; gap: 2rem;
+  flex-wrap: wrap;
 }
-.sig-counter-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.15em; text-transform: uppercase;
+.counter-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem; font-weight: 900; color: var(--gold-light); line-height: 1;
+}
+.counter-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  margin-bottom: 0.2rem;
+}
+.counter-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+.counter-track {
+  width: 240px; height: 6px; background: rgba(255,255,255,0.12);
+  border-radius: 4px; overflow: hidden; margin-top: 0.5rem;
+}
+.counter-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+/* WHAT'S HAPPENING */
+.sec { padding: 4.5rem 2rem; }
+.sec-dark { background: var(--night); color: #fff; }
+.sec-alt { background: var(--cream-alt); }
+.container { max-width: 900px; margin: 0 auto; }
+.section-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900;
+  line-height: 1.15; margin-bottom: 1.25rem;
+}
+.section-title span { color: var(--gold); }
+.sec-dark .section-title { color: #fff; }
+.lead { font-size: 1rem; line-height: 1.8; color: var(--text-mid); }
+.sec-dark .lead { color: rgba(255,255,255,0.78); }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px; padding: 1.75rem;
+}
+.card-light {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px; padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.card h3, .card-light h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--gold-light); margin-bottom: 0.6rem;
+}
+.card-light h3 { color: var(--text-dark); }
+.card p, .card-light p {
+  font-size: 0.93rem; color: rgba(255,255,255,0.8); line-height: 1.75;
+}
+.card-light p { color: var(--text-mid); }
+
+/* SIGN PETITIONS */
+.sign-sec { background: var(--forest); padding: 4.5rem 2rem; }
+.sign-sec .section-title { color: #fff; }
+.locations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.location-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(212,155,42,0.25);
+  border-radius: 10px; padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+.location-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700;
   color: var(--gold-light); margin-bottom: 0.4rem;
 }
-.sig-counter-numbers {
-  display: flex; align-items: baseline; gap: 0.4rem;
-  margin-bottom: 0.75rem;
+.location-hours {
+  font-size: 0.78rem; color: rgba(255,255,255,0.55);
+  line-height: 1.7;
 }
-.sig-count {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem; font-weight: 900;
-  color: #fff; line-height: 1;
-}
-.sig-goal {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem; color: rgba(255,255,255,0.55);
-}
-.sig-bar-wrap { margin-bottom: 0.6rem; }
-.sig-bar-track {
-  position: relative; height: 8px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 6px; overflow: visible;
-  margin-bottom: 0.3rem;
-}
-.sig-bar-fill {
-  height: 100%; border-radius: 6px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold-pale));
-  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 0 12px rgba(212,155,42,0.4);
-}
-.sig-bar-threshold {
-  position: absolute; top: -3px;
-  width: 2px; height: 14px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 1px;
-}
-.sig-bar-labels {
-  display: flex; justify-content: space-between;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem; color: rgba(255,255,255,0.4);
-}
-.sig-threshold-label { color: rgba(255,255,255,0.55); }
-.sig-note {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem; color: rgba(255,255,255,0.5);
-  line-height: 1.5; margin: 0;
+.location-closed {
+  font-size: 0.72rem; color: rgba(255,255,255,0.35);
+  margin-top: 0.3rem;
 }
 
-/* ── HERO FORM (inside white card) ── */
-.hero-form {
-  display: flex; flex-direction: column; gap: 1rem;
+/* DEADLINE */
+.deadline-bar {
+  background: var(--gold);
+  padding: 1rem 2rem; text-align: center;
 }
-.hero-form-row { display: flex; gap: 1rem; }
-.hero-form input[type="text"],
-.hero-form input[type="email"],
-.hero-form input[type="tel"] {
-  width: 100%; padding: 0.75rem 1rem;
-  background: #f7f7f7;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px; color: var(--text-dark);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+.deadline-bar p {
+  font-size: 0.92rem; font-weight: 700;
+  color: var(--forest); letter-spacing: 0.03em;
 }
-.hero-form input::placeholder { color: #aaa; }
-.hero-form input:focus {
-  outline: none;
-  border-color: var(--gold);
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(212,155,42,0.15);
-}
-.hero-form-check {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem; font-weight: 600; color: #333;
-  cursor: pointer; margin: 0; padding: 0;
-}
-.hero-form-check input[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  appearance: checkbox;
-  flex-shrink: 0;
-  width: 18px; height: 18px;
-  margin: 0; padding: 0;
-  accent-color: var(--gold);
-}
-.hero-form-check span {
-  display: inline; line-height: 1;
-}
-.hero-card-section-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem; font-weight: 900;
-  color: var(--text-dark); margin-bottom: 0.25rem;
-}
-.hero-card-divider-line {
-  border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 0;
-}
-.hero-card-section { padding: 1.5rem 2rem; }
 
-/* ── BUTTONS ── */
-.btn-primary {
-  background: var(--gold); color: #fff;
-  padding: 0.9rem 2.2rem; border: none; border-radius: 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  text-decoration: none; cursor: pointer;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 16px rgba(212,155,42,0.35);
+/* FORM */
+.form-sec { background: var(--night); padding: 4.5rem 2rem; }
+.form-sec .section-title { color: #fff; }
+.form-sec .lead { color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
+.form-card {
+  background: #fff; border-radius: 12px; padding: 2rem;
+  max-width: 560px; margin: 0 auto;
 }
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(212,155,42,0.45); }
-.btn-outline {
-  background: transparent; border: 2px solid rgba(255,255,255,0.5); color: #fff;
-  padding: 0.9rem 2.2rem; border-radius: 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  text-decoration: none; cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+.form-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="tel"] {
+  width: 100%; padding: 0.7rem 1rem;
+  background: #f7f7f7; border: 1px solid #e0e0e0;
+  border-radius: 8px; font-family: 'Inter', sans-serif;
+  font-size: 0.9rem; color: var(--text-dark);
+  transition: border-color 0.2s;
 }
-.btn-outline:hover { border-color: var(--gold-light); background: rgba(200,184,74,0.15); }
+.form-card input:focus { outline: none; border-color: var(--gold); background: #fff; }
+.form-card input::placeholder { color: #aaa; }
+.form-note { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; font-style: italic; }
+.form-check {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.9rem; font-weight: 600; color: #333;
+  margin-bottom: 0.5rem; cursor: pointer;
+}
+.form-check input { width: 16px; height: 16px; accent-color: var(--gold); }
+.btn-submit {
+  width: 100%; margin-top: 1rem;
+  background: var(--gold); color: #fff; border: none;
+  padding: 0.9rem; border-radius: 8px; cursor: pointer;
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  transition: background 0.2s;
+}
+.btn-submit:hover { background: var(--gold-light); }
 
-/* ── DIVIDERS ── */
+/* FOOTER */
+footer {
+  background: var(--night); color: rgba(255,255,255,0.5);
+  padding: 2rem; text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-brand {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1.2rem; color: var(--gold-light);
+  text-transform: uppercase; margin-bottom: 0.4rem;
+}
+footer p { font-size: 0.8rem; line-height: 1.8; }
+footer a { color: var(--gold-light); text-decoration: none; }
+
 .gold-divider {
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
 }
 
-/* ── SECTIONS ── */
-section { padding: 5rem 0; scroll-margin-top: 70px; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-.container-narrow { max-width: 850px; margin: 0 auto; padding: 0 2rem; }
-.section-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.3em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.75rem;
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3rem); font-weight: 900;
-  line-height: 1.1; color: var(--text-dark); margin-bottom: 1.5rem;
-}
-.section-title span { color: var(--gold); }
-.lead-text { font-size: 1.05rem; line-height: 1.75; color: var(--text-mid); margin-bottom: 1.5rem; }
-p { margin-bottom: 1rem; font-size: 1rem; }
-a { color: var(--lake-blue); }
-
-/* ── HOW DID WE GET HERE ── */
-.sec-backstory { background: var(--night-sky-deep); color: #fff; }
-.sec-backstory .section-title { color: #fff; }
-.sec-backstory .lead-text { color: rgba(255,255,255,0.82); }
-.backstory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
-.backstory-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
-}
-.backstory-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;
-}
-.backstory-card p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; }
-
-/* ── HOW IT WORKS ── */
-.sec-how { background: var(--cream-alt); }
-.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
-.step { text-align: center; }
-.step-number {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.75rem;
-}
-.step h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--text-dark); margin-bottom: 0.5rem;
-}
-.step p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.7; }
-.step-icon { width: 90px; height: 90px; margin: 0 auto 1rem; }
-.step-icon svg { width: 100%; height: 100%; }
-
-/* ── GET 5 SECTION ── */
-.sec-get5 { background: var(--forest-dark); color: #fff; }
-.get5-card {
-  max-width: 700px; margin: 0 auto;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,155,42,0.3);
-  border-radius: 12px; padding: 3rem 2.5rem;
-}
-.get5-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.4rem; font-weight: 900; color: var(--gold);
-  text-align: center; margin-bottom: 0.25rem; line-height: 1.1;
-}
-.get5-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.05rem; color: rgba(255,255,255,0.92);
-  line-height: 1.7; text-align: center; margin-bottom: 0.75rem;
-}
-.get5-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
-.form-field { display: flex; flex-direction: column; gap: 0.3rem; }
-.form-field label {
-  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mid);
-}
-.form-field input {
-  background: #fff; border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 8px; color: var(--text-dark); padding: 0.6rem 0.8rem;
-  font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none;
-}
-.form-field input:focus { border-color: var(--gold); }
-
-/* ── INFO SECTION ── */
-.sec-info { background: var(--cream); }
-.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
-.info-card {
-  background: #fff; border: 1px solid rgba(0,0,0,0.06);
-  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
-  overflow: visible;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-}
-.info-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.75rem;
-}
-.card-header { margin-bottom: 0.75rem; }
-.card-header h3 { margin-bottom: 0; }
-.supporter-avatars { display: flex; gap: 0.5rem; margin-top: 1rem; padding-bottom: 2rem; }
-.supporter-avatars .avatar-wrap { position: relative; cursor: pointer; text-decoration: none; }
-.supporter-avatars img {
-  width: 52px; height: 52px; border-radius: 50%; object-fit: cover;
-  border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.supporter-avatars .avatar-wrap:hover img { transform: scale(1.1); box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
-.supporter-avatars .avatar-tooltip {
-  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
-  background: var(--forest-dark, #1a3a2a); color: #fff; padding: 0.35rem 0.65rem;
-  border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.72rem;
-  font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none;
-  transition: opacity 0.2s; z-index: 10;
-}
-.supporter-avatars .avatar-tooltip::after {
-  content: ''; position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
-  border: 5px solid transparent; border-bottom-color: var(--forest-dark, #1a3a2a);
-}
-.supporter-avatars .avatar-wrap:hover .avatar-tooltip { opacity: 1; }
-.avatar-initial {
-  width: 52px; height: 52px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem; font-weight: 800; color: #fff;
-  border: 2px solid rgba(255,255,255,0.4);
-  letter-spacing: 0.03em;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.supporter-avatars .avatar-wrap:hover .avatar-initial { transform: scale(1.1); box-shadow: 0 2px 8px rgba(0,0,0,0.25); }
-.info-card p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; }
-
-/* ── HOUSING SECTION ── */
-.sec-housing-q { background: var(--forest-dark); color: #fff; }
-.sec-housing-q .section-title { color: #fff; }
-.sec-housing-q .lead-text { color: rgba(255,255,255,0.82); }
-.housing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem; }
-.housing-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--gold); border-radius: 8px; padding: 2rem;
-}
-.housing-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;
-}
-.housing-card p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; }
-.housing-card a { color: var(--gold-light); }
-.housing-card a:hover { color: var(--gold); }
-.track-record {
-  margin-top: 3.5rem; padding: 2.5rem;
-  background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.08);
-  border-left: 4px solid var(--gold); border-radius: 8px;
-}
-.track-record h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;
-}
-.track-record p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 1rem; }
-.track-record p:last-child { margin-bottom: 0; }
-.track-record strong { color: #fff; }
-.track-record ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
-.track-record li {
-  font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.8;
-  padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding-left: 1.5rem; position: relative;
-}
-.track-record li::before { content: '\2717'; color: var(--gold); position: absolute; left: 0; font-weight: 700; }
-.track-record .highlight-stat {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem; font-weight: 700; color: var(--gold-light);
-  display: block; margin-bottom: 0.25rem;
-}
-
-/* ── ACTION CARDS ── */
-.sec-action { background: var(--night-sky-deep); color: #fff; }
-.sec-action .section-title { color: #fff; }
-.sec-action a { color: var(--gold-light); }
-.action-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem; margin-top: 1.5rem;
-}
-.action-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(212,155,42,0.15);
-  padding: 2rem;
-  border-top: 4px solid var(--forest-mid);
-  border-radius: 8px;
-  transition: border-color 0.3s, background 0.3s;
-}
-.action-card:hover { border-color: var(--gold); background: rgba(255,255,255,0.08); }
-.action-card.urgent { border-top-color: var(--alert-red); }
-.action-card h4 {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold-light); margin-bottom: 0.8rem; font-size: 1.05rem;
-}
-.action-card p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
-.action-card .btn {
-  display: inline-block; background: var(--alert-red); color: white;
-  padding: 0.6rem 1.5rem; text-decoration: none; border-radius: 6px;
-  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.85rem;
-  margin-top: 0.5rem; letter-spacing: 0.05em; transition: background 0.3s;
-}
-.action-card .btn:hover { opacity: 0.9; }
-.email-block {
-  background: rgba(255,255,255,0.06); padding: 1.2rem; margin: 1rem 0;
-  border-radius: 6px;
-  font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.82rem; word-break: break-all;
-  color: rgba(255,255,255,0.85); line-height: 1.8;
-}
-
-/* ── COLLAPSIBLE SUBSECTIONS ── */
-details.subsection {
-  border-left: 4px solid var(--gold);
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  background: rgba(26,26,46,0.04);
-  border-radius: 0 8px 8px 0;
-}
-details.subsection summary {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  min-height: 2rem;
-}
-details.subsection summary::-webkit-details-marker { display: none; }
-details.subsection summary::after {
-  content: '+';
-  font-family: 'Inter', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--gold);
-  flex-shrink: 0;
-  transition: transform 0.2s;
-  width: 1.5rem;
-  text-align: center;
-  align-self: center;
-}
-details[open].subsection summary::after {
-  content: '\2212';
-}
-details[open] .more-trigger { display: none; }
-details.subsection summary h3 {
-  margin: 0;
-  align-self: center;
-}
-details.subsection .detail-body {
-  margin-top: 1.25rem;
-}
-.sec-golf details.subsection,
-.sec-dark-content details.subsection {
-  background: rgba(255,255,255,0.05);
-  border-left-color: var(--gold-light);
-}
-.sec-golf details.subsection summary::after,
-.sec-dark-content details.subsection summary::after {
-  color: var(--gold-light);
-}
-
-/* ── SUBSECTION (non-details) ── */
-.subsection {
-  margin: 2.5rem 0;
-  padding: 2rem;
-  background: rgba(255,255,255,0.04);
-  border-left: 4px solid var(--gold);
-}
-.subsection h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: var(--gold-light);
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-.subsection p { font-size: 0.95rem; line-height: 1.8; margin-bottom: 0.8rem; }
-
-/* ── VISION CARDS ── */
-.sec-vision { background: var(--cream-alt); }
-.vision-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.vision-card {
-  background: #fff;
-  border-top: 4px solid var(--gold);
-  padding: 1.8rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.vision-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
-.vision-card .icon { margin-bottom: 1rem; line-height: 1; }
-.vision-card .icon svg { width: 42px; height: 42px; }
-.vision-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem; margin-bottom: 0.75rem;
-  color: var(--forest-dark);
-}
-.vision-card p { font-size: 0.88rem; line-height: 1.7; color: #444; margin-bottom: 0; }
-
-/* ── TIMELINE ── */
-.timeline { position: relative; margin-top: 2.5rem; }
-.timeline::before {
-  content: ''; position: absolute; left: 120px; top: 0; bottom: 0;
-  width: 2px; background: linear-gradient(to bottom, var(--gold), transparent);
-}
-.timeline-item { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
-.timeline-date {
-  width: 120px; min-width: 120px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem; font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--gold-light);
-  padding-top: 0.25rem;
-  text-align: right;
-  padding-right: 1.5rem;
-}
-.timeline-dot {
-  width: 14px; min-width: 14px; height: 14px;
-  background: var(--gold);
-  border-radius: 50%;
-  margin-top: 0.4rem;
-  box-shadow: 0 0 12px rgba(200,146,42,0.6);
-}
-.timeline-content { flex: 1; padding-left: 1rem; }
-.timeline-content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; color: var(--gold-light);
-  margin-bottom: 0.3rem;
-}
-.timeline-content p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 0.5rem; }
-.timeline-content a { color: var(--gold-light); }
-
-/* ── INVESTIGATIVE / WHY SECTIONS ── */
-.sec-dark-content { background: var(--night-sky-mid); color: rgba(255,255,255,0.9); }
-.sec-dark-content .section-title { color: #fff; }
-.sec-dark-content h3 { color: var(--gold-light); }
-.sec-dark-content a { color: var(--gold-light); }
-.sec-dark-content .lead-text { color: rgba(255,255,255,0.75); }
-
-/* ── HOUSING SECTION ── */
-.sec-housing { background: var(--cream-alt); }
-.sec-housing .subsection { margin-bottom: 2rem; }
-.sec-housing .subsection p { font-size: 0.95rem; line-height: 1.85; margin-bottom: 0.9rem; }
-.sec-housing a { color: var(--gold); }
-.sec-housing a:hover { color: var(--gold-light); }
-.sec-housing .subsection h3 { color: var(--forest-dark); }
-
-/* ── SCHOOLS SECTION ── */
-.sec-schools { background: var(--night-sky-deep); color: #fff; }
-.sec-schools .section-title { color: #fff; }
-.sec-schools .subsection { border-left-color: var(--gold-light); }
-.sec-schools .subsection p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.9); margin-bottom: 0.9rem; }
-.sec-schools a { color: var(--gold-light); }
-.sec-schools a:hover { color: var(--gold-pale); }
-
-/* ── GOLF & HEALTH SECTION ── */
-.sec-golf { background: #0c1e0c; color: #fff; }
-.sec-golf .section-title { color: #fff; }
-.sec-golf .subsection { border-left-color: var(--gold-light); background: rgba(255,255,255,0.04); }
-.sec-golf .subsection h3 { color: var(--gold-light); }
-.sec-golf .subsection p { font-size: 0.95rem; line-height: 1.85; color: rgba(255,255,255,0.9); margin-bottom: 0.9rem; }
-.sec-golf a { color: var(--gold-light); }
-.sec-golf a:hover { color: var(--gold-pale); }
-
-/* ── HOMEGROWN ── */
-.sec-homegrown { background: var(--forest-dark); color: rgba(255,255,255,0.9); }
-.sec-homegrown .section-title { color: #fff; }
-.sec-homegrown a { color: var(--gold-light); }
-
-/* ── SHARE BAR ── */
-.share-bar {
-  display: flex; align-items: center; justify-content: center;
-  gap: 0.6rem; margin-top: 2rem; padding-top: 1.2rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-.share-bar .share-label {
-  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.45; margin-right: 0.3rem;
-}
-.share-bar a, .share-bar button {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.55rem 1.1rem; border-radius: 6px;
-  font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700;
-  letter-spacing: 0.04em; text-decoration: none; cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.1s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75);
-}
-.share-bar a { background: var(--gold); border-color: var(--gold); color: #1a1a0e; }
-.share-bar a:hover { background: var(--gold-light); border-color: var(--gold-light); color: #1a1a0e; transform: translateY(-1px); }
-.share-bar button:hover { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.95); transform: translateY(-1px); }
-.sec-vision .share-bar, .sec-housing .share-bar { border-top-color: rgba(0,0,0,0.08); }
-.sec-vision .share-bar a, .sec-vision .share-bar button,
-.sec-housing .share-bar a, .sec-housing .share-bar button {
-  border-color: rgba(0,0,0,0.15); background: rgba(0,0,0,0.06); color: rgba(0,0,0,0.55);
-}
-.sec-vision .share-bar a, .sec-housing .share-bar a { background: var(--forest-dark); border-color: var(--forest-dark); color: #fff; }
-.sec-vision .share-bar a:hover, .sec-housing .share-bar a:hover { background: var(--forest-mid); border-color: var(--forest-mid); color: #fff; transform: translateY(-1px); }
-.sec-vision .share-bar button:hover, .sec-housing .share-bar button:hover { background: rgba(0,0,0,0.1); color: rgba(0,0,0,0.75); transform: translateY(-1px); }
-.sec-vision .share-bar .share-label, .sec-housing .share-bar .share-label { color: rgba(0,0,0,0.4); }
-.share-bar .copied-msg { font-size: 0.65rem; color: var(--gold); opacity: 0; transition: opacity 0.3s; }
-.share-bar .copied-msg.show { opacity: 1; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--night-sky-deep); color: rgba(255,255,255,0.6);
-  padding: 3rem 2rem; text-align: center;
-}
-footer .footer-brand {
-  font-family: 'Righteous', 'Arial Black', sans-serif;
-  font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; text-transform: uppercase;
-}
-footer p { font-size: 0.82rem; line-height: 1.8; margin-bottom: 0.3rem; }
-footer a { color: var(--gold-light); }
-.footer-gold { height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin-bottom: 2rem; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 800px) {
-  .info-grid { grid-template-columns: 1fr; }
-  .backstory-grid { grid-template-columns: 1fr; }
-  .housing-grid { grid-template-columns: 1fr; }
-  .action-grid { grid-template-columns: 1fr; }
-  .steps-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .get5-form { grid-template-columns: 1fr; }
-  nav { padding: 0 1rem; top: 0; }
-  .nav-links { display: none; }
-  html, body { overflow-x: hidden; max-width: 100%; }
-  .nav-links.open {
-    display: flex; flex-direction: column;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: rgba(12,24,36,0.98); padding: 1rem 1.5rem; gap: 0.8rem;
-  }
-  .hamburger { display: block; }
-  section { padding: 3rem 0; }
-  .hero { padding: 5rem 1.5rem 4rem; margin-top: 60px; }
-  .get5-card { padding: 2rem 1.5rem; }
-  .container, .container-narrow { padding: 0 1.25rem; }
+@media (max-width: 700px) {
+  .two-col { grid-template-columns: 1fr; }
+  .locations { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+  .btn-outline { margin-left: 0; }
+  .hero-btns { flex-direction: column; align-items: center; }
 }
 </style>
 </head>
-
 <body>
 
-<!-- ══════════ ANNOUNCEMENT BANNER ══════════ -->
-<div class="announce-bar">
-  <div class="announce-bar-inner">
-    <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-      <div class="announce-dot"></div>
-      <span class="announce-tag">New</span>
-    </div>
-    <span class="announce-text">Sign our petitions at <strong>Amity Coffee</strong><span class="announce-hours">Tue–Fri 7am–3pm · Sat 8am–3pm · Sun 8am–1pm</span></span>
-    <span class="announce-sep">·</span>
-    <span class="announce-text"><strong>Duluth Gear Exchange</strong><span class="announce-hours">Tue–Fri 11am–6pm · Sat–Sun 10am–5pm</span></span>
-  </div>
-</div>
-
-<!-- ══════════ NAVIGATION ══════════ -->
 <nav>
   <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
-  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-  </ul>
+  <a class="nav-link" href="/">Full Site &rarr;</a>
 </nav>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Let Duluthians<br><em>Decide</em> Lester.</h1>
-      <p class="subheading">The former Lester Park Golf Course is public land. Volunteer with us to make sure Duluthians have a say in its future — before the city acts without asking you.</p>
-      <div class="sig-counter">
-        <div class="sig-counter-label">Signatures Collected</div>
-        <div class="sig-counter-numbers">
-          <span class="sig-count" id="sigCount">0</span>
-          <span class="sig-goal">/ <span id="sigGoal">7,200</span> goal</span>
-        </div>
-        <div class="sig-bar-wrap">
-          <div class="sig-bar-track">
-            <div class="sig-bar-fill" id="sigBar" style="width:0%"></div>
-          </div>
-          <div class="sig-bar-labels">
-            <span>0</span>
-            <span>7,200</span>
-          </div>
-        </div>
-        <p class="sig-note">We need 7,200 signatures to force a city-wide vote on the future of Lester.</p>
-      </div>
-    </div>
-    <div class="hero-form-card">
-      <div class="hero-card-section" id="stay-connected">
-        <p class="hero-card-section-label">Join the Campaign</p>
-        <p class="hero-form-card-sub">267.5 acres of public land. Duluthians deserve a say.</p>
-        <form name="hero-signup" method="POST" data-netlify="true" action="/volunteer" class="hero-form">
-          <input type="hidden" name="form-name" value="hero-signup">
-          <div class="hero-form-row">
-            <input type="text" name="first-name" placeholder="First name" required>
-            <input type="text" name="last-name" placeholder="Last name" required>
-          </div>
-          <input type="email" name="email" placeholder="Email address" required>
-          <input type="tel" name="phone" placeholder="Phone number">
-          <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:0;font-style:italic;">We'll send you campaign updates by email.</p>
-          <label class="hero-form-check">
-            <input type="checkbox" name="volunteer" value="yes">
-            <span>I can volunteer</span>
-          </label>
-          <p style="font-family:'Inter',sans-serif;font-size:0.82rem;color:var(--text-mid);margin:-0.5rem 0 0;font-style:italic;">We need your help to stop the sale of the land. We know canvassing isn't the most fun thing, but in this case it is an absolute necessity to save our public land from being lost forever.</p>
-          <button type="submit" class="btn-primary" style="width:100%;margin-top:0.4rem;">Sign Me Up</button>
-        </form>
-      </div>
+  <div class="hero-inner">
+    <h1>267 Acres of Public Land.<br><em>Duluthians Deserve a Vote.</em></h1>
+    <p>The city is moving to sell the former Lester Park Golf Course to private developers — without asking you. We're collecting signatures to force a city-wide referendum before it's too late.</p>
+    <div class="hero-btns">
+      <a href="#sign" class="btn">Sign the Petition</a>
+      <a href="#join" class="btn-outline">Join the Campaign</a>
     </div>
   </div>
 </div>
 
+<!-- PHOTO STRIP -->
 <div class="photo-strip">
   <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
   <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
@@ -921,273 +313,131 @@ footer a { color: var(--gold-light); }
   <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
 </div>
 
-<section class="sec-info">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center;">What's at Stake</h2>
-    <p class="lead-text" style="text-align:center;max-width:700px;margin:0 auto 2.5rem;">The city is moving to rezone and sell 267 acres of public land to private developers — without a public vote. <strong>We believe Duluthians should have the final say. That's how democracy is supposed to work.</strong></p>
+<!-- COUNTER -->
+<div class="counter-bar">
+  <div>
+    <div class="counter-label">Signatures Collected</div>
+    <div class="counter-num" id="sigCount">811</div>
+  </div>
+  <div>
+    <div class="counter-track">
+      <div class="counter-fill" id="sigBar" style="width:0%"></div>
+    </div>
+    <div class="counter-note">7,200 needed by June 1</div>
+  </div>
+</div>
 
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>What's Happening</h3>
-        <p>The former Lester Park Golf Course — 267.5 acres of public land on Duluth's east side — is headed for sale to developers who want to build a high-end golf resort, luxury housing, a hotel, and restaurants. A ~$197k Land Use Study is underway but nothing it says will stop the developers from getting the land. <a href="learn-more.html">Learn more&nbsp;&rarr;</a></p>
+<!-- WHAT'S HAPPENING -->
+<div class="sec sec-dark">
+  <div class="container">
+    <p class="section-label">What's happening</p>
+    <h2 class="section-title">Public Land. Private Developers. No Vote.</h2>
+    <p class="lead" style="max-width:640px;margin-bottom:2rem;">The Duluth City Council authorized the transfer of 267.5 acres of the former Lester Park Golf Course to DEDA for $1 — with the intent to hand it to out-of-state developers for a private golf resort, luxury housing, and a hotel. No public vote was held. We believe that's wrong.</p>
+    <div class="two-col">
+      <div class="card">
+        <h3>The Land</h3>
+        <p>267.5 acres of public parkland on Duluth's east side, adjacent to Lester Park and Hawk Ridge. Once sold, it's gone forever.</p>
       </div>
-      <div class="info-card">
-        <h3>The Window</h3>
-        <p>The Land Use Study is due back in July. We need to make our voices heard well before then so that city hall knows Duluthians demand a say before public land is sold.</p>
-      </div>
-      <div class="info-card">
-        <h3>Why It Matters</h3>
-        <p>Once public land is sold, it's gone forever. Duluth already has the trail builders, skiers, cyclists, naturalists, and park planners to build something extraordinary here — on our own terms, without selling it. We don't need developers at the table. In fact, it's better if they're not. <a href="learn-more.html">Learn more&nbsp;&rarr;</a></p>
-      </div>
-      <div class="info-card">
-        <h3>Who We Are</h3>
-        <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one belief: public land decisions belong to the public. <a href="bios.html">Learn more&nbsp;&rarr;</a></p>
-        <div class="supporter-avatars">
-          <a href="bios.html#michael-bernstein" class="avatar-wrap"><span class="avatar-tooltip">Michael Bernstein</span><img src="michael-bernstein.jpg" alt="Michael Bernstein"></a>
-          <a href="bios.html#laura-erickson" class="avatar-wrap"><span class="avatar-tooltip">Laura Erickson</span><img src="laura-erickson.jpg" alt="Laura Erickson"></a>
-          <a href="bios.html#meghan-morrow" class="avatar-wrap"><span class="avatar-tooltip">Meghan Morrow</span><img src="meghan-morrow.jpg" alt="Meghan Morrow"></a>
-          <a href="bios.html#brett-cease" class="avatar-wrap"><span class="avatar-tooltip">Brett Cease</span><img src="https://citizensclimatelobby.org/wp-content/uploads/2022/10/Brett500x500.jpg" alt="Brett Cease"></a>
-          <a href="bios.html#dan-proctor" class="avatar-wrap"><span class="avatar-tooltip">Dan Proctor</span><img src="dan-proctor.jpg" alt="Dan Proctor"></a>
-        </div>
+      <div class="card">
+        <h3>The Ask</h3>
+        <p>Our petitions require the city to hold a public vote before any rezoning or sale. 7,200 valid signatures from registered Duluth voters by June 1.</p>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <div class="gold-divider"></div>
 
-<section id="vision" class="sec-vision">
+<!-- SIGN IN PERSON -->
+<div class="sign-sec" id="sign">
   <div class="container">
-    <p class="section-label">Homegrown Lester</p>
-    <h2 class="section-title">A Community Vision for<br><span>Lester's Future</span></h2>
-    <p class="lead-text" style="max-width:720px">Duluth deserves a living park that serves the whole community for generations.</p>
-
-    <div class="vision-grid">
-      <div class="vision-card">
-        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="22" r="13" stroke="#5a6e3a" stroke-width="2"/><circle cx="20" cy="22" r="2" fill="#5a6e3a"/><line x1="20" y1="22" x2="20" y2="9" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="9" y2="29" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="31" y2="29" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="7" y2="20" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="33" y2="20" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="13" y2="11" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="27" y2="11" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="12" y2="33" stroke="#5a6e3a" stroke-width="1.2"/><line x1="20" y1="22" x2="28" y2="33" stroke="#5a6e3a" stroke-width="1.2"/><path d="M14 8L20 5L26 8" stroke="#5a6e3a" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg></div>
-        <h3>Family-Friendly Trail Network</h3>
-        <p>Duluth is one of only seven International Mountain Bicycling Association Gold Level Ride Centers in the world — but much of the terrain is expert-level. Lester's gently rolling former fairways are a blank canvas for the beginner and intermediate trails that would make Duluth a destination for families who currently go to places like Cuyuna instead. Think: Bentonville North.</p>
-      </div>
-      <div class="vision-card">
-        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C14 4 8 12 8 20C8 26 12 30 16 32V38H24V32C28 30 32 26 32 20C32 12 26 4 20 4Z" fill="#5a6e3a" fill-opacity="0.12" stroke="#5a6e3a" stroke-width="1.8"/><rect x="17" y="28" width="6" height="10" fill="#5a6e3a" fill-opacity="0.25" stroke="#5a6e3a" stroke-width="1"/><circle cx="20" cy="16" r="3" stroke="#5a6e3a" stroke-width="1.2" fill="#5a6e3a" fill-opacity="0.15"/><path d="M15 22C17 20 23 20 25 22" stroke="#5a6e3a" stroke-width="1" stroke-linecap="round"/></svg></div>
-        <h3>Nature Center &amp; Preschool</h3>
-        <p>Modeled on Hartley Nature Center, whose preschool is so well-regarded that some parents drive from an hour away in Wisconsin to bring their kids. There is a severe daycare and preschool shortage that a Lester nature center and preschool could address. Or, thinking bigger: why not create a campus along the lines of Wolf Ridge — to serve as an environmental learning center for Duluth schools year-round and visiting students from across the region?</p>
-      </div>
-      <div class="vision-card">
-        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 38V18" stroke="#5a6e3a" stroke-width="1.8" stroke-linecap="round"/><path d="M14 38V22" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><path d="M26 38V20" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><circle cx="20" cy="14" r="4" fill="#5a6e3a" fill-opacity="0.2" stroke="#5a6e3a" stroke-width="1.5"/><circle cx="14" cy="18" r="3" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.2"/><circle cx="26" cy="16" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.2"/><path d="M20 14L18 10M20 14L22 10M20 14L20 9" stroke="#5a6e3a" stroke-width="1" stroke-linecap="round"/></svg></div>
-        <h3>Native Plant Restoration</h3>
-        <p>Transitioning former fairways from managed turf to native plantings has been shown to increase local biodiversity by 30% within two years.. <a href="#golf" style="color:var(--forest-light);">Golf is in decline, and other communities are investing in re-wilding the land</a>.</p>
-      </div>
-      <div class="vision-card">
-        <div class="icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="10" r="4" fill="#5a6e3a" fill-opacity="0.2" stroke="#5a6e3a" stroke-width="1.5"/><circle cx="10" cy="18" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><circle cx="30" cy="18" r="3.5" fill="#5a6e3a" fill-opacity="0.15" stroke="#5a6e3a" stroke-width="1.3"/><path d="M20 14V20L14 26" stroke="#5a6e3a" stroke-width="1.3" stroke-linecap="round"/><path d="M20 20L26 26" stroke="#5a6e3a" stroke-width="1.3" stroke-linecap="round"/><path d="M10 22V28L16 34" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/><path d="M30 22V28L24 34" stroke="#5a6e3a" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-        <h3>Community Spaces</h3>
-        <p>A home for the Duluth Art Institute (currently in an office building downtown). Workshop space for the Duluth Folk School, which has outgrown its current location. A kids' maker space mentored by UMD and Lake Superior College engineering students. A family birding club with Hawk Ridge next door. The only constraint on the possibilities is our imagination.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════ FAQ ══════════ -->
-<section id="faq" class="sec-info">
-  <div class="container" style="max-width:860px;">
-    <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
-
-    <div class="faq-list">
-
-      <details class="faq-item">
-        <summary>What is Our Park Our Vote?</summary>
-        <div class="faq-body">
-          <p><strong>Our Park Our Vote</strong> is a not-for-profit group of Duluth residents united by one belief: public land decisions belong to the public. We formed in mid-February 2026, following the City Council's passage of Ordinance 25-032-O authorizing the conditional transfer of the former Lester Park Golf Course to DEDA.</p>
+    <p class="section-label">Sign in person</p>
+    <h2 class="section-title">Find a Petition Near You</h2>
+    <p class="lead" style="color:rgba(255,255,255,0.65);max-width:560px;margin-bottom:0;">Petition sheets are available at three locations across Duluth. You must be a registered Duluth voter to sign.</p>
+    <div class="locations" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="location-card">
+        <div class="location-name">Amity Coffee</div>
+        <div class="location-hours">
+          Tue–Fri 7am–3pm<br>
+          Sat 8am–3pm<br>
+          Sun 8am–1pm
         </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>What's happening with Lester Park?</summary>
-        <div class="faq-body">
-          <p>The city is moving to rezone and sell 267 acres of public land — the former Lester Park Golf Course — to private developers who want to build a high-end golf resort, luxury housing, a hotel, and restaurants. A ~$197k Land Use Study is underway but nothing it says will stop the developers from getting the land. <a href="learn-more.html">Learn more →</a></p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>There's a land use study underway. Shouldn't we wait?</summary>
-        <div class="faq-body">
-          <p>No. The resolution mandating the study explicitly favors housing development and a golf course as outcomes. A golf course alone requires 150–220 acres — leaving only 70–80 acres for 455 housing units, a hotel, retail, trails, and parking. <a href="lester-space.html">See how the land actually divides up →</a></p>
-          <p>We're not asking anyone to prejudge the outcome. We're asking that Duluthians get to vote on it.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>How can I help?</summary>
-        <div class="faq-body">
-          <p>Sign up to volunteer using the form at the top of this page. You can help by talking to your neighbors, attending City Council meetings, contacting your councilors, or organizing in your community. Email <a href="mailto:info@ourparkourvote.org">info@ourparkourvote.org</a> to learn more.</p>
-        </div>
-      </details>
-
-    </div>
-  </div>
-</section>
-
-<div class="gold-divider"></div>
-
-<!-- ══════════ TAKE ACTION ══════════ -->
-<section id="action" class="sec-action">
-  <div class="container">
-    <p class="section-label" style="color:var(--gold-light)">Take Action</p>
-    <h2 class="section-title" style="color:#fff">Use Your Voice</h2>
-
-    <div class="action-grid">
-      <div class="action-card urgent">
-        <h4>🏛️ Attend City Council &amp; Speak Out</h4>
-        <p>The Duluth City Council meets on the <strong>2nd and 4th Monday of every month at 6:00 PM</strong> in Council Chambers, 3rd Floor, City Hall. Sign up at the Clerk's desk to speak during "Opportunity for Citizens to be Heard."</p>
-        <p style="font-size:0.85rem;line-height:1.9;margin-top:0.5rem;">
-          <strong>Upcoming meetings:</strong><br>
-          Monday, April 13, 2026 — 6:00 PM<br>
-          Monday, April 27, 2026 — 6:00 PM
-        </p>
+        <div class="location-closed">Closed Mondays</div>
       </div>
-
-      <div class="action-card">
-        <h4>📧 Contact the Mayor &amp; Council</h4>
-        <p>Tell them you want a public vote before any rezoning of Lester Park.</p>
-        <p style="font-size:0.85rem;margin-top:0.5rem;"><strong>Mayor Reinert:</strong> mayor[at]duluthmn.gov | 218-730-5230</p>
-        <div class="email-block">
-          wdurrwachter[at]duluthmn.gov;
-          ddesotelle[at]duluthmn.gov;
-          rrandorf[at]duluthmn.gov;
-          dclanaugh[at]duluthmn.gov;
-          jkennedy[at]duluthmn.gov;
-          jjohnson[at]duluthmn.gov;
-          aforsman[at]duluthmn.gov;
-          lnephew[at]duluthmn.gov;
-          ttomanek[at]duluthmn.gov
+      <div class="location-card">
+        <div class="location-name">Duluth Gear Exchange</div>
+        <div class="location-hours">
+          Tue–Fri 11am–6pm<br>
+          Sat–Sun 10am–5pm
         </div>
-        <p style="font-size:0.82rem;margin-top:0.75rem;">Copy all addresses into your "To:" field to email all nine councilors at once.</p>
+        <div class="location-closed">Closed Mondays</div>
       </div>
-
-      <div class="action-card">
-        <h4>📖 Read the Full Backstory</h4>
-        <p>The developer, the working group, the land use study, the affordable housing promises, and DEDA's track record — all of it in one place.</p>
-        <a href="learn-more.html" class="btn">Learn More →</a>
+      <div class="location-card">
+        <div class="location-name">Zenith Bookstore</div>
+        <div class="location-hours">
+          Mon–Sat 10am–7pm<br>
+          Sun 10am–4pm
+        </div>
+        <div class="location-closed">Open every day</div>
+      </div>
+      <div class="location-card">
+        <div class="location-name">Stitch Craft</div>
+        <div class="location-hours">
+          Mon, Wed–Fri 10am–5pm<br>
+          Sat–Sun 10am–6pm
+        </div>
+        <div class="location-closed">Closed Tuesdays</div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ══════════ FOOTER ══════════ -->
+<!-- DEADLINE -->
+<div class="deadline-bar">
+  <p>Deadline: June 1, 2026 &nbsp;·&nbsp; 7,200 signatures needed &nbsp;·&nbsp; Every signature counts</p>
+</div>
+
+<!-- JOIN FORM -->
+<div class="form-sec" id="join">
+  <div class="container" style="text-align:center;">
+    <p class="section-label" style="justify-content:center;display:flex;">Join the Campaign</p>
+    <h2 class="section-title">Stay Connected &amp; Volunteer</h2>
+    <p class="lead">Get campaign updates and let us know if you can help collect signatures.</p>
+    <div class="form-card">
+      <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you">
+        <input type="hidden" name="form-name" value="hero-signup">
+        <div class="form-row">
+          <input type="text" name="first-name" placeholder="First name" required>
+          <input type="text" name="last-name" placeholder="Last name" required>
+        </div>
+        <input type="email" name="email" placeholder="Email address" required style="width:100%;margin-bottom:1rem;">
+        <input type="tel" name="phone" placeholder="Phone number" style="width:100%;margin-bottom:0.75rem;">
+        <p class="form-note">We'll send you campaign updates by email.</p>
+        <label class="form-check">
+          <input type="checkbox" name="volunteer" value="yes">
+          I can volunteer to collect signatures
+        </label>
+        <button type="submit" class="btn-submit">Sign Me Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</div>
-  <p>Paid for by Our Park Our Vote, a not-for-profit, community-driven initiative.</p>
-  <p><a href="/">ourparkourvote.org</a></p>
+  <p>Not-for-profit · 1346 W. Arrowhead Rd. #324, Duluth MN 55811</p>
+  <p><a href="mailto:info@ourparkourvote.org">info<!---->@<!---->ourparkourvote.org</a> · <a href="https://ourparkourvote.org">ourparkourvote.org</a></p>
 </footer>
 
-
 <script>
-function copyLink(sectionId, btn) {
-  const url = window.location.origin + window.location.pathname + '#' + sectionId;
-  navigator.clipboard.writeText(url).then(function() {
-    const msg = document.getElementById('copied-' + sectionId);
-    if (msg) {
-      msg.classList.add('show');
-      setTimeout(function() { msg.classList.remove('show'); }, 2000);
-    }
-  }).catch(function() {
-    const ta = document.createElement('textarea');
-    ta.value = url;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const msg = document.getElementById('copied-' + sectionId);
-    if (msg) {
-      msg.classList.add('show');
-      setTimeout(function() { msg.classList.remove('show'); }, 2000);
-    }
-  });
-}
-
-function copySubLink(btn) {
-  let el = btn;
-  while (el && el.tagName !== 'DETAILS' && el.tagName !== 'SECTION') {
-    el = el.parentElement;
-  }
-  if (el && el.tagName === 'DETAILS' && !el.id) {
-    while (el && el.tagName !== 'SECTION') {
-      el = el.parentElement;
-    }
-  }
-  const sectionId = el ? el.id : '';
-  const url = window.location.origin + window.location.pathname + (sectionId ? '#' + sectionId : '');
-  navigator.clipboard.writeText(url).then(function() {
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(function() { btn.textContent = orig; }, 2000);
-  }).catch(function() {
-    const ta = document.createElement('textarea');
-    ta.value = url;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(function() { btn.textContent = orig; }, 2000);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var hash = window.location.hash.substring(1);
-  if (!hash) return;
-  var el = document.getElementById(hash);
-  if (el && el.tagName === 'DETAILS') {
-    el.open = true;
-    setTimeout(function() { el.scrollIntoView({behavior: 'smooth', block: 'start'}); }, 100);
-  }
-});
-</script>
-
-<script>
-// ── SIGNATURE COUNTER ──────────────────────────────────────
-// To update: change SIGNATURES_COLLECTED to the current count
 const SIGNATURES_COLLECTED = 811;
 const GOAL = 7200;
-
 (function() {
-  const fill = document.getElementById('sigBar');
-  const countEl = document.getElementById('sigCount');
-
-  if (!fill) return;
-
   const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
-
-  fill.style.width = pct + '%';
-  countEl.textContent = SIGNATURES_COLLECTED.toLocaleString();
+  document.getElementById('sigBar').style.width = pct + '%';
+  document.getElementById('sigCount').textContent = SIGNATURES_COLLECTED.toLocaleString();
 })();
 </script>
-  <script>
-document.querySelector('form[name="hero-signup"]').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = this;
-  var data = new FormData(form);
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(data).toString()
-  })
-  .then(function() {
-    var params = new URLSearchParams({
-      'first-name': data.get('first-name') || '',
-      'last-name':  data.get('last-name')  || '',
-      'email':      data.get('email')      || '',
-      'phone':      data.get('phone')      || ''
-    });
-    window.location.href = '/thank-you?' + params.toString();
-  })
-  .catch(function() {
-    form.setAttribute('action', '/thank-you');
-    form.submit();
-  });
-});
-</script>
+
 </body>
 </html>
