@@ -162,33 +162,39 @@ nav {
 .location-closed { font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 0.3rem; }
 .deadline-bar { background: var(--gold); padding: 1rem 2rem; text-align: center; }
 .deadline-bar p { font-size: 0.92rem; font-weight: 700; color: var(--forest); letter-spacing: 0.03em; }
+
+/* ── JOIN SECTION ───────────────────────────────────── */
 .form-sec { background: var(--night); padding: 4.5rem 2rem; }
 .form-sec .section-title { color: #fff; }
 .form-sec .lead { color: rgba(255,255,255,0.65); margin-bottom: 2rem; }
-.form-card { background: #fff; border-radius: 12px; padding: 2rem; max-width: 560px; margin: 0 auto; }
-.form-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
-.form-card input[type="text"],
-.form-card input[type="email"],
-.form-card input[type="tel"] {
-  width: 100%; padding: 0.7rem 1rem; background: #f7f7f7; border: 1px solid #e0e0e0;
-  border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text-dark);
-  transition: border-color 0.2s;
+.join-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,155,42,0.25);
+  border-top: 4px solid var(--gold);
+  border-radius: 14px; padding: 2rem 1.75rem;
+  max-width: 480px; margin: 0 auto;
 }
-.form-card input:focus { outline: none; border-color: var(--gold); background: #fff; }
-.form-card input::placeholder { color: #aaa; }
-.form-note { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; font-style: italic; }
-.form-check {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.9rem; font-weight: 600; color: #333; margin-bottom: 0.5rem; cursor: pointer;
+.vf-row { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; }
+.vf-input {
+  width: 100%; padding: 0.65rem 0.9rem;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.88rem;
+  color: #fff; transition: border-color 0.2s;
 }
-.form-check input { width: 16px; height: 16px; accent-color: var(--gold); }
-.btn-submit {
-  width: 100%; margin-top: 1rem; background: var(--gold); color: #fff; border: none;
+.vf-input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.1); }
+.vf-input::placeholder { color: rgba(255,255,255,0.35); }
+.btn-submit-vol {
+  width: 100%; margin-top: 0.25rem; background: var(--gold); color: #fff; border: none;
   padding: 0.9rem; border-radius: 8px; cursor: pointer; font-family: 'Inter', sans-serif;
   font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.15s;
 }
-.btn-submit:hover { background: var(--gold-light); }
+.btn-submit-vol:hover { background: var(--gold-light); transform: translateY(-1px); }
+.vf-note {
+  font-size: 0.78rem; color: rgba(255,255,255,0.35);
+  margin-top: 0.75rem; text-align: center; line-height: 1.6;
+}
+
 footer {
   background: var(--night); color: rgba(255,255,255,0.5);
   padding: 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);
@@ -206,7 +212,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 @media (max-width: 700px) {
   .two-col { grid-template-columns: 1fr; }
   .locations { grid-template-columns: 1fr; }
-  .form-row { flex-direction: column; }
+  .vf-row { flex-direction: column; }
   .btn-outline { margin-left: 0; }
   .hero-btns { flex-direction: column; align-items: center; }
 }
@@ -302,22 +308,22 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="container" style="text-align:center;">
     <p class="section-label" style="justify-content:center;display:flex;">Join the Campaign</p>
     <h2 class="section-title">Stay Connected &amp; Volunteer</h2>
-    <p class="lead">Get campaign updates and let us know if you can help collect signatures.</p>
-    <div class="form-card">
+    <p class="lead">Get campaign updates and learn about opportunities to get involved.</p>
+    <div class="join-card">
       <form name="hero-signup" method="POST" data-netlify="true" action="/thank-you">
         <input type="hidden" name="form-name" value="hero-signup">
-        <div class="form-row">
-          <input type="text" name="first-name" placeholder="First name" required>
-          <input type="text" name="last-name" placeholder="Last name" required>
+        <div class="vf-row">
+          <input class="vf-input" type="text" name="first-name" placeholder="First name" required>
+          <input class="vf-input" type="text" name="last-name" placeholder="Last name" required>
         </div>
-        <input type="email" name="email" placeholder="Email address" required style="width:100%;margin-bottom:1rem;">
-        <input type="tel" name="phone" placeholder="Phone number" style="width:100%;margin-bottom:0.75rem;">
-        <p class="form-note">We'll send you campaign updates by email.</p>
-        <label class="form-check">
-          <input type="checkbox" name="volunteer" value="yes">
-          I can volunteer to collect signatures
-        </label>
-        <button type="submit" class="btn-submit">Sign Me Up</button>
+        <div style="margin-bottom:0.75rem;">
+          <input class="vf-input" type="email" name="email" placeholder="Email address" required>
+        </div>
+        <div style="margin-bottom:0.75rem;">
+          <input class="vf-input" type="tel" name="phone" placeholder="Phone number">
+        </div>
+        <button type="submit" class="btn-submit-vol">Sign Me Up</button>
+        <p class="vf-note">We'll contact you to let you know about opportunities to get involved.</p>
       </form>
     </div>
   </div>
