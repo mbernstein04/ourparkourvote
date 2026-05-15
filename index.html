@@ -345,6 +345,62 @@ footer a { color: var(--gold-light); text-decoration: none; }
   .btn-outline { margin-left: 0; }
   .hero-btns { flex-direction: column; align-items: center; }
 }
+
+/* ── DNT ARCHIVE ALERT ─────────────────────────────── */
+.opov-alert {
+  background: #f6f1e3;
+  border-left: 6px solid #1e4d1a;
+  padding: 1.5rem 2rem;
+  color: #2a2a2a;
+}
+.opov-alert__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.opov-alert__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5b5b5b;
+  margin-bottom: 0.55rem;
+  font-weight: 700;
+}
+.opov-alert__quote {
+  margin: 0 0 0.85rem 0;
+  padding: 0;
+  border: none;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.55;
+  font-style: normal;
+  color: #1a1a1a;
+}
+.opov-alert__quote strong {
+  color: #1e4d1a;
+  font-weight: 700;
+}
+.opov-alert__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #1e4d1a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.opov-alert__link:hover {
+  color: #143510;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .opov-alert { padding: 1.1rem 1.4rem; }
+  .opov-alert__quote { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .opov-alert { padding: 1rem 1.1rem; border-left-width: 4px; }
+  .opov-alert__label { font-size: 0.68rem; }
+  .opov-alert__quote { font-size: 0.95rem; line-height: 1.5; }
+  .opov-alert__link { font-size: 0.83rem; }
+}
 </style>
 </head>
 <body>
@@ -352,6 +408,22 @@ footer a { color: var(--gold-light); text-decoration: none; }
 <nav>
   <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
 </nav>
+
+<!-- DNT archive alert — Sunnarborg's 2019 description -->
+<aside class="opov-alert" role="region" aria-label="From the Duluth News Tribune archive">
+  <div class="opov-alert__inner">
+    <div class="opov-alert__label">FROM THE DULUTH NEWS TRIBUNE ARCHIVE</div>
+    <blockquote class="opov-alert__quote">
+      In 2019, developer Tom Sunnarborg told the Duluth News Tribune he pictured a <strong>&ldquo;ski village/resort, such as Vail or Breckenridge&rdquo;</strong> at Lester Park &mdash; with a chalet-style hotel, housing units, and a downsized private golf course.
+    </blockquote>
+    <a class="opov-alert__link"
+       href="https://www.duluthnewstribune.com/news/developer-eyes-lester-park-golf-course"
+       target="_blank"
+       rel="noopener noreferrer">
+      Read the original Duluth News Tribune article &rarr;
+    </a>
+  </div>
+</aside>
 
 <div class="hero">
   <div class="hero-inner">
