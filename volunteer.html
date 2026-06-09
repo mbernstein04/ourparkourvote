@@ -348,13 +348,12 @@ footer a { color: var(--gold-light); text-decoration: none; }
 <div class="counter-bar">
   <div>
     <div class="counter-label">Signatures Collected</div>
-    <div class="counter-num" id="sigCount">4,714</div>
+    <div class="counter-num" id="sigCount">4,875</div>
   </div>
   <div>
     <div class="counter-track">
       <div class="counter-fill" id="sigBar" style="width:0%"></div>
     </div>
-    <div class="counter-note">7,200 needed by June 1</div>
   </div>
 </div>
 
@@ -443,10 +442,6 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
 </div>
 
-<!-- DEADLINE BAR -->
-<div class="deadline-bar">
-  <p>Deadline: June 1, 2026 &nbsp;·&nbsp; 7,200 signatures needed &nbsp;·&nbsp; Every signature counts</p>
-</div>
 
 <footer>
   <div class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</div>
@@ -455,8 +450,8 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </footer>
 
 <script>
-const SIGNATURES_COLLECTED = 4714;
-const GOAL = 7200;
+const SIGNATURES_COLLECTED = 4875;
+const GOAL = 5800;
 (function() {
   const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
   document.getElementById('sigBar').style.width = pct + '%';
