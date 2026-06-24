@@ -418,7 +418,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </head>
 <body>
 
-<div class="top-alert">There is still time to sign the petitions! Go to one of our partner businesses and sign to demand a vote and save our parkland.</div>
+<div class="top-alert">Thanks to you, we submitted thousands of signatures to the City Clerk, who is now verifying them. We'll share the certified results as soon as they're official.</div>
 
 <nav>
   <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
@@ -444,7 +444,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
     <div class="counter-track">
       <div class="counter-fill" id="sigBar" style="width:0%"></div>
     </div>
-    <div class="counter-note">Goal: 5,800 signatures</div>
+    <div class="counter-note">Goal: 5,500 signatures</div>
   </div>
 </div>
 
@@ -621,8 +621,8 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </footer>
 
 <script>
-const SIGNATURES_COLLECTED = 4875;
-const GOAL = 5800;
+const SIGNATURES_COLLECTED = 5500;
+const GOAL = 5500;
 (function() {
   const pct = Math.min((SIGNATURES_COLLECTED / GOAL) * 100, 100);
   document.getElementById('sigBar').style.width = pct + '%';
