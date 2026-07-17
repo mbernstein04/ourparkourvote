@@ -1,0 +1,20 @@
+# Netlify configuration for ourparkourvote.org
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# Serve the clean URL that the sign-up forms redirect to on success.
+# (Netlify usually resolves this automatically via Pretty URLs; this makes it explicit.)
+[[redirects]]
+  from = "/thank-you-demand"
+  to = "/thank-you-demand.html"
+  status = 200
+
+# Legacy: any old /thank-you links land somewhere sensible.
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you-demand.html"
+  status = 200

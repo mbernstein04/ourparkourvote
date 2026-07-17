@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Our Park, Our Vote</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest: #122a18; --gold: #d49b2a; --gold-light: #f0b84e;
+  --cream: #f8f5ee; --night: #0c1824;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif; background: var(--night); color: #fff;
+  line-height: 1.7; -webkit-font-smoothing: antialiased;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+nav {
+  background: var(--night); padding: 0 2rem; height: 56px;
+  display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-brand {
+  font-family: 'Righteous', sans-serif; font-size: 1rem; color: var(--gold-light);
+  text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; }
+.card {
+  max-width: 560px; width: 100%; text-align: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,155,42,0.3); border-top: 4px solid var(--gold);
+  border-radius: 16px; padding: 2.75rem 2rem;
+}
+.check {
+  width: 64px; height: 64px; margin: 0 auto 1.25rem;
+  border-radius: 50%; background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; color: var(--night); font-weight: 700;
+}
+h1 {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.15; margin-bottom: 0.75rem;
+}
+.lede { color: rgba(255,255,255,0.78); font-size: 1.02rem; margin-bottom: 2rem; }
+.lede strong { color: var(--gold-light); }
+.steps { text-align: left; margin: 0 auto 2rem; }
+.step {
+  display: flex; gap: 0.9rem; align-items: flex-start;
+  padding: 1rem 0; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.step:first-child { border-top: none; }
+.step-num {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(212,155,42,0.2); color: var(--gold-light);
+  font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  margin-top: 0.1rem;
+}
+.step-body h3 { font-size: 0.98rem; font-weight: 700; margin-bottom: 0.2rem; }
+.step-body p { font-size: 0.9rem; color: rgba(255,255,255,0.68); line-height: 1.6; }
+.step-body a { color: var(--gold-light); text-decoration: underline; }
+.btn-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block; background: var(--gold); color: #2a1408;
+  padding: 0.8rem 1.6rem; border-radius: 8px; font-weight: 700;
+  font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: background 0.2s;
+}
+.btn:hover { background: var(--gold-light); }
+.btn-ghost {
+  background: transparent; border: 1px solid rgba(255,255,255,0.35); color: #fff;
+}
+.btn-ghost:hover { border-color: var(--gold-light); background: rgba(255,255,255,0.05); }
+#copied { font-size: 0.8rem; color: var(--gold-light); margin-top: 0.75rem; min-height: 1.1rem; }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
+</nav>
+<div class="wrap">
+  <div class="card">
+    <div class="check">&#10003;</div>
+    <h1>You're on the record.</h1>
+    <p class="lede">Thank you — your name has been added to the public demand that the City Clerk <strong>count every uncounted sheet</strong> and let Duluth vote. Here's how to make it count for more:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Share this with your neighbors</h3>
+          <p>The more names, the louder the message. Send them the page:
+            <button class="btn-ghost" style="padding:0.35rem 0.8rem;font-size:0.72rem;margin-left:0.25rem;" onclick="copyLink()">Copy link</button>
+          </p>
+          <div id="copied"></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Contact your officials</h3>
+          <p>In your own words, tell the Mayor and your City Councilors: count every Lester Park petition sheet, and let Duluth vote. <a href="https://duluthmn.gov/city-council/" target="_blank" rel="noopener">Find their contact info &rarr;</a></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Read the lawsuit</h3>
+          <p>See exactly what we've asked the court to do. <a href="/#lawsuit">Go to the case &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="/">Back to Home</a>
+    </div>
+    <div id="copied-note"></div>
+  </div>
+</div>
+<script>
+function copyLink() {
+  var url = window.location.origin + "/";
+  var note = document.getElementById('copied');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function(){ note.textContent = "Link copied — thank you for sharing."; },
+      function(){ note.textContent = url; });
+  } else {
+    note.textContent = url;
+  }
+}
+</script>
+</body>
+</html>
