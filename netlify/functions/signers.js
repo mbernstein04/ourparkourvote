@@ -15,10 +15,12 @@
  * Env vars:
  *   NETLIFY_API_TOKEN  — personal access token from
  *                        app.netlify.com/user/applications
- *   NETLIFY_FORM_ID    — the demand form id from Site → Forms. May be a
- *                        single id, or a comma-separated list to combine
- *                        several forms (e.g. the hero "demand-and-updates"
- *                        form and the "count-the-sheets" form).
+ *   NETLIFY_FORM_ID    — the demand form id from Site → Forms. Both demand
+ *                        forms on the page (the hero box and the #demand
+ *                        signing sheet) post to a single "demand" form, so
+ *                        this is normally one id. A comma-separated list is
+ *                        still supported to combine additional forms (e.g.
+ *                        the legacy "hero-signup" form).
  *   SITE_ID            — auto-injected by Netlify at function runtime.
  *
  * Response shape on success (matches the signer-wall script in index.html):
