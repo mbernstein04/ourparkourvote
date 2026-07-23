@@ -3,683 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Park, Our Vote — Protect Lester Park</title>
-<meta name="description" content="Duluth residents submitted thousands of signatures to force a public vote on the future of Lester Park. The City Clerk didn't count them all — so we've gone to court and are demanding the count be finished. Add your name.">
-<link rel="canonical" href="https://ourparkourvote.org/simple">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+<title>The Latest — Our Park, Our Vote</title>
 <style>
-:root {
-  --forest: #122a18;
-  --forest-mid: #1e5230;
-  --gold: #d49b2a;
-  --gold-light: #f0b84e;
-  --cream: #f8f5ee;
-  --cream-alt: #f0ece3;
-  --text-dark: #1a2332;
-  --text-mid: #3d4e60;
-  --night: #0c1824;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-dark);
-  background: var(--cream);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-nav {
-  background: var(--night);
-  padding: 0.6rem 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  min-height: 56px; flex-wrap: wrap; gap: 0.5rem 1rem;
-}
-.nav-brand {
-  font-family: 'Righteous', sans-serif;
-  font-size: 1rem; color: var(--gold-light);
-  text-decoration: none; letter-spacing: 0.05em; text-transform: uppercase;
-}
-.nav-links { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
-.nav-links a {
-  color: rgba(255,255,255,0.8); text-decoration: none;
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-  transition: color 0.15s;
-}
-.nav-links a:hover { color: var(--gold-light); }
-.nav-links .nav-cta {
-  background: var(--gold); color: #2a1408; padding: 0.4rem 0.9rem; border-radius: 6px;
-  transition: background 0.15s;
-}
-.nav-links .nav-cta:hover { background: var(--gold-light); color: #2a1408; }
-@media (max-width: 600px) { .nav-links { gap: 0.9rem; } .nav-links a { font-size: 0.72rem; } }
-.hero {
-  background: var(--night);
-  background-image: url('lester-sunrise.jpg');
-  background-size: cover; background-position: center 40%;
-  position: relative; padding: 3.75rem 2rem 4rem;
-}
-.hero::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(170deg, rgba(12,24,36,0.75) 0%, rgba(18,42,24,0.65) 100%);
-  pointer-events: none;
-}
-.hero-inner {
-  position: relative; z-index: 1;
-  max-width: 700px; margin: 0 auto; text-align: center;
-}
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 6vw, 4.2rem);
-  font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 1rem;
-}
-.hero h1 em { font-style: italic; color: var(--gold); }
-.hero p {
-  font-size: 1.1rem; color: rgba(255,255,255,0.88);
-  max-width: 560px; margin: 0 auto 2rem; line-height: 1.7;
-}
-.btn {
-  display: inline-block;
-  background: var(--gold); color: #fff;
-  padding: 0.9rem 2.4rem; border-radius: 8px;
-  font-weight: 700; font-size: 0.85rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s;
-}
-.btn:hover { background: var(--gold-light); transform: translateY(-2px); }
-.btn-outline {
-  display: inline-block;
-  border: 2px solid rgba(255,255,255,0.5); color: #fff;
-  padding: 0.9rem 2.4rem; border-radius: 8px;
-  font-weight: 700; font-size: 0.85rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  text-decoration: none; margin-left: 1rem;
-  transition: border-color 0.2s;
-}
-.btn-outline:hover { border-color: var(--gold-light); }
-.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.hero-card {
-  background: rgba(12,24,36,0.86);
-  border: 1px solid rgba(212,155,42,0.35);
-  border-top: 4px solid var(--gold);
-  border-radius: 14px;
-  padding: 1.5rem 1.5rem 1.6rem;
-  max-width: 440px; margin: 1.9rem auto 0;
-  text-align: left;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-}
-.hero-card h2 {
-  font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
-  color: #fff; margin-bottom: 0.35rem; text-align: center; line-height: 1.25;
-}
-.hero-card .hc-sub {
-  font-size: 0.85rem; color: rgba(255,255,255,0.72); text-align: center;
-  margin-bottom: 1.15rem; line-height: 1.5;
-}
-.hero-card .vf-note { color: rgba(255,255,255,0.45); }
-.hero-secondary { margin-top: 1rem; text-align: center; font-size: 0.85rem; }
-.hero-secondary a { color: var(--gold-light); text-decoration: underline; font-weight: 600; }
-.photo-strip {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 0; height: 220px; overflow: hidden;
-}
-.photo-strip-item { overflow: hidden; }
-.photo-strip-item img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center;
-  transition: transform 0.6s ease; display: block;
-}
-.photo-strip-item:hover img { transform: scale(1.05); }
-@media (max-width: 700px) {
-  .photo-strip { grid-template-columns: repeat(2, 1fr); height: 160px; }
-}
-.counter-bar {
-  background: var(--forest);
-  padding: 1.25rem 2rem;
-  display: flex; align-items: center; justify-content: center; gap: 2rem;
-  flex-wrap: wrap;
-}
-.counter-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem; font-weight: 900; color: var(--gold-light); line-height: 1;
-}
-.counter-label {
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
-  text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 0.2rem;
-}
-.counter-note { font-size: 0.85rem; color: rgba(255,255,255,0.6); max-width: 320px; }
-.counter-track {
-  width: 240px; height: 6px; background: rgba(255,255,255,0.12);
-  border-radius: 4px; overflow: hidden; margin-top: 0.5rem;
-}
-.counter-fill {
-  height: 100%; border-radius: 4px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-}
-.sec { padding: 4.5rem 2rem; }
-.sec-dark { background: var(--night); color: #fff; }
-.sec-light { background: var(--cream); color: var(--text-dark); padding: 4.5rem 2rem; }
-.sec-light .section-label { color: var(--gold-dark, #a87510); }
-.sec-light .section-title { color: var(--forest); }
-.sec-light .lead { color: var(--text-mid); }
-.sec-light .lead strong { color: var(--forest); font-weight: 700; }
-.container { max-width: 900px; margin: 0 auto; }
-.section-label {
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.3em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
-}
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900;
-  line-height: 1.15; margin-bottom: 1.25rem;
-}
-.sec-dark .section-title { color: #fff; }
-.lead { font-size: 1rem; line-height: 1.8; color: var(--text-mid); }
-.sec-dark .lead { color: rgba(255,255,255,0.78); }
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-.card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--gold); border-radius: 8px; padding: 1.75rem;
-}
-.card h3 {
-  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
-  color: var(--gold-light); margin-bottom: 0.6rem;
-}
-.card p { font-size: 0.93rem; color: rgba(255,255,255,0.8); line-height: 1.75; }
-.deadline-bar { background: var(--gold); padding: 1rem 2rem; text-align: center; }
-.deadline-bar p { font-size: 0.92rem; font-weight: 700; color: var(--forest); letter-spacing: 0.03em; }
-/* ── LAWSUIT SECTION ────────────────────────────────── */
-.suit-lead-strong { color: var(--gold-light); font-weight: 700; }
-.suit-quote {
-  margin: 2rem 0; padding: 1.25rem 1.6rem;
-  border-left: 3px solid var(--gold);
-  background: rgba(255,255,255,0.05);
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem; font-style: italic; line-height: 1.5;
-  color: rgba(255,255,255,0.92);
-}
-.suit-quote cite {
-  display: block; margin-top: 0.7rem;
-  font-family: 'Inter', sans-serif; font-style: normal;
-  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--gold);
-}
-.suit-cta {
-  margin: 2.5rem 0 0.5rem; padding: 2rem;
-  border: 2px solid var(--gold); border-radius: 12px;
-  text-align: center;
-}
-.suit-cta h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;
-}
-.suit-source {
-  font-size: 0.82rem; color: rgba(255,255,255,0.55);
-  margin: 1rem auto 0; max-width: 60ch; line-height: 1.6; font-style: italic;
-}
-.suit-brief-h {
-  font-family: 'Playfair Display', serif; font-weight: 700;
-  font-size: 1.15rem; color: var(--gold-light); margin: 2.5rem 0 0.25rem;
-}
-.suit-brief {
-  margin: 1rem 0 0.5rem;
-  border: 1px solid rgba(212,155,42,0.3);
-  border-radius: 10px; overflow: hidden;
-}
-.sb-row {
-  display: grid; grid-template-columns: 210px 1fr; gap: 1.1rem;
-  padding: 1rem 1.3rem; border-bottom: 1px solid rgba(255,255,255,0.09);
-}
-.sb-row:last-child { border-bottom: none; }
-.sb-k {
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--gold); padding-top: 0.15rem;
-}
-.sb-v { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.6; }
-@media (max-width: 640px) { .sb-row { grid-template-columns: 1fr; gap: 0.3rem; } }
-.wh-item {
-  border-left: 3px solid var(--gold);
-  background: rgba(255,255,255,0.04);
-  border-radius: 0 10px 10px 0;
-  padding: 1.25rem 1.5rem; margin-top: 1.25rem;
-}
-.wh-item h3 {
-  font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700;
-  color: var(--gold-light); margin-bottom: 0.4rem;
-}
-.wh-item p { font-size: 0.96rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin: 0; }
-.wh-item p strong { color: #fff; }
-/* ── DEMAND / SIGNING SHEET ─────────────────────────── */
-.demand-sec { background: var(--forest); padding: 4.5rem 2rem; }
-.demand-sec .section-title { color: #fff; }
-.demand-grid {
-  display: grid; grid-template-columns: 1.05fr 0.95fr;
-  gap: 2.5rem; margin-top: 2.25rem; align-items: start;
-}
-.demand-statement {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,155,42,0.3);
-  border-left: 4px solid var(--gold);
-  border-radius: 10px; padding: 1.75rem;
-}
-.demand-statement .to {
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem;
-}
-.demand-statement p {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.12rem; line-height: 1.55; color: rgba(255,255,255,0.94);
-  margin-bottom: 1rem;
-}
-.demand-statement p:last-child { margin-bottom: 0; }
-.demand-statement strong { color: var(--gold-light); font-weight: 700; }
-.demand-sign-note {
-  font-size: 0.82rem; color: rgba(255,255,255,0.6);
-  margin-top: 1.1rem; line-height: 1.6; font-style: italic;
-}
-.demand-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(212,155,42,0.25);
-  border-top: 4px solid var(--gold);
-  border-radius: 14px; padding: 2rem 1.75rem;
-}
-.demand-card h3 {
-  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
-  color: #fff; margin-bottom: 1.25rem; text-align: center;
-}
-@media (max-width: 760px) {
-  .demand-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-}
-/* shared form controls (used by demand + join) */
-.vf-row { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; }
-.vf-input {
-  width: 100%; padding: 0.65rem 0.9rem;
-  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.88rem;
-  color: #fff; transition: border-color 0.2s;
-}
-.vf-input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.1); }
-.vf-input::placeholder { color: rgba(255,255,255,0.35); }
-.vf-check-group {
-  display: flex; align-items: flex-start; gap: 0.7rem;
-  padding: 0.75rem 0.9rem; margin-bottom: 0.75rem;
-  border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
-  background: rgba(255,255,255,0.04);
-  cursor: pointer; text-align: left;
-  transition: border-color 0.2s, background 0.2s;
-}
-.vf-check-group:hover { border-color: rgba(212,155,42,0.5); background: rgba(255,255,255,0.07); }
-.vf-check-group input[type="checkbox"] {
-  margin-top: 0.2rem; flex-shrink: 0;
-  accent-color: var(--gold); cursor: pointer;
-}
-.vf-check-label {
-  font-size: 0.88rem; color: rgba(255,255,255,0.88);
-  font-weight: 600; line-height: 1.4;
-}
-.vf-check-label span {
-  display: block; margin-top: 0.2rem;
-  font-size: 0.78rem; font-weight: 400; font-style: italic;
-  color: rgba(255,255,255,0.5);
-}
-.btn-submit-vol {
-  width: 100%; margin-top: 0.25rem; background: var(--gold); color: #fff; border: none;
-  padding: 0.9rem; border-radius: 8px; cursor: pointer; font-family: 'Inter', sans-serif;
-  font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
-  transition: background 0.2s, transform 0.15s;
-}
-.btn-submit-vol:hover { background: var(--gold-light); transform: translateY(-1px); }
-.vf-note {
-  font-size: 0.78rem; color: rgba(255,255,255,0.35);
-  margin-top: 0.75rem; text-align: center; line-height: 1.6;
-}
-/* ── PRESS SECTION ──────────────────────────────────── */
-.press-sec { background: var(--night); padding: 4.5rem 2rem; }
-.press-sec .section-title { color: #fff; }
-.press-intro { max-width: 640px; }
-.press-list { margin-top: 2.25rem; border-top: 1px solid rgba(255,255,255,0.1); }
-.press-item {
-  display: block; text-decoration: none;
-  padding: 1.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);
-  transition: padding-left 0.15s, background 0.15s;
-}
-.press-item:hover { padding-left: 0.6rem; }
-.press-meta {
-  display: flex; gap: 0.9rem; align-items: baseline; flex-wrap: wrap;
-  margin-bottom: 0.35rem;
-}
-.press-outlet {
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold);
-}
-.press-date { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
-.press-headline {
-  font-family: 'Playfair Display', serif; font-size: 1.18rem; font-weight: 700;
-  line-height: 1.3; color: #fff;
-}
-.press-item:hover .press-headline { color: var(--gold-light); }
-.press-arrow { color: var(--gold); font-weight: 700; }
-.press-note {
-  font-size: 0.82rem; color: rgba(255,255,255,0.45);
-  margin-top: 1.75rem; line-height: 1.6; font-style: italic;
-}
-/* ── SIGNER WALL ────────────────────────────────────── */
-.signer-wall { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; }
-.signer-chip {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(212,155,42,0.22);
-  border-radius: 20px; padding: 0.35rem 0.9rem;
-  font-size: 0.86rem; color: rgba(255,255,255,0.85);
-}
-.signer-chip.signer-more { background: transparent; border-style: dashed; color: var(--gold-light); font-weight: 600; }
-/* ── JOIN SECTION ───────────────────────────────────── */
-.form-sec { background: var(--forest); padding: 4.5rem 2rem; }
-.form-sec .section-title { color: #fff; }
-.form-sec .lead { color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
-.join-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(212,155,42,0.25);
-  border-top: 4px solid var(--gold);
-  border-radius: 14px; padding: 2rem 1.75rem;
-  max-width: 480px; margin: 0 auto;
-}
-footer {
-  background: var(--night); color: rgba(255,255,255,0.5);
-  padding: 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);
-}
-.footer-brand {
-  font-family: 'Righteous', sans-serif; font-size: 1.2rem; color: var(--gold-light);
-  text-transform: uppercase; margin-bottom: 0.4rem;
-}
-footer p { font-size: 0.8rem; line-height: 1.8; }
-footer a { color: var(--gold-light); text-decoration: none; }
-.gold-divider {
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
-}
-@media (max-width: 700px) {
-  .two-col { grid-template-columns: 1fr; }
-  .vf-row { flex-direction: column; }
-  .btn-outline { margin-left: 0; }
-  .hero-btns { flex-direction: column; align-items: center; }
-}
-/* ── TOP ALERT ─────────────────────────────────────── */
-.top-alert {
-  background: #1e4d1a;
-  color: #fff;
-  text-align: center;
-  padding: 0.85rem 1.4rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  font-weight: 600;
-}
-.top-alert a { color: var(--gold-light); text-decoration: underline; white-space: nowrap; }
-@media (max-width: 768px) {
-  .top-alert { font-size: 0.9rem; padding: 0.75rem 1rem; }
-}
-/* ── DATED URGENCY STRIP (remove after the deadline passes) ── */
-.urgent-strip {
-  background: #7c1d1d;
-  color: #fff;
-  text-align: center;
-  padding: 0.85rem 1.4rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  font-weight: 600;
-  border-bottom: 2px solid var(--gold);
-}
-.urgent-strip .u-tag {
-  display: inline-block;
-  background: var(--gold);
-  color: #3a1010;
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.16rem 0.55rem; border-radius: 4px;
-  margin-right: 0.55rem; vertical-align: middle;
-}
-.urgent-strip strong { color: var(--gold-light); }
-@media (max-width: 768px) {
-  .urgent-strip { font-size: 0.9rem; padding: 0.75rem 1rem; }
-  .urgent-strip .u-tag { display: inline-block; margin-bottom: 0.3rem; }
-}
+  :root{--pine:#1f6f43; --ink:#1a2330; --muted:#5b6675; --line:#d7dde5; --gold:#8a6d1a; --court:#5b3d8f; --city:#c05621; --paper:#fbfcf9;}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:Georgia,'Times New Roman',serif; color:var(--ink); background:var(--paper); line-height:1.55;}
+  .wrap{max-width:780px; margin:0 auto; padding:0 22px 48px;}
+  header{background:var(--pine); color:#fff; padding:26px 22px 22px; text-align:center;}
+  header .kicker{font-family:Helvetica,Arial,sans-serif; font-size:12px; letter-spacing:.16em; text-transform:uppercase; opacity:.85;}
+  header h1{font-size:30px; margin-top:6px;}
+  header .sub{font-size:15px; opacity:.92; margin-top:6px;}
+  .urgent{background:#fff; border:2px solid var(--pine); border-radius:10px; padding:18px 20px; margin:-18px auto 0; max-width:740px; box-shadow:0 3px 14px rgba(0,0,0,.08); text-align:center;}
+  .urgent .when{font-family:Helvetica,Arial,sans-serif; font-weight:700; font-size:17px; color:var(--pine);}
+  .urgent p{font-size:15px; margin-top:6px;}
+  h2{font-family:Helvetica,Arial,sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--pine); border-bottom:2px solid var(--pine); padding-bottom:5px; margin:34px 0 12px;}
+  p{font-size:16px; margin-bottom:10px;}
+  .stats{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 4px;}
+  .stat{flex:1 1 140px; border:1px solid var(--line); background:#fff; border-radius:8px; padding:10px 12px; text-align:center;}
+  .stat .n{font-family:Helvetica,Arial,sans-serif; font-size:22px; font-weight:700; color:var(--pine);}
+  .stat .l{font-family:Helvetica,Arial,sans-serif; font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-top:2px;}
+  ul.clean{list-style:none;}
+  ul.clean li{padding:7px 0 7px 26px; position:relative; font-size:15.5px;}
+  ul.clean li::before{content:"—"; position:absolute; left:2px; color:var(--pine); font-weight:700;}
+  .isnt li::before{content:"✕"; color:var(--city); font-size:13px; top:9px;}
+  .is li::before{content:"✓"; color:var(--pine);}
+  .tl{margin:10px 0 0; padding-left:20px; border-left:3px solid var(--line);}
+  .ev{position:relative; padding:0 0 14px 14px; font-size:15px;}
+  .ev::before{content:""; position:absolute; left:-27.5px; top:6px; width:11px; height:11px; border-radius:50%; background:#64748b; border:2px solid #fff; box-shadow:0 0 0 1.5px var(--line);}
+  .ev.court::before{background:var(--court);} .ev.city::before{background:var(--city);} .ev.people::before{background:var(--pine);} .ev.ahead::before{background:var(--gold);}
+  .ev b{font-family:Helvetica,Arial,sans-serif; font-size:13px;}
+  .box{background:#fff; border:1px solid var(--line); border-left:4px solid var(--gold); border-radius:6px; padding:13px 16px; margin:14px 0; font-size:15px;}
+  .speak{background:#eef5f0; border-radius:8px; padding:14px 16px; margin-top:10px; font-size:15.5px;}
+  footer{border-top:1px solid var(--line); margin-top:36px; padding:14px 0 0; font-size:12.5px; color:var(--muted);}
+  @media (max-width:520px){header h1{font-size:24px;} .stat .n{font-size:18px;}}
 </style>
 </head>
 <body>
-<!-- DATED URGENCY STRIP — remove this block once the meeting window / deadline has passed -->
-<div class="urgent-strip"><span class="u-tag">Friday, July 17</span>There's still time — today. Mayor Reinert or Council President Nephew can call an emergency Council meeting today to take up Councilor Durrwachter's resolution ordering the City Clerk to resume counting our petitions — and five councilors together can compel one. <strong>Ask them to call it today.</strong></div>
-<div class="top-alert">The City Clerk left roughly 165 of our petition sheets uncounted and wrongly rejected 53 more. We've gone to court to demand a full count. <a href="#demand">Add your name →</a></div>
-<nav>
-  <a class="nav-brand" href="/"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</a>
-  <div class="nav-links">
-    <a href="#what-happened">What Happened</a>
-    <a href="#lawsuit">The Lawsuit</a>
-    <a href="#press">Press</a>
-    <a href="#demand" class="nav-cta">Add Your Name</a>
+<header>
+  <div class="kicker">Our Park, Our Vote — Lester Park</div>
+  <h1>The Latest</h1>
+  <div class="sub">Updated Wednesday, July 22, 2026</div>
+</header>
+<div class="wrap">
+  <div class="urgent">
+    <div class="when">THURSDAY, JULY 23 • 6:00 P.M. • DULUTH CITY HALL</div>
+    <p>The City Council decides one question: whether to place both certified petitions on the November 3 ballot. The agenda allows <b>no public comment</b>. <b>Come anyway &mdash; fill the chamber.</b> And be heard the way that is still open: email and call your councilors today (addresses below).</p>
   </div>
-</nav>
-<div class="hero">
-  <div class="hero-inner">
-    <h1>267 Acres of Public Land.<br><em>Duluthians Deserve a Vote.</em></h1>
-    <p>Thousands of Duluthians signed to put the future of the former Lester Park Golf Course on the ballot. The City Clerk didn't count all of our petition sheets — so we've filed suit and we're demanding every one is counted. Add your name.</p>
-    <div class="hero-card">
-      <h2>Sign the Demand &amp; Stay Updated</h2>
-      <p class="hc-sub">Add your name to demand the Clerk count every petition sheet — and we'll keep you posted on the lawsuit and what comes next.</p>
-      <form name="demand" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you-demand">
-        <input type="hidden" name="form-name" value="demand">
-        <p style="display:none"><label>Leave this field empty: <input name="bot-field"></label></p>
-        <div class="vf-row">
-          <input class="vf-input" type="text" name="first-name" placeholder="First name" required>
-          <input class="vf-input" type="text" name="last-name" placeholder="Last name" required>
-        </div>
-        <div style="margin-bottom:0.75rem;">
-          <input class="vf-input" type="email" name="email" placeholder="Email address" required>
-        </div>
-        <button type="submit" class="btn-submit-vol">Add My Name</button>
-        <p class="vf-note">By signing, your name is listed publicly (first and last name). We'll only email you about the Lester Park campaign — your email is never shown, sold, or shared.</p>
-      </form>
-      <p class="hero-secondary"><a href="#lawsuit">Read the lawsuit &rarr;</a></p>
-    </div>
-  </div>
-</div>
-<div class="counter-bar">
-  <div>
-    <div class="counter-label">Signatures Submitted</div>
-    <div class="counter-num" id="sigCount">5,500+</div>
-  </div>
-  <div>
-    <div class="counter-track">
-      <div class="counter-fill" id="sigBar" style="width:100%"></div>
-    </div>
-    <div class="counter-note">Turned in to the City Clerk. Now we're fighting to get every last one counted.</div>
-  </div>
-</div>
-<!-- ─── WHAT HAPPENED ───────────────────────────────────── -->
-<div class="sec sec-dark" id="what-happened">
-  <div class="container">
-    <p class="section-label">What Happened</p>
-    <h2 class="section-title">Hundreds of Valid Signatures, Left Out of the Count</h2>
-    <p class="lead" style="max-width:680px;">
-      Under the City Charter, the Clerk's office must examine every petition sheet and count the signatures of qualified Duluth voters. On the 230-acre petition, hundreds of those voters were never counted — for two reasons, and neither is that anyone questioned whether the signers were real, registered residents.
-    </p>
-    <div class="wh-item">
-      <h3>Roughly 165 sheets were never counted at all</h3>
-      <p>To validate signatures, the Clerk's office worked from photocopies of the petition sheets. <strong>About 165 of the original sheets were never copied</strong> — so they were never reviewed and never counted. Every qualified voter who signed them was simply left out of the total.</p>
-    </div>
-    <div class="wh-item">
-      <h3>53 more were excluded over two lines of boilerplate</h3>
-      <p>Another 53 sheets were set aside — not because the signers weren't qualified, but because those sheets didn't carry two lines of printed text: a "<em>subject to public inspection</em>" notice and a disability-related instruction drawn from a state rule. The signatures on them are genuine signatures of registered Duluth voters.</p>
-    </div>
-    <div class="wh-item">
-      <h3>The Clerk had already found our form compliant</h3>
-      <p>Here is what makes the exclusion hard to justify: before those sheets were ever circulated, the Clerk's office reviewed our petition form and confirmed in writing that it <strong>"appears to be compliant."</strong> The suggestion to add that language came <em>afterward</em> — offered as the Clerk's own "recommendation," and only months later described as something the rule "will require." Sheets circulated in good-faith reliance on the office's own approval should not be nullified for missing words the office itself never asked for.</p>
-    </div>
-    <p class="lead" style="max-width:680px;margin-top:1.75rem;">
-      The result: more than 4,000 eligible Duluthians signed to put this on the ballot, and hundreds were left uncounted over paperwork the City had already blessed. <a href="#lawsuit" style="color:var(--gold-light);text-decoration:underline;">See what the lawsuit asks the court to do &rarr;</a>
-    </p>
-  </div>
-</div>
-<!-- ─── END WHAT HAPPENED ───────────────────────────────── -->
-<!-- ─── DEMAND LAWSUIT ──────────────────────────────────── -->
-<div class="sec sec-dark" id="lawsuit">
-  <div class="container">
-    <p class="section-label">Our Demand</p>
-    <h2 class="section-title">We Counted On the City to Count Every Signature.<br>It Didn't.</h2>
-    <p class="lead" style="max-width:680px;">
-      Duluthians signed two voter-initiative petitions to put the future of the former Lester Park Golf Course to a public vote. Under the City Charter, the Clerk's office must examine <span class="suit-lead-strong">every</span> petition sheet. On the 230-acre petition, it didn't: <span class="suit-lead-strong">roughly 165 signature sheets were never counted at all</span>, and 53 more were wrongly rejected — leaving the petition certified below the 20% threshold that would put the measure on the <span class="suit-lead-strong">November 2026 ballot</span>.
-    </p>
-    <p class="lead" style="max-width:680px;margin-top:1.25rem;">
-      So we went to court. The demand is simple: <strong style="color:#fff;">finish the count.</strong> Review the sheets that were skipped, certify both petitions under the correct standard, and let this land's future be decided the way it should be — by the people who live here, this November.
-    </p>
-    <h3 class="suit-brief-h">The Lawsuit, in Brief</h3>
-    <div class="suit-brief">
-      <div class="sb-row"><span class="sb-k">The case</span><span class="sb-v"><em>Bernstein v. Denham</em> — a Verified Petition for a Writ of Mandamus and Declaratory Relief, filed July 15, 2026 in St. Louis County District Court (No. 69DU-CV-26-1924), on an expedited basis.</span></div>
-      <div class="sb-row"><span class="sb-k">Who filed it</span><span class="sb-v">Michael Bernstein — a registered Duluth voter, Director of Our Park, Our Vote, and the proposer of both petitions — on his own behalf.</span></div>
-      <div class="sb-row"><span class="sb-k">Filed against</span><span class="sb-v">City Clerk Alyssa Denham (in her official capacity), the Duluth City Council, and the City of Duluth.</span></div>
-      <div class="sb-row"><span class="sb-k">What happened</span><span class="sb-v">Two voter petitions sought to send the future of the former Lester Park Golf Course to a public vote. On the 230-acre petition, the Clerk left roughly 165 signature sheets uncounted and wrongly rejected 53 more — certifying it below the 20% threshold. The 37.5-acre "Lake 9" petition already had enough valid signatures but was processed under the wrong standard. Either error would push the vote from November 2026 to November 2027 — after the City's planned rezoning could already be done.</span></div>
-      <div class="sb-row"><span class="sb-k">What it asks the court</span><span class="sb-v">Order the Clerk to finish the count and certify both petitions correctly, order the Council to act within the Charter's deadlines so the measures reach the November 3, 2026 ballot, and bar any rezoning or sale while the case is pending.</span></div>
-      <div class="sb-row"><span class="sb-k">What's at stake</span><span class="sb-v">More than 4,000 eligible Duluthians — including over 1,100 whose signatures were never counted — could lose their chance to vote on this land this cycle.</span></div>
-    </div>
-    <blockquote class="suit-quote">
-      The ask is very simple — just demanding that the Clerk's office finish counting those sheets.
-      <cite>— Duluth City Councilor Wendy Durrwachter</cite>
-    </blockquote>
-    <div class="suit-cta">
-      <h3>Read the entire filing.</h3>
-      <a class="btn" href="verified-petition-lester-park.pdf" download>Read the Full Court Filing (PDF)</a>
-      <p class="suit-source">Verified Petition for a Writ of Mandamus and Declaratory Relief — <em>Bernstein v. Denham</em>, St. Louis County District Court, No. 69DU-CV-26-1924 (filed July 15, 2026). Read our words directly rather than take anyone's summary for them.</p>
-    </div>
-  </div>
-</div>
-<!-- ─── END DEMAND LAWSUIT ──────────────────────────────── -->
-<div class="gold-divider"></div>
-<!-- ─── PUBLIC SIGNING SHEET ────────────────────────────── -->
-<div class="demand-sec" id="demand">
-  <div class="container">
-    <p class="section-label">Add Your Name</p>
-    <h2 class="section-title">Demand the Clerk Count Every Uncounted Sheet</h2>
-    <p class="lead" style="color:rgba(255,255,255,0.72);max-width:640px;">
-      Add your name to a public demand to the City Clerk and City Council. It takes ten seconds, and it tells the City that Duluth is watching — and expects every lawful signature to be counted, now.
-    </p>
-    <div class="demand-grid">
-      <div class="demand-statement">
-        <div class="to">To the Duluth City Clerk &amp; City Council</div>
-        <p>You are holding <strong>roughly 165 petition sheets that were never counted at all</strong> — and 53 more you wrongly rejected. Duluth residents signed them lawfully to put the future of the former Lester Park Golf Course before the voters.</p>
-        <p>We, the undersigned, demand that the Clerk's office <strong>immediately review and count every uncounted sheet</strong> and certify our petitions under the correct standard — so this decision can go where it belongs: on the November 2026 ballot.</p>
-        <p>Count them all. Let Duluth vote.</p>
-        <p class="demand-sign-note">This is a public demand. By adding your name, you will be listed on this page as a signer (first and last name). Your email address is never shown.</p>
-      </div>
-      <div class="demand-card">
-        <h3>Sign the Demand</h3>
-        <form name="demand" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you-demand">
-          <input type="hidden" name="form-name" value="demand">
-          <p style="display:none"><label>Leave this field empty: <input name="bot-field"></label></p>
-          <div class="vf-row">
-            <input class="vf-input" type="text" name="first-name" placeholder="First name" required>
-            <input class="vf-input" type="text" name="last-name" placeholder="Last name" required>
-          </div>
-          <div style="margin-bottom:0.75rem;">
-            <input class="vf-input" type="email" name="email" placeholder="Email address" required>
-          </div>
-          <div style="margin-bottom:0.75rem;">
-            <input class="vf-input" type="text" name="neighborhood" placeholder="Neighborhood (optional, e.g. Lakeside)">
-          </div>
-          <button type="submit" class="btn-submit-vol">Add My Name</button>
-          <p class="vf-note">By signing, your name is listed publicly (first and last name). We'll only contact you about the Lester Park campaign, and your email is never shown, sold, or shared.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ─── END PUBLIC SIGNING SHEET ────────────────────────── -->
-<div class="gold-divider"></div>
-<!-- ─── SIGNER WALL ─────────────────────────────────────── -->
-<div class="sec sec-dark" id="signers">
-  <div class="container">
-    <p class="section-label">The Undersigned</p>
-    <h2 class="section-title">Duluthians Demanding a Full Count</h2>
-    <p class="lead" id="signersIntro" style="max-width:660px;">Loading signers&hellip;</p>
-    <div class="signer-wall" id="signerWall" aria-live="polite"></div>
-  </div>
-</div>
-<!-- ─── END SIGNER WALL ─────────────────────────────────── -->
-<div class="gold-divider"></div>
-<!-- ─── IN THE NEWS ─────────────────────────────────────── -->
-<div class="press-sec" id="press">
-  <div class="container">
-    <p class="section-label">In the News</p>
-    <h2 class="section-title">Press Coverage</h2>
-    <p class="lead press-intro" style="color:rgba(255,255,255,0.72);">
-      Reporters across the Northland are following the fight over Lester Park and the uncounted signatures. Here's the coverage, newest first.
-    </p>
-    <div class="press-list">
-      <a class="press-item" href="https://www.wdio.com/top-stories/duluth-residents-file-lawsuit-over-alleged-miscounted-petition-signatures/" target="_blank" rel="noopener">
-        <div class="press-meta"><span class="press-outlet">WDIO</span><span class="press-date">July 2026</span></div>
-        <div class="press-headline">Duluth residents file lawsuit over alleged miscounted petition signatures <span class="press-arrow">→</span></div>
-      </a>
-      <a class="press-item" href="https://www.fox21online.com/news/local/lawsuit-filed-against-the-city-of-duluth-over-future-development-of-lester-park/article_13ee11d9-3c47-49a0-87ca-112afbf97292.html" target="_blank" rel="noopener">
-        <div class="press-meta"><span class="press-outlet">FOX 21 Online</span><span class="press-date">July 2026</span></div>
-        <div class="press-headline">Lawsuit filed against the City of Duluth over future development of Lester Park <span class="press-arrow">→</span></div>
-      </a>
-      <a class="press-item" href="https://www.duluthnewstribune.com/news/local/duluthians-petition-for-lester-park-golf-course-referendum" target="_blank" rel="noopener">
-        <div class="press-meta"><span class="press-outlet">Duluth News Tribune</span><span class="press-date">2026</span></div>
-        <div class="press-headline">Duluthians petition for Lester Park Golf Course referendum <span class="press-arrow">→</span></div>
-      </a>
-      <!-- background/context press items removed per request -->
 
-    </div>
-    <p class="press-note">See a story we've missed? Email the link to <a href="mailto:info@ourparkourvote.org" style="color:var(--gold-light);">info@ourparkourvote.org</a> and we'll add it. This list is updated as new coverage is published.</p>
+  <h2>Where things stand</h2>
+  <p>Both petitions are certified for the November 3 election &mdash; but it took a fight. When we delivered the petitions in June, we knew the count had left many valid signatures on the table for the 230-acre parcel petition: hundreds of sheets set aside, uncounted. So we spent a week fighting to get every valid signature counted &mdash; and on Friday, July 17, the clerk's office informed us it had found more than <b>one thousand</b> additional valid signatures. That put the petition at <b>4,220</b> &mdash; well above the <b>3,683</b> the Charter requires &mdash; and certified for the ballot, alongside the Lake 9 petition at <b>4,049</b>.</p>
+  <p>That was fun for about fifteen minutes. Then the City told us that because it believes our petitions are illegal, it wasn't going to put them on the ballot anyway. We're still in court on that one (<i>Bernstein v. Denham</i>, St. Louis County File No. 69DU-CV-26-1924) &mdash; and the council still has the chance to do the right thing Thursday and put our petitions on the ballot.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">3,683</div><div class="l">needed</div></div>
+    <div class="stat"><div class="n">4,220</div><div class="l">certified — petition 1</div></div>
+    <div class="stat"><div class="n">4,049</div><div class="l">certified — petition 2</div></div>
+    <div class="stat"><div class="n">Nov 3</div><div class="l">the election</div></div>
   </div>
+
+  <h2>What Thursday's vote is</h2>
+  <ul class="clean is">
+    <li>A decision whether to follow the Charter. Section 51 gives the council two courses once petitions are certified: pass the proposed ordinances, or submit them to the voters. It does not authorize rejection.</li>
+    <li>A decision about <b>who decides</b> — not what ultimately happens at Lester Park. A yes vote decides nothing about housing, golf, or trails. It decides that Duluth's voters get the question.</li>
+  </ul>
+
+  <h2>What Thursday's vote isn't</h2>
+  <ul class="clean isnt">
+    <li><b>Not a referendum.</b> Nothing is repealed or overturned. These are initiatives — forward-looking rules. One requires voter approval before 230 acres of parkland is rezoned for private development; the other returns the undeveloped Lake 9 parcel to park zoning. In the meantime, the land stays what it is today.</li>
+    <li><b>Not the last word on legality.</b> Under Minnesota law, certified measures go to the voters unless they are invalid on their face — so clearly illegal there is nothing to argue about. Genuine legal questions are decided by courts, after the election. No binding decision of any Minnesota court has ever held that the state planning law takes the petition right away from Duluth's voters — a right the charter has reserved since 1912, before modern zoning existed.</li>
+    <li><b>Not a poll of whether councilors like the measures.</b> A councilor can doubt the petitions' wisdom and still vote to place them. Letting constituents decide a question you might answer differently is what the Charter asks.</li>
+  </ul>
+
+  <div class="box"><b>Options on the table Thursday:</b> any councilor may move to place both measures on the ballot — from the floor, even if a placement resolution has been withdrawn from the agenda. Any councilor may move to table the rejection resolution until the court rules, which keeps every option open. Adopting the rejection resolution means deciding a contested legal question the courts have not decided — against the council's own electors. The administration's own published placement resolution says a November vote comes at little or no added cost.</div>
+
+
+  <h2>The letter to the council</h2>
+  <p>On Wednesday, July 22, the petitioner in <i>Bernstein v. Denham</i> sent the letter below to all nine councilors, with the City Attorney's Office and the City Clerk copied. It is reproduced here in full.</p>
+  <div class="box" style="border-left-color:var(--pine); font-size:14.5px;">
+    <p><b>Re: Thursday's special meeting — the two certified Lester Park initiative petitions</b></p>
+    <p>Dear President Nephew and Members of the Council:</p>
+    <p>I write as the petitioner in <i>Bernstein v. Denham</i>, St. Louis County File No. 69DU-CV-26-1924, and as a Duluth voter, on one subject only: the action before you Thursday evening. I am copying the City Attorney's Office and posting this letter publicly. I would welcome the opportunity to discuss this with any or all of you before Thursday's vote — with the City Attorney's Office present or with its consent, which this letter also serves to request of that office. Unless and until that consent is given, this letter is the whole of what I will say to you before you vote.</p>
+    <p>The administration has said state planning law forbids placement of the two petitions. Briefly, and with respect, here is why that is wrong. The planning act is an enabling law: it prescribes <i>how</i> a city zones — planning commission review, published notice, a public hearing, a council vote — and nowhere says whose assent completes the city's act. That has always been charter ground. Duluth's mayor has held a veto over ordinances — zoning included — since 1956, nine years before the planning act existed, and in the sixty years the two have coexisted no one has ever claimed that approval breaks the act. Since 1955, state law itself has required a seven-eighths council vote before Duluth conveys parkland — the state's own extra safeguard, layered on the same field. The U.S. Supreme Court upheld a city charter requiring voter approval of zoning changes as &ldquo;power reserved by the people to themselves.&rdquo; <i>City of Eastlake v. Forest City Enterprises</i> (1976). The one Minnesota case the administration relies on condemned a <i>referendum</i> — an attempt to unmake a completed rezoning that a second statute, applicable only in the Twin Cities metro, had required — and in the same opinion expressly reserved to municipalities the right to make &ldquo;substantive determinations as to land use and zoning.&rdquo; These petitions unmake nothing and skip no statutory step; they add the electors' approval, prospectively, for one category of land the City holds in trust for its residents. And the Minnesota Supreme Court has twice sent to the voters a charter measure requiring voter approval before a city implemented a decision reached under a detailed statutory process. <i>Jennissen v. City of Bloomington</i> (2018, 2020).</p>
+    <p>Whether that analysis ultimately prevails is for the district court, where the question is pending and fully preserved. But Thursday's vote does not require you to decide it — and under Minnesota law you may not: from <i>Davies v. City of Minneapolis</i> (1982) forward, certified measures go to the voters unless <i>manifestly</i> invalid — invalid beyond serious dispute. A theory that must be argued is, by definition, a theory for the courtroom, not a reason to withhold a ballot line.</p>
+    <p>Two further considerations, offered candidly. The City's own materials already state the governing principle: the Board &amp; Commission Handbook, published last September, instructs the City's appointed boards and commissions that &ldquo;ultimate power is reserved to the voters by way of Charter provisions for recall, initiative, and referendum.&rdquo; And whatever the Council decides Thursday will resolve nothing legally. A council's vote on a certified petition's validity receives no deference; the district court decides that question de novo, and it is already positioned to do so. A vote to reject therefore cannot keep off the ballot measures the law places there. What it can do is produce a sequence in which the Council votes to keep its constituents from voting, and a judge then puts the questions back on the ballot — a sequence I would find confusing as a voter, and I suspect many of your constituents would as well. If any member is uncertain, tabling the rejection resolution refers the question to the court while adjudicating nothing.</p>
+    <p>I have sought no attorney's fees, costs, damages, or monetary relief of any kind in the litigation, and I seek none. The only relief anyone has requested, anywhere, is a ballot line.</p>
+    <p>I repeat the offer made above: I am available to meet with any or all of you, today or tomorrow, at the Council's convenience — through the City Attorney's Office.</p>
+    <p>I respect the commitment and dedication each of you brings to Duluth. We may disagree about particular issues of policy, but I don't doubt that all of us are trying to do what we think is best for this city's future.</p>
+    <p>Respectfully,<br>Michael &ldquo;Bernie&rdquo; Bernstein (MN Bar No. 0401630)<br>Petitioner, appearing on his own behalf</p>
+  </div>
+
+  <h2>How we got here</h2>
+  <div class="tl">
+    <div class="ev city"><b>Oct. 28, 2025</b> — Planning Commission special meeting (5:00 p.m.) recommends selling the Lester Park Golf Course property. To this day: no published minutes, no video.</div>
+    <div class="ev city"><b>Dec. 8, 2025</b> — Council adopts the conditional conveyance ordinance; the development agreement makes rezoning out of park status a required step before closing (spring 2027).</div>
+    <div class="ev"><b>Early Jan. 2026</b> — The 30-day referendum window on that ordinance — which ran through the holidays — closes.</div>
+    <div class="ev people"><b>June 23, 2026</b> — Our Park, Our Vote delivers two petitions to the City Clerk.</div>
+    <div class="ev city"><b>July 8, 2026</b> — Certificates issue, two days after the Charter's deadline. Hundreds of petition sheets set aside uncounted.</div>
+    <div class="ev people"><b>July 15, 2026</b> — Lawsuit filed: count and certify as the Charter commands.</div>
+    <div class="ev court"><b>July 17, 2026</b> — Judge Reed issues a peremptory writ. Amended certificates: 4,220 and 4,049 valid signatures.</div>
+    <div class="ev court"><b>July 20, 2026</b> — Hearing. Court defers ruling until after the council acts.</div>
+    <div class="ev people"><b>July 22, 2026</b> — Letter to all nine councilors, City Attorney copied, posted here in full.</div>
+    <div class="ev ahead"><b>July 23, 2026</b> — The council votes. Be there.</div>
+    <div class="ev ahead"><b>Aug. 11, 2026</b> — Deadline to certify ballot questions to the County Auditor.</div>
+    <div class="ev ahead"><b>Nov. 3, 2026</b> — General election.</div>
+  </div>
+
+  <h2>How to help</h2>
+  <ul class="clean">
+    <li><b>The council will not take public comment Thursday.</b> Think about that: a special meeting called to decide the fate of petitions signed by more than 4,000 Duluthians &mdash; and the public may not speak. Any councilor can still move to allow comment. Ask for it.</li>
+    <li><b>So be heard now.</b> Email all nine councilors today &mdash; one line is enough: &ldquo;Please allow public comment at Thursday's special meeting &mdash; and put both petitions on the November ballot.&rdquo; All nine, one email: <span style="word-break:break-all">lnephew@duluthmn.gov, jkennedy@duluthmn.gov, wdurrwachter@duluthmn.gov, ddesotelle@duluthmn.gov, rrandorf@duluthmn.gov, dclanaugh@duluthmn.gov, jjohnson@duluthmn.gov, aforsman@duluthmn.gov, ttomanek@duluthmn.gov</span> &bull; or call 218-730-5700.</li>
+    <li><b>Come Thursday anyway.</b> City Hall Council Chambers, 411 W. First St., before 6:00. A full chamber speaks without a microphone.</li>
+    <li><b>If comment is opened after all, thirty seconds is enough:</b></li>
+  </ul>
+  <div class="speak">“My name is ____. I live in ____. I signed the petition. I'm not asking you to agree with it — I'm asking you to let me vote on it. Please put both measures on the November ballot.”</div>
+  <ul class="clean">
+    <li><b>Forward this page.</b> Bring one neighbor.</li>
+  </ul>
+
+  <footer>Published by Our Park, Our Vote • ourparkourvote.org • Every date and figure above is drawn from the public court file (<i>Bernstein v. Denham</i>, St. Louis County File No. 69DU-CV-26-1924) and the City of Duluth's public records. This page reports the status of pending public proceedings; it asks for a vote, not an outcome.</footer>
 </div>
-<!-- ─── END IN THE NEWS ─────────────────────────────────── -->
-<div class="photo-strip">
-  <div class="photo-strip-item"><img src="lester-pine.jpg" alt="Snow-covered pine trees at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-dawn.jpg" alt="Winter dawn at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-forest.jpg" alt="Forest at Lester Park"></div>
-  <div class="photo-strip-item"><img src="lester-seeds.jpg" alt="Seeds at Lester Park"></div>
-</div>
-<footer>
-  <div class="footer-brand"><span style="color:#fff">Our</span> Park. <span style="color:#fff">Our</span> Vote.</div>
-  <p>Not-for-profit · 1346 W. Arrowhead Rd. #324, Duluth MN 55811</p>
-  <p><a href="mailto:info@ourparkourvote.org">info<!---->@<!---->ourparkourvote.org</a> · <a href="https://ourparkourvote.org">ourparkourvote.org</a></p>
-</footer>
-<script>
-(function () {
-  var wall = document.getElementById('signerWall');
-  var intro = document.getElementById('signersIntro');
-  if (!wall || !intro) return;
-  var MAX_SHOW = 500;
-  fetch('/.netlify/functions/signers')
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-    .then(function (d) {
-      var names = (d && d.names) || [];
-      var count = (d && typeof d.count === 'number') ? d.count : names.length;
-      if (!count) {
-        intro.textContent = 'Be the first to add your name — the demand form is just above.';
-        return;
-      }
-      intro.innerHTML = '<strong style="color:var(--gold-light)">' + count.toLocaleString() +
-        '</strong> ' + (count === 1 ? 'Duluthian has' : 'Duluthians have') + ' added their name so far.';
-      var frag = document.createDocumentFragment();
-      names.slice(0, MAX_SHOW).forEach(function (n) {
-        var chip = document.createElement('span');
-        chip.className = 'signer-chip';
-        chip.textContent = ((n.first || '') + ' ' + (n.last || '')).trim();
-        frag.appendChild(chip);
-      });
-      wall.appendChild(frag);
-      if (count > MAX_SHOW) {
-        var more = document.createElement('span');
-        more.className = 'signer-chip signer-more';
-        more.textContent = '+ ' + (count - MAX_SHOW).toLocaleString() + ' more';
-        wall.appendChild(more);
-      }
-    })
-    .catch(function () {
-      intro.textContent = 'Signatures are being tallied — check back soon.';
-    });
-})();
-</script>
 </body>
 </html>
