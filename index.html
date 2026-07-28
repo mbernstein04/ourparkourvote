@@ -21,6 +21,9 @@ a{color:var(--green-d)}
 .brand{font-family:Georgia,serif;font-weight:700;letter-spacing:.02em;font-size:1.05rem}
 .brand span{color:var(--gold)}
 .top .tag{font-size:.82rem;opacity:.85}
+.topnav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.topnav a{color:#eef3ee;text-decoration:none;font-size:.9rem;font-weight:600;opacity:.9}
+.topnav a:hover{opacity:1;text-decoration:underline}
 .hero{background:
    linear-gradient(180deg, rgba(18,32,25,.86), rgba(27,67,50,.92)),
    radial-gradient(1200px 400px at 80% -10%, rgba(64,145,108,.55), transparent 60%),
@@ -31,7 +34,8 @@ a{color:var(--green-d)}
   color:#dfe8df;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
   padding:6px 12px;border-radius:999px;margin-bottom:20px}
 .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.08;margin:.1em 0 .35em;color:#fff}
-.hero p.sub{font-size:1.16rem;max-width:640px;color:#e7ecdf;margin:0 0 30px}
+.hero p.sub{font-size:1.28rem;max-width:680px;color:#f2f4ea;margin:0 0 16px;font-weight:500}
+.hero p.sub2{font-size:1.04rem;max-width:640px;color:#dbe4d6;margin:0 0 30px}
 .cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;
   padding:15px 26px;border-radius:12px;font-size:1.05rem;transition:transform .08s ease, box-shadow .2s}
@@ -74,6 +78,11 @@ h2.section{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:.15em 0 .6em}
 .dl .wrap{padding:46px 22px;text-align:center}
 .dl h2{color:#fff;margin:.1em 0 .5em}
 .dl .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.press{background:var(--paper);border-top:1px solid var(--line)}
+.press .wrap{padding:48px 22px;max-width:760px}
+.press h2.section{color:var(--green-d)}
+.press .press-lead{font-size:1.16rem;color:var(--ink);font-weight:500;margin:0 0 16px;max-width:680px}
+.press .press-contact{font-size:1rem;color:#3c483f;margin:0}
 footer{background:#0f1a14;color:#b9c6bd;font-size:.9rem}
 footer .wrap{padding:30px 22px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center}
 footer a{color:#d8e2d7}
@@ -82,7 +91,8 @@ footer a{color:#d8e2d7}
   .card-lg{grid-template-columns:1fr}
   .thumb{max-width:220px;margin:0 auto}
   .grid{grid-template-columns:1fr}
-  .top .tag{display:none}
+  .top .wrap{flex-wrap:wrap;gap:8px 16px}
+  .topnav{gap:14px;font-size:.85rem}
 }
 .docpage{background:#fff;padding:22px 18px 18px}.docpage .db{display:block;height:11px;width:60%;background:var(--green);border-radius:3px;margin-bottom:16px}.docpage .dl{display:block;height:7px;background:#e7e2d3;border-radius:3px;margin:10px 0}.docpage .dl.w1{width:92%}.docpage .dl.w2{width:76%}.docpage .dl.w3{width:85%}
 </style>
@@ -91,16 +101,21 @@ footer a{color:#d8e2d7}
 
 <div class="top"><div class="wrap">
   <div class="brand">OUR PARK, <span>OUR VOTE</span></div>
-  <div class="tag">Let the people of Duluth decide the future of Lester Park</div>
+  <nav class="topnav">
+    <a href="what-the-petitions-do.html">What the Petitions Do</a>
+    <a href="#update">Latest Update</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
   <span class="eyebrow">Filed July 24, 2026 &middot; Bernstein v. Denham</span>
   <h1>Let Duluth Vote on Lester Park</h1>
-  <p class="sub">More than four thousand Duluth voters signed each petition to decide the future of the former Lester Park Golf Course. We&rsquo;ve filed our brief explaining why those petitions belong on the November ballot &mdash; and why, under Minnesota law, that decision is the voters&rsquo; to make.</p>
+  <p class="sub">The petitions put all of Lester Park under park zoning &mdash; and let Duluth voters decide, by majority vote, whether any of it is ever rezoned for development.</p>
+  <p class="sub2">More than four thousand Duluth voters signed each petition. We&rsquo;ve filed our brief explaining why those petitions belong on the November ballot &mdash; and why, under Minnesota law, that decision is the voters&rsquo; to make.</p>
   <div class="cta">
-    <a class="btn btn-gold" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Download the Brief &nbsp;<span style="opacity:.7;font-weight:600">PDF &middot; 30 pp</span></a>
-    <a class="btn btn-ghost" href="#read">Read a 1-page summary</a>
+    <a class="btn btn-gold" href="what-the-petitions-do.html"><span class="ic">&#9656;</span> What the petitions actually do</a>
+    <a class="btn btn-ghost" href="Lester_Park_Brief.pdf" download>Download the Brief &nbsp;<span style="opacity:.7;font-weight:600">PDF &middot; 30 pp</span></a>
   </div>
   <div class="fineprint">A brief in support of a peremptory writ of mandamus on placement &middot; St. Louis County File No. 69DU-CV-26-1924</div>
 </div></header>
@@ -133,15 +148,12 @@ footer a{color:#d8e2d7}
   </div>
 </div></section>
 
-<section class="action"><div class="wrap">
-  <div class="kicker" style="color:var(--gold)">Take action</div>
-  <h2>The next public meeting is Monday night.</h2>
-  <div class="meetbox">
-    <div class="m">&#128197; <b>Monday, July 27, 2026</b></div>
-    <div class="m">&#128337; <b>6:00 p.m.</b></div>
-    <div class="m">&#128205; <b>Duluth City Hall</b>, Council Chamber</div>
-  </div>
-  <p class="lead">The Council takes this up again Monday night &mdash; and there will be an opportunity for <strong>public comment</strong>. Come to City Hall and be heard. Every voice in the room makes it harder for them to look away.</p>
+<section class="action" id="update"><div class="wrap" style="text-align:left;max-width:760px">
+  <div class="kicker" style="color:var(--gold)">Latest update &middot; July 28, 2026</div>
+  <h2 style="text-align:left">Council declines to place the measures; the question moves to the court &mdash; on a fast schedule</h2>
+  <p class="lead" style="margin:0 0 14px;text-align:left">On July 27 the City Council voted 7&ndash;2 to reject the certified petitions rather than place them on the November 3 ballot, and tabled &mdash; for the second time &mdash; the resolution that would have submitted them to voters.</p>
+  <p class="lead" style="margin:0 0 14px;text-align:left">We filed notice with the District Court the same night and asked the Court to order the measures onto the ballot in time for the County&rsquo;s August 11 certification deadline. On July 28 the City agreed to the expedited schedule we proposed: the City&rsquo;s brief is due July 30, our reply August 2, with a decision expected before the certification deadline.</p>
+  <p class="lead" style="margin:0;text-align:left">More than 4,000 Duluthians signed each petition. We believe they are entitled to an answer from the voters, and we&rsquo;ll keep this page updated as the case moves.</p>
 </div></section>
 
 <section class="dl"><div class="wrap">
@@ -150,6 +162,13 @@ footer a{color:#d8e2d7}
     <a class="btn btn-gold" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Download the Brief (PDF &middot; 30 pp)</a>
     <a class="btn btn-ghost" href="Lester_Park_Brief_Summary.pdf" download>1-page summary</a>
   </div>
+</div></section>
+
+<section class="press" id="press"><div class="wrap">
+  <div class="kicker" style="color:var(--gold-d)">For press &mdash; suggested description</div>
+  <h2 class="section" style="margin-top:.1em">Suggested description of the measures</h2>
+  <p class="press-lead">The petitions would put all of Lester Park under park zoning and let Duluth voters decide, by majority vote, whether any of it is ever rezoned for development.</p>
+  <p class="press-contact">These are initiative petitions under Duluth City Charter &sect; 51, not a referendum. Press contact: Michael Bernstein, Our Park Our Vote &mdash; <a href="mailto:mbernstein04@gmail.com">mbernstein04@gmail.com</a>, 202.255.4590. Full ordinance text available on request.</p>
 </div></section>
 
 <footer><div class="wrap">
