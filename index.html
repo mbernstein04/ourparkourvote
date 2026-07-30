@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Let Duluth Vote on Lester Park — Our Park, Our Vote</title>
+<title>Our Park, Our Vote — Let Duluth Vote on the Lester Park Land Sale</title>
+<meta name="description" content="The petitions require a majority vote of Duluthians before Lester Park's public parkland can be converted and sold for private development.">
 <style>
 :root{
   --ink:#122019; --green:#2d6a4f; --green-d:#1b4332; --green-l:#40916c;
@@ -12,15 +13,14 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif}
 a{color:var(--green-d)}
-.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
 .top{background:var(--green-d);color:#eef3ee}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
-.brand{font-family:Georgia,serif;font-weight:700;letter-spacing:.02em;font-size:1.05rem}
+.top .wrap{max-width:1060px;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;gap:16px}
+.brand{font-family:Georgia,serif;font-weight:700;letter-spacing:.02em;font-size:1.05rem;text-decoration:none;color:#eef3ee}
 .brand span{color:var(--gold)}
-.top .tag{font-size:.82rem;opacity:.85}
 .topnav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .topnav a{color:#eef3ee;text-decoration:none;font-size:.9rem;font-weight:600;opacity:.9}
 .topnav a:hover{opacity:1;text-decoration:underline}
@@ -29,146 +29,134 @@ a{color:var(--green-d)}
    radial-gradient(1200px 400px at 80% -10%, rgba(64,145,108,.55), transparent 60%),
    var(--green-d);
   color:#f4f1e6}
-.hero .wrap{padding:64px 22px 72px}
+.hero .wrap{padding:60px 22px 64px}
 .eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
   color:#dfe8df;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
   padding:6px 12px;border-radius:999px;margin-bottom:20px}
-.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.08;margin:.1em 0 .35em;color:#fff}
-.hero p.sub{font-size:1.28rem;max-width:680px;color:#f2f4ea;margin:0 0 16px;font-weight:500}
-.hero p.sub2{font-size:1.04rem;max-width:640px;color:#dbe4d6;margin:0 0 30px}
+.hero h1{font-size:clamp(1.95rem,4.6vw,3.1rem);line-height:1.1;margin:.1em 0 .4em;color:#fff}
+.hero p.sub{font-size:1.2rem;color:#eef3e2;margin:0 0 26px;max-width:730px}
 .cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;
-  padding:15px 26px;border-radius:12px;font-size:1.05rem;transition:transform .08s ease, box-shadow .2s}
+  padding:14px 24px;border-radius:12px;font-size:1.02rem;transition:transform .08s ease, box-shadow .2s}
 .btn:hover{transform:translateY(-1px)}
 .btn-gold{background:var(--gold);color:#241a02;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .btn-gold:hover{background:#d9a626}
 .btn-ghost{background:transparent;color:#f4f1e6;border:1.5px solid rgba(255,255,255,.5)}
 .btn-ghost:hover{background:rgba(255,255,255,.10)}
-.btn .ic{font-size:1.15em;line-height:1}
-.hero .fineprint{margin-top:16px;font-size:.85rem;color:#c9d4c6}
-.panel{margin:-44px auto 0;position:relative;z-index:2}
-.card-lg{background:var(--paper);border:1px solid var(--line);border-radius:18px;
-  box-shadow:0 18px 50px rgba(18,32,25,.16);padding:26px;display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center}
-.thumb{border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 10px 24px rgba(0,0,0,.14);background:#fff}
-.thumb .pglabel{font-size:.72rem;text-align:center;color:var(--muted);padding:6px;border-top:1px solid var(--line);background:#faf8f2}
-.panel h2{margin:.1em 0 .3em;font-size:1.5rem}
-.panel .doc-meta{color:var(--muted);font-size:.92rem;margin:0 0 16px}
-.panel .btn-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn-green{background:var(--green);color:#fff}
-.btn-green:hover{background:var(--green-l)}
+.btn .ic{font-size:1.05em;line-height:1}
+section.block{padding:46px 0}
+section.block:nth-of-type(even){background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+h2.section{font-size:clamp(1.5rem,3.2vw,2.05rem);margin:.15em 0 .55em;color:var(--green-d)}
+.block p{margin:.8em 0;color:#33413a;font-size:1.06rem}
+.block p .leadin{font-weight:700;color:var(--green-d)}
+.faq{border-top:1px solid var(--line);margin-top:.4em}
+.faq .q{font-family:Georgia,serif;font-weight:700;font-size:1.12rem;color:var(--green-d);margin:1.5em 0 .1em}
+.faq .a{margin:.2em 0 0;color:#33413a;font-size:1.05rem}
+.faq .a .no{font-weight:700;color:var(--ink)}
+.dl{background:var(--green-d);color:#fff}
+.dl .wrap{padding:40px 22px;text-align:center}
+.dl h2{color:#fff;margin:.1em 0 .5em;font-family:Georgia,serif}
+.dl .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn-outline{background:#fff;color:var(--green-d);border:1.5px solid var(--green)}
 .btn-outline:hover{background:#f0f6f1}
-section.block{padding:56px 0}
-.kicker{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
-h2.section{font-size:clamp(1.6rem,3.4vw,2.2rem);margin:.15em 0 .6em}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.tile{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px}
-.tile .n{font-family:Georgia,serif;color:var(--green);font-weight:700;font-size:1.05rem;margin-bottom:6px}
-.tile h3{margin:.1em 0 .35em;font-size:1.22rem}
-.tile p{margin:0;color:#3c483f}
-.action{background:var(--ink);color:#f2efe4}
-.action .wrap{padding:52px 22px;text-align:center}
-.action h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.3rem);margin:.1em 0 .4em}
-.action .meetbox{display:inline-flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;align-items:center;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:18px 26px;margin:8px 0 26px}
-.action .meetbox .m{display:flex;align-items:center;gap:9px;font-size:1.02rem}
-.action .meetbox .m b{color:var(--gold)}
-.action p.lead{max-width:640px;margin:0 auto 8px;font-size:1.12rem;color:#e6eadf}
-.dl{background:var(--green-d);color:#fff}
-.dl .wrap{padding:46px 22px;text-align:center}
-.dl h2{color:#fff;margin:.1em 0 .5em}
-.dl .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.press{background:var(--paper);border-top:1px solid var(--line)}
-.press .wrap{padding:48px 22px;max-width:760px}
-.press h2.section{color:var(--green-d)}
-.press .press-lead{font-size:1.16rem;color:var(--ink);font-weight:500;margin:0 0 16px;max-width:680px}
-.press .press-contact{font-size:1rem;color:#3c483f;margin:0}
+.press{background:var(--ink);color:#e9ede3}
+.press .wrap{padding:44px 22px}
+.press .kicker{color:var(--gold)}
+.press h2{color:#fff;margin:.2em 0 .6em;font-size:1.5rem;font-family:Georgia,serif}
+.press .press-lead{color:#f2f4ea;font-size:1.16rem;font-weight:500;margin:.2em 0 16px;max-width:700px}
+.press .press-contact{color:#cdd6c9;font-size:1.02rem;margin:.6em 0}
+.press a{color:#e7c65a}
 footer{background:#0f1a14;color:#b9c6bd;font-size:.9rem}
-footer .wrap{padding:30px 22px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center}
+footer .wrap{max-width:1060px;padding:30px 22px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center}
 footer a{color:#d8e2d7}
 .casecite{opacity:.75;font-style:italic}
-@media(max-width:720px){
-  .card-lg{grid-template-columns:1fr}
-  .thumb{max-width:220px;margin:0 auto}
-  .grid{grid-template-columns:1fr}
-  .top .wrap{flex-wrap:wrap;gap:8px 16px}
-  .topnav{gap:14px;font-size:.85rem}
+@media(max-width:640px){
+  .top .wrap{flex-direction:column;align-items:flex-start;gap:10px}
 }
-.docpage{background:#fff;padding:22px 18px 18px}.docpage .db{display:block;height:11px;width:60%;background:var(--green);border-radius:3px;margin-bottom:16px}.docpage .dl{display:block;height:7px;background:#e7e2d3;border-radius:3px;margin:10px 0}.docpage .dl.w1{width:92%}.docpage .dl.w2{width:76%}.docpage .dl.w3{width:85%}
 </style>
 </head>
 <body>
 
 <div class="top"><div class="wrap">
-  <div class="brand">OUR PARK, <span>OUR VOTE</span></div>
+  <a class="brand" href="/">OUR PARK, <span>OUR VOTE</span></a>
   <nav class="topnav">
-    <a href="what-the-petitions-do.html">What the Petitions Do</a>
-    <a href="#update">Latest Update</a>
+    <a href="#sale">The Sale</a>
+    <a href="#petitions">The Petitions</a>
+    <a href="#housing">Housing</a>
+    <a href="#faq">FAQ</a>
     <a href="contact.html">Contact</a>
   </nav>
 </div></div>
 
 <header class="hero"><div class="wrap">
-  <span class="eyebrow">Filed July 24, 2026 &middot; Bernstein v. Denham</span>
-  <h1>Let Duluth Vote on Lester Park</h1>
-  <p class="sub">The petitions put all of Lester Park under park zoning &mdash; and let Duluth voters decide, by majority vote, whether any of it is ever rezoned for development.</p>
-  <p class="sub2">More than four thousand Duluth voters signed each petition. We&rsquo;ve filed our brief explaining why those petitions belong on the November ballot &mdash; and why, under Minnesota law, that decision is the voters&rsquo; to make.</p>
+  <span class="eyebrow">Bernstein v. Denham &middot; St. Louis County District Court</span>
+  <h1>Duluth wants to sell the former Lester Park golf course land to private developers &mdash; without asking the public's permission.</h1>
+  <p class="sub">Two certified petitions &mdash; signed by more than 4,000 Duluthians each &mdash; give the voters the final say. And to be clear: we're not against housing at Lester &mdash; we're for making sure it fits the community need.</p>
   <div class="cta">
-    <a class="btn btn-gold" href="what-the-petitions-do.html"><span class="ic">&#9656;</span> What the petitions actually do</a>
-    <a class="btn btn-ghost" href="Lester_Park_Brief.pdf" download>Download the Brief &nbsp;<span style="opacity:.7;font-weight:600">PDF &middot; 30 pp</span></a>
+    <a class="btn btn-gold" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Read the legal brief (PDF)</a>
+    <a class="btn btn-ghost" href="contact.html">Contact us</a>
   </div>
-  <div class="fineprint">A brief in support of a peremptory writ of mandamus on placement &middot; St. Louis County File No. 69DU-CV-26-1924</div>
 </div></header>
 
-<div class="wrap panel">
-  <div class="card-lg">
-    <div class="thumb">
-      <div class="docpage" aria-hidden="true"><span class="db"></span><span class="dl w1"></span><span class="dl w2"></span><span class="dl w3"></span><span class="dl"></span><span class="dl w2"></span><span class="dl w1"></span><span class="dl w3"></span><span class="dl"></span></div>
-      <div class="pglabel">Petitioner&rsquo;s Memorandum &middot; 30 pages</div>
-    </div>
-    <div>
-      <h2 class="serif">Petitioner&rsquo;s Memorandum of Law in Support of Placement</h2>
-      <p class="doc-meta">Filed July 24, 2026 &middot; 30 pages &middot; Bernstein v. Denham, Sixth Judicial District</p>
-      <div class="btn-row">
-        <a class="btn btn-green" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Download the full brief (PDF)</a>
-        <a class="btn btn-outline" id="read" href="Lester_Park_Brief_Summary.pdf" download>Download the 1-page summary</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="block"><div class="wrap">
-  <div class="kicker">What the brief says</div>
-  <h2 class="section">The signatures are valid. The law says let the people vote.</h2>
-  <div class="grid">
-    <div class="tile"><div class="n">01</div><h3>The people signed</h3><p>The City Clerk certified both petitions &mdash; over 4,000 valid signatures each, well beyond what the Charter requires. The signatures are not in dispute.</p></div>
-    <div class="tile"><div class="n">02</div><h3>The law favors a vote</h3><p>For forty years, Minnesota courts have held that a certified measure goes to the voters unless it is <em>manifestly</em> invalid &mdash; invalid beyond serious dispute. A contested legal theory is not that.</p></div>
-    <div class="tile"><div class="n">03</div><h3>Duluth has been here before</h3><p>In 1972, when a Duluth council refused to let residents vote on a rezoning, the Minnesota Supreme Court ordered the election. <em>Denney v. City of Duluth</em>. The answer was to let the people decide.</p></div>
-    <div class="tile"><div class="n">04</div><h3>Placing is not endorsing</h3><p>Putting the measures on the ballot decides only <em>who decides</em> &mdash; it keeps the choice with the people of Duluth. We believe that when Duluthians get a voice, better things will happen.</p></div>
-  </div>
+<section class="block" id="sale"><div class="wrap">
+  <div class="kicker">The sale</div>
+  <h2 class="section">The City wants to sell parkland. The public hasn't been asked.</h2>
+  <p>In December 2025, the City Council approved an ordinance authorizing the future sale of the former Lester Park golf course property to a private developer. The land has not been sold — conditions in the City's own agreement must be met first. That is exactly why the public's voice matters now, while the land is still public: once parkland is sold, it is gone for good, and the one thing no future council can do is vote it back. Minnesota has always treated selling Duluth's parkland as extraordinary: a 1955 state law, written specifically for Duluth, requires a three-fourths vote of the planning commission and a four-fifths vote of the council before park property can be sold — and directs that ordinances under it follow the procedures of the City Charter. The petitions stand in that tradition and add one more safeguard: before the public's land passes into private hands, the public itself must approve. More than 4,000 Duluthians signed each petition to put that question on the November ballot. On July 27, the Council voted 7–2 to keep it off. That decision is now before the District Court.</p>
 </div></section>
 
-<section class="action" id="update"><div class="wrap" style="text-align:left;max-width:760px">
-  <div class="kicker" style="color:var(--gold)">Latest update &middot; July 28, 2026</div>
-  <h2 style="text-align:left">Council declines to place the measures; the question moves to the court &mdash; on a fast schedule</h2>
-  <p class="lead" style="margin:0 0 14px;text-align:left">On July 27 the City Council voted 7&ndash;2 to reject the certified petitions rather than place them on the November 3 ballot, and tabled &mdash; for the second time &mdash; the resolution that would have submitted them to voters.</p>
-  <p class="lead" style="margin:0 0 14px;text-align:left">We filed notice with the District Court the same night and asked the Court to order the measures onto the ballot in time for the County&rsquo;s August 11 certification deadline. On July 28 the City agreed to the expedited schedule we proposed: the City&rsquo;s brief is due July 30, our reply August 2, with a decision expected before the certification deadline.</p>
-  <p class="lead" style="margin:0;text-align:left">More than 4,000 Duluthians signed each petition. We believe they are entitled to an answer from the voters, and we&rsquo;ll keep this page updated as the case moves.</p>
+<section class="block" id="petitions"><div class="wrap">
+  <div class="kicker">What the petitions do</div>
+  <h2 class="section">Two petitions, one principle: the voters decide.</h2>
+  <p><span class="leadin">Petition 1 — the upper 230 acres.</span> This land is parkland today, and the petition keeps it that way unless the public agrees otherwise: before the City converts this parkland for private development, a majority of Duluth voters must approve. The public's land doesn't change hands without the public's consent.</p>
+  <p><span class="leadin">Petition 2 — the lower 37.5 acres.</span> This parcel was slated years ago for a development that never happened — nothing was built, and the land sits vacant in public hands. Petition 2 restores its park status through the City's own standard process, and applies the same rule going forward: converting it for private development requires the voters' approval.</p>
+  <p><span class="leadin">What the petitions do NOT do.</span> They don't prohibit housing at Lester Park, and they don't touch any permit or approval anywhere else in Duluth. They decide one thing: who gives the final answer before public parkland is turned over to private development. We think that should be the public.</p>
+</div></section>
+
+<section class="block" id="housing"><div class="wrap">
+  <div class="kicker">Housing &amp; the golf resort</div>
+  <h2 class="section">Housing that fits the community need — not a subsidized playground.</h2>
+  <p>We're not against housing at Lester. The part of the property that can be responsibly developed should be considered for housing that meets Duluth's actual needs — homes working families can afford, at the depth of affordability the City's own studies say we're short of. If the City and a developer bring the voters a plan like that, we expect Duluthians to say yes. A public vote isn't a wall. It's a bar, and good projects clear it. It's also leverage: a developer and a council that need majority approval will come to the voters with real, funded affordability commitments — not requirements on paper with no money attached, which is what Lester Park got last time.</p>
+  <p>What we oppose is the other thing on the table: committing public land to build a luxury golf resort. Duluth has already run the golf experiment — the City stopped operating the Lester Park course because it lost money. A luxury resort version is the same mistake at a higher price: a financially and environmentally unsustainable use that operates at a loss, spreads fertilizer and pesticides above streams that run to Lake Superior, and keeps 200 football fields' worth of public land in mowed turf for the few instead of habitat, trails, and open parkland for everyone. Public land should not be anyone's subsidized private playground. Whoever wants to build one can buy their own land.</p>
+</div></section>
+
+<section class="block" id="faq"><div class="wrap">
+  <div class="kicker">Questions</div>
+  <h2 class="section">Frequently asked questions</h2>
+  <div class="faq">
+    <p class="q">Isn't this just a zoning dispute?</p>
+    <p class="a"><span class="no">No.</span> In December 2025 the Council approved an ordinance authorizing the sale of the golf course property to a private developer, and under the City's own agreement the sale cannot close until the land's park status is removed. That step is how the sale happens — which is why the petitions guard it. The question is simple: should parkland Duluthians own be sold to private hands without Duluthians' consent?</p>
+
+    <p class="q">Are you against all development at Lester Park?</p>
+    <p class="a"><span class="no">No.</span> The portion that can be responsibly developed should be considered for housing that meets Duluth's actual needs, and a plan that does that can win a public vote. What we oppose is committing public land to build a luxury golf resort — a financially and environmentally unsustainable use that serves the few at everyone's expense.</p>
+
+    <p class="q">Is this a referendum?</p>
+    <p class="a"><span class="no">No.</span> These are initiative petitions under City Charter § 51 — proposals for new ordinances, a power Duluth's Charter has given its citizens since 1912. A referendum undoes a recently passed ordinance; an initiative proposes a new one. Nothing here undoes anything.</p>
+
+    <p class="q">Does this ban housing at Lester Park?</p>
+    <p class="a"><span class="no">No.</span> Either parcel can be developed for housing — if a majority of Duluth voters approve. The petitions decide who decides, not what gets built.</p>
+
+    <p class="q">Would this open the floodgates to petitions like this on every project?</p>
+    <p class="a">Duluth has had this power since 1912. In 114 years it has been used on land use four times. Reaching the ballot takes signatures from 20% of the city's last-election voters; passing takes a citywide majority. Nobody runs that gauntlet over a routine project.</p>
+
+    <p class="q">Where do things stand now?</p>
+    <p class="a">Both petitions were certified as sufficient — more than 4,000 valid signatures each, against a threshold of 3,683. On July 27, 2026, the City Council voted 7–2 not to place them on the ballot. Whether the measures go before voters on November 3 is now before the St. Louis County District Court. Ballot questions must be certified to the County by August 11.</p>
+  </div>
 </div></section>
 
 <section class="dl"><div class="wrap">
-  <h2 class="serif">Read it for yourself.</h2>
+  <h2>Read it for yourself.</h2>
   <div class="btn-row">
-    <a class="btn btn-gold" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Download the Brief (PDF &middot; 30 pp)</a>
-    <a class="btn btn-ghost" href="Lester_Park_Brief_Summary.pdf" download>1-page summary</a>
+    <a class="btn btn-gold" href="Lester_Park_Brief.pdf" download><span class="ic">&#11015;</span> Download the brief (PDF &middot; 30 pp)</a>
+    <a class="btn btn-outline" href="Lester_Park_Brief_Summary.pdf" download>1-page summary</a>
   </div>
 </div></section>
 
 <section class="press" id="press"><div class="wrap">
-  <div class="kicker" style="color:var(--gold-d)">For press &mdash; suggested description</div>
-  <h2 class="section" style="margin-top:.1em">Suggested description of the measures</h2>
-  <p class="press-lead">The petitions would put all of Lester Park under park zoning and let Duluth voters decide, by majority vote, whether any of it is ever rezoned for development.</p>
-  <p class="press-contact">These are initiative petitions under Duluth City Charter &sect; 51, not a referendum. Press contact: Michael Bernstein, Our Park Our Vote &mdash; <a href="mailto:mbernstein04@gmail.com">mbernstein04@gmail.com</a>, 202.255.4590. Full ordinance text available on request.</p>
+  <div class="kicker">For press — suggested description of the measures</div>
+  <h2 class="serif">Suggested description of the measures</h2>
+  <p class="press-lead">The petitions require a majority vote of Duluthians before Lester Park's public parkland can be converted and sold for private development.</p>
+  <p class="press-contact">These are initiative petitions under Duluth City Charter § 51, not a referendum. Press contact: Michael Bernstein, Our Park Our Vote — <a href="mailto:mbernstein04@gmail.com">mbernstein04@gmail.com</a>, 202.255.4590. Full ordinance text available on request.</p>
 </div></section>
 
 <footer><div class="wrap">
