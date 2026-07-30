@@ -1,2 +1,15 @@
 /petition-land-sale.html / 301
 /petition-land-sale / 301
+
+# Retired legacy campaign pages — archived in /archive, not served.
+# Old root URLs redirect to home so existing links don't 404.
+/full-site.html / 301
+/volunteer.html / 301
+/learn-more.html / 301
+/lester-space.html / 301
+/bios.html / 301
+/native_sixpack_v7.html / 301
+/petitions-combined.html / 301
+
+# Block the archived copies from being served (force overrides the on-disk files).
+/archive/* / 301!
