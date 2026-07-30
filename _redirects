@@ -11,5 +11,8 @@
 /native_sixpack_v7.html / 301
 /petitions-combined.html / 301
 
+# Retired: content consolidated onto the homepage.
+/what-the-petitions-do.html / 301
+
 # Block the archived copies from being served (force overrides the on-disk files).
 /archive/* / 301!
